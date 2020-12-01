@@ -1,0 +1,6 @@
+module Pods_PIL {
+  umbrella header "Pods-PIL-umbrella.h"
+
+  export *
+  module * { export * }
+}

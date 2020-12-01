@@ -1,0 +1,6 @@
+module Pods_PIL_PILTests {
+  umbrella header "Pods-PIL-PILTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
