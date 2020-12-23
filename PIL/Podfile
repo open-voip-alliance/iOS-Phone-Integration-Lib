@@ -2,10 +2,13 @@ platform :ios, '11.3'
 
 target 'PIL' do
 
-    #//wip pod 'PhoneLib' ,:git => 'https://github.com/open-voip-alliance/iOSPhoneLib.git', 'branch' => 'main'
-    #//wip pod 'PhoneLib', :path => '/Users/chris/projects/Vialer/iOS/ios-phone-lib'
+  
+  source 'https://gitlab.linphone.org/BC/public/podspec.git'
+  source 'https://github.com/CocoaPods/Specs.git'
+  
+  #//wip pod 'PhoneLib' ,:git => 'https://github.com/open-voip-alliance/iOSPhoneLib.git', 'branch' => 'main'
+  pod 'PhoneLib', :path => '/Users/chris/projects/Vialer/iOS/ios-phone-lib'
 
-    #//wip pod 'Alamofire', '~> 4.7'
 
   target 'PILTests' do
     # Pods for testing

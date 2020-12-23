@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,26 @@
 		8319D8B22576AD8D0095E54E /* PIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8319D8A82576AD8D0095E54E /* PIL.framework */; };
 		8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319D8B62576AD8D0095E54E /* PILTests.swift */; };
 		8319D8B92576AD8D0095E54E /* PIL.h in Headers */ = {isa = PBXBuildFile; fileRef = 8319D8AB2576AD8D0095E54E /* PIL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83B84F82257D7B1900BABAC7 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B84F81257D7B1900BABAC7 /* PIL.swift */; };
+		83B84F83257D7B1900BABAC7 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B84F81257D7B1900BABAC7 /* PIL.swift */; };
+		83F69EA7258FCF1E0076B8F0 /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */; };
+		83F69EA8258FCF1E0076B8F0 /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */; };
+		83F69EAE25922CE60076B8F0 /* CallKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */; };
+		83F69EAF25922CE60076B8F0 /* CallKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */; };
+		83F69EB32592306E0076B8F0 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EB22592306E0076B8F0 /* Call.swift */; };
+		83F69EB42592306E0076B8F0 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EB22592306E0076B8F0 /* Call.swift */; };
+		83F69EB8259230A60076B8F0 /* SimpleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EB7259230A60076B8F0 /* SimpleState.swift */; };
+		83F69EB9259230A60076B8F0 /* SimpleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EB7259230A60076B8F0 /* SimpleState.swift */; };
+		83F69EBD2592369C0076B8F0 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EBC2592369C0076B8F0 /* Direction.swift */; };
+		83F69EBE2592369C0076B8F0 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EBC2592369C0076B8F0 /* Direction.swift */; };
+		83F69EC32593CD930076B8F0 /* VoIPPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */; };
+		83F69EC42593CD930076B8F0 /* VoIPPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */; };
+		83F69ECA2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */; };
+		83F69ECB2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */; };
+		83F69ECF2593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */; };
+		83F69ED02593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */; };
+		83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADAC5258BD81100CA64C8 /* Auth.swift */; };
+		83FADAC7258BD81100CA64C8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADAC5258BD81100CA64C8 /* Auth.swift */; };
 		876CC1C2FFF2293F6EF26090 /* libPods-PIL-PILTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC694B131CEB7EBC72B2BF1 /* libPods-PIL-PILTests.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +53,16 @@
 		8319D8B12576AD8D0095E54E /* PILTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PILTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8319D8B62576AD8D0095E54E /* PILTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PILTests.swift; sourceTree = "<group>"; };
 		8319D8B82576AD8D0095E54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83B84F81257D7B1900BABAC7 /* PIL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIL.swift; sourceTree = "<group>"; };
+		83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationError.swift; sourceTree = "<group>"; };
+		83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKitDelegate.swift; sourceTree = "<group>"; };
+		83F69EB22592306E0076B8F0 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
+		83F69EB7259230A60076B8F0 /* SimpleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleState.swift; sourceTree = "<group>"; };
+		83F69EBC2592369C0076B8F0 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushHandler.swift; sourceTree = "<group>"; };
+		83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushPayloadTransformer.swift; sourceTree = "<group>"; };
+		83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushPayload.swift; sourceTree = "<group>"; };
+		83FADAC5258BD81100CA64C8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		A11562F028AED5C11AE54AEB /* Pods-PIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL.release.xcconfig"; path = "Target Support Files/Pods-PIL/Pods-PIL.release.xcconfig"; sourceTree = "<group>"; };
 		CD379AFE14075D0FD87BC715 /* Pods-PIL-PILTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILTests.release.xcconfig"; path = "Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests.release.xcconfig"; sourceTree = "<group>"; };
 		DBC694B131CEB7EBC72B2BF1 /* libPods-PIL-PILTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIL-PILTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,8 +133,14 @@
 		8319D8AA2576AD8D0095E54E /* PIL */ = {
 			isa = PBXGroup;
 			children = (
-				8319D8AB2576AD8D0095E54E /* PIL.h */,
+				83F69EA5258FCEF80076B8F0 /* Enums */,
+				83FADAC4258BD7F500CA64C8 /* Configuration */,
+				83F69EC12593CD0C0076B8F0 /* Push */,
 				8319D8AC2576AD8D0095E54E /* Info.plist */,
+				8319D8AB2576AD8D0095E54E /* PIL.h */,
+				83B84F81257D7B1900BABAC7 /* PIL.swift */,
+				83F69EB22592306E0076B8F0 /* Call.swift */,
+				83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */,
 			);
 			path = PIL;
 			sourceTree = "<group>";
@@ -116,6 +152,34 @@
 				8319D8B82576AD8D0095E54E /* Info.plist */,
 			);
 			path = PILTests;
+			sourceTree = "<group>";
+		};
+		83F69EA5258FCEF80076B8F0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */,
+				83F69EB7259230A60076B8F0 /* SimpleState.swift */,
+				83F69EBC2592369C0076B8F0 /* Direction.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		83F69EC12593CD0C0076B8F0 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */,
+				83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */,
+				83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
+		83FADAC4258BD7F500CA64C8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				83FADAC5258BD81100CA64C8 /* Auth.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +205,7 @@
 				8319D8A42576AD8D0095E54E /* Sources */,
 				8319D8A52576AD8D0095E54E /* Frameworks */,
 				8319D8A62576AD8D0095E54E /* Resources */,
+				BD285E6CD406BD57BE87F9EC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +224,8 @@
 				8319D8AD2576AD8D0095E54E /* Sources */,
 				8319D8AE2576AD8D0095E54E /* Frameworks */,
 				8319D8AF2576AD8D0095E54E /* Resources */,
+				8C8F570141C7932B54B941DA /* [CP] Embed Pods Frameworks */,
+				40E77AB301BF84778802F356 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,10 +244,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					8319D8A72576AD8D0095E54E = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1220;
 					};
 					8319D8B02576AD8D0095E54E = {
 						CreatedOnToolsVersion = 12.1;
@@ -246,6 +314,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		40E77AB301BF84778802F356 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8436842C5FA6AE61E4327232 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +353,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8C8F570141C7932B54B941DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD285E6CD406BD57BE87F9EC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PIL/Pods-PIL-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PIL/Pods-PIL-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PIL/Pods-PIL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -275,6 +394,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83F69EBD2592369C0076B8F0 /* Direction.swift in Sources */,
+				83B84F82257D7B1900BABAC7 /* PIL.swift in Sources */,
+				83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */,
+				83F69EB32592306E0076B8F0 /* Call.swift in Sources */,
+				83F69EC32593CD930076B8F0 /* VoIPPushHandler.swift in Sources */,
+				83F69ECA2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */,
+				83F69ECF2593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */,
+				83F69EB8259230A60076B8F0 /* SimpleState.swift in Sources */,
+				83F69EA7258FCF1E0076B8F0 /* RegistrationError.swift in Sources */,
+				83F69EAE25922CE60076B8F0 /* CallKitDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +411,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83F69ED02593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */,
+				83F69ECB2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */,
 				8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */,
+				83F69EB42592306E0076B8F0 /* Call.swift in Sources */,
+				83F69EB9259230A60076B8F0 /* SimpleState.swift in Sources */,
+				83F69EBE2592369C0076B8F0 /* Direction.swift in Sources */,
+				83F69EC42593CD930076B8F0 /* VoIPPushHandler.swift in Sources */,
+				83F69EAF25922CE60076B8F0 /* CallKitDelegate.swift in Sources */,
+				83B84F83257D7B1900BABAC7 /* PIL.swift in Sources */,
+				83FADAC7258BD81100CA64C8 /* Auth.swift in Sources */,
+				83F69EA8258FCF1E0076B8F0 /* RegistrationError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +562,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F9709B49935F95F1CC8CA67 /* Pods-PIL.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
@@ -431,7 +571,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PIL/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,6 +581,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -450,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A11562F028AED5C11AE54AEB /* Pods-PIL.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
@@ -458,7 +600,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PIL/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2234830DFE34A018CA974415 /* Pods-PIL-PILTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
 				INFOPLIST_FILE = PILTests/Info.plist;
@@ -496,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD379AFE14075D0FD87BC715 /* Pods-PIL-PILTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
 				INFOPLIST_FILE = PILTests/Info.plist;
