@@ -1,0 +1,26 @@
+{
+  "name": "PhoneLib",
+  "version": "0.1.0",
+  "summary": "Makes it easy to implement SIP in apps.",
+  "description": "This framework is designed to make it easier to implement SIP functions into an app. Currently it uses Linphone as the underlying SIP SDK. But it is built in a way that the SIP SDK can easily be swapped by another one.",
+  "homepage": "https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib",
+  "license": "This framework is owned by Spindle Devhouse.",
+  "authors": {
+    "Chris Kontos": "Chris.Kontos@wearespindle.com",
+    "Jeremy Norman": "Jeremy.Norman@wearespindle.com",
+    "Fabian Giger": "giger@coffeeit.nl"
+  },
+  "source": {
+    "git": "https://gitlab.com/CoffeeIT/spindle/linphone/ios.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.3"
+  },
+  "source_files": "PhoneLib/**/*",
+  "dependencies": {
+    "linphone-sdk": [
+      "4.4.1"
+    ]
+  }
+}

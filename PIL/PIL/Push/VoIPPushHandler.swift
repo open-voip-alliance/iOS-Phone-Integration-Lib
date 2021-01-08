@@ -14,12 +14,10 @@ class VoIPPushHandler {
 
 //    private let middleware = Middleware() //wip
     private let voIPPushPayloadTransformer = VoIPPushPayloadTransformer()
-//    private lazy var sip: Sip = {
-//        (UIApplication.shared.delegate as! AppDelegate).sip
-//    }() //wip
+    private lazy var pil: PIL = PIL.shared
 
     private lazy var callKit: CXProvider = {
-        sip.callKitProviderDelegate.provider
+        pil.callKitProviderDelegate.provider
     }()
 
     // This will be updated and set to TRUE when we have confirmation that we have received a call via SIP.
@@ -36,7 +34,7 @@ class VoIPPushHandler {
             return
         }
 
-        self.sip.prepareForIncomingCall(uuid: payload.uuid)
+        self.pil.prepareForIncomingCall(uuid: payload.uuid)
 
         callKit.reportNewIncomingCall(with: payload.uuid, update: createCxCallUpdate(from: payload)) { error in
             if (error != nil) {
@@ -60,7 +58,7 @@ class VoIPPushHandler {
                 _ = payload.phoneNumber,
                 _ = payload.callerId
 
-        if self.sip.hasActiveCall {
+        if self.pil.hasActiveCall {
             respond(with: payload, available: false)
             self.rejectCall(uuid: uuid, description: "Rejecting call as there is already one in progress")
             return
@@ -72,13 +70,13 @@ class VoIPPushHandler {
         the now ringing UI.
     */
     func establishConnection(for payload: VoIPPushPayload) {
-        if sip.hasActiveCall {
+        if pil.hasActiveCall {
             return
         }
 
         let uuid = payload.uuid
 
-        sip.register { error in
+        pil.register { error in
             if error != nil {
                 self.rejectCall(uuid: uuid, description: "Failed to register with SIP, rejecting the call...")
                 return;
@@ -103,13 +101,14 @@ class VoIPPushHandler {
         Respond to the middleware, this will determine if we receive the call or not.
     */
     private func respond(with payload: VoIPPushPayload, available: Bool, completion: ((Error?) -> ())? = nil) {
-        if (completion == nil) {
-            MiddlewareRequestOperationManager(baseURLasString: payload.responseUrl)!
-                    .sentCallResponse(toMiddleware: payload.payload.dictionaryPayload, isAvailable: available)
-        } else {
-            MiddlewareRequestOperationManager(baseURLasString: payload.responseUrl)!
-                    .sentCallResponse(toMiddleware: payload.payload.dictionaryPayload, isAvailable: available, withCompletion: completion)
-        }
+        //wip 
+//        if (completion == nil) {
+//            MiddlewareRequestOperationManager(baseURLasString: payload.responseUrl)!
+//                    .sentCallResponse(toMiddleware: payload.payload.dictionaryPayload, isAvailable: available)
+//        } else {
+//            MiddlewareRequestOperationManager(baseURLasString: payload.responseUrl)!
+//                    .sentCallResponse(toMiddleware: payload.payload.dictionaryPayload, isAvailable: available, withCompletion: completion)
+//        }
     }
 
     /**

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Auth: Decodable {
+public struct Auth {
     let username: String
     let password: String
     let domain: String
@@ -20,7 +20,7 @@ struct Auth: Decodable {
         }
     }
     
-    init(username: String, password: String, domain: String, port: Int, secure:Bool) {
+    public init(username: String, password: String, domain: String, port: Int, secure:Bool) {
         self.username = username
         self.password = password
         self.domain = domain

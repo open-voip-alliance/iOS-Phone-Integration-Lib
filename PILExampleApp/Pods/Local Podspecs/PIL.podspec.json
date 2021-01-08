@@ -1,0 +1,31 @@
+{
+  "name": "PIL",
+  "platforms": {
+    "ios": "11.3"
+  },
+  "summary": "Platform integration layer uses Linphone through PhoneLib to provide SIP functionality.",
+  "requires_arc": true,
+  "version": "0.1.0",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Chris Kontos": "chris.kontos@wearespindle.com"
+  },
+  "homepage": "https://gitlab.wearespindle.com/vialer/mobile/voip/platform-integration-layer",
+  "source": {
+    "git": "https://gitlab.wearespindle.com/vialer/mobile/voip/platform-integration-layer.git",
+    "tag": "0.1.0"
+  },
+  "frameworks": "UIKit",
+  "dependencies": {
+    "PhoneLib": [
+      "~> 0.1.0"
+    ]
+  },
+  "source_files": "PIL/**/*.{swift}",
+  "resources": "PIL/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}",
+  "swift_versions": "5",
+  "swift_version": "5"
+}

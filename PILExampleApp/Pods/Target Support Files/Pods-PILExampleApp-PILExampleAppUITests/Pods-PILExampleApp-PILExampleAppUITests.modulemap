@@ -1,0 +1,6 @@
+module Pods_PILExampleApp_PILExampleAppUITests {
+  umbrella header "Pods-PILExampleApp-PILExampleAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

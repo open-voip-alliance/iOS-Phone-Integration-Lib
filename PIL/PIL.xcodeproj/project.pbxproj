@@ -29,6 +29,8 @@
 		83F69ECB2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */; };
 		83F69ECF2593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */; };
 		83F69ED02593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */; };
+		83F69ED5259A23F00076B8F0 /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */; };
+		83F69ED6259A23F00076B8F0 /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */; };
 		83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADAC5258BD81100CA64C8 /* Auth.swift */; };
 		83FADAC7258BD81100CA64C8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADAC5258BD81100CA64C8 /* Auth.swift */; };
 		876CC1C2FFF2293F6EF26090 /* libPods-PIL-PILTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC694B131CEB7EBC72B2BF1 /* libPods-PIL-PILTests.a */; };
@@ -62,6 +64,7 @@
 		83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushHandler.swift; sourceTree = "<group>"; };
 		83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushPayloadTransformer.swift; sourceTree = "<group>"; };
 		83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushPayload.swift; sourceTree = "<group>"; };
+		83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDExtension.swift; sourceTree = "<group>"; };
 		83FADAC5258BD81100CA64C8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		A11562F028AED5C11AE54AEB /* Pods-PIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL.release.xcconfig"; path = "Target Support Files/Pods-PIL/Pods-PIL.release.xcconfig"; sourceTree = "<group>"; };
 		CD379AFE14075D0FD87BC715 /* Pods-PIL-PILTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILTests.release.xcconfig"; path = "Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		8319D8AA2576AD8D0095E54E /* PIL */ = {
 			isa = PBXGroup;
 			children = (
+				83F69ED3259A23BB0076B8F0 /* Extensions */,
 				83F69EA5258FCEF80076B8F0 /* Enums */,
 				83FADAC4258BD7F500CA64C8 /* Configuration */,
 				83F69EC12593CD0C0076B8F0 /* Push */,
@@ -172,6 +176,14 @@
 				83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */,
 			);
 			path = Push;
+			sourceTree = "<group>";
+		};
+		83F69ED3259A23BB0076B8F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		83FADAC4258BD7F500CA64C8 /* Configuration */ = {
@@ -397,6 +409,7 @@
 				83F69EBD2592369C0076B8F0 /* Direction.swift in Sources */,
 				83B84F82257D7B1900BABAC7 /* PIL.swift in Sources */,
 				83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */,
+				83F69ED5259A23F00076B8F0 /* UUIDExtension.swift in Sources */,
 				83F69EB32592306E0076B8F0 /* Call.swift in Sources */,
 				83F69EC32593CD930076B8F0 /* VoIPPushHandler.swift in Sources */,
 				83F69ECA2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */,
@@ -413,6 +426,7 @@
 			files = (
 				83F69ED02593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */,
 				83F69ECB2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */,
+				83F69ED6259A23F00076B8F0 /* UUIDExtension.swift in Sources */,
 				8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */,
 				83F69EB42592306E0076B8F0 /* Call.swift in Sources */,
 				83F69EB9259230A60076B8F0 /* SimpleState.swift in Sources */,

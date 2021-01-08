@@ -24,7 +24,7 @@ public class PIL: RegistrationStateDelegate {
     private var incomingUuid: UUID?
     private var onIncomingCall: ((Call) -> ())?
     
-    var auth: Auth? = nil {
+    public var auth: Auth? = nil {
         didSet {
             if (auth?.isValid != true) {
                 print("Attempting to set an invalid auth object") //, LogLevel.ERROR) //wip add logging system
@@ -36,9 +36,15 @@ public class PIL: RegistrationStateDelegate {
         }
     }
     
+    var hasActiveCall: Bool {
+        get {
+            self.call != nil
+        }
+    }
+    
     init() {
         callKitProviderDelegate = CallKitDelegate(pil: self)
-//        phoneLib.sessionDelegate = self //wip implement sessionDelegate methods
+        phoneLib.sessionDelegate = self
         phoneLib.setAudioCodecs([Codec.OPUS])
     }
     
@@ -51,10 +57,10 @@ public class PIL: RegistrationStateDelegate {
         
         if (!auth.isValid) {return}//wip throw NoAuthenticationCredentialsException()
 
-//        if (forceInitialize) { //wip implement destroy on phoneLib and then in PIL
-//            phoneLib.destroy()
-//        }
-        
+        if (forceInitialize) {
+            unregister()
+        }
+
         if (!forceReregister && phoneLib.registrationStatus == .registered){
             print("The user was already registered and will not force re-registration.")
             return
@@ -70,7 +76,7 @@ public class PIL: RegistrationStateDelegate {
         }
     }
     
-    func register(onRegister: ((Error?) -> ())? = nil) { //wip make sure it returns error correclty
+    func register(onRegister: ((Error?) -> ())? = nil) { //wip make sure it returns error correctly
         PhoneLib.shared.registrationDelegate = self
 
         guard let username = auth?.username,
@@ -92,10 +98,29 @@ public class PIL: RegistrationStateDelegate {
         }
     }
 
-    func unregister() {
+    public func unregister() {
         phoneLib.unregister {
             print("Unregistered.")
         }
+    }
+    
+    //wip
+    public func call(number: String) -> Session? {
+        var session : Session?
+        register { error in
+            if error != nil {
+                print("Unable to register.")
+                return
+            }
+
+            print("Attempting to call.")
+            session = self.phoneLib.call(to: number)
+        }
+        return session //wip Is this session always nil? if yes remove it from here and phonelib
+    }
+    
+    func prepareForIncomingCall(uuid: UUID) {
+        self.incomingUuid = uuid
     }
     
     

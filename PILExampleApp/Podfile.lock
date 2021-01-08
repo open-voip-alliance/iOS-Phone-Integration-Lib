@@ -1,0 +1,43 @@
+PODS:
+  - linphone-sdk (4.4.1):
+    - linphone-sdk/all-frameworks (= 4.4.1)
+    - linphone-sdk/app-extension (= 4.4.1)
+    - linphone-sdk/app-extension-swift (= 4.4.1)
+    - linphone-sdk/basic-frameworks (= 4.4.1)
+    - linphone-sdk/swift (= 4.4.1)
+  - linphone-sdk/all-frameworks (4.4.1)
+  - linphone-sdk/app-extension (4.4.1)
+  - linphone-sdk/app-extension-swift (4.4.1):
+    - linphone-sdk/app-extension
+  - linphone-sdk/basic-frameworks (4.4.1):
+    - linphone-sdk/app-extension
+  - linphone-sdk/swift (4.4.1):
+    - linphone-sdk/app-extension-swift
+    - linphone-sdk/basic-frameworks
+  - PhoneLib (0.1.0):
+    - linphone-sdk (= 4.4.1)
+  - PIL (0.1.0):
+    - PhoneLib (~> 0.1.0)
+
+DEPENDENCIES:
+  - PhoneLib (from `/Users/chris/projects/Vialer/iOS/ios-phone-lib`)
+  - PIL (from `/Users/chris/projects/Vialer/iOS/iOS-platform-integration-layer/PIL`)
+
+SPEC REPOS:
+  https://gitlab.linphone.org/BC/public/podspec.git:
+    - linphone-sdk
+
+EXTERNAL SOURCES:
+  PhoneLib:
+    :path: "/Users/chris/projects/Vialer/iOS/ios-phone-lib"
+  PIL:
+    :path: "/Users/chris/projects/Vialer/iOS/iOS-platform-integration-layer/PIL"
+
+SPEC CHECKSUMS:
+  linphone-sdk: 91183cb3e3224d2d1a211357cd6a39d61636d17d
+  PhoneLib: 0a062ca52a13fee76b5858464b5e8f12014a07ec
+  PIL: 1f2e3304b36a2f5ddd14541ce39ba1f8dd548302
+
+PODFILE CHECKSUM: 6ef3e668b2e681136f6be80be4d7d8f6bfa2680b
+
+COCOAPODS: 1.10.0

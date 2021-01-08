@@ -84,7 +84,7 @@ extension CallKitDelegate: CXProviderDelegate {
             return
         }
         
-        print("Call is ending with average rating: \(call.session.getAverageRating())/5.")
+        print("Call is ending with average rating: \(call.session.getAverageRating())/5")
         let success = PhoneLib.shared.endCall(for: call.session)
 
         if success {
@@ -123,7 +123,7 @@ extension CallKitDelegate: CXProviderDelegate {
     public func provider(_ provider: CXProvider, perform action: CXPlayDTMFCallAction) {
 //        guard let call = findCallOrFail(action: action) else { return }
 
-        print("DTMF not supported yet")
+        print("DTMF not supported yet")//wip
         action.fail()
     }
 
@@ -181,7 +181,7 @@ extension CallKitDelegate {
 
         print("Awaiting the incoming call to be confirmed")
 
-        CallKitDelegate.wait(timeoutInMilliseconds: 5000) { isCallConfirmed() }
+        _ = CallKitDelegate.wait(timeoutInMilliseconds: 5000) { isCallConfirmed() }
 
         print("Finished waiting with result: \(isCallConfirmed())")
 
@@ -189,13 +189,8 @@ extension CallKitDelegate {
     }
 
     private func isCallConfirmed() -> Bool {
-        //return VoIPPushHandler.incomingCallConfirmed //wip
-        return true //wip dlt this
+        return VoIPPushHandler.incomingCallConfirmed
     }
-}
-
-extension Notification.Name {
-    static let teardownPIL = Notification.Name("destroy-pil")
 }
 
 extension CallKitDelegate {
