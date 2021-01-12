@@ -13,5 +13,9 @@ target 'PIL' do
   target 'PILTests' do
     # Pods for testing
   end
+  
+  target 'PILExampleApp' do
+    pod 'PIL', :path => '/Users/chris/projects/Vialer/iOS/iOS-platform-integration-layer/PIL'
+  end
 
 end

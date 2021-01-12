@@ -1,0 +1,6 @@
+module Pods_PIL_PILExampleApp {
+  umbrella header "Pods-PIL-PILExampleApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

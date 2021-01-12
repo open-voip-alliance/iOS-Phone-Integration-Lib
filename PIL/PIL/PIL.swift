@@ -14,6 +14,11 @@ public class PIL: RegistrationStateDelegate {
     static public let shared = PIL()
     
     lazy var phoneLib: PhoneLib = PhoneLib.shared
+    public var registrationStatus: SipRegistrationStatus {
+        get{
+          return PhoneLib.shared.registrationStatus
+        }
+    }
     
     var callKitProviderDelegate: CallKitDelegate!
     var call: Call?
@@ -61,7 +66,7 @@ public class PIL: RegistrationStateDelegate {
             unregister()
         }
 
-        if (!forceReregister && phoneLib.registrationStatus == .registered){
+        if (!forceReregister && registrationStatus == .registered){
             print("The user was already registered and will not force re-registration.")
             return
         }
