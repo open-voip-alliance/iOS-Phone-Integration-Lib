@@ -8,7 +8,7 @@
 import Foundation
 import PhoneLib
 
-class Call {
+public class Call {
 
     let session: Session
     let direction: Direction

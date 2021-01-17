@@ -9,7 +9,6 @@ import Foundation
 import CallKit
 import UserNotifications
 import AVKit
-import PhoneLib
 
 class CallKitDelegate: NSObject {
 
@@ -85,7 +84,8 @@ extension CallKitDelegate: CXProviderDelegate {
         }
         
         print("Call is ending with average rating: \(call.session.getAverageRating())/5")
-        let success = PhoneLib.shared.endCall(for: call.session)
+//        let success = PhoneLib.shared.endCall(for: call.session)
+        let success = pil.end(call:call)
 
         if success {
             action.fulfill(withDateEnded: Date())
@@ -103,7 +103,7 @@ extension CallKitDelegate: CXProviderDelegate {
     public func provider(_ provider: CXProvider, perform action: CXSetMutedCallAction) {
         guard findCallOrFail(action: action) != nil else { return }
 
-        PhoneLib.shared.setMicrophone(muted: action.isMuted)
+//        PhoneLib.shared.setMicrophone(muted: action.isMuted)
 
         action.fulfill()
     }
@@ -111,13 +111,13 @@ extension CallKitDelegate: CXProviderDelegate {
     public func provider(_ provider: CXProvider, perform action: CXSetHeldCallAction) {
         guard let call = findCallOrFail(action: action) else { return }
 
-        let success = PhoneLib.shared.setHold(session: call.session, onHold: action.isOnHold)
-
-        if success {
-            action.fulfill()
-        } else {
-            action.fail()
-        }
+//        let success = PhoneLib.shared.setHold(session: call.session, onHold: action.isOnHold)
+//
+//        if success {
+//            action.fulfill()
+//        } else {
+//            action.fail()
+//        }
     }
 
     public func provider(_ provider: CXProvider, perform action: CXPlayDTMFCallAction) {
@@ -128,11 +128,11 @@ extension CallKitDelegate: CXProviderDelegate {
     }
 
     public func provider(_ provider: CXProvider, didActivate audioSession: AVAudioSession) {
-        PhoneLib.shared.setAudio(enabled: true)
+//        PhoneLib.shared.setAudio(enabled: true)
     }
 
     public func provider(_ provider: CXProvider, didDeactivate audioSession: AVAudioSession) {
-        PhoneLib.shared.setAudio(enabled: false)
+//        PhoneLib.shared.setAudio(enabled: false)
     }
 }
 

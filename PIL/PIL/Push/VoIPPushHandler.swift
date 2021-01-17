@@ -76,8 +76,8 @@ class VoIPPushHandler {
 
         let uuid = payload.uuid
 
-        pil.register { error in
-            if error != nil {
+        pil.register { success in
+            if !success {
                 self.rejectCall(uuid: uuid, description: "Failed to register with SIP, rejecting the call...")
                 return;
             }

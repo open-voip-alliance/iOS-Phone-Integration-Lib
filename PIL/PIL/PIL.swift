@@ -21,11 +21,11 @@ public class PIL: RegistrationStateDelegate {
     }
     
     var callKitProviderDelegate: CallKitDelegate!
-    var call: Call?
+    public var call: Call?
     var firstTransferCall: Call?
     var secondTransferCall: Call?
     
-    private var onRegister: ((Error?) -> ())?
+    //private var onRegister: ((Bool) -> ()) //wip
     private var incomingUuid: UUID?
     private var onIncomingCall: ((Call) -> ())?
     
@@ -34,10 +34,7 @@ public class PIL: RegistrationStateDelegate {
             if (auth?.isValid != true) {
                 print("Attempting to set an invalid auth object") //, LogLevel.ERROR) //wip add logging system
                 auth = nil
-                return
             }
-
-            start(forceInitialize: false, forceReregister: true)
         }
     }
     
@@ -53,14 +50,22 @@ public class PIL: RegistrationStateDelegate {
         phoneLib.setAudioCodecs([Codec.OPUS])
     }
     
-    /// Start the PIL, unless the force options are provided, the method will not restart or re-register.
-    func start(forceInitialize: Bool = false,
+    /// Start the PIL.
+    /// Unless an Authentication object is provided, the method will use the pil.auth property.
+    /// Unless the force options are provided, the method will not restart or re-register.
+    public func start(authentication:Auth? = nil,
+               forceInitialize: Bool = false,
                forceReregister: Bool = false,
-               completion: (() -> Unit)? = nil) {
+               completion: ((Bool) -> ())) {
         
-        guard let auth = auth else {return} //wip implement throw NoAuthenticationCredentialsException()
+        if authentication != nil {
+            auth = authentication
+        }
         
-        if (!auth.isValid) {return}//wip throw NoAuthenticationCredentialsException()
+        guard auth != nil else {
+            completion(false)
+            return
+        } //wip throw NoAuthenticationCredentialsException()
 
         if (forceInitialize) {
             unregister()
@@ -68,20 +73,21 @@ public class PIL: RegistrationStateDelegate {
 
         if (!forceReregister && registrationStatus == .registered){
             print("The user was already registered and will not force re-registration.")
-            return
+            completion(true)
         }
         
-        register { error in
-            if error != nil {
+        register { success in
+            if !success {
                 print("Unable to register.")
-                return
+                completion(false)
             }
-
+            
             print("The user has been registered successfully.")
+            completion(true)
         }
     }
     
-    func register(onRegister: ((Error?) -> ())? = nil) { //wip make sure it returns error correctly
+    func register(onRegister: ((Bool) -> ())) { //wip
         PhoneLib.shared.registrationDelegate = self
 
         guard let username = auth?.username,
@@ -90,10 +96,9 @@ public class PIL: RegistrationStateDelegate {
               let port = auth?.port,
               let secure = auth?.secure
         else {
+            onRegister(false)
             return
         }
-
-        self.onRegister = onRegister
         
         print("Registering with \(username) + \(password) encrypted:\(secure) at \(domain):\(port)")
         let success = phoneLib.register(domain: domain, port: port, username: username, password: password, encrypted: secure)
@@ -101,6 +106,7 @@ public class PIL: RegistrationStateDelegate {
         if !success {
             print("Failed to register.")
         }
+        onRegister(success)
     }
 
     public func unregister() {
@@ -112,35 +118,56 @@ public class PIL: RegistrationStateDelegate {
     //wip
     public func call(number: String) -> Session? {
         var session : Session?
-        register { error in
-            if error != nil {
+        register { success in
+            if !success {
                 print("Unable to register.")
                 return
             }
 
             print("Attempting to call.")
-            session = self.phoneLib.call(to: number)
+            session = phoneLib.call(to: number)
         }
-        return session //wip Is this session always nil? if yes remove it from here and phonelib
+//        let call = Call(session: session, direction: session.direction, uuid:session.uuid) //wip don't return session but call
+        return session
     }
     
-    func prepareForIncomingCall(uuid: UUID) {
+    public func end(call: Call) -> Bool {
+        return phoneLib.endCall(for: call.session)
+    }
+    
+    func acceptIncomingCall(callback: @escaping () -> ()) {
+//        self.onIncomingCall = { call in
+//            _ = self.phone.acceptCall(for: call.session)
+//            callback()
+//        }
+//
+//        if let call = self.call {
+//            VialerLogInfo("We have found the call already and can accept it.")
+//            self.onIncomingCall?(call)
+//            self.onIncomingCall = nil
+//            return
+//        }
+//
+//        VialerLogInfo("We have no call yet, so we will queue to accept as soon as possible.")
+    }
+    
+    func prepareForIncomingCall(uuid: UUID) { //wip
         self.incomingUuid = uuid
+    }
+    
+    func findCallByUuid(uuid: UUID) -> Call? { //wip
+        if call?.uuid == uuid {
+            return call
+        }
+        return nil
     }
     
     
 // MARK: - RegistrationStateDelegate
     public func didChangeRegisterState(_ state: SipRegistrationStatus, message: String?) {
-        print("Reg state: \(String(reflecting: state)) with message \(String(describing: message))")
-
-        if state == .registered {
-            onRegister?(nil)
-            onRegister = nil
-        }
+        print("Registration state: \(String(reflecting: state)) with message \(String(describing: message))")
 
         if state == .failed {
-            onRegister?(RegistrationError.failed)
-            onRegister = nil
             if let uuid = incomingUuid {
                 print("Reporting call ended with uuid: \(uuid)")
                 callKitProviderDelegate.provider.reportCall(with: uuid, endedAt: Date(), reason: CXCallEndedReason.failed)

@@ -59,43 +59,26 @@ class TableViewController: UITableViewController {
             (sender as! UIButton).setTitle("Connect", for: .normal)
             pil.unregister()
         } else {
-            //wip let success =
-            pil.auth = Auth(username: accountTF.text!, password: passwordTF.text!, domain: domainTF.text!, port: Int(portTF.text!)!, secure: useTLS.isOn)
+            let auth = Auth(username: accountTF.text!, password: passwordTF.text!, domain: domainTF.text!, port: Int(portTF.text!)!, secure: useTLS.isOn)
             
-            debugPrint("Account \(accountTF.text!) tried to register on \(domainTF.text!):\(portTF.text!).")
-            
-            print("//wip \(pil.registrationStatus)")
-            (sender as! UIButton).setTitle(pil.registrationStatus == .registered ? "Disconnect" : "Failed", for: .normal)
+            pil.start(authentication: auth, completion: { (result) -> Void in
+                (sender as! UIButton).setTitle(result ? "Disconnect" : "Failed", for: .normal)
+                print("Account \(accountTF.text!) tried to register on \(domainTF.text!):\(portTF.text!) with success = \(result).")
+            })
         }
-        
-//        if PhoneLib.shared.registrationStatus == .registered {
-//            PhoneLib.shared.unregister {
-//                (sender as! UIButton).setTitle("Connect", for: .normal)
-//            }
-//        } else {
-//            let success = PhoneLib.shared.register(domain: domainTF.text!,
-//                                                      port: Int(portTF.text!)!,
-//                                                      username: accountTF.text!,
-//                                                      password: passwordTF.text!,
-//                                                      encrypted: useTLS.isOn)
-//            debugPrint("Account \(accountTF.text!) tried to register on \(domainTF.text!):\(portTF.text!) with result: \(success).")
-//            (sender as! UIButton).setTitle(success ? "Disconnect" : "Failed", for: .normal)
-//            PhoneLib.shared.resetAudioCodecs()
-//        }
     }
     
     @IBAction func call(_ sender: Any) {
-//        //Two active lines.
-//        if let active = activeSession {
-//            _ = PhoneLib.shared.setHold(session: active, onHold: true)
-//            holdSession = active
-//            activeSession = nil
-//        }
-//        let outgoingCall = PhoneLib.shared.call(to: numberTF.text!)
-//        let outgoingSuccess = outgoingCall != nil
-//        stateLabel.text = "Call res: \(outgoingSuccess)"
-//        debugPrint("Call res: \(outgoingSuccess)")
-//        callDecline.isHidden = !outgoingSuccess
+        let session = pil.call(number: numberTF.text!)
+        
+        print("//wip returned session from call(number): \(String(describing: session))")
+        print("//wip returned session.remoteNumber from call(number): \(String(describing: session?.remoteNumber))")
+        print("//wip returned session.state from call(number): \(String(describing: session?.state))")
+        
+        let outgoingSuccess = session != nil
+        stateLabel.text = "Call result: \(outgoingSuccess)"
+        debugPrint("Call result: \(outgoingSuccess)")
+        callDecline.isHidden = !outgoingSuccess
     }
     
     @IBAction func answer(_ sender: Any) {
@@ -106,14 +89,15 @@ class TableViewController: UITableViewController {
     }
     
     @IBAction func decline(_ sender: Any) {
-//        guard let session = activeSession else { return }
-//        stateLabel.text = "Ended: \(PhoneLib.shared.endCall(for: session))"
-//        callAnswer.isHidden = true
-//        callDecline.isHidden = true
-//        callTransfer.isHidden = true
+        guard let call = pil.call else { return }
+        stateLabel.text = "Ended: \(pil.end(call: call))"
+        callAnswer.isHidden = true
+        callDecline.isHidden = true
+        callTransfer.isHidden = true
     }
     
     @IBAction func holdCall(_ sender: UIButton) {
+        
 //        guard let session = activeSession else { return }
 //        stateLabel.text = "Hold successful: \(PhoneLib.shared.setHold(session: session, onHold: session.state != .paused))"
 //        sender.setTitle(session.state == .pausing ? "Unhold" : "Hold", for: .normal)
