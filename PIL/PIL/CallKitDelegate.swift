@@ -68,13 +68,13 @@ class CallKitDelegate: NSObject {
 extension CallKitDelegate: CXProviderDelegate {
 
     func providerDidReset(_ provider: CXProvider) {
-        print("Provider reset, end all the calls")
+        print("Provider reset, end all the calls") //wip terminate the ongoing audio session and dispose of any active calls
     }
 
     public func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
-//        PIL.shared.acceptIncomingCall { //wip
-//            action.fulfill()
-//        }
+        PIL.shared.acceptIncomingCall {
+            action.fulfill()
+        }
     }
 
     public func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
@@ -84,7 +84,6 @@ extension CallKitDelegate: CXProviderDelegate {
         }
         
         print("Call is ending with average rating: \(call.session.getAverageRating())/5")
-//        let success = PhoneLib.shared.endCall(for: call.session)
         let success = pil.end(call:call)
 
         if success {
@@ -109,7 +108,7 @@ extension CallKitDelegate: CXProviderDelegate {
     }
 
     public func provider(_ provider: CXProvider, perform action: CXSetHeldCallAction) {
-        guard let call = findCallOrFail(action: action) else { return }
+//        guard let call = findCallOrFail(action: action) else { return }
 
 //        let success = PhoneLib.shared.setHold(session: call.session, onHold: action.isOnHold)
 //

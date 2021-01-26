@@ -7,8 +7,8 @@ target 'PIL' do
   source 'https://github.com/CocoaPods/Specs.git'
   
   #//wip pod 'PhoneLib' ,:git => 'https://github.com/open-voip-alliance/iOSPhoneLib.git', 'branch' => 'main'
-  pod 'PhoneLib', :path => '/Users/chris/projects/Vialer/iOS/ios-phone-lib'
-
+  #//wip pod 'PhoneLib', :path => '/Users/chris/projects/Vialer/iOS/ios-phone-lib'
+  pod 'PhoneLib' ,:git => 'https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git', 'branch' => 'main'
 
   target 'PILTests' do
     # Pods for testing

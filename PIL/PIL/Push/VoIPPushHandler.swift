@@ -12,10 +12,13 @@ import CallKit
 
 class VoIPPushHandler {
 
-//    private let middleware = Middleware() //wip
-    private let voIPPushPayloadTransformer = VoIPPushPayloadTransformer()
     private lazy var pil: PIL = PIL.shared
-
+    private let voIPPushPayloadTransformer = VoIPPushPayloadTransformer()
+    
+    private lazy var middlewareDelegate = {
+        pil.middlewareDelegate
+    }()
+    
     private lazy var callKit: CXProvider = {
         pil.callKitProviderDelegate.provider
     }()
@@ -101,14 +104,11 @@ class VoIPPushHandler {
         Respond to the middleware, this will determine if we receive the call or not.
     */
     private func respond(with payload: VoIPPushPayload, available: Bool, completion: ((Error?) -> ())? = nil) {
-        //wip 
-//        if (completion == nil) {
-//            MiddlewareRequestOperationManager(baseURLasString: payload.responseUrl)!
-//                    .sentCallResponse(toMiddleware: payload.payload.dictionaryPayload, isAvailable: available)
-//        } else {
-//            MiddlewareRequestOperationManager(baseURLasString: payload.responseUrl)!
-//                    .sentCallResponse(toMiddleware: payload.payload.dictionaryPayload, isAvailable: available, withCompletion: completion)
-//        }
+        if (completion == nil) {
+            middlewareDelegate?.respond(payload: payload.payload.dictionaryPayload as NSDictionary, available: available, completion: nil)
+        } else {
+            middlewareDelegate?.respond(payload: payload.payload.dictionaryPayload as NSDictionary, available: available, completion: completion)
+        }
     }
 
     /**

@@ -21,9 +21,11 @@ public class PIL: RegistrationStateDelegate {
     }
     
     var callKitProviderDelegate: CallKitDelegate!
-    public var call: Call?
     var firstTransferCall: Call?
     var secondTransferCall: Call?
+    
+    public var call: Call?
+    public weak var middlewareDelegate: MiddlewareDelegate?
     
     //private var onRegister: ((Bool) -> ()) //wip
     private var incomingUuid: UUID?
@@ -136,19 +138,19 @@ public class PIL: RegistrationStateDelegate {
     }
     
     func acceptIncomingCall(callback: @escaping () -> ()) {
-//        self.onIncomingCall = { call in
-//            _ = self.phone.acceptCall(for: call.session)
-//            callback()
-//        }
-//
-//        if let call = self.call {
-//            VialerLogInfo("We have found the call already and can accept it.")
-//            self.onIncomingCall?(call)
-//            self.onIncomingCall = nil
-//            return
-//        }
-//
-//        VialerLogInfo("We have no call yet, so we will queue to accept as soon as possible.")
+        self.onIncomingCall = { call in
+            _ = self.phoneLib.acceptCall(for: call.session)
+            callback()
+        }
+
+        if let call = self.call {
+            print("We have found the call already and can accept it.")
+            self.onIncomingCall?(call)
+            self.onIncomingCall = nil
+            return
+        }
+
+        print("We have no call yet, so we will queue to accept as soon as possible.")
     }
     
     func prepareForIncomingCall(uuid: UUID) { //wip

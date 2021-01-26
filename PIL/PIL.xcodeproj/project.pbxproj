@@ -13,6 +13,10 @@
 		8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319D8B62576AD8D0095E54E /* PILTests.swift */; };
 		8319D8B92576AD8D0095E54E /* PIL.h in Headers */ = {isa = PBXBuildFile; fileRef = 8319D8AB2576AD8D0095E54E /* PIL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		836A97F425ACDB4A00497759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836A97F325ACDB4A00497759 /* Main.storyboard */; };
+		837C275A25B8A64E008220C6 /* PushKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C275925B8A64E008220C6 /* PushKitManager.swift */; };
+		837C275B25B8A64E008220C6 /* PushKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C275925B8A64E008220C6 /* PushKitManager.swift */; };
+		8385249A25BB16E1008F4827 /* MiddlewareDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385249925BB16E1008F4827 /* MiddlewareDelegate.swift */; };
+		8385249B25BB16E1008F4827 /* MiddlewareDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385249925BB16E1008F4827 /* MiddlewareDelegate.swift */; };
 		8396095525B1D78700392B5E /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396095425B1D78700392B5E /* Actions.swift */; };
 		83B84F82257D7B1900BABAC7 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B84F81257D7B1900BABAC7 /* PIL.swift */; };
 		83B84F83257D7B1900BABAC7 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B84F81257D7B1900BABAC7 /* PIL.swift */; };
@@ -66,6 +70,8 @@
 		8319D8B62576AD8D0095E54E /* PILTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PILTests.swift; sourceTree = "<group>"; };
 		8319D8B82576AD8D0095E54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		836A97F325ACDB4A00497759 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		837C275925B8A64E008220C6 /* PushKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushKitManager.swift; sourceTree = "<group>"; };
+		8385249925BB16E1008F4827 /* MiddlewareDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareDelegate.swift; sourceTree = "<group>"; };
 		8396095425B1D78700392B5E /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		83B84F81257D7B1900BABAC7 /* PIL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIL.swift; sourceTree = "<group>"; };
 		83C98B9325A8AD1900CECE31 /* PILExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PILExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,9 +222,11 @@
 		83F69EC12593CD0C0076B8F0 /* Push */ = {
 			isa = PBXGroup;
 			children = (
+				837C275925B8A64E008220C6 /* PushKitManager.swift */,
 				83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */,
 				83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */,
 				83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */,
+				8385249925BB16E1008F4827 /* MiddlewareDelegate.swift */,
 			);
 			path = Push;
 			sourceTree = "<group>";
@@ -552,7 +560,9 @@
 				83F69EB8259230A60076B8F0 /* SimpleState.swift in Sources */,
 				8396095525B1D78700392B5E /* Actions.swift in Sources */,
 				83F69EA7258FCF1E0076B8F0 /* RegistrationError.swift in Sources */,
+				837C275A25B8A64E008220C6 /* PushKitManager.swift in Sources */,
 				83F69EAE25922CE60076B8F0 /* CallKitDelegate.swift in Sources */,
+				8385249A25BB16E1008F4827 /* MiddlewareDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,7 +581,9 @@
 				83F69EAF25922CE60076B8F0 /* CallKitDelegate.swift in Sources */,
 				83B84F83257D7B1900BABAC7 /* PIL.swift in Sources */,
 				83FADAC7258BD81100CA64C8 /* Auth.swift in Sources */,
+				837C275B25B8A64E008220C6 /* PushKitManager.swift in Sources */,
 				83F69EA8258FCF1E0076B8F0 /* RegistrationError.swift in Sources */,
+				8385249B25BB16E1008F4827 /* MiddlewareDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +670,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -716,7 +728,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

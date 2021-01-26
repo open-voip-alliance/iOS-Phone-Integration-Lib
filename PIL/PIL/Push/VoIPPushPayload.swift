@@ -8,7 +8,7 @@
 import Foundation
 import PushKit
 
-struct VoIPPushPayload {
+public struct VoIPPushPayload {
     let phoneNumber: String
     let uuid: UUID
     let responseUrl: String

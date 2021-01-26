@@ -124,6 +124,11 @@ class LinphoneManager:SipSdkProtocol {
             
             lc.useRfc2833ForDtmf = true
             lc.ipv6Enabled = true
+            
+            lc.dnsSearchEnabled = false
+            lc.dnsServersApp = ["8.8.8.8"]
+            lc.dnsSrvEnabled = false
+            
             setTimer()
             print("Linphone successfully registering")
         } catch (let error) {
@@ -191,7 +196,7 @@ class LinphoneManager:SipSdkProtocol {
         }
     }
     
-    internal func setAudioCodecs(_ codecs: [Codec]) {
+    func setAudioCodecs(_ codecs: [Codec]) {
         var disabledPayloads = lc.audioPayloadTypes
 
         for codec in Codec.allCases {
