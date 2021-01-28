@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol MiddlewareDelegate: class {
+@objc public protocol MiddlewareDelegate {
 
     /**
      *  Tells the middleware that the user is able to receive the call.
@@ -16,7 +16,7 @@ public protocol MiddlewareDelegate: class {
      *  @param available if the user is avaiable to receive the call.
      *  @param completion optional block giving access to an error object when one occurs.
      */
-    func respond(payload:NSDictionary, available:Bool, completion:((Error?) -> ())?)
+    @objc func respond(payload:NSDictionary, available:Bool, completion:((Error?) -> ())?)
     
-    func tokenReceived(token: String)
+    //wip func tokenReceived(token: String)
 }

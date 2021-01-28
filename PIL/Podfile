@@ -2,7 +2,6 @@ platform :ios, '11.3'
 
 target 'PIL' do
 
-  
   source 'https://gitlab.linphone.org/BC/public/podspec.git'
   source 'https://github.com/CocoaPods/Specs.git'
   
@@ -16,6 +15,9 @@ target 'PIL' do
   
   target 'PILExampleApp' do
     pod 'PIL', :path => '/Users/chris/projects/Vialer/iOS/iOS-platform-integration-layer/PIL'
+    pod 'AFNetworkActivityLogger'
+    pod 'AFNetworking'
+    pod 'SAMKeychain'
   end
 
 end

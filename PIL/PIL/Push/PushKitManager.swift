@@ -31,7 +31,7 @@ class PushKitManager: NSObject {
     func registerForVoIPPushes() {
         if hasRegisteredForVoIPPushes() {
             if self.token != nil {
-                notifications.post(name: Notification.Name.receivedApnsToken, object: nil)
+                notifications.post(name: Notification.Name.receivedApnsToken, object: nil) //wip replace this with middlewareDelegate method call
             }
             return
         }
@@ -53,7 +53,7 @@ extension PushKitManager: PKPushRegistryDelegate {
     func pushRegistry(_ registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
         let token = String(apnsToken: pushCredentials.token)
         print("Received a new APNS token: \(token)")
-        notifications.post(name: Notification.Name.receivedApnsToken, object: nil)
+        notifications.post(name: Notification.Name.receivedApnsToken, object: nil) //wip replace with tokenReceived from middleware delegate 
     }
 
     func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> ()) {

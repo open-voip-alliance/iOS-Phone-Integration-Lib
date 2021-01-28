@@ -65,6 +65,9 @@ class TableViewController: UITableViewController {
                 (sender as! UIButton).setTitle(result ? "Disconnect" : "Failed", for: .normal)
                 print("Account \(accountTF.text!) tried to register on \(domainTF.text!):\(portTF.text!) with success = \(result).")
             })
+            
+            //wip register for pushes here
+            pil.
         }
     }
     

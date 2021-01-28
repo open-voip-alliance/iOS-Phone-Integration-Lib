@@ -12,7 +12,7 @@ class Actions {
     
     func performCallAction(action: (_: UUID) -> CXCallAction) {
 //        guard let uuid = sip.call?.uuid else {
-//            VialerLogError("Unable to perform action on call as there is no active call")
+//            print("Unable to perform action on call as there is no active call")
 //            return
 //        }
 
@@ -21,12 +21,12 @@ class Actions {
 //
 //        controller.request(CXTransaction(action: action)) { error in
 //            if error != nil {
-//                VialerLogError("Failed to perform \(action.description) \(String(describing: error?.localizedDescription))")
+//                print("Failed to perform \(action.description) \(String(describing: error?.localizedDescription))")
 //                DispatchQueue.main.async {
 //                 self.dismiss(animated: true)
 //                }
 //            } else {
-//                VialerLogDebug("Performed \(action.description))")
+//                debugPrint("Performed \(action.description))")
 //            }
 //        }
     }

@@ -98,9 +98,11 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/linphone-sdk/linphone-sdk/apple-darwin/Resources/liblinphone_tester"
+  install_resource "${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/linphone-sdk/linphone-sdk/apple-darwin/Resources/liblinphone_tester"
+  install_resource "${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

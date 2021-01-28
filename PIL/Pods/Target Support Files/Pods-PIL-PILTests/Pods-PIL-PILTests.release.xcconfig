@@ -2,6 +2,7 @@ ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/linphone-sdk/linphone-sdk/apple-darwin/Frameworks"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworkActivityLogger" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/SAMKeychain"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/PhoneLib" "${PODS_CONFIGURATION_BUILD_DIR}/linphone-sdk"
 OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/PhoneLib/PhoneLib.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/linphone-sdk/linphonesw.modulemap"

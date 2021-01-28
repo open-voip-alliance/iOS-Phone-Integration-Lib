@@ -1,4 +1,21 @@
 PODS:
+  - AFNetworkActivityLogger (3.0.0):
+    - AFNetworking/NSURLSession (~> 3.0)
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - linphone-sdk (4.4.1):
     - linphone-sdk/all-frameworks (= 4.4.1)
     - linphone-sdk/app-extension (= 4.4.1)
@@ -18,12 +35,20 @@ PODS:
     - linphone-sdk (= 4.4.1)
   - PIL (0.1.0):
     - PhoneLib (~> 0.1.0)
+  - SAMKeychain (1.5.3)
 
 DEPENDENCIES:
+  - AFNetworkActivityLogger
+  - AFNetworking
   - PhoneLib (from `https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git`)
   - PIL (from `/Users/chris/projects/Vialer/iOS/iOS-platform-integration-layer/PIL`)
+  - SAMKeychain
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworkActivityLogger
+    - AFNetworking
+    - SAMKeychain
   https://gitlab.linphone.org/BC/public/podspec.git:
     - linphone-sdk
 
@@ -40,10 +65,13 @@ CHECKOUT OPTIONS:
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
 
 SPEC CHECKSUMS:
+  AFNetworkActivityLogger: e77f68d014becb33c4306a23f56a64906ff72670
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   linphone-sdk: 91183cb3e3224d2d1a211357cd6a39d61636d17d
   PhoneLib: 0a062ca52a13fee76b5858464b5e8f12014a07ec
   PIL: 1f2e3304b36a2f5ddd14541ce39ba1f8dd548302
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
 
-PODFILE CHECKSUM: 45ebd450e5fb842c2122cc5a83e78cfcdcb6a7fd
+PODFILE CHECKSUM: ff10690c3d0030fc3606d4ae81a5f4ee00f00b18
 
 COCOAPODS: 1.10.0

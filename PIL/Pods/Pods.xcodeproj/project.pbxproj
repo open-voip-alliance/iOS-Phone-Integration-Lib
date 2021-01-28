@@ -8,229 +8,362 @@
 
 /* Begin PBXBuildFile section */
 		0031F233CF43632240D994E5B50158C3 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D337C593FB7F96776FD4F0897A8FF40 /* Actions.swift */; };
-		1C29126E61F331B4773553CFC53DFFE9 /* SipManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9EA73C4C7CFF31272C4EF725EC45E /* SipManagerProtocol.swift */; };
+		0235E1382E039589C04FE5AC4AA0167A /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 28761D38237F81D99B05BC3FEF25DC4C /* AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		11F677F9F255BDD5860D25EDF5722285 /* AFNetworkActivityLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 241434DBC51D693D4973195F4C1A1CE0 /* AFNetworkActivityLogger-dummy.m */; };
+		12450CB9DC4AA029A6F65AC67FA90D3F /* Pods-PIL-PILExampleApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D6D1D34E1631820C7A7E44226025A7D /* Pods-PIL-PILExampleApp-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		16FA3502123B29F4D6B53AEC74DD3408 /* PhoneLib-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B58DADE1DAF1780908132A3E75DED807 /* PhoneLib-dummy.m */; };
+		17023A4144C019F7D9BDE86D48A6732C /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0C71D5FE6E80BFC47402A61FC0F38 /* AFAutoPurgingImageCache.m */; };
+		1AD51D58807EF31AB999AEB098B71D97 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E66CFC93C4901B1A95137AE0FA68FD /* UIButton+AFNetworking.m */; };
+		1BF4D9DCF2C605B882B70DA9ED9C7BE0 /* SAMKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 348F50A5D0D482FAF6CC9E0FF2B2A3D2 /* SAMKeychain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1E301D3DFF2EE101ADB14D87FC95E735 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F372CCC13A8ACBCDAD3C0D029866B615 /* SessionDelegate.swift */; };
 		1E9624F20E7DB57C821C2007779B1F80 /* VoIPPushPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F2AA9FF6ECE5FC0949C1D695B2BB86 /* VoIPPushPayload.swift */; };
-		25BD57A55DB19AB388ADD2A2289DC4E1 /* PhoneLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C009ABAA8A7370F9C3FA72D3BF427A8 /* PhoneLib.swift */; };
+		230A7ABB9FD48D70A76E765BAEC0E64A /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ED678D5B6CCA419E34AEFDE0065FF9C9 /* UIActivityIndicatorView+AFNetworking.m */; };
 		27D567DC5422768B6094DA8D2B1BBE26 /* CallKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A12E7D13A09D1236D7FFCC2467A759 /* CallKitDelegate.swift */; };
 		283BAF291CAADD5DB0B222620120649E /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72BA595675CE366458BB4EA70958D86 /* UUIDExtension.swift */; };
 		2B15666EDCB9B322A91521F7B0761523 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D19DD959664E166A6D9BA4D0A0C92F /* PIL.swift */; };
-		2C996B1C74246332F9306D70422C7FED /* Pods-PIL-PILExampleApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D6D1D34E1631820C7A7E44226025A7D /* Pods-PIL-PILExampleApp-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3038F990D4453704919C1D02DE29E3EE /* Pods-PIL-PILExampleApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4A69A9E5A63C9D82DF6BC3BB74193 /* Pods-PIL-PILExampleApp-dummy.m */; };
+		3058C56672CDF1DDDCC8A8681BC09F28 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A15FD7689EBA355CFE784EA9F3AADDB /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		30DCF6BA0446FCB9E421BE88115EBC58 /* PIL-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 319A4CFCB20B5BD7B99ABB1C1F360688 /* PIL-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		363A6AEDE4100E0C62E5CF12FFDD02D1 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 842DD9D54E522A37654FCC44EA58BB35 /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		390498D6DB6F4CCFEC510E0743B65CED /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C62D01D03525451032B0271692AAF74 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3D4B2555FADC7AC80742E51499860392 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 40E19FFAA7D2F10BC9B4C10B167BBD32 /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3E433A134EDACB6CFE6D98EBBA4990E1 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = D430244259FC35C9647EBD7B8AB41F15 /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4044AF6E41D3C817BA024919E34D1988 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D098F92D3ACEA2961DF1D8B51439AF /* UIRefreshControl+AFNetworking.m */; };
+		409F4404E4F0CABF04183B49739D983C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CC6FBC305AB93746726EF47AF79E04 /* AFNetworkReachabilityManager.m */; };
 		40FE323D591164594CB316537CCE8B59 /* Pods-PIL-PILTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 639DC62B84D7921D603A2543BB1F570C /* Pods-PIL-PILTests-dummy.m */; };
-		428EF27C6932687B8EA3620D3775DC23 /* AttendedTransferSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF1FDFD0F53B46C1A8743AC0FA5AA3 /* AttendedTransferSession.swift */; };
 		449F3668A16FA917B40E2030BEB4C45D /* Pods-PIL-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B45C8BC34C0A21013A5ACE8AB02D42 /* Pods-PIL-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		45020BD41F0C6F6A0DCF59598CEAC938 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4699B4AEE93E73ACC49930F0A2620B7A /* Session.swift */; };
+		47CF3E36EE9650F285DA19585EA05DFB /* BaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF99078AE0B11695FCBB0792B6E221 /* BaseManagerProtocol.swift */; };
+		4BD370F964E9889ECD356277B21919F1 /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3AA1C24D127BCE101FDEDB8E3D512 /* SessionState.swift */; };
+		4DC285A1AC160BBFC1DAEFA3E69AD30F /* SipRegistrationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BB6D98AFFE6146DE848F166AA55CD /* SipRegistrationStatus.swift */; };
 		4E8E4501FE7D7E3EF3D8BB65D5C5964F /* MiddlewareDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE7D27D75387FEA8A64CB2EDA093BE5 /* MiddlewareDelegate.swift */; };
+		4F796583511CBEB534B433C2C194C564 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1191C13E1C5E0BA0D8A499FEA31D2043 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		536DC49D91108AEC06D55A1EDF33E3D7 /* SipSDKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A71C8C910608FC688660743B828F6 /* SipSDKDelegate.swift */; };
 		5A1C72581907E05E6B927026FF322974 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94386181D3758C24270ED1E232D18C7F /* Call.swift */; };
-		5B6ACB5CEF703DF7A049F6A33D495B10 /* RegistrationStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C693136C51688835553751C932168C /* RegistrationStateDelegate.swift */; };
 		5F115DC93C4FA2AE588D657BD0C24DBD /* PIL-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0B7AAE562DB5F90DA7B2501B271C /* PIL-dummy.m */; };
-		611B138C03BC02155E845AF796FC4361 /* LinphoneLoggingServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9C3A761A2DCDBB46B94419698141 /* LinphoneLoggingServiceManager.swift */; };
-		638944A4FD1751271B456DDD7375CDA7 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA80D9226CDFFB817D1CCC9B4EEEAC /* SessionDelegate.swift */; };
-		668D027069466246DC1AE6E7B147544B /* SipSdkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C6BDBB19C8403BEFC26BE8D0096D3 /* SipSdkProtocol.swift */; };
-		69C8514D36D10ACADB0E61A4BAB3E873 /* PhoneLib-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FB8274E147229E09C420BA3EFF2A0 /* PhoneLib-dummy.m */; };
+		60A51BBA5662A8951E89A926B8EC1926 /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = CADD3015AD2315F760725117392AF102 /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		61413027FE754557762CA85F1E438888 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E63227B004A8399CFEFDA27EB7853733 /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		690E0903DDE357CB3976011EAB41E3C3 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C0BA26DE4F57DB5661D0C8D46569C3 /* AFImageDownloader.m */; };
 		6A229A55C5C16BB35DF50420B29908B8 /* Pods-PIL-PILTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB3F2D10356ECE110E24264A11971B08 /* Pods-PIL-PILTests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6FEED5072253E67F33836ABEF468A14A /* AttendedTransferSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD87CEC41914346944662B5ABE08F7A /* AttendedTransferSession.swift */; };
+		703AF1B46157D173AEFA92DF99E31DA8 /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FA63FC1CA217D460688AAE7FA2EA2B /* AFNetworkActivityLogger.m */; };
+		709F2D19872EF378F04AA91A12DBDC0F /* Codec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B884794FF0F28266D2F08E17660C56 /* Codec.swift */; };
 		74256F130EEB68C2C5354F8CFC7E1B87 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8454F6182DF52203E924431408238E /* Direction.swift */; };
-		78E76A7578F3B0A458A6B02051036420 /* SipRegistrationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB32218A934BE7AB0A1C71D9F834F1 /* SipRegistrationStatus.swift */; };
-		7A591FDE25CABA5F99A7F8DA9754CEF9 /* Pods-PIL-PILExampleApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4A69A9E5A63C9D82DF6BC3BB74193 /* Pods-PIL-PILExampleApp-dummy.m */; };
-		82D653B07035BEE0C16B08139E38AEFB /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90D58398DF8232CAA69899D200E39C /* SessionState.swift */; };
-		88B78F088A94DBF0FC0C90D9431C67AF /* LinphoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C73204BB125819DD144FFA4CDD8BCC /* LinphoneManager.swift */; };
-		B2C208A5FCB16B0A05D7600A7C161BB7 /* LinphoneWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936C3AF8C24BF4BDB8A9C6AF34249E3 /* LinphoneWrapper.swift */; };
+		744246E6F5F15981E85D0A41A293395F /* SAMKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = BA81C660396D48BEAD3B44E41BE21259 /* SAMKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7443B89D05EA43E227C362FA93C54923 /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E976D05EF8F062F76A87A6CD2AEDFC /* AFNetworking-dummy.m */; };
+		76ADED56E12DA7BDB54ABFACC45B04BF /* linphone-sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3834072B1B1F9082B54AD24F222FBCDF /* linphone-sdk-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		79E8FDBFC11ED9DD38B74D5F365C7628 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDFAF28659D4C6566F5DAD7E2AC41F4 /* UIProgressView+AFNetworking.m */; };
+		83FBB1135810728E70C911FA375C07BA /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD3031E7BD4C9537873010D495A145 /* UIImageView+AFNetworking.m */; };
+		8449FE23CFEE6CA2CBC4336A183BA10A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE12587603A5083DC0704954828824 /* AFURLSessionManager.m */; };
+		84E3236F55DCE0E7B8F19B1C1C2E8D86 /* LinphoneLoggingServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CEB40A4D4F40B58F1E6CFC85B24B2 /* LinphoneLoggingServiceManager.swift */; };
+		85DA4002B6CAD3A3D95731A62CA47A94 /* PhoneLib-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87169BC86DA421E6B37AA6F0E80EEBF9 /* PhoneLib-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		85FF8EB7D43C763FDD8B53C73223A96B /* RegistrationStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8164113129263E2617ADCF52352987 /* RegistrationStateDelegate.swift */; };
+		8C31C7B4CC982149D48CD43CACA6EE03 /* SipManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C24A42B7186AD968C01B84AA0679BDF /* SipManagerProtocol.swift */; };
+		8F4CC2D7D779CDAF51E0F212F6EB02CC /* SAMKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B832438C1576B8EB994EAE785D48A93 /* SAMKeychain-dummy.m */; };
+		911692ACF1F2CCCD60BEEFDF4405F2C0 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 73014FC9217186FCB672DF9D8B522624 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9E43B3EE2DDEA5F7E1F742CD4C908FE3 /* SipSdkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78118C7C9F0E1D8C4C0B1C71B84EF4 /* SipSdkProtocol.swift */; };
+		A02282564A2A10159E47D9AC3798A281 /* SAMKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 836DAD77AE1B2226C100A4BEB999C641 /* SAMKeychainQuery.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A07534BABEC36B4D16D29C41FAD24B3D /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F15E26B312D8E4A4F23D2BDE961CD0 /* UIWebView+AFNetworking.m */; };
+		A766B64464364AE6BA1B36FE6DC8B7C0 /* AFNetworkActivityLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B56C3F1A2EED9D6F49F1B8A8C7E2450 /* AFNetworkActivityLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA3B12F36107AA2BCA3AA4B6E1E80742 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB1CF81DF641B64C65CCB74569B7E7 /* AFNetworkActivityIndicatorManager.m */; };
+		AE94FD76D2C2ED2557ED82FF70E7AEEA /* AFNetworkActivityConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F21610F7AB42600D82CEAA955CFF918 /* AFNetworkActivityConsoleLogger.m */; };
+		B07A25FB0E008A176E334489C3247CFE /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C3AE0AE9067566A640C8C907F62EAEC8 /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B67C8DFD4FAA115F581EC3C6DC720A04 /* PushKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3821ED00319DF6F8F70596DEB5F116 /* PushKitManager.swift */; };
-		B819AA73EF66338A95AB097202CC7D1F /* linphone-sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A20DB9DBED6412F5919FEE40DAFEF0F /* linphone-sdk-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BCCD0EB49B4046C7E92F8D8026A1D1F8 /* BaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC54E0583AF94430A96F03BB23BCF78 /* BaseManagerProtocol.swift */; };
+		BEC45F6D808D6E2D3AAB9E50D4F701AF /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA2F84BA4B6A75F3D73D4AD2EDF8151 /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BF1261312A1B3200F5B4AE8B43BFD9A2 /* Pods-PIL-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CC39D13B9D03CE348D4049311DB80D /* Pods-PIL-dummy.m */; };
+		BF1D906295ED943708DB90DEDCC573A2 /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A3EF2C6D4F893AA4E26F70E091F2E279 /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C12295A19776250FE7615D5EDA4C9C2A /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = D99A877399BB7E7D8EA87DEFA1ACF8F7 /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C47858219B1DB7D34C5661FE026BA340 /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B680C2F42D35B2CAE80BC13A5B071A /* RegistrationError.swift */; };
-		D1DBDE708B49CB7FA12A8F2D4FA4C41F /* PhoneLib-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28CC88780F06402F3B386235C85520EF /* PhoneLib-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C772994BFCA392A10D078E595807543A /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D1E7EF67B42182DF6E483541272770 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C91A498B93118A48A6C79CBBB7549E29 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DB1982FB7DECBAD0B6413B12490147 /* AFURLResponseSerialization.m */; };
+		CDB4AB366E04DA2DAD55108D4BA1750C /* LinphoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60745DD99179298587DD1F46A6487246 /* LinphoneManager.swift */; };
+		D19B8E774FEBC01563AFD02786421D46 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = EB75AC4F16575443FC50B61F3339B086 /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D2903A39212BAB45C0CF25298536AC97 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE58286A742EC59FDDCE75AF8BBE8F /* Auth.swift */; };
-		D71B820237F7CFA734D34CA65D80609B /* SipSDKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D34E8E6039A5CE0BC387010A4C1A9F1 /* SipSDKDelegate.swift */; };
-		DB412B49405B48DE873295F8C0BE3043 /* linphone-sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 280AAB6F3DB7C9422562DD1C17A2170F /* linphone-sdk-dummy.m */; };
-		DD6D1BE63A21461FB3B2AA328EE439B8 /* SipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E546758276400840D27D6AD123CC2C /* SipManager.swift */; };
+		D6AB41290E8DFB38A05CD5886FA6B076 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 73568F29C2F0699CDA31D8661A47C9A2 /* AFCompatibilityMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D6F15E2D2B327D44C1DCD070C34F957B /* linphone-sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F0D18B07968D65F3992785F589FA56 /* linphone-sdk-dummy.m */; };
+		D8949D7CB2F6E0B83B5A108BA9F089E9 /* PhoneLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F1EFED9E5A92094F4903A2B9E84FC /* PhoneLib.swift */; };
 		DDCAB09CD51FB51B9DDE902592F32A2F /* VoIPPushPayloadTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178A0306B7EDA543F112D796BB9E633 /* VoIPPushPayloadTransformer.swift */; };
-		E6739E141BA80BB8E677AA009EFD0356 /* Codec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D74CB83BB0AA65F93815760D31B448E /* Codec.swift */; };
+		DFD8F2A2484F1A6ECDB1AE0CB5406B75 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E41710BC653A9843C625EE57A6EA87 /* AFHTTPSessionManager.m */; };
+		E138103DF04C0B3606F69B723DF2AE2E /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D102399D90722686F3E8BE324E3AAD /* AFURLRequestSerialization.m */; };
+		E6D7B49C0EAEF37DEDF33BAD549A887D /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D5601CB52D9FE77ABF7ECF3239FE6434 /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E9BB7DB3F23A53E81CEF04F4BA8182CA /* SipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31BD7A8187FFE62896257E2A79228F /* SipManager.swift */; };
+		EC8BCD7BCC7EB0D3DE997E8E1E8A279F /* AFNetworkActivityLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E8AF9DB12A9AADC3514970B2FB9D703 /* AFNetworkActivityLoggerProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EE699D5C5B11847A8803192E5EFB8C81 /* SAMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F8BA3FBA8EEA6D0EA5E7F982617A91 /* SAMKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F125F4FE95211975607A315C684C6CFE /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6409F0FE3DB6C857C08766EB44C179FB /* AFSecurityPolicy.m */; };
+		F231AE062A58A2F30A3B2E9AD840540D /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A6111D6D690EBBAF0EFF611C7D989033 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F6AF6876037EAE5825FBFB29C8619153 /* AFNetworkActivityConsoleLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 0017794FEA415F95BA7033DCDDC91654 /* AFNetworkActivityConsoleLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F7878AE2F96CCF51D04FC2C5A2A95FED /* SimpleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0D22C798FD7E0B9AE53CDE3452736 /* SimpleState.swift */; };
-		F798D4117A1B4FC597F319DCB31C5683 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87FA40EF12D168A975D6C1F519F50B5 /* Session.swift */; };
 		FCAC44F0A96359B3BBEC7A203F0787FC /* VoIPPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB976FAFBE21A7667CC7C1BB833E2775 /* VoIPPushHandler.swift */; };
+		FE78B5EA1DE7161E0154B77A948CC6FB /* LinphoneWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966475C5446FE38D752E618702F336B /* LinphoneWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		335B638EF30AB478A3FE4CBCFD502A22 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 21921160E4B0CD327C6FFF50C9BE1F64;
-			remoteInfo = "linphone-sdk";
-		};
-		521D5021704175CB679DF316BAAA0C7E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 21921160E4B0CD327C6FFF50C9BE1F64;
-			remoteInfo = "linphone-sdk";
-		};
-		57375939D8796125EF1C59901E47B469 /* PBXContainerItemProxy */ = {
+		287C352F5F812B069729BCB49B188459 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 63C028C8B25F1B5CF492F3CBF0A25042;
 			remoteInfo = PhoneLib;
 		};
-		8D97BF01AE51AFA10AC56A63A7DCD0B8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 21921160E4B0CD327C6FFF50C9BE1F64;
-			remoteInfo = "linphone-sdk";
-		};
-		94292E31A9E4AF75883ADADBB622E853 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 63C028C8B25F1B5CF492F3CBF0A25042;
-			remoteInfo = PhoneLib;
-		};
-		CF9BFE066DE6A261E241A1AE4F49BAD2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 63C028C8B25F1B5CF492F3CBF0A25042;
-			remoteInfo = PhoneLib;
-		};
-		D65A10F1A6F04BA5357461273F099CB3 /* PBXContainerItemProxy */ = {
+		35407D0CE0D166DA2E7EA13EC9271703 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D7EF811F2F0D98F65BBF6E7EA3B6139D;
 			remoteInfo = PIL;
 		};
-		F4DD8B299D1D082194ECC2052A4982FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 21921160E4B0CD327C6FFF50C9BE1F64;
-			remoteInfo = "linphone-sdk";
-		};
-		FD928929876F59F13DCD5B228DDA95E7 /* PBXContainerItemProxy */ = {
+		37ADDEAA30E8FE1C435A00590F62EAA0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 63C028C8B25F1B5CF492F3CBF0A25042;
 			remoteInfo = PhoneLib;
 		};
+		5534E3B05E961A025D704A4CDD4B712A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
+			remoteInfo = AFNetworking;
+		};
+		565F97FB3ACDA643FC98B713D5CA7690 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21921160E4B0CD327C6FFF50C9BE1F64;
+			remoteInfo = "linphone-sdk";
+		};
+		61E51D9D9A491A485CD919C08B3270F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21921160E4B0CD327C6FFF50C9BE1F64;
+			remoteInfo = "linphone-sdk";
+		};
+		8C22F0105A7D155CE638E21659C5A12A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21921160E4B0CD327C6FFF50C9BE1F64;
+			remoteInfo = "linphone-sdk";
+		};
+		9B7F98CF77564FE8DF97FBBF78EBCCA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5572D14DECB5A676C1B31B30A3BA7F10;
+			remoteInfo = SAMKeychain;
+		};
+		A8F38796EE855DCEE4FFCE032FDD421E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63C028C8B25F1B5CF492F3CBF0A25042;
+			remoteInfo = PhoneLib;
+		};
+		CB1431BC9B7129479FB788535EE46A4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63C028C8B25F1B5CF492F3CBF0A25042;
+			remoteInfo = PhoneLib;
+		};
+		CF5771F53199753473E2D3587BFE89C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
+			remoteInfo = AFNetworking;
+		};
+		D6E7AA4D4116AD0A670865BCDA928C3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21921160E4B0CD327C6FFF50C9BE1F64;
+			remoteInfo = "linphone-sdk";
+		};
+		F51992D5232C4FADA8C779A6E2E6760B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 345AD5892F69C88D2C7544242987B2EC;
+			remoteInfo = AFNetworkActivityLogger;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0017794FEA415F95BA7033DCDDC91654 /* AFNetworkActivityConsoleLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityConsoleLogger.h; path = AFNetworkActivityLogger/AFNetworkActivityConsoleLogger.h; sourceTree = "<group>"; };
 		013D873BC087DF83BA267E5C829AD474 /* Pods-PIL-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PIL-acknowledgements.markdown"; sourceTree = "<group>"; };
 		03122C0B4D0D960BC3B6F990DF0A68B7 /* PIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PIL.debug.xcconfig; sourceTree = "<group>"; };
 		07F2AA9FF6ECE5FC0949C1D695B2BB86 /* VoIPPushPayload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoIPPushPayload.swift; sourceTree = "<group>"; };
 		092ECD26E3B9E83C0FB848A6D2ADDDDA /* Pods-PIL-PILTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PIL-PILTests-resources.sh"; sourceTree = "<group>"; };
-		0C4820714DC7A8E421AEA2B4E427A001 /* ortp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ortp.framework; path = "linphone-sdk/apple-darwin/Frameworks/ortp.framework"; sourceTree = "<group>"; };
+		09E41710BC653A9843C625EE57A6EA87 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		0AA2F84BA4B6A75F3D73D4AD2EDF8151 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		0D4CB830C92918E0AAB84758F3C089EB /* linphone-sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "linphone-sdk.debug.xcconfig"; sourceTree = "<group>"; };
 		0D6D1D34E1631820C7A7E44226025A7D /* Pods-PIL-PILExampleApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PIL-PILExampleApp-umbrella.h"; sourceTree = "<group>"; };
 		0DE7D27D75387FEA8A64CB2EDA093BE5 /* MiddlewareDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MiddlewareDelegate.swift; sourceTree = "<group>"; };
+		0E31BD7A8187FFE62896257E2A79228F /* SipManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipManager.swift; path = PhoneLib/Managers/Sip/SipManager.swift; sourceTree = "<group>"; };
 		0E4C441A75133ACDE490DA883FDA744E /* Pods-PIL-PILExampleApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PIL-PILExampleApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		0FFC9C3A761A2DCDBB46B94419698141 /* LinphoneLoggingServiceManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinphoneLoggingServiceManager.swift; path = PhoneLib/Managers/Linphone/LinphoneLoggingServiceManager.swift; sourceTree = "<group>"; };
+		0E8AF9DB12A9AADC3514970B2FB9D703 /* AFNetworkActivityLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityLoggerProtocol.h; path = AFNetworkActivityLogger/AFNetworkActivityLoggerProtocol.h; sourceTree = "<group>"; };
+		0FC4D21FE4CAC1462A981B02AF8601B0 /* AFNetworkActivityLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworkActivityLogger-prefix.pch"; sourceTree = "<group>"; };
+		1191C13E1C5E0BA0D8A499FEA31D2043 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		122D97B8134CEF4C22F967A55251A42C /* bctoolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = bctoolbox.framework; path = "linphone-sdk/apple-darwin/Frameworks/bctoolbox.framework"; sourceTree = "<group>"; };
 		13B45C8BC34C0A21013A5ACE8AB02D42 /* Pods-PIL-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PIL-umbrella.h"; sourceTree = "<group>"; };
-		188F368C973F955307506334D9723113 /* PhoneLib-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PhoneLib-prefix.pch"; sourceTree = "<group>"; };
-		19CF5173FCF55AADE3FAD1B095853418 /* linphone-sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "linphone-sdk.modulemap"; sourceTree = "<group>"; };
-		1B28BF86753AC0A452D4BB728F17C0D0 /* lime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = lime.framework; path = "linphone-sdk/apple-darwin/Frameworks/lime.framework"; sourceTree = "<group>"; };
-		20CB32218A934BE7AB0A1C71D9F834F1 /* SipRegistrationStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipRegistrationStatus.swift; path = PhoneLib/Enums/SipRegistrationStatus.swift; sourceTree = "<group>"; };
-		23FCA399D2D01CA1BEAF74BB473101C8 /* belcard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = belcard.framework; path = "linphone-sdk/apple-darwin/Frameworks/belcard.framework"; sourceTree = "<group>"; };
+		13D1E7EF67B42182DF6E483541272770 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		1B832438C1576B8EB994EAE785D48A93 /* SAMKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAMKeychain-dummy.m"; sourceTree = "<group>"; };
+		1DFBD45E651BF3ED8F50165DD29F8C2E /* linphone-sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "linphone-sdk.modulemap"; sourceTree = "<group>"; };
+		21E66CFC93C4901B1A95137AE0FA68FD /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
 		2413A3BA144202DE4ED86EF5573EE4A4 /* Pods-PIL-PILExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PIL-PILExampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		280AAB6F3DB7C9422562DD1C17A2170F /* linphone-sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "linphone-sdk-dummy.m"; sourceTree = "<group>"; };
-		28CC88780F06402F3B386235C85520EF /* PhoneLib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PhoneLib-umbrella.h"; sourceTree = "<group>"; };
+		241434DBC51D693D4973195F4C1A1CE0 /* AFNetworkActivityLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworkActivityLogger-dummy.m"; sourceTree = "<group>"; };
+		25F14FF79135AED09B5E21AFDAE69D0F /* belr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = belr.framework; path = "linphone-sdk/apple-darwin/Frameworks/belr.framework"; sourceTree = "<group>"; };
+		264643F472BDE8A69C3F68E8BA146C95 /* linphone-sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "linphone-sdk-prefix.pch"; sourceTree = "<group>"; };
+		28761D38237F81D99B05BC3FEF25DC4C /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
 		2CD16DB823BC1228DF21DA85B701949D /* Pods-PIL-PILExampleApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PIL-PILExampleApp.modulemap"; sourceTree = "<group>"; };
+		2F21610F7AB42600D82CEAA955CFF918 /* AFNetworkActivityConsoleLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityConsoleLogger.m; path = AFNetworkActivityLogger/AFNetworkActivityConsoleLogger.m; sourceTree = "<group>"; };
+		301A53C65B77A20BBF496DB39088D7B6 /* liblinphone_tester */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = liblinphone_tester; path = "linphone-sdk/apple-darwin/Resources/liblinphone_tester"; sourceTree = "<group>"; };
+		307994D469B2BF0DDE5E7547A51D744F /* AFNetworkActivityLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworkActivityLogger.release.xcconfig; sourceTree = "<group>"; };
 		31279D242651080972F4E9460680FE55 /* Pods-PIL-PILExampleApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PIL-PILExampleApp-frameworks.sh"; sourceTree = "<group>"; };
 		319A4CFCB20B5BD7B99ABB1C1F360688 /* PIL-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PIL-umbrella.h"; sourceTree = "<group>"; };
 		33C4A69A9E5A63C9D82DF6BC3BB74193 /* Pods-PIL-PILExampleApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PIL-PILExampleApp-dummy.m"; sourceTree = "<group>"; };
+		348F50A5D0D482FAF6CC9E0FF2B2A3D2 /* SAMKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAMKeychain.h; path = Sources/SAMKeychain.h; sourceTree = "<group>"; };
 		3521CE23FE9E25728BF16546B930E744 /* Pods-PIL-PILTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PIL-PILTests.modulemap"; sourceTree = "<group>"; };
-		35B9EA73C4C7CFF31272C4EF725EC45E /* SipManagerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipManagerProtocol.swift; path = PhoneLib/Managers/SipManagerProtocol.swift; sourceTree = "<group>"; };
-		365FBD359D25A9864CE117FC7D2F1384 /* linphonetester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = linphonetester.framework; path = "linphone-sdk/apple-darwin/Frameworks/linphonetester.framework"; sourceTree = "<group>"; };
-		3857949E8BAF6C7C72D91B26856B8838 /* bctoolbox-ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "bctoolbox-ios.framework"; path = "linphone-sdk/apple-darwin/Frameworks/bctoolbox-ios.framework"; sourceTree = "<group>"; };
+		3834072B1B1F9082B54AD24F222FBCDF /* linphone-sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "linphone-sdk-umbrella.h"; sourceTree = "<group>"; };
+		38DE3558D17D048BC99025FC8508E1BD /* AFNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.debug.xcconfig; sourceTree = "<group>"; };
 		3905DDD714CABE7A437AD463D6D09F6C /* libPhoneLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPhoneLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BCC3BABE114C769B363250705A53179 /* msamr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = msamr.framework; path = "linphone-sdk/apple-darwin/Frameworks/msamr.framework"; sourceTree = "<group>"; };
+		3B56C3F1A2EED9D6F49F1B8A8C7E2450 /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityLogger.h; path = AFNetworkActivityLogger/AFNetworkActivityLogger.h; sourceTree = "<group>"; };
+		3C62D01D03525451032B0271692AAF74 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		3C7831A76DFB12DB2953F653B3063E87 /* linphonetester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = linphonetester.framework; path = "linphone-sdk/apple-darwin/Frameworks/linphonetester.framework"; sourceTree = "<group>"; };
+		3C9D6CDE8961FE7AF1EEBDE61E3B0D6F /* bctoolbox-tester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "bctoolbox-tester.framework"; path = "linphone-sdk/apple-darwin/Frameworks/bctoolbox-tester.framework"; sourceTree = "<group>"; };
+		3D0A71C8C910608FC688660743B828F6 /* SipSDKDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipSDKDelegate.swift; path = PhoneLib/Protocols/SipSDKDelegate.swift; sourceTree = "<group>"; };
+		3FD87CEC41914346944662B5ABE08F7A /* AttendedTransferSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttendedTransferSession.swift; path = PhoneLib/Models/AttendedTransferSession.swift; sourceTree = "<group>"; };
+		40E19FFAA7D2F10BC9B4C10B167BBD32 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		41D102399D90722686F3E8BE324E3AAD /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
 		45CC39D13B9D03CE348D4049311DB80D /* Pods-PIL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PIL-dummy.m"; sourceTree = "<group>"; };
-		490C442617738E18FBD054E4C5A486AF /* mssilk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mssilk.framework; path = "linphone-sdk/apple-darwin/Frameworks/mssilk.framework"; sourceTree = "<group>"; };
-		5DBF5F9078FCBA395E01F6398F4A71D5 /* bctoolbox-tester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "bctoolbox-tester.framework"; path = "linphone-sdk/apple-darwin/Frameworks/bctoolbox-tester.framework"; sourceTree = "<group>"; };
+		4699B4AEE93E73ACC49930F0A2620B7A /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = PhoneLib/Models/Session.swift; sourceTree = "<group>"; };
+		52F0D18B07968D65F3992785F589FA56 /* linphone-sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "linphone-sdk-dummy.m"; sourceTree = "<group>"; };
+		547F1EFED9E5A92094F4903A2B9E84FC /* PhoneLib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneLib.swift; path = PhoneLib/PhoneLib.swift; sourceTree = "<group>"; };
+		5A474AD39AA9F5C2792F88EE352665B4 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		5C24A42B7186AD968C01B84AA0679BDF /* SipManagerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipManagerProtocol.swift; path = PhoneLib/Managers/SipManagerProtocol.swift; sourceTree = "<group>"; };
 		5DD9F8D73B4866EE252AB30B3CF351B2 /* Pods-PIL-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PIL-acknowledgements.plist"; sourceTree = "<group>"; };
-		5F2D5A30CC69426A52B02420851B31E9 /* PhoneLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PhoneLib.modulemap; sourceTree = "<group>"; };
 		5F3821ED00319DF6F8F70596DEB5F116 /* PushKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PushKitManager.swift; sourceTree = "<group>"; };
-		5FC54E0583AF94430A96F03BB23BCF78 /* BaseManagerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseManagerProtocol.swift; path = PhoneLib/Managers/BaseManagerProtocol.swift; sourceTree = "<group>"; };
-		6069B66565B456B5CDE7621F4763A038 /* mswebrtc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mswebrtc.framework; path = "linphone-sdk/apple-darwin/Frameworks/mswebrtc.framework"; sourceTree = "<group>"; };
+		5F8590AC6A39485D73BB6231256E7A88 /* msx264.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = msx264.framework; path = "linphone-sdk/apple-darwin/Frameworks/msx264.framework"; sourceTree = "<group>"; };
+		5FFB1CF81DF641B64C65CCB74569B7E7 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
+		60745DD99179298587DD1F46A6487246 /* LinphoneManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinphoneManager.swift; path = PhoneLib/Managers/Linphone/LinphoneManager.swift; sourceTree = "<group>"; };
+		60D098F92D3ACEA2961DF1D8B51439AF /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		612028EAFF1C2054A0EB821A9C9F2440 /* libSAMKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSAMKeychain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		63392D5D07E1E48B1AF35A814B63DA68 /* Pods-PIL-PILExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PIL-PILExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		639DC62B84D7921D603A2543BB1F570C /* Pods-PIL-PILTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PIL-PILTests-dummy.m"; sourceTree = "<group>"; };
-		647D3C788039DAA71A48618EE9C63D6D /* mscodec2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mscodec2.framework; path = "linphone-sdk/apple-darwin/Frameworks/mscodec2.framework"; sourceTree = "<group>"; };
+		6409F0FE3DB6C857C08766EB44C179FB /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		67CC9450E9D06C3B14B41595F85744B6 /* PIL.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PIL.modulemap; sourceTree = "<group>"; };
-		6D2FB8274E147229E09C420BA3EFF2A0 /* PhoneLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PhoneLib-dummy.m"; sourceTree = "<group>"; };
-		6D6A13018A5497C13E1E1315B46991A7 /* bctoolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = bctoolbox.framework; path = "linphone-sdk/apple-darwin/Frameworks/bctoolbox.framework"; sourceTree = "<group>"; };
-		6F9DF61FF79E6F2116DD354C2EC865E9 /* liblinphone_tester */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = liblinphone_tester; path = "linphone-sdk/apple-darwin/Resources/liblinphone_tester"; sourceTree = "<group>"; };
+		6A7B748F71CFB526C583232F0ACC9658 /* linphone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = linphone.framework; path = "linphone-sdk/apple-darwin/Frameworks/linphone.framework"; sourceTree = "<group>"; };
+		6EF2F8BB5C6F07F4A3F15E2BB920D8B9 /* mscodec2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mscodec2.framework; path = "linphone-sdk/apple-darwin/Frameworks/mscodec2.framework"; sourceTree = "<group>"; };
+		6FF0C71D5FE6E80BFC47402A61FC0F38 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
 		7197422C5387D6B9A39339DFFB079B47 /* libPods-PIL-PILExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIL-PILExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73014FC9217186FCB672DF9D8B522624 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
+		73568F29C2F0699CDA31D8661A47C9A2 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFCompatibilityMacros.h; path = AFNetworking/AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		73D19DD959664E166A6D9BA4D0A0C92F /* PIL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PIL.swift; path = PIL/PIL.swift; sourceTree = "<group>"; };
+		75E17C7E1E59C9F2C3F1C6FE4C99A38C /* SAMKeychain.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SAMKeychain.bundle; path = Support/SAMKeychain.bundle; sourceTree = "<group>"; };
 		76CDFF892BB5ED906B9C4ECC30FD8CB2 /* Pods-PIL.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PIL.modulemap"; sourceTree = "<group>"; };
-		7C009ABAA8A7370F9C3FA72D3BF427A8 /* PhoneLib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneLib.swift; path = PhoneLib/PhoneLib.swift; sourceTree = "<group>"; };
+		79D3AA1C24D127BCE101FDEDB8E3D512 /* SessionState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionState.swift; path = PhoneLib/Enums/SessionState.swift; sourceTree = "<group>"; };
+		7AFE12587603A5083DC0704954828824 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
 		7D337C593FB7F96776FD4F0897A8FF40 /* Actions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Actions.swift; path = PIL/Actions.swift; sourceTree = "<group>"; };
-		7D34E8E6039A5CE0BC387010A4C1A9F1 /* SipSDKDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipSDKDelegate.swift; path = PhoneLib/Protocols/SipSDKDelegate.swift; sourceTree = "<group>"; };
-		800DEA28B16112C7FD2FE30AF5A9EB19 /* belle-sip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "belle-sip.framework"; path = "linphone-sdk/apple-darwin/Frameworks/belle-sip.framework"; sourceTree = "<group>"; };
-		826B321517A1035E59A1E824D552D26E /* PhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PhoneLib.debug.xcconfig; sourceTree = "<group>"; };
+		7DDFAF28659D4C6566F5DAD7E2AC41F4 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		8195B2E9C8544A5C7A7CAAD3E68D4CEF /* belle-sip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "belle-sip.framework"; path = "linphone-sdk/apple-darwin/Frameworks/belle-sip.framework"; sourceTree = "<group>"; };
+		82B06E3378A201A109B6792C11B71543 /* PhoneLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PhoneLib.modulemap; sourceTree = "<group>"; };
+		836DAD77AE1B2226C100A4BEB999C641 /* SAMKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAMKeychainQuery.h; path = Sources/SAMKeychainQuery.h; sourceTree = "<group>"; };
+		842DD9D54E522A37654FCC44EA58BB35 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		848CEB40A4D4F40B58F1E6CFC85B24B2 /* LinphoneLoggingServiceManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinphoneLoggingServiceManager.swift; path = PhoneLib/Managers/Linphone/LinphoneLoggingServiceManager.swift; sourceTree = "<group>"; };
 		84A98F68B68F96B4E483ECD267B634C8 /* Pods-PIL-PILTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PIL-PILTests.debug.xcconfig"; sourceTree = "<group>"; };
-		84C73204BB125819DD144FFA4CDD8BCC /* LinphoneManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinphoneManager.swift; path = PhoneLib/Managers/Linphone/LinphoneManager.swift; sourceTree = "<group>"; };
 		85C81FFFC3EF20E251AB4F1064FF333C /* Pods-PIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PIL.debug.xcconfig"; sourceTree = "<group>"; };
-		88231009600B613D7D4243489EAB4CC8 /* mediastreamer2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mediastreamer2.framework; path = "linphone-sdk/apple-darwin/Frameworks/mediastreamer2.framework"; sourceTree = "<group>"; };
+		87169BC86DA421E6B37AA6F0E80EEBF9 /* PhoneLib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PhoneLib-umbrella.h"; sourceTree = "<group>"; };
 		88B680C2F42D35B2CAE80BC13A5B071A /* RegistrationError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationError.swift; sourceTree = "<group>"; };
+		89CD3031E7BD4C9537873010D495A145 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		8A15FD7689EBA355CFE784EA9F3AADDB /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
 		8F8454F6182DF52203E924431408238E /* Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		923D510911BD717517BAFDA85FA2B8EF /* libPIL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPIL.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92CC6FBC305AB93746726EF47AF79E04 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		94386181D3758C24270ED1E232D18C7F /* Call.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Call.swift; path = PIL/Call.swift; sourceTree = "<group>"; };
 		9454548FCB791746229C362BD7645CC0 /* Pods-PIL-PILExampleApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PIL-PILExampleApp-resources.sh"; sourceTree = "<group>"; };
-		95F730680CFBFB8ED040EA4D0C7EAC90 /* linphone-sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "linphone-sdk.debug.xcconfig"; sourceTree = "<group>"; };
-		993C6BDBB19C8403BEFC26BE8D0096D3 /* SipSdkProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipSdkProtocol.swift; path = PhoneLib/Managers/SipSdkProtocol.swift; sourceTree = "<group>"; };
-		9A20DB9DBED6412F5919FEE40DAFEF0F /* linphone-sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "linphone-sdk-umbrella.h"; sourceTree = "<group>"; };
-		9BFA80D9226CDFFB817D1CCC9B4EEEAC /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = PhoneLib/Protocols/SessionDelegate.swift; sourceTree = "<group>"; };
-		9D74CB83BB0AA65F93815760D31B448E /* Codec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codec.swift; path = PhoneLib/Models/Codec.swift; sourceTree = "<group>"; };
+		95C0BA26DE4F57DB5661D0C8D46569C3 /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
+		95EB071C0A635D75C09E12660C88284F /* PhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PhoneLib.release.xcconfig; sourceTree = "<group>"; };
+		976D9AFC27D8D9FFD0C930508B2E1E7B /* msopenh264.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = msopenh264.framework; path = "linphone-sdk/apple-darwin/Frameworks/msopenh264.framework"; sourceTree = "<group>"; };
+		9939DF4D66121448589BADA4E5DD1F5B /* PhoneLib-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PhoneLib-prefix.pch"; sourceTree = "<group>"; };
+		9AA1F2B578FE11419F987CA342B36404 /* ortp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ortp.framework; path = "linphone-sdk/apple-darwin/Frameworks/ortp.framework"; sourceTree = "<group>"; };
+		9C592A136A2CC5F5529D6677A75AAF18 /* belcard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = belcard.framework; path = "linphone-sdk/apple-darwin/Frameworks/belcard.framework"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1407171FFD9343584B01DF877ACFC78 /* Pods-PIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PIL.release.xcconfig"; sourceTree = "<group>"; };
 		A178A0306B7EDA543F112D796BB9E633 /* VoIPPushPayloadTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoIPPushPayloadTransformer.swift; sourceTree = "<group>"; };
-		A71BC89AD747C8C168912302203CC7EE /* linphone-sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "linphone-sdk.release.xcconfig"; sourceTree = "<group>"; };
+		A3EF2C6D4F893AA4E26F70E091F2E279 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		A3F22BDC537BB982A79490189475516C /* msamr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = msamr.framework; path = "linphone-sdk/apple-darwin/Frameworks/msamr.framework"; sourceTree = "<group>"; };
+		A3FA63FC1CA217D460688AAE7FA2EA2B /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityLogger.m; path = AFNetworkActivityLogger/AFNetworkActivityLogger.m; sourceTree = "<group>"; };
+		A4FA15D44DF6BAC7550EDEED10862AA3 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6111D6D690EBBAF0EFF611C7D989033 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		A6B884794FF0F28266D2F08E17660C56 /* Codec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codec.swift; path = PhoneLib/Models/Codec.swift; sourceTree = "<group>"; };
 		A72BA595675CE366458BB4EA70958D86 /* UUIDExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UUIDExtension.swift; sourceTree = "<group>"; };
+		A819F617AD5B27ED9055F36346C66D5D /* AFNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.release.xcconfig; sourceTree = "<group>"; };
 		A8990D095424DA920158CBB81EB2F948 /* Pods-PIL-PILTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PIL-PILTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A931B85773D9CA16D44D339D7B9937B9 /* SAMKeychain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAMKeychain.release.xcconfig; sourceTree = "<group>"; };
 		A965D787B7A8C95D8AC1A52BD1FA4BB8 /* Pods-PIL-PILTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PIL-PILTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A98C1FF01C1E7E66FD6BA0FC806D4D75 /* limetester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = limetester.framework; path = "linphone-sdk/apple-darwin/Frameworks/limetester.framework"; sourceTree = "<group>"; };
+		AB78118C7C9F0E1D8C4C0B1C71B84EF4 /* SipSdkProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipSdkProtocol.swift; path = PhoneLib/Managers/SipSdkProtocol.swift; sourceTree = "<group>"; };
 		AB976FAFBE21A7667CC7C1BB833E2775 /* VoIPPushHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoIPPushHandler.swift; sourceTree = "<group>"; };
-		ADDF1FDFD0F53B46C1A8743AC0FA5AA3 /* AttendedTransferSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttendedTransferSession.swift; path = PhoneLib/Models/AttendedTransferSession.swift; sourceTree = "<group>"; };
-		B4EF4F0D84A580EAC3684E2F369A6A54 /* belr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = belr.framework; path = "linphone-sdk/apple-darwin/Frameworks/belr.framework"; sourceTree = "<group>"; };
-		B89DD36A6EA86E5E4567AB3294066F0F /* PhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PhoneLib.release.xcconfig; sourceTree = "<group>"; };
-		BC90D58398DF8232CAA69899D200E39C /* SessionState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionState.swift; path = PhoneLib/Enums/SessionState.swift; sourceTree = "<group>"; };
+		B44BB6D98AFFE6146DE848F166AA55CD /* SipRegistrationStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipRegistrationStatus.swift; path = PhoneLib/Enums/SipRegistrationStatus.swift; sourceTree = "<group>"; };
+		B58DADE1DAF1780908132A3E75DED807 /* PhoneLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PhoneLib-dummy.m"; sourceTree = "<group>"; };
+		B6F8BA3FBA8EEA6D0EA5E7F982617A91 /* SAMKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAMKeychain.m; path = Sources/SAMKeychain.m; sourceTree = "<group>"; };
+		B966475C5446FE38D752E618702F336B /* LinphoneWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinphoneWrapper.swift; path = "linphone-sdk/apple-darwin/share/linphonesw/LinphoneWrapper.swift"; sourceTree = "<group>"; };
+		BA81C660396D48BEAD3B44E41BE21259 /* SAMKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAMKeychainQuery.m; path = Sources/SAMKeychainQuery.m; sourceTree = "<group>"; };
+		BB2C21B9352CBEE606730A72BB0B621F /* linphone-sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "linphone-sdk.release.xcconfig"; sourceTree = "<group>"; };
+		BBF81DCC376D72EBCD6E2B40AC211235 /* mssilk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mssilk.framework; path = "linphone-sdk/apple-darwin/Frameworks/mssilk.framework"; sourceTree = "<group>"; };
+		BCEBFF0D841CABDDB1B9C309747A75BF /* limetester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = limetester.framework; path = "linphone-sdk/apple-darwin/Frameworks/limetester.framework"; sourceTree = "<group>"; };
 		BD3E8A6BC93C2DAE126C79E6D4C7FE31 /* liblinphone-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "liblinphone-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBF898A6B994F835DCD4AA47F651318 /* Pods-PIL-PILTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PIL-PILTests.release.xcconfig"; sourceTree = "<group>"; };
-		C00CA3A28F1E0AD15AF83740EA681EAE /* msx264.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = msx264.framework; path = "linphone-sdk/apple-darwin/Frameworks/msx264.framework"; sourceTree = "<group>"; };
 		C2ECFB65D801E9B9955D475ACBAE53F5 /* PIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PIL.release.xcconfig; sourceTree = "<group>"; };
 		C316DAF1647DE5AE7229D5B3009D4695 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C36F0B7AAE562DB5F90DA7B2501B271C /* PIL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PIL-dummy.m"; sourceTree = "<group>"; };
+		C3AE0AE9067566A640C8C907F62EAEC8 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
 		C7E0D22C798FD7E0B9AE53CDE3452736 /* SimpleState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleState.swift; sourceTree = "<group>"; };
 		CA69399402EEBA717E12202AFA94CFD2 /* libPods-PIL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADD3015AD2315F760725117392AF102 /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
 		CB3F2D10356ECE110E24264A11971B08 /* Pods-PIL-PILTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PIL-PILTests-umbrella.h"; sourceTree = "<group>"; };
-		CEC58BAC15887CF549C0C0D470418112 /* msopenh264.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = msopenh264.framework; path = "linphone-sdk/apple-darwin/Frameworks/msopenh264.framework"; sourceTree = "<group>"; };
 		D1CDEC239FDDB5A2CDD880F3B8506C8B /* PIL-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PIL-prefix.pch"; sourceTree = "<group>"; };
+		D223F44D8C5AC201FD2DC9D77563E76E /* PhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PhoneLib.debug.xcconfig; sourceTree = "<group>"; };
+		D2E976D05EF8F062F76A87A6CD2AEDFC /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		D430244259FC35C9647EBD7B8AB41F15 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		D5601CB52D9FE77ABF7ECF3239FE6434 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		D897FFAA5D49B7BF7835B730D15EBEE6 /* libPods-PIL-PILTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIL-PILTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBD4BB68D0405CB5B629429226523742 /* linphone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = linphone.framework; path = "linphone-sdk/apple-darwin/Frameworks/linphone.framework"; sourceTree = "<group>"; };
-		E038ADFFB00A0FC6D8E6E7E6FF67B285 /* linphone-sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "linphone-sdk-prefix.pch"; sourceTree = "<group>"; };
+		D99A877399BB7E7D8EA87DEFA1ACF8F7 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		DA6EC5B39F6E7954A30791CB0658C3EB /* mediastreamer2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mediastreamer2.framework; path = "linphone-sdk/apple-darwin/Frameworks/mediastreamer2.framework"; sourceTree = "<group>"; };
+		DD8164113129263E2617ADCF52352987 /* RegistrationStateDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegistrationStateDelegate.swift; path = PhoneLib/Protocols/RegistrationStateDelegate.swift; sourceTree = "<group>"; };
 		E1DE58286A742EC59FDDCE75AF8BBE8F /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		E3DB1982FB7DECBAD0B6413B12490147 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		E4A1F597867363D74EB09F0A5F2F289D /* PIL.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PIL.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E5EC0CD9DC191C68F10A2C47E68F4D9A /* Pods-PIL-PILExampleApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PIL-PILExampleApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E6C693136C51688835553751C932168C /* RegistrationStateDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegistrationStateDelegate.swift; path = PhoneLib/Protocols/RegistrationStateDelegate.swift; sourceTree = "<group>"; };
+		E5F15E26B312D8E4A4F23D2BDE961CD0 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		E63227B004A8399CFEFDA27EB7853733 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		E65DE44E9DDB2BCC3E87BA07736DE58B /* SAMKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAMKeychain-prefix.pch"; sourceTree = "<group>"; };
+		E9DF99078AE0B11695FCBB0792B6E221 /* BaseManagerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseManagerProtocol.swift; path = PhoneLib/Managers/BaseManagerProtocol.swift; sourceTree = "<group>"; };
+		EB75AC4F16575443FC50B61F3339B086 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
+		ED678D5B6CCA419E34AEFDE0065FF9C9 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
 		F2757C01C770915DF53990A0A3465920 /* Pods-PIL-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PIL-resources.sh"; sourceTree = "<group>"; };
+		F372CCC13A8ACBCDAD3C0D029866B615 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = PhoneLib/Protocols/SessionDelegate.swift; sourceTree = "<group>"; };
+		F3F31A7AFEB4862E85FC07C46853C986 /* lime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = lime.framework; path = "linphone-sdk/apple-darwin/Frameworks/lime.framework"; sourceTree = "<group>"; };
+		F461458DC6D414B5B32190EF1F9D2C85 /* libAFNetworkActivityLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFNetworkActivityLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A12E7D13A09D1236D7FFCC2467A759 /* CallKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallKitDelegate.swift; path = PIL/CallKitDelegate.swift; sourceTree = "<group>"; };
 		F845355C3C79ED943088DA33EEC82A49 /* Pods-PIL-PILTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PIL-PILTests-frameworks.sh"; sourceTree = "<group>"; };
-		F87FA40EF12D168A975D6C1F519F50B5 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = PhoneLib/Models/Session.swift; sourceTree = "<group>"; };
-		F8E546758276400840D27D6AD123CC2C /* SipManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipManager.swift; path = PhoneLib/Managers/Sip/SipManager.swift; sourceTree = "<group>"; };
-		F936C3AF8C24BF4BDB8A9C6AF34249E3 /* LinphoneWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinphoneWrapper.swift; path = "linphone-sdk/apple-darwin/share/linphonesw/LinphoneWrapper.swift"; sourceTree = "<group>"; };
+		FA40BBB3469FA7F597FB60BD7BBF4F47 /* AFNetworkActivityLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworkActivityLogger.debug.xcconfig; sourceTree = "<group>"; };
+		FAA022CA1948019B64A42AB4FBB66D00 /* bctoolbox-ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "bctoolbox-ios.framework"; path = "linphone-sdk/apple-darwin/Frameworks/bctoolbox-ios.framework"; sourceTree = "<group>"; };
+		FAE1C618668FB2C6EE79CF8106733883 /* SAMKeychain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAMKeychain.debug.xcconfig; sourceTree = "<group>"; };
+		FC2965A1E5D66ADB3903023D25DA8482 /* mswebrtc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mswebrtc.framework; path = "linphone-sdk/apple-darwin/Frameworks/mswebrtc.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		674B40457002ECE22B7D7AC30C761D44 /* Frameworks */ = {
+		69B2BCCE41FA0C6F1073B40FF0EEE143 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6CAC4B733D51313B24BBDFECB112AD3A /* Frameworks */ = {
+		6BF782C5C1440B5318AB0A1932EFD474 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,7 +391,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E68C5A3BE5B0E8A03A8E32250483A066 /* Frameworks */ = {
+		C64259458E3491090D4888B3D231E737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8EEFDEE919C9951859B11DC1A1B2BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0722E1A5D9D8CC4675F548ED70282A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBAE241466D53510B47B113F632FA47A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,12 +422,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02C1B6A01F4E7701CAED8DFD57E30AFD /* basic-frameworks */ = {
+		024146869C142961878CC6FD2278B8F1 /* app-extension-swift */ = {
 			isa = PBXGroup;
 			children = (
-				64E9B035E4AACB9F60B93F427047091C /* Frameworks */,
+				B966475C5446FE38D752E618702F336B /* LinphoneWrapper.swift */,
 			);
-			name = "basic-frameworks";
+			name = "app-extension-swift";
 			sourceTree = "<group>";
 		};
 		0571D186027E652868C6DDC4623C9E3E /* Pods-PIL-PILExampleApp */ = {
@@ -293,40 +447,40 @@
 			path = "Target Support Files/Pods-PIL-PILExampleApp";
 			sourceTree = "<group>";
 		};
-		087E4BC65722314C86EFD1961D6ACC1B /* Products */ = {
+		06792A5A08B4334B9A13FAA13BD289E7 /* NSURLSession */ = {
 			isa = PBXGroup;
 			children = (
+				73568F29C2F0699CDA31D8661A47C9A2 /* AFCompatibilityMacros.h */,
+				842DD9D54E522A37654FCC44EA58BB35 /* AFHTTPSessionManager.h */,
+				09E41710BC653A9843C625EE57A6EA87 /* AFHTTPSessionManager.m */,
+				D5601CB52D9FE77ABF7ECF3239FE6434 /* AFURLSessionManager.h */,
+				7AFE12587603A5083DC0704954828824 /* AFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		0DA23838571E750E5F2A003BCF0CA3FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75E17C7E1E59C9F2C3F1C6FE4C99A38C /* SAMKeychain.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1E461C6EBA941C55687801DAAD1F993C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F461458DC6D414B5B32190EF1F9D2C85 /* libAFNetworkActivityLogger.a */,
+				A4FA15D44DF6BAC7550EDEED10862AA3 /* libAFNetworking.a */,
 				BD3E8A6BC93C2DAE126C79E6D4C7FE31 /* liblinphone-sdk.a */,
 				3905DDD714CABE7A437AD463D6D09F6C /* libPhoneLib.a */,
 				923D510911BD717517BAFDA85FA2B8EF /* libPIL.a */,
 				CA69399402EEBA717E12202AFA94CFD2 /* libPods-PIL.a */,
 				7197422C5387D6B9A39339DFFB079B47 /* libPods-PIL-PILExampleApp.a */,
 				D897FFAA5D49B7BF7835B730D15EBEE6 /* libPods-PIL-PILTests.a */,
+				612028EAFF1C2054A0EB821A9C9F2440 /* libSAMKeychain.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		14CD7C69D1BEBFC0545B16D308B813CE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		1575AB20784AB0D4415C1DCFE47BCEE7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		15B945A22374D8D90C98EFE5A50E5EA0 /* all-frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1575AB20784AB0D4415C1DCFE47BCEE7 /* Frameworks */,
-				14CD7C69D1BEBFC0545B16D308B813CE /* Resources */,
-			);
-			name = "all-frameworks";
 			sourceTree = "<group>";
 		};
 		1F23FF1BADC1C30DB1F337A789331CE9 /* Pods-PIL-PILTests */ = {
@@ -346,18 +500,26 @@
 			path = "Target Support Files/Pods-PIL-PILTests";
 			sourceTree = "<group>";
 		};
-		22CCC40102C81444B40C1681FF3F96C1 /* Support Files */ = {
+		27D3584DEE76DEEFF48803157AEEADB5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				19CF5173FCF55AADE3FAD1B095853418 /* linphone-sdk.modulemap */,
-				280AAB6F3DB7C9422562DD1C17A2170F /* linphone-sdk-dummy.m */,
-				E038ADFFB00A0FC6D8E6E7E6FF67B285 /* linphone-sdk-prefix.pch */,
-				9A20DB9DBED6412F5919FEE40DAFEF0F /* linphone-sdk-umbrella.h */,
-				95F730680CFBFB8ED040EA4D0C7EAC90 /* linphone-sdk.debug.xcconfig */,
-				A71BC89AD747C8C168912302203CC7EE /* linphone-sdk.release.xcconfig */,
+				82B06E3378A201A109B6792C11B71543 /* PhoneLib.modulemap */,
+				B58DADE1DAF1780908132A3E75DED807 /* PhoneLib-dummy.m */,
+				9939DF4D66121448589BADA4E5DD1F5B /* PhoneLib-prefix.pch */,
+				87169BC86DA421E6B37AA6F0E80EEBF9 /* PhoneLib-umbrella.h */,
+				D223F44D8C5AC201FD2DC9D77563E76E /* PhoneLib.debug.xcconfig */,
+				95EB071C0A635D75C09E12660C88284F /* PhoneLib.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/linphone-sdk";
+			path = "../Target Support Files/PhoneLib";
+			sourceTree = "<group>";
+		};
+		2C15C06295DD97FC1F4F72B9A1B87AC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				301A53C65B77A20BBF496DB39088D7B6 /* liblinphone_tester */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		2F01C67B52557264F613B2214343EB81 /* Targets Support Files */ = {
@@ -370,32 +532,141 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3E16BDDD308669906B6A291432BEEB08 /* Frameworks */ = {
+		31AE79728A0361E6C0DAECFFFFDAF748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		40BD024C4D76A674457A2D935DE459F9 /* Support Files */ = {
+		37A78D66E80ACC731CC0DF10F89F4A7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5F2D5A30CC69426A52B02420851B31E9 /* PhoneLib.modulemap */,
-				6D2FB8274E147229E09C420BA3EFF2A0 /* PhoneLib-dummy.m */,
-				188F368C973F955307506334D9723113 /* PhoneLib-prefix.pch */,
-				28CC88780F06402F3B386235C85520EF /* PhoneLib-umbrella.h */,
-				826B321517A1035E59A1E824D552D26E /* PhoneLib.debug.xcconfig */,
-				B89DD36A6EA86E5E4567AB3294066F0F /* PhoneLib.release.xcconfig */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37D62AA61F1DE6E913BE0B4589AFECD3 /* linphone-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				F091C0B1FB59DF5C568074EFCECE3BB3 /* all-frameworks */,
+				4CD1F4CA59C49472F2C3DC9CF6F5F731 /* app-extension */,
+				024146869C142961878CC6FD2278B8F1 /* app-extension-swift */,
+				65716F7FECE1880EAE6F7AECBCBC0878 /* basic-frameworks */,
+				B3B1ADD4AEE5AE1E5D58BC8BC6B7B8FD /* Frameworks */,
+				2C15C06295DD97FC1F4F72B9A1B87AC0 /* Resources */,
+				D815B417D963622D1BF95F1B86551419 /* Support Files */,
+			);
+			path = "linphone-sdk";
+			sourceTree = "<group>";
+		};
+		3C4F9D5CD0AB604A4D63FBB9772F16D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		41973953D6EC5B16492A6C3F3D9998B5 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				8A15FD7689EBA355CFE784EA9F3AADDB /* AFSecurityPolicy.h */,
+				6409F0FE3DB6C857C08766EB44C179FB /* AFSecurityPolicy.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		4A2B8B24FBD7517259EDC2384DF9EC89 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EB75AC4F16575443FC50B61F3339B086 /* AFAutoPurgingImageCache.h */,
+				6FF0C71D5FE6E80BFC47402A61FC0F38 /* AFAutoPurgingImageCache.m */,
+				CADD3015AD2315F760725117392AF102 /* AFImageDownloader.h */,
+				95C0BA26DE4F57DB5661D0C8D46569C3 /* AFImageDownloader.m */,
+				73014FC9217186FCB672DF9D8B522624 /* AFNetworkActivityIndicatorManager.h */,
+				5FFB1CF81DF641B64C65CCB74569B7E7 /* AFNetworkActivityIndicatorManager.m */,
+				40E19FFAA7D2F10BC9B4C10B167BBD32 /* UIActivityIndicatorView+AFNetworking.h */,
+				ED678D5B6CCA419E34AEFDE0065FF9C9 /* UIActivityIndicatorView+AFNetworking.m */,
+				A6111D6D690EBBAF0EFF611C7D989033 /* UIButton+AFNetworking.h */,
+				21E66CFC93C4901B1A95137AE0FA68FD /* UIButton+AFNetworking.m */,
+				A3EF2C6D4F893AA4E26F70E091F2E279 /* UIImage+AFNetworking.h */,
+				13D1E7EF67B42182DF6E483541272770 /* UIImageView+AFNetworking.h */,
+				89CD3031E7BD4C9537873010D495A145 /* UIImageView+AFNetworking.m */,
+				C3AE0AE9067566A640C8C907F62EAEC8 /* UIKit+AFNetworking.h */,
+				0AA2F84BA4B6A75F3D73D4AD2EDF8151 /* UIProgressView+AFNetworking.h */,
+				7DDFAF28659D4C6566F5DAD7E2AC41F4 /* UIProgressView+AFNetworking.m */,
+				1191C13E1C5E0BA0D8A499FEA31D2043 /* UIRefreshControl+AFNetworking.h */,
+				60D098F92D3ACEA2961DF1D8B51439AF /* UIRefreshControl+AFNetworking.m */,
+				E63227B004A8399CFEFDA27EB7853733 /* UIWebView+AFNetworking.h */,
+				E5F15E26B312D8E4A4F23D2BDE961CD0 /* UIWebView+AFNetworking.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		4CD1F4CA59C49472F2C3DC9CF6F5F731 /* app-extension */ = {
+			isa = PBXGroup;
+			children = (
+				37A78D66E80ACC731CC0DF10F89F4A7D /* Frameworks */,
+			);
+			name = "app-extension";
+			sourceTree = "<group>";
+		};
+		5B29EE38B0E5E73E12743CB36E7F926A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2E976D05EF8F062F76A87A6CD2AEDFC /* AFNetworking-dummy.m */,
+				5A474AD39AA9F5C2792F88EE352665B4 /* AFNetworking-prefix.pch */,
+				38DE3558D17D048BC99025FC8508E1BD /* AFNetworking.debug.xcconfig */,
+				A819F617AD5B27ED9055F36346C66D5D /* AFNetworking.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PhoneLib";
+			path = "../Target Support Files/AFNetworking";
 			sourceTree = "<group>";
 		};
-		64E9B035E4AACB9F60B93F427047091C /* Frameworks */ = {
+		644C39253B63C62ED15E2A26B6428C0D /* Serialization */ = {
 			isa = PBXGroup;
 			children = (
+				D99A877399BB7E7D8EA87DEFA1ACF8F7 /* AFURLRequestSerialization.h */,
+				41D102399D90722686F3E8BE324E3AAD /* AFURLRequestSerialization.m */,
+				D430244259FC35C9647EBD7B8AB41F15 /* AFURLResponseSerialization.h */,
+				E3DB1982FB7DECBAD0B6413B12490147 /* AFURLResponseSerialization.m */,
 			);
-			name = Frameworks;
+			name = Serialization;
+			sourceTree = "<group>";
+		};
+		65716F7FECE1880EAE6F7AECBCBC0878 /* basic-frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31AE79728A0361E6C0DAECFFFFDAF748 /* Frameworks */,
+			);
+			name = "basic-frameworks";
+			sourceTree = "<group>";
+		};
+		6A1E96F3247AF107710487CF0DD79082 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				28761D38237F81D99B05BC3FEF25DC4C /* AFNetworking.h */,
+				06792A5A08B4334B9A13FAA13BD289E7 /* NSURLSession */,
+				781B628E24EF1AC509D32C190240D878 /* Reachability */,
+				41973953D6EC5B16492A6C3F3D9998B5 /* Security */,
+				644C39253B63C62ED15E2A26B6428C0D /* Serialization */,
+				5B29EE38B0E5E73E12743CB36E7F926A /* Support Files */,
+				4A2B8B24FBD7517259EDC2384DF9EC89 /* UIKit */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		6A710ADB559D03F385FBE02D12C9681C /* AFNetworkActivityLogger */ = {
+			isa = PBXGroup;
+			children = (
+				0017794FEA415F95BA7033DCDDC91654 /* AFNetworkActivityConsoleLogger.h */,
+				2F21610F7AB42600D82CEAA955CFF918 /* AFNetworkActivityConsoleLogger.m */,
+				3B56C3F1A2EED9D6F49F1B8A8C7E2450 /* AFNetworkActivityLogger.h */,
+				A3FA63FC1CA217D460688AAE7FA2EA2B /* AFNetworkActivityLogger.m */,
+				0E8AF9DB12A9AADC3514970B2FB9D703 /* AFNetworkActivityLoggerProtocol.h */,
+				FCC10BD4F6CC77C56628D0827A535802 /* Support Files */,
+			);
+			path = AFNetworkActivityLogger;
 			sourceTree = "<group>";
 		};
 		7438E55CE75C5622E7CA3A5B43008FF0 /* Pod */ = {
@@ -407,35 +678,49 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		8096C9035831046F324E38159F77876C /* Resources */ = {
+		78075A2978853531E4CA2C25099C0A17 /* PhoneLib */ = {
 			isa = PBXGroup;
 			children = (
-				6F9DF61FF79E6F2116DD354C2EC865E9 /* liblinphone_tester */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		86E0D1DB0BA0D6B295D2990A392B0C27 /* PhoneLib */ = {
-			isa = PBXGroup;
-			children = (
-				ADDF1FDFD0F53B46C1A8743AC0FA5AA3 /* AttendedTransferSession.swift */,
-				5FC54E0583AF94430A96F03BB23BCF78 /* BaseManagerProtocol.swift */,
-				9D74CB83BB0AA65F93815760D31B448E /* Codec.swift */,
-				0FFC9C3A761A2DCDBB46B94419698141 /* LinphoneLoggingServiceManager.swift */,
-				84C73204BB125819DD144FFA4CDD8BCC /* LinphoneManager.swift */,
-				7C009ABAA8A7370F9C3FA72D3BF427A8 /* PhoneLib.swift */,
-				E6C693136C51688835553751C932168C /* RegistrationStateDelegate.swift */,
-				F87FA40EF12D168A975D6C1F519F50B5 /* Session.swift */,
-				9BFA80D9226CDFFB817D1CCC9B4EEEAC /* SessionDelegate.swift */,
-				BC90D58398DF8232CAA69899D200E39C /* SessionState.swift */,
-				F8E546758276400840D27D6AD123CC2C /* SipManager.swift */,
-				35B9EA73C4C7CFF31272C4EF725EC45E /* SipManagerProtocol.swift */,
-				20CB32218A934BE7AB0A1C71D9F834F1 /* SipRegistrationStatus.swift */,
-				7D34E8E6039A5CE0BC387010A4C1A9F1 /* SipSDKDelegate.swift */,
-				993C6BDBB19C8403BEFC26BE8D0096D3 /* SipSdkProtocol.swift */,
-				40BD024C4D76A674457A2D935DE459F9 /* Support Files */,
+				3FD87CEC41914346944662B5ABE08F7A /* AttendedTransferSession.swift */,
+				E9DF99078AE0B11695FCBB0792B6E221 /* BaseManagerProtocol.swift */,
+				A6B884794FF0F28266D2F08E17660C56 /* Codec.swift */,
+				848CEB40A4D4F40B58F1E6CFC85B24B2 /* LinphoneLoggingServiceManager.swift */,
+				60745DD99179298587DD1F46A6487246 /* LinphoneManager.swift */,
+				547F1EFED9E5A92094F4903A2B9E84FC /* PhoneLib.swift */,
+				DD8164113129263E2617ADCF52352987 /* RegistrationStateDelegate.swift */,
+				4699B4AEE93E73ACC49930F0A2620B7A /* Session.swift */,
+				F372CCC13A8ACBCDAD3C0D029866B615 /* SessionDelegate.swift */,
+				79D3AA1C24D127BCE101FDEDB8E3D512 /* SessionState.swift */,
+				0E31BD7A8187FFE62896257E2A79228F /* SipManager.swift */,
+				5C24A42B7186AD968C01B84AA0679BDF /* SipManagerProtocol.swift */,
+				B44BB6D98AFFE6146DE848F166AA55CD /* SipRegistrationStatus.swift */,
+				3D0A71C8C910608FC688660743B828F6 /* SipSDKDelegate.swift */,
+				AB78118C7C9F0E1D8C4C0B1C71B84EF4 /* SipSdkProtocol.swift */,
+				27D3584DEE76DEEFF48803157AEEADB5 /* Support Files */,
 			);
 			path = PhoneLib;
+			sourceTree = "<group>";
+		};
+		781B628E24EF1AC509D32C190240D878 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				3C62D01D03525451032B0271692AAF74 /* AFNetworkReachabilityManager.h */,
+				92CC6FBC305AB93746726EF47AF79E04 /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		7C7C2A329D01835BEDBB58995FE85812 /* SAMKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				348F50A5D0D482FAF6CC9E0FF2B2A3D2 /* SAMKeychain.h */,
+				B6F8BA3FBA8EEA6D0EA5E7F982617A91 /* SAMKeychain.m */,
+				836DAD77AE1B2226C100A4BEB999C641 /* SAMKeychainQuery.h */,
+				BA81C660396D48BEAD3B44E41BE21259 /* SAMKeychainQuery.m */,
+				0DA23838571E750E5F2A003BCF0CA3FC /* Resources */,
+				F9B285AEDC6BACA305B13B3C47C04EEC /* Support Files */,
+			);
+			path = SAMKeychain;
 			sourceTree = "<group>";
 		};
 		8C2613DB175E824B983D689ABFFE5CD3 /* Enums */ = {
@@ -447,14 +732,6 @@
 			);
 			name = Enums;
 			path = PIL/Enums;
-			sourceTree = "<group>";
-		};
-		940726B01389458120831E570EF8EFD6 /* app-extension */ = {
-			isa = PBXGroup;
-			children = (
-				3E16BDDD308669906B6A291432BEEB08 /* Frameworks */,
-			);
-			name = "app-extension";
 			sourceTree = "<group>";
 		};
 		AAB37BD51528D592CDF0AA1B590AEF40 /* Support Files */ = {
@@ -484,6 +761,31 @@
 			path = PIL/Push;
 			sourceTree = "<group>";
 		};
+		B3B1ADD4AEE5AE1E5D58BC8BC6B7B8FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				122D97B8134CEF4C22F967A55251A42C /* bctoolbox.framework */,
+				FAA022CA1948019B64A42AB4FBB66D00 /* bctoolbox-ios.framework */,
+				3C9D6CDE8961FE7AF1EEBDE61E3B0D6F /* bctoolbox-tester.framework */,
+				9C592A136A2CC5F5529D6677A75AAF18 /* belcard.framework */,
+				8195B2E9C8544A5C7A7CAAD3E68D4CEF /* belle-sip.framework */,
+				25F14FF79135AED09B5E21AFDAE69D0F /* belr.framework */,
+				F3F31A7AFEB4862E85FC07C46853C986 /* lime.framework */,
+				BCEBFF0D841CABDDB1B9C309747A75BF /* limetester.framework */,
+				6A7B748F71CFB526C583232F0ACC9658 /* linphone.framework */,
+				3C7831A76DFB12DB2953F653B3063E87 /* linphonetester.framework */,
+				DA6EC5B39F6E7954A30791CB0658C3EB /* mediastreamer2.framework */,
+				A3F22BDC537BB982A79490189475516C /* msamr.framework */,
+				6EF2F8BB5C6F07F4A3F15E2BB920D8B9 /* mscodec2.framework */,
+				976D9AFC27D8D9FFD0C930508B2E1E7B /* msopenh264.framework */,
+				BBF81DCC376D72EBCD6E2B40AC211235 /* mssilk.framework */,
+				FC2965A1E5D66ADB3903023D25DA8482 /* mswebrtc.framework */,
+				5F8590AC6A39485D73BB6231256E7A88 /* msx264.framework */,
+				9AA1F2B578FE11419F987CA342B36404 /* ortp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B78964FCFC4845E2AF869B1447F0BD82 /* PIL */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,31 +804,6 @@
 			path = "/Users/chris/projects/Vialer/iOS/iOS-platform-integration-layer/PIL";
 			sourceTree = "<absolute>";
 		};
-		C02C0041044E8F8ED7CEA3CDEE44910E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6D6A13018A5497C13E1E1315B46991A7 /* bctoolbox.framework */,
-				3857949E8BAF6C7C72D91B26856B8838 /* bctoolbox-ios.framework */,
-				5DBF5F9078FCBA395E01F6398F4A71D5 /* bctoolbox-tester.framework */,
-				23FCA399D2D01CA1BEAF74BB473101C8 /* belcard.framework */,
-				800DEA28B16112C7FD2FE30AF5A9EB19 /* belle-sip.framework */,
-				B4EF4F0D84A580EAC3684E2F369A6A54 /* belr.framework */,
-				1B28BF86753AC0A452D4BB728F17C0D0 /* lime.framework */,
-				A98C1FF01C1E7E66FD6BA0FC806D4D75 /* limetester.framework */,
-				DBD4BB68D0405CB5B629429226523742 /* linphone.framework */,
-				365FBD359D25A9864CE117FC7D2F1384 /* linphonetester.framework */,
-				88231009600B613D7D4243489EAB4CC8 /* mediastreamer2.framework */,
-				3BCC3BABE114C769B363250705A53179 /* msamr.framework */,
-				647D3C788039DAA71A48618EE9C63D6D /* mscodec2.framework */,
-				CEC58BAC15887CF549C0C0D470418112 /* msopenh264.framework */,
-				490C442617738E18FBD054E4C5A486AF /* mssilk.framework */,
-				6069B66565B456B5CDE7621F4763A038 /* mswebrtc.framework */,
-				C00CA3A28F1E0AD15AF83740EA681EAE /* msx264.framework */,
-				0C4820714DC7A8E421AEA2B4E427A001 /* ortp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		C736FEE8BBB04D1E2550B38E58AC40CC /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,30 +813,30 @@
 			path = PIL/Configuration;
 			sourceTree = "<group>";
 		};
-		CA3D8ACC6F81BA55B019C66A0F6D1E3C /* linphone-sdk */ = {
-			isa = PBXGroup;
-			children = (
-				15B945A22374D8D90C98EFE5A50E5EA0 /* all-frameworks */,
-				940726B01389458120831E570EF8EFD6 /* app-extension */,
-				DAC9FD2A4FFDFF9486E0826A3988D1F8 /* app-extension-swift */,
-				02C1B6A01F4E7701CAED8DFD57E30AFD /* basic-frameworks */,
-				C02C0041044E8F8ED7CEA3CDEE44910E /* Frameworks */,
-				8096C9035831046F324E38159F77876C /* Resources */,
-				22CCC40102C81444B40C1681FF3F96C1 /* Support Files */,
-			);
-			path = "linphone-sdk";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				DFFDD05E2787B678E51BD34601A859C8 /* Development Pods */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				EC290E5F31C060039D3F8DB83B8962A9 /* Pods */,
-				087E4BC65722314C86EFD1961D6ACC1B /* Products */,
+				EAEC640B994CFAAA03A329225D21F565 /* Pods */,
+				1E461C6EBA941C55687801DAAD1F993C /* Products */,
 				2F01C67B52557264F613B2214343EB81 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D815B417D963622D1BF95F1B86551419 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DFBD45E651BF3ED8F50165DD29F8C2E /* linphone-sdk.modulemap */,
+				52F0D18B07968D65F3992785F589FA56 /* linphone-sdk-dummy.m */,
+				264643F472BDE8A69C3F68E8BA146C95 /* linphone-sdk-prefix.pch */,
+				3834072B1B1F9082B54AD24F222FBCDF /* linphone-sdk-umbrella.h */,
+				0D4CB830C92918E0AAB84758F3C089EB /* linphone-sdk.debug.xcconfig */,
+				BB2C21B9352CBEE606730A72BB0B621F /* linphone-sdk.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/linphone-sdk";
 			sourceTree = "<group>";
 		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
@@ -569,12 +846,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DAC9FD2A4FFDFF9486E0826A3988D1F8 /* app-extension-swift */ = {
+		DDBA4512B8BED46AC4D9A9BB11FF9E45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F936C3AF8C24BF4BDB8A9C6AF34249E3 /* LinphoneWrapper.swift */,
 			);
-			name = "app-extension-swift";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DFFDD05E2787B678E51BD34601A859C8 /* Development Pods */ = {
@@ -610,13 +886,49 @@
 			path = PIL/Extensions;
 			sourceTree = "<group>";
 		};
-		EC290E5F31C060039D3F8DB83B8962A9 /* Pods */ = {
+		EAEC640B994CFAAA03A329225D21F565 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CA3D8ACC6F81BA55B019C66A0F6D1E3C /* linphone-sdk */,
-				86E0D1DB0BA0D6B295D2990A392B0C27 /* PhoneLib */,
+				6A710ADB559D03F385FBE02D12C9681C /* AFNetworkActivityLogger */,
+				6A1E96F3247AF107710487CF0DD79082 /* AFNetworking */,
+				37D62AA61F1DE6E913BE0B4589AFECD3 /* linphone-sdk */,
+				78075A2978853531E4CA2C25099C0A17 /* PhoneLib */,
+				7C7C2A329D01835BEDBB58995FE85812 /* SAMKeychain */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F091C0B1FB59DF5C568074EFCECE3BB3 /* all-frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDBA4512B8BED46AC4D9A9BB11FF9E45 /* Frameworks */,
+				3C4F9D5CD0AB604A4D63FBB9772F16D1 /* Resources */,
+			);
+			name = "all-frameworks";
+			sourceTree = "<group>";
+		};
+		F9B285AEDC6BACA305B13B3C47C04EEC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B832438C1576B8EB994EAE785D48A93 /* SAMKeychain-dummy.m */,
+				E65DE44E9DDB2BCC3E87BA07736DE58B /* SAMKeychain-prefix.pch */,
+				FAE1C618668FB2C6EE79CF8106733883 /* SAMKeychain.debug.xcconfig */,
+				A931B85773D9CA16D44D339D7B9937B9 /* SAMKeychain.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SAMKeychain";
+			sourceTree = "<group>";
+		};
+		FCC10BD4F6CC77C56628D0827A535802 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				241434DBC51D693D4973195F4C1A1CE0 /* AFNetworkActivityLogger-dummy.m */,
+				0FC4D21FE4CAC1462A981B02AF8601B0 /* AFNetworkActivityLogger-prefix.pch */,
+				FA40BBB3469FA7F597FB60BD7BBF4F47 /* AFNetworkActivityLogger.debug.xcconfig */,
+				307994D469B2BF0DDE5E7547A51D744F /* AFNetworkActivityLogger.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AFNetworkActivityLogger";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -630,11 +942,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16BC6C0832F7FE9271BA5543C2FD6441 /* Headers */ = {
+		47E7C62F120DD4175C2430080655BA71 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C996B1C74246332F9306D70422C7FED /* Pods-PIL-PILExampleApp-umbrella.h in Headers */,
+				85DA4002B6CAD3A3D95731A62CA47A94 /* PhoneLib-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEF172602FE57628C9B5B42BF4108D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12450CB9DC4AA029A6F65AC67FA90D3F /* Pods-PIL-PILExampleApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +966,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F46B5EAF7354D7D83FA4ECD7DDF8B78 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BF4D9DCF2C605B882B70DA9ED9C7BE0 /* SAMKeychain.h in Headers */,
+				A02282564A2A10159E47D9AC3798A281 /* SAMKeychainQuery.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64024164535A7044C01A90E2C608B923 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6AF6876037EAE5825FBFB29C8619153 /* AFNetworkActivityConsoleLogger.h in Headers */,
+				A766B64464364AE6BA1B36FE6DC8B7C0 /* AFNetworkActivityLogger.h in Headers */,
+				EC8BCD7BCC7EB0D3DE997E8E1E8A279F /* AFNetworkActivityLoggerProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		715E98D8BB39F250E63EBC1E1C05F098 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76ADED56E12DA7BDB54ABFACC45B04BF /* linphone-sdk-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77CFF0C534667369AC9130E68843C345 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D19B8E774FEBC01563AFD02786421D46 /* AFAutoPurgingImageCache.h in Headers */,
+				D6AB41290E8DFB38A05CD5886FA6B076 /* AFCompatibilityMacros.h in Headers */,
+				363A6AEDE4100E0C62E5CF12FFDD02D1 /* AFHTTPSessionManager.h in Headers */,
+				60A51BBA5662A8951E89A926B8EC1926 /* AFImageDownloader.h in Headers */,
+				911692ACF1F2CCCD60BEEFDF4405F2C0 /* AFNetworkActivityIndicatorManager.h in Headers */,
+				0235E1382E039589C04FE5AC4AA0167A /* AFNetworking.h in Headers */,
+				390498D6DB6F4CCFEC510E0743B65CED /* AFNetworkReachabilityManager.h in Headers */,
+				3058C56672CDF1DDDCC8A8681BC09F28 /* AFSecurityPolicy.h in Headers */,
+				C12295A19776250FE7615D5EDA4C9C2A /* AFURLRequestSerialization.h in Headers */,
+				3E433A134EDACB6CFE6D98EBBA4990E1 /* AFURLResponseSerialization.h in Headers */,
+				E6D7B49C0EAEF37DEDF33BAD549A887D /* AFURLSessionManager.h in Headers */,
+				3D4B2555FADC7AC80742E51499860392 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				F231AE062A58A2F30A3B2E9AD840540D /* UIButton+AFNetworking.h in Headers */,
+				BF1D906295ED943708DB90DEDCC573A2 /* UIImage+AFNetworking.h in Headers */,
+				C772994BFCA392A10D078E595807543A /* UIImageView+AFNetworking.h in Headers */,
+				B07A25FB0E008A176E334489C3247CFE /* UIKit+AFNetworking.h in Headers */,
+				BEC45F6D808D6E2D3AAB9E50D4F701AF /* UIProgressView+AFNetworking.h in Headers */,
+				4F796583511CBEB534B433C2C194C564 /* UIRefreshControl+AFNetworking.h in Headers */,
+				61413027FE754557762CA85F1E438888 /* UIWebView+AFNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A83C3763B03277BDD9FD401764F21C30 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -654,33 +1027,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB215EF0EDBC6A028DB61701E26DDC24 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B819AA73EF66338A95AB097202CC7D1F /* linphone-sdk-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1DF9552E524430F04314B7B2DC1C8A2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1DBDE708B49CB7FA12A8F2D4FA4C41F /* PhoneLib-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E3B6F3B67618408731F26C1CCD6A388 /* Build configuration list for PBXNativeTarget "AFNetworking" */;
+			buildPhases = (
+				77CFF0C534667369AC9130E68843C345 /* Headers */,
+				E32A094A878A621C7758DF0B47D68CE8 /* Sources */,
+				C8EEFDEE919C9951859B11DC1A1B2BD2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFNetworking;
+			productName = AFNetworking;
+			productReference = A4FA15D44DF6BAC7550EDEED10862AA3 /* libAFNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		21921160E4B0CD327C6FFF50C9BE1F64 /* linphone-sdk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41D31993327DDF64E877FF0D1C544C17 /* Build configuration list for PBXNativeTarget "linphone-sdk" */;
+			buildConfigurationList = 913250A5049061996ED53DB7E651B622 /* Build configuration list for PBXNativeTarget "linphone-sdk" */;
 			buildPhases = (
-				CB215EF0EDBC6A028DB61701E26DDC24 /* Headers */,
-				3BB620CE0B87C24F90B77A3BF2C53B36 /* Sources */,
-				674B40457002ECE22B7D7AC30C761D44 /* Frameworks */,
-				4A5317B7A66650EDD5595883EC38F0F6 /* Copy generated compatibility header */,
+				715E98D8BB39F250E63EBC1E1C05F098 /* Headers */,
+				F560268EA378240C5043C03AA2C58B55 /* Sources */,
+				E0722E1A5D9D8CC4675F548ED70282A7 /* Frameworks */,
+				7A9BE430C5849FD401E9AF986F1BBDDE /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
@@ -691,19 +1065,54 @@
 			productReference = BD3E8A6BC93C2DAE126C79E6D4C7FE31 /* liblinphone-sdk.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		63C028C8B25F1B5CF492F3CBF0A25042 /* PhoneLib */ = {
+		345AD5892F69C88D2C7544242987B2EC /* AFNetworkActivityLogger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61D98858117BC9D2469B9791FECE0C75 /* Build configuration list for PBXNativeTarget "PhoneLib" */;
+			buildConfigurationList = 93E5D6305F9B8B03876F1156EAFC65EF /* Build configuration list for PBXNativeTarget "AFNetworkActivityLogger" */;
 			buildPhases = (
-				E1DF9552E524430F04314B7B2DC1C8A2 /* Headers */,
-				2C48B4C0EAD2DDF3EA22DA99F39CA846 /* Sources */,
-				E68C5A3BE5B0E8A03A8E32250483A066 /* Frameworks */,
-				2B1123E18E4B794166216E099C083DC9 /* Copy generated compatibility header */,
+				64024164535A7044C01A90E2C608B923 /* Headers */,
+				9B263A4D53F63F9F8A1FF87914C80AE1 /* Sources */,
+				6BF782C5C1440B5318AB0A1932EFD474 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7A5C44B13086F255F97C21148A1CC12C /* PBXTargetDependency */,
+				8C7D4DF52CBDC1C6EEDD17C3C6C69603 /* PBXTargetDependency */,
+			);
+			name = AFNetworkActivityLogger;
+			productName = AFNetworkActivityLogger;
+			productReference = F461458DC6D414B5B32190EF1F9D2C85 /* libAFNetworkActivityLogger.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5572D14DECB5A676C1B31B30A3BA7F10 /* SAMKeychain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E9588118811AB05EBECC8C49A3054C /* Build configuration list for PBXNativeTarget "SAMKeychain" */;
+			buildPhases = (
+				5F46B5EAF7354D7D83FA4ECD7DDF8B78 /* Headers */,
+				4224D40B8A4B8FB2484C8CF93363C65C /* Sources */,
+				C64259458E3491090D4888B3D231E737 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SAMKeychain;
+			productName = SAMKeychain;
+			productReference = 612028EAFF1C2054A0EB821A9C9F2440 /* libSAMKeychain.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		63C028C8B25F1B5CF492F3CBF0A25042 /* PhoneLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD577BE2936DB0BCFBAF5EF60E374875 /* Build configuration list for PBXNativeTarget "PhoneLib" */;
+			buildPhases = (
+				47E7C62F120DD4175C2430080655BA71 /* Headers */,
+				CC858D3834C7DBBB54F160B6AA2C21F4 /* Sources */,
+				69B2BCCE41FA0C6F1073B40FF0EEE143 /* Frameworks */,
+				6050D8118F6F4E9D87A1E8100F8C6E40 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AD9ADC94D59040650E61AF99267A42E /* PBXTargetDependency */,
 			);
 			name = PhoneLib;
 			productName = PhoneLib;
@@ -721,8 +1130,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				358F57A2D1C25F7EBD1ADAFBB9B6BA6D /* PBXTargetDependency */,
-				4F35EEAE01356C0A80BF9AD1D34D6F95 /* PBXTargetDependency */,
+				FC147BBC5B7B472B373CC4220C578724 /* PBXTargetDependency */,
+				6597C94B76767CDCA1443D1DAE70BB74 /* PBXTargetDependency */,
 			);
 			name = "Pods-PIL-PILTests";
 			productName = "Pods-PIL-PILTests";
@@ -731,18 +1140,21 @@
 		};
 		86FE696901E5BA696945C808E7A8FD8F /* Pods-PIL-PILExampleApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE5F4EE065954E309F731BF049BF6C8E /* Build configuration list for PBXNativeTarget "Pods-PIL-PILExampleApp" */;
+			buildConfigurationList = D0825BD47313218EA6B0874165E13E97 /* Build configuration list for PBXNativeTarget "Pods-PIL-PILExampleApp" */;
 			buildPhases = (
-				16BC6C0832F7FE9271BA5543C2FD6441 /* Headers */,
-				F33713F3330AD735607024063B52F2D1 /* Sources */,
-				6CAC4B733D51313B24BBDFECB112AD3A /* Frameworks */,
+				4DEF172602FE57628C9B5B42BF4108D9 /* Headers */,
+				D23FB40558662720D4F0054FC7C05FB6 /* Sources */,
+				FBAE241466D53510B47B113F632FA47A /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B2C2F1F1A73618D01275C60ADB9E48F9 /* PBXTargetDependency */,
-				62EA6E12DFAC441EBB56068834AD5107 /* PBXTargetDependency */,
-				C2CC0B03BD316AB710E0DCD691F6ED81 /* PBXTargetDependency */,
+				7D818E7701568E5D6E0BD4F75441A580 /* PBXTargetDependency */,
+				6CB2243978AD5D2C80E4E669AC4BB623 /* PBXTargetDependency */,
+				A1432922684355D830110B67F9F1464C /* PBXTargetDependency */,
+				6E6E029A54220356CEA51A8E2BA85A29 /* PBXTargetDependency */,
+				B5674D3C67EC7C11211CDF1A079690DD /* PBXTargetDependency */,
+				D996B6998A2A95F3F3E63CF9A5590F97 /* PBXTargetDependency */,
 			);
 			name = "Pods-PIL-PILExampleApp";
 			productName = "Pods-PIL-PILExampleApp";
@@ -761,7 +1173,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9DEA63325C2B164659BA92F74E086C3E /* PBXTargetDependency */,
+				54507CDFA5F6E3FD7C87022F29516CDC /* PBXTargetDependency */,
 			);
 			name = PIL;
 			productName = PIL;
@@ -779,8 +1191,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				1228FF5F3C5E40AB2DC18B66252B4BC6 /* PBXTargetDependency */,
-				A0605E1F18E986909D7C4AC84D919B67 /* PBXTargetDependency */,
+				1836C484DAD90D07D8D2BE56755BBD5A /* PBXTargetDependency */,
+				D0AD84F1B3D158B91B70BC1A0FC106F5 /* PBXTargetDependency */,
 			);
 			name = "Pods-PIL";
 			productName = "Pods-PIL";
@@ -805,22 +1217,25 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 087E4BC65722314C86EFD1961D6ACC1B /* Products */;
+			productRefGroup = 1E461C6EBA941C55687801DAAD1F993C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				345AD5892F69C88D2C7544242987B2EC /* AFNetworkActivityLogger */,
+				0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */,
 				21921160E4B0CD327C6FFF50C9BE1F64 /* linphone-sdk */,
 				63C028C8B25F1B5CF492F3CBF0A25042 /* PhoneLib */,
 				D7EF811F2F0D98F65BBF6E7EA3B6139D /* PIL */,
 				EFE6D050CABA46CD6AA3C4687B70D6D9 /* Pods-PIL */,
 				86FE696901E5BA696945C808E7A8FD8F /* Pods-PIL-PILExampleApp */,
 				72796CEC61B097C75224871A90AB7B62 /* Pods-PIL-PILTests */,
+				5572D14DECB5A676C1B31B30A3BA7F10 /* SAMKeychain */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B1123E18E4B794166216E099C083DC9 /* Copy generated compatibility header */ = {
+		6050D8118F6F4E9D87A1E8100F8C6E40 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -844,7 +1259,7 @@
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/PhoneLib/PhoneLib.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/PhoneLib/PhoneLib-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		4A5317B7A66650EDD5595883EC38F0F6 /* Copy generated compatibility header */ = {
+		7A9BE430C5849FD401E9AF986F1BBDDE /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -895,35 +1310,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2C48B4C0EAD2DDF3EA22DA99F39CA846 /* Sources */ = {
+		4224D40B8A4B8FB2484C8CF93363C65C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				428EF27C6932687B8EA3620D3775DC23 /* AttendedTransferSession.swift in Sources */,
-				BCCD0EB49B4046C7E92F8D8026A1D1F8 /* BaseManagerProtocol.swift in Sources */,
-				E6739E141BA80BB8E677AA009EFD0356 /* Codec.swift in Sources */,
-				611B138C03BC02155E845AF796FC4361 /* LinphoneLoggingServiceManager.swift in Sources */,
-				88B78F088A94DBF0FC0C90D9431C67AF /* LinphoneManager.swift in Sources */,
-				69C8514D36D10ACADB0E61A4BAB3E873 /* PhoneLib-dummy.m in Sources */,
-				25BD57A55DB19AB388ADD2A2289DC4E1 /* PhoneLib.swift in Sources */,
-				5B6ACB5CEF703DF7A049F6A33D495B10 /* RegistrationStateDelegate.swift in Sources */,
-				F798D4117A1B4FC597F319DCB31C5683 /* Session.swift in Sources */,
-				638944A4FD1751271B456DDD7375CDA7 /* SessionDelegate.swift in Sources */,
-				82D653B07035BEE0C16B08139E38AEFB /* SessionState.swift in Sources */,
-				DD6D1BE63A21461FB3B2AA328EE439B8 /* SipManager.swift in Sources */,
-				1C29126E61F331B4773553CFC53DFFE9 /* SipManagerProtocol.swift in Sources */,
-				78E76A7578F3B0A458A6B02051036420 /* SipRegistrationStatus.swift in Sources */,
-				D71B820237F7CFA734D34CA65D80609B /* SipSDKDelegate.swift in Sources */,
-				668D027069466246DC1AE6E7B147544B /* SipSdkProtocol.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3BB620CE0B87C24F90B77A3BF2C53B36 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DB412B49405B48DE873295F8C0BE3043 /* linphone-sdk-dummy.m in Sources */,
-				B2C208A5FCB16B0A05D7600A7C161BB7 /* LinphoneWrapper.swift in Sources */,
+				8F4CC2D7D779CDAF51E0F212F6EB02CC /* SAMKeychain-dummy.m in Sources */,
+				EE699D5C5B11847A8803192E5EFB8C81 /* SAMKeychain.m in Sources */,
+				744246E6F5F15981E85D0A41A293395F /* SAMKeychainQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,6 +1333,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				40FE323D591164594CB316537CCE8B59 /* Pods-PIL-PILTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B263A4D53F63F9F8A1FF87914C80AE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE94FD76D2C2ED2557ED82FF70E7AEEA /* AFNetworkActivityConsoleLogger.m in Sources */,
+				11F677F9F255BDD5860D25EDF5722285 /* AFNetworkActivityLogger-dummy.m in Sources */,
+				703AF1B46157D173AEFA92DF99E31DA8 /* AFNetworkActivityLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,74 +1368,178 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F33713F3330AD735607024063B52F2D1 /* Sources */ = {
+		CC858D3834C7DBBB54F160B6AA2C21F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A591FDE25CABA5F99A7F8DA9754CEF9 /* Pods-PIL-PILExampleApp-dummy.m in Sources */,
+				6FEED5072253E67F33836ABEF468A14A /* AttendedTransferSession.swift in Sources */,
+				47CF3E36EE9650F285DA19585EA05DFB /* BaseManagerProtocol.swift in Sources */,
+				709F2D19872EF378F04AA91A12DBDC0F /* Codec.swift in Sources */,
+				84E3236F55DCE0E7B8F19B1C1C2E8D86 /* LinphoneLoggingServiceManager.swift in Sources */,
+				CDB4AB366E04DA2DAD55108D4BA1750C /* LinphoneManager.swift in Sources */,
+				16FA3502123B29F4D6B53AEC74DD3408 /* PhoneLib-dummy.m in Sources */,
+				D8949D7CB2F6E0B83B5A108BA9F089E9 /* PhoneLib.swift in Sources */,
+				85FF8EB7D43C763FDD8B53C73223A96B /* RegistrationStateDelegate.swift in Sources */,
+				45020BD41F0C6F6A0DCF59598CEAC938 /* Session.swift in Sources */,
+				1E301D3DFF2EE101ADB14D87FC95E735 /* SessionDelegate.swift in Sources */,
+				4BD370F964E9889ECD356277B21919F1 /* SessionState.swift in Sources */,
+				E9BB7DB3F23A53E81CEF04F4BA8182CA /* SipManager.swift in Sources */,
+				8C31C7B4CC982149D48CD43CACA6EE03 /* SipManagerProtocol.swift in Sources */,
+				4DC285A1AC160BBFC1DAEFA3E69AD30F /* SipRegistrationStatus.swift in Sources */,
+				536DC49D91108AEC06D55A1EDF33E3D7 /* SipSDKDelegate.swift in Sources */,
+				9E43B3EE2DDEA5F7E1F742CD4C908FE3 /* SipSdkProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23FB40558662720D4F0054FC7C05FB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3038F990D4453704919C1D02DE29E3EE /* Pods-PIL-PILExampleApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E32A094A878A621C7758DF0B47D68CE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17023A4144C019F7D9BDE86D48A6732C /* AFAutoPurgingImageCache.m in Sources */,
+				DFD8F2A2484F1A6ECDB1AE0CB5406B75 /* AFHTTPSessionManager.m in Sources */,
+				690E0903DDE357CB3976011EAB41E3C3 /* AFImageDownloader.m in Sources */,
+				AA3B12F36107AA2BCA3AA4B6E1E80742 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				7443B89D05EA43E227C362FA93C54923 /* AFNetworking-dummy.m in Sources */,
+				409F4404E4F0CABF04183B49739D983C /* AFNetworkReachabilityManager.m in Sources */,
+				F125F4FE95211975607A315C684C6CFE /* AFSecurityPolicy.m in Sources */,
+				E138103DF04C0B3606F69B723DF2AE2E /* AFURLRequestSerialization.m in Sources */,
+				C91A498B93118A48A6C79CBBB7549E29 /* AFURLResponseSerialization.m in Sources */,
+				8449FE23CFEE6CA2CBC4336A183BA10A /* AFURLSessionManager.m in Sources */,
+				230A7ABB9FD48D70A76E765BAEC0E64A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				1AD51D58807EF31AB999AEB098B71D97 /* UIButton+AFNetworking.m in Sources */,
+				83FBB1135810728E70C911FA375C07BA /* UIImageView+AFNetworking.m in Sources */,
+				79E8FDBFC11ED9DD38B74D5F365C7628 /* UIProgressView+AFNetworking.m in Sources */,
+				4044AF6E41D3C817BA024919E34D1988 /* UIRefreshControl+AFNetworking.m in Sources */,
+				A07534BABEC36B4D16D29C41FAD24B3D /* UIWebView+AFNetworking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F560268EA378240C5043C03AA2C58B55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F15E2D2B327D44C1DCD070C34F957B /* linphone-sdk-dummy.m in Sources */,
+				FE78B5EA1DE7161E0154B77A948CC6FB /* LinphoneWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1228FF5F3C5E40AB2DC18B66252B4BC6 /* PBXTargetDependency */ = {
+		1836C484DAD90D07D8D2BE56755BBD5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PhoneLib;
 			target = 63C028C8B25F1B5CF492F3CBF0A25042 /* PhoneLib */;
-			targetProxy = CF9BFE066DE6A261E241A1AE4F49BAD2 /* PBXContainerItemProxy */;
+			targetProxy = A8F38796EE855DCEE4FFCE032FDD421E /* PBXContainerItemProxy */;
 		};
-		358F57A2D1C25F7EBD1ADAFBB9B6BA6D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PhoneLib;
-			target = 63C028C8B25F1B5CF492F3CBF0A25042 /* PhoneLib */;
-			targetProxy = FD928929876F59F13DCD5B228DDA95E7 /* PBXContainerItemProxy */;
-		};
-		4F35EEAE01356C0A80BF9AD1D34D6F95 /* PBXTargetDependency */ = {
+		3AD9ADC94D59040650E61AF99267A42E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "linphone-sdk";
 			target = 21921160E4B0CD327C6FFF50C9BE1F64 /* linphone-sdk */;
-			targetProxy = 521D5021704175CB679DF316BAAA0C7E /* PBXContainerItemProxy */;
+			targetProxy = 8C22F0105A7D155CE638E21659C5A12A /* PBXContainerItemProxy */;
 		};
-		62EA6E12DFAC441EBB56068834AD5107 /* PBXTargetDependency */ = {
+		54507CDFA5F6E3FD7C87022F29516CDC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PhoneLib;
 			target = 63C028C8B25F1B5CF492F3CBF0A25042 /* PhoneLib */;
-			targetProxy = 57375939D8796125EF1C59901E47B469 /* PBXContainerItemProxy */;
+			targetProxy = 287C352F5F812B069729BCB49B188459 /* PBXContainerItemProxy */;
 		};
-		7A5C44B13086F255F97C21148A1CC12C /* PBXTargetDependency */ = {
+		6597C94B76767CDCA1443D1DAE70BB74 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "linphone-sdk";
 			target = 21921160E4B0CD327C6FFF50C9BE1F64 /* linphone-sdk */;
-			targetProxy = 335B638EF30AB478A3FE4CBCFD502A22 /* PBXContainerItemProxy */;
+			targetProxy = 565F97FB3ACDA643FC98B713D5CA7690 /* PBXContainerItemProxy */;
 		};
-		9DEA63325C2B164659BA92F74E086C3E /* PBXTargetDependency */ = {
+		6CB2243978AD5D2C80E4E669AC4BB623 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
+			targetProxy = CF5771F53199753473E2D3587BFE89C8 /* PBXContainerItemProxy */;
+		};
+		6E6E029A54220356CEA51A8E2BA85A29 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PhoneLib;
 			target = 63C028C8B25F1B5CF492F3CBF0A25042 /* PhoneLib */;
-			targetProxy = 94292E31A9E4AF75883ADADBB622E853 /* PBXContainerItemProxy */;
+			targetProxy = CB1431BC9B7129479FB788535EE46A4E /* PBXContainerItemProxy */;
 		};
-		A0605E1F18E986909D7C4AC84D919B67 /* PBXTargetDependency */ = {
+		7D818E7701568E5D6E0BD4F75441A580 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "linphone-sdk";
-			target = 21921160E4B0CD327C6FFF50C9BE1F64 /* linphone-sdk */;
-			targetProxy = F4DD8B299D1D082194ECC2052A4982FA /* PBXContainerItemProxy */;
+			name = AFNetworkActivityLogger;
+			target = 345AD5892F69C88D2C7544242987B2EC /* AFNetworkActivityLogger */;
+			targetProxy = F51992D5232C4FADA8C779A6E2E6760B /* PBXContainerItemProxy */;
 		};
-		B2C2F1F1A73618D01275C60ADB9E48F9 /* PBXTargetDependency */ = {
+		8C7D4DF52CBDC1C6EEDD17C3C6C69603 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
+			targetProxy = 5534E3B05E961A025D704A4CDD4B712A /* PBXContainerItemProxy */;
+		};
+		A1432922684355D830110B67F9F1464C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PIL;
 			target = D7EF811F2F0D98F65BBF6E7EA3B6139D /* PIL */;
-			targetProxy = D65A10F1A6F04BA5357461273F099CB3 /* PBXContainerItemProxy */;
+			targetProxy = 35407D0CE0D166DA2E7EA13EC9271703 /* PBXContainerItemProxy */;
 		};
-		C2CC0B03BD316AB710E0DCD691F6ED81 /* PBXTargetDependency */ = {
+		B5674D3C67EC7C11211CDF1A079690DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SAMKeychain;
+			target = 5572D14DECB5A676C1B31B30A3BA7F10 /* SAMKeychain */;
+			targetProxy = 9B7F98CF77564FE8DF97FBBF78EBCCA6 /* PBXContainerItemProxy */;
+		};
+		D0AD84F1B3D158B91B70BC1A0FC106F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "linphone-sdk";
 			target = 21921160E4B0CD327C6FFF50C9BE1F64 /* linphone-sdk */;
-			targetProxy = 8D97BF01AE51AFA10AC56A63A7DCD0B8 /* PBXContainerItemProxy */;
+			targetProxy = 61E51D9D9A491A485CD919C08B3270F0 /* PBXContainerItemProxy */;
+		};
+		D996B6998A2A95F3F3E63CF9A5590F97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "linphone-sdk";
+			target = 21921160E4B0CD327C6FFF50C9BE1F64 /* linphone-sdk */;
+			targetProxy = D6E7AA4D4116AD0A670865BCDA928C3A /* PBXContainerItemProxy */;
+		};
+		FC147BBC5B7B472B373CC4220C578724 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PhoneLib;
+			target = 63C028C8B25F1B5CF492F3CBF0A25042 /* PhoneLib */;
+			targetProxy = 37ADDEAA30E8FE1C435A00590F62EAA0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		13691C8EFC033B2461A99BCE8C60AC45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D223F44D8C5AC201FD2DC9D77563E76E /* PhoneLib.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PhoneLib/PhoneLib-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = Headers/Public/PhoneLib/PhoneLib.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = PhoneLib;
+				PRODUCT_NAME = PhoneLib;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		1643595886914B611A37F6D2730450D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 85C81FFFC3EF20E251AB4F1064FF333C /* Pods-PIL.debug.xcconfig */;
@@ -1055,22 +1562,43 @@
 			};
 			name = Debug;
 		};
-		26906A5679D11BDC4468D837A706A5DA /* Release */ = {
+		2F5DFA5F4DA06456ED42D4CAD0D3DE4E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B89DD36A6EA86E5E4567AB3294066F0F /* PhoneLib.release.xcconfig */;
+			baseConfigurationReference = 2413A3BA144202DE4ED86EF5573EE4A4 /* Pods-PIL-PILExampleApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/PhoneLib/PhoneLib-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = Headers/Public/PhoneLib/PhoneLib.modulemap;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4664D85FBA790230A9A998254FDEDB22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 307994D469B2BF0DDE5E7547A51D744F /* AFNetworkActivityLogger.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworkActivityLogger/AFNetworkActivityLogger-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = PhoneLib;
-				PRODUCT_NAME = PhoneLib;
+				PRODUCT_MODULE_NAME = AFNetworkActivityLogger;
+				PRODUCT_NAME = AFNetworkActivityLogger;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1106,22 +1634,21 @@
 			};
 			name = Debug;
 		};
-		54352922E8380B57A62D15955A1C47C2 /* Debug */ = {
+		60C94353AAF1554E630DCFC4463C3157 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 826B321517A1035E59A1E824D552D26E /* PhoneLib.debug.xcconfig */;
+			baseConfigurationReference = 0D4CB830C92918E0AAB84758F3C089EB /* linphone-sdk.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/PhoneLib/PhoneLib-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/linphone-sdk/linphone-sdk-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = Headers/Public/PhoneLib/PhoneLib.modulemap;
+				MODULEMAP_FILE = "Headers/Public/linphonesw/linphone-sdk.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = PhoneLib;
-				PRODUCT_NAME = PhoneLib;
+				PRODUCT_MODULE_NAME = linphonesw;
+				PRODUCT_NAME = "linphone-sdk";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1157,9 +1684,9 @@
 			};
 			name = Release;
 		};
-		97A20DE84BA3068A7A9E43A0A5637AA1 /* Release */ = {
+		96F8B66697165FFB60E88F93E7940C09 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A71BC89AD747C8C168912302203CC7EE /* linphone-sdk.release.xcconfig */;
+			baseConfigurationReference = BB2C21B9352CBEE606730A72BB0B621F /* linphone-sdk.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1248,6 +1775,30 @@
 			};
 			name = Debug;
 		};
+		9C6EC1F5B2D30CEF84781D922F355F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A819F617AD5B27ED9055F36346C66D5D /* AFNetworking.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFNetworking;
+				PRODUCT_NAME = AFNetworking;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		A73C05A1C9F70CA1A9A6DC9FBC8A6F38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BFBF898A6B994F835DCD4AA47F651318 /* Pods-PIL-PILTests.release.xcconfig */;
@@ -1271,21 +1822,20 @@
 			};
 			name = Release;
 		};
-		C97F6AF68D77561883E4BF0E0E01302D /* Debug */ = {
+		AEFD2B06585B6377F39D4C33A3D24D2D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95F730680CFBFB8ED040EA4D0C7EAC90 /* linphone-sdk.debug.xcconfig */;
+			baseConfigurationReference = FA40BBB3469FA7F597FB60BD7BBF4F47 /* AFNetworkActivityLogger.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/linphone-sdk/linphone-sdk-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworkActivityLogger/AFNetworkActivityLogger-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Headers/Public/linphonesw/linphone-sdk.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = linphonesw;
-				PRODUCT_NAME = "linphone-sdk";
+				PRODUCT_MODULE_NAME = AFNetworkActivityLogger;
+				PRODUCT_NAME = AFNetworkActivityLogger;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1295,9 +1845,82 @@
 			};
 			name = Debug;
 		};
-		E12CBBABE0288298A3228E02FF781D9A /* Release */ = {
+		B165F2F4D67208C0D90EF4E102C20EA5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2413A3BA144202DE4ED86EF5573EE4A4 /* Pods-PIL-PILExampleApp.release.xcconfig */;
+			baseConfigurationReference = A931B85773D9CA16D44D339D7B9937B9 /* SAMKeychain.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SAMKeychain/SAMKeychain-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SAMKeychain;
+				PRODUCT_NAME = SAMKeychain;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0BE8145D3B843693450B80C4AC92DE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAE1C618668FB2C6EE79CF8106733883 /* SAMKeychain.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SAMKeychain/SAMKeychain-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SAMKeychain;
+				PRODUCT_NAME = SAMKeychain;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB2D440ACC5249EC3B1AA4C41E222936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95EB071C0A635D75C09E12660C88284F /* PhoneLib.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PhoneLib/PhoneLib-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = Headers/Public/PhoneLib/PhoneLib.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = PhoneLib;
+				PRODUCT_NAME = PhoneLib;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCE294ADCDA030B1767C23700FF26990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63392D5D07E1E48B1AF35A814B63DA68 /* Pods-PIL-PILExampleApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1314,9 +1937,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		E9A86E899E6962010021CAEA3889C891 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1363,24 +1985,25 @@
 			};
 			name = Release;
 		};
-		F82545DFDF77A846FA6F1E6B804A3589 /* Debug */ = {
+		F905DBE0F9CEDC65D1E0884A0FE46A68 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63392D5D07E1E48B1AF35A814B63DA68 /* Pods-PIL-PILExampleApp.debug.xcconfig */;
+			baseConfigurationReference = 38DE3558D17D048BC99025FC8508E1BD /* AFNetworking.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFNetworking;
+				PRODUCT_NAME = AFNetworking;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1450,20 +2073,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E3B6F3B67618408731F26C1CCD6A388 /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F905DBE0F9CEDC65D1E0884A0FE46A68 /* Debug */,
+				9C6EC1F5B2D30CEF84781D922F355F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		23C2CD6EF2ADF88A256017B17BB1B956 /* Build configuration list for PBXNativeTarget "Pods-PIL-PILTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9A86E899E6962010021CAEA3889C891 /* Debug */,
 				A73C05A1C9F70CA1A9A6DC9FBC8A6F38 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		41D31993327DDF64E877FF0D1C544C17 /* Build configuration list for PBXNativeTarget "linphone-sdk" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C97F6AF68D77561883E4BF0E0E01302D /* Debug */,
-				97A20DE84BA3068A7A9E43A0A5637AA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1477,11 +2100,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61D98858117BC9D2469B9791FECE0C75 /* Build configuration list for PBXNativeTarget "PhoneLib" */ = {
+		52E9588118811AB05EBECC8C49A3054C /* Build configuration list for PBXNativeTarget "SAMKeychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				54352922E8380B57A62D15955A1C47C2 /* Debug */,
-				26906A5679D11BDC4468D837A706A5DA /* Release */,
+				C0BE8145D3B843693450B80C4AC92DE3 /* Debug */,
+				B165F2F4D67208C0D90EF4E102C20EA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		913250A5049061996ED53DB7E651B622 /* Build configuration list for PBXNativeTarget "linphone-sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60C94353AAF1554E630DCFC4463C3157 /* Debug */,
+				96F8B66697165FFB60E88F93E7940C09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93E5D6305F9B8B03876F1156EAFC65EF /* Build configuration list for PBXNativeTarget "AFNetworkActivityLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEFD2B06585B6377F39D4C33A3D24D2D /* Debug */,
+				4664D85FBA790230A9A998254FDEDB22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1495,11 +2136,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE5F4EE065954E309F731BF049BF6C8E /* Build configuration list for PBXNativeTarget "Pods-PIL-PILExampleApp" */ = {
+		AD577BE2936DB0BCFBAF5EF60E374875 /* Build configuration list for PBXNativeTarget "PhoneLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F82545DFDF77A846FA6F1E6B804A3589 /* Debug */,
-				E12CBBABE0288298A3228E02FF781D9A /* Release */,
+				13691C8EFC033B2461A99BCE8C60AC45 /* Debug */,
+				CB2D440ACC5249EC3B1AA4C41E222936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0825BD47313218EA6B0874165E13E97 /* Build configuration list for PBXNativeTarget "Pods-PIL-PILExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE294ADCDA030B1767C23700FF26990 /* Debug */,
+				2F5DFA5F4DA06456ED42D4CAD0D3DE4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

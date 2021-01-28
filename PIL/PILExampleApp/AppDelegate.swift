@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PIL
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

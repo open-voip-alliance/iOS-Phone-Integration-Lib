@@ -26,6 +26,7 @@ public class PIL: RegistrationStateDelegate {
     
     public var call: Call?
     public weak var middlewareDelegate: MiddlewareDelegate?
+    weak var pushKitManager: PushKitManager?
     
     //private var onRegister: ((Bool) -> ()) //wip
     private var incomingUuid: UUID?
