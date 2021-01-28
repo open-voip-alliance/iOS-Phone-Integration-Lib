@@ -77,7 +77,9 @@ NSString * const MiddlewareAccountRegistrationIsDoneNotification = @"MiddlewareA
     }
 }
 
-- (void)sentAPNSToken:(NSString *)apnsToken {
+#pragma mark - MiddlewareDelegate
+
+- (void)sendTokenWithToken:(NSString * _Nonnull)token {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSString *applicationStateString;
         NSInteger applicationState = [UIApplication sharedApplication].applicationState;
@@ -117,7 +119,7 @@ NSString * const MiddlewareAccountRegistrationIsDoneNotification = @"MiddlewareA
         backgroundTaskCleanupBlock();
     }];
 
-    [self sentAPNSToken:apnsToken withCompletion:^(NSError *error) {
+    [self sentAPNSToken:token withCompletion:^(NSError *error) {
         NSMutableString *logString = [NSMutableString stringWithFormat:@"APNS token background task completed"];
         if (application.applicationState == UIApplicationStateBackground) {
             [logString appendFormat:@" with %.3f time remaining", application.backgroundTimeRemaining];

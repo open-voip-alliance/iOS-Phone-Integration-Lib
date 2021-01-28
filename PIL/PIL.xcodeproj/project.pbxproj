@@ -42,10 +42,6 @@
 		83F69EBE2592369C0076B8F0 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EBC2592369C0076B8F0 /* Direction.swift */; };
 		83F69EC32593CD930076B8F0 /* VoIPPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */; };
 		83F69EC42593CD930076B8F0 /* VoIPPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */; };
-		83F69ECA2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */; };
-		83F69ECB2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */; };
-		83F69ECF2593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */; };
-		83F69ED02593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */; };
 		83F69ED5259A23F00076B8F0 /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */; };
 		83F69ED6259A23F00076B8F0 /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */; };
 		83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADAC5258BD81100CA64C8 /* Auth.swift */; };
@@ -104,8 +100,6 @@
 		83F69EB7259230A60076B8F0 /* SimpleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleState.swift; sourceTree = "<group>"; };
 		83F69EBC2592369C0076B8F0 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushHandler.swift; sourceTree = "<group>"; };
-		83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushPayloadTransformer.swift; sourceTree = "<group>"; };
-		83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushPayload.swift; sourceTree = "<group>"; };
 		83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDExtension.swift; sourceTree = "<group>"; };
 		83FADAC5258BD81100CA64C8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		A11562F028AED5C11AE54AEB /* Pods-PIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL.release.xcconfig"; path = "Target Support Files/Pods-PIL/Pods-PIL.release.xcconfig"; sourceTree = "<group>"; };
@@ -294,8 +288,6 @@
 			children = (
 				837C275925B8A64E008220C6 /* PushKitManager.swift */,
 				83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */,
-				83F69EC92593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift */,
-				83F69ECE2593CDE70076B8F0 /* VoIPPushPayload.swift */,
 				8385249925BB16E1008F4827 /* MiddlewareDelegate.swift */,
 			);
 			path = Push;
@@ -626,8 +618,6 @@
 				83F69ED5259A23F00076B8F0 /* UUIDExtension.swift in Sources */,
 				83F69EB32592306E0076B8F0 /* Call.swift in Sources */,
 				83F69EC32593CD930076B8F0 /* VoIPPushHandler.swift in Sources */,
-				83F69ECA2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */,
-				83F69ECF2593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */,
 				83F69EB8259230A60076B8F0 /* SimpleState.swift in Sources */,
 				8396095525B1D78700392B5E /* Actions.swift in Sources */,
 				83F69EA7258FCF1E0076B8F0 /* RegistrationError.swift in Sources */,
@@ -641,8 +631,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83F69ED02593CDE70076B8F0 /* VoIPPushPayload.swift in Sources */,
-				83F69ECB2593CDD40076B8F0 /* VoIPPushPayloadTransformer.swift in Sources */,
 				83F69ED6259A23F00076B8F0 /* UUIDExtension.swift in Sources */,
 				8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */,
 				83F69EB42592306E0076B8F0 /* Call.swift in Sources */,

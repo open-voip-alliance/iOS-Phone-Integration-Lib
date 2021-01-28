@@ -26,7 +26,7 @@ public class PIL: RegistrationStateDelegate {
     
     public var call: Call?
     public weak var middlewareDelegate: MiddlewareDelegate?
-    weak var pushKitManager: PushKitManager?
+    let pushKitManager = PushKitManager()
     
     //private var onRegister: ((Bool) -> ()) //wip
     private var incomingUuid: UUID?
@@ -90,7 +90,7 @@ public class PIL: RegistrationStateDelegate {
         }
     }
     
-    func register(onRegister: ((Bool) -> ())) { //wip
+    func register(onRegister: ((Bool) -> ())) {
         PhoneLib.shared.registrationDelegate = self
 
         guard let username = auth?.username,
@@ -118,7 +118,10 @@ public class PIL: RegistrationStateDelegate {
         }
     }
     
-    //wip
+    public func registerForVoIPPushes(){
+        pushKitManager.registerForVoIPPushes()
+    }
+    
     public func call(number: String) -> Session? {
         var session : Session?
         register { success in
@@ -154,11 +157,11 @@ public class PIL: RegistrationStateDelegate {
         print("We have no call yet, so we will queue to accept as soon as possible.")
     }
     
-    func prepareForIncomingCall(uuid: UUID) { //wip
+    func prepareForIncomingCall(uuid: UUID) {
         self.incomingUuid = uuid
     }
     
-    func findCallByUuid(uuid: UUID) -> Call? { //wip
+    func findCallByUuid(uuid: UUID) -> Call? {
         if call?.uuid == uuid {
             return call
         }

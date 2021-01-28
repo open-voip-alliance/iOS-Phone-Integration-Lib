@@ -63,20 +63,19 @@ class TableViewController: UITableViewController {
             
             pil.start(authentication: auth, completion: { (result) -> Void in
                 (sender as! UIButton).setTitle(result ? "Disconnect" : "Failed", for: .normal)
+                
                 print("Account \(accountTF.text!) tried to register on \(domainTF.text!):\(portTF.text!) with success = \(result).")
+                
+                pil.registerForVoIPPushes()
             })
             
-            //wip register for pushes here
-            pil.
+            
+            
         }
     }
     
     @IBAction func call(_ sender: Any) {
         let session = pil.call(number: numberTF.text!)
-        
-        print("//wip returned session from call(number): \(String(describing: session))")
-        print("//wip returned session.remoteNumber from call(number): \(String(describing: session?.remoteNumber))")
-        print("//wip returned session.state from call(number): \(String(describing: session?.state))")
         
         let outgoingSuccess = session != nil
         stateLabel.text = "Call result: \(outgoingSuccess)"

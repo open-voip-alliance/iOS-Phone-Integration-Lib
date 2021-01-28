@@ -5,8 +5,6 @@
 
 #import "MiddlewareRequestOperationManager.h"
 #import "SystemUser.h"
-#import "PILExampleApp-Swift.h" //wip
-#import "PIL/PIL-Swift.h"
 @import PIL;
 
 static NSString * const MiddlewareURLDeviceRecordMutation = @"/api/apns-device/";
@@ -127,27 +125,6 @@ static NSString * const MiddlewareMainBundleCFBundleIdentifier = @"CFBundleIdent
     }];
 }
 
-- (void)respondWithPayload:(NSDictionary * _Nonnull)payload available:(BOOL)available completion:(void (^ _Nullable)(NSError * _Nullable))completion {
-    NSDictionary *params = @{// Key that was given in the device push message as reference (required).
-                             MiddlewareResponseKeyUniqueKey: payload[MiddlewareResponseKeyUniqueKey],
-                             // Time given in the device push message to time the roundtrip (optional).
-                             MiddlewareResponseKeyMessageStartTime: payload[MiddlewareResponseKeyMessageStartTime],
-                             // Wether the device is available to accept the call (optional but default True).
-                             MiddlewareResponseKeyAvailable: available ? MiddlewareResponseKeyAvailableYES : MiddlewareResponseKeyAvailableNO,
-                             MiddlewareResponseKeySIPUserId: SystemUser.currentUser.sipAccount,
-                             };
-    
-    [self POST:MiddlewareURLIncomingCallResponse parameters:params withCompletion:^(NSURLResponse *operation, NSDictionary *responseData, NSError *error) {
-        if (completion) {
-            if (!error) {
-                completion(nil);
-            } else {
-                completion(error);
-            }
-        }
-    }];
-}
-
 - (void)sendHangupReasonToMiddleware:(NSString * _Nonnull)hangupReason forUniqueKey:(NSString * _Nonnull)uniqueKey withCompletion:(void (^)(NSError *error))completion {
     NSDictionary *params = @{// Key that was given in the device push message as reference (required).
                              MiddlewareResponseKeyUniqueKey: uniqueKey,
@@ -179,6 +156,29 @@ static NSString * const MiddlewareMainBundleCFBundleIdentifier = @"CFBundleIdent
     }];
 }
 
+#pragma mark - MiddlewareDelegate
+
+- (void)respondWithPayload:(NSDictionary * _Nonnull)payload available:(BOOL)available completion:(void (^ _Nullable)(NSError * _Nullable))completion {
+    NSDictionary *params = @{// Key that was given in the device push message as reference (required).
+                             MiddlewareResponseKeyUniqueKey: payload[MiddlewareResponseKeyUniqueKey],
+                             // Time given in the device push message to time the roundtrip (optional).
+                             MiddlewareResponseKeyMessageStartTime: payload[MiddlewareResponseKeyMessageStartTime],
+                             // Wether the device is available to accept the call (optional but default True).
+                             MiddlewareResponseKeyAvailable: available ? MiddlewareResponseKeyAvailableYES : MiddlewareResponseKeyAvailableNO,
+                             MiddlewareResponseKeySIPUserId: SystemUser.currentUser.sipAccount,
+                             };
+    
+    [self POST:MiddlewareURLIncomingCallResponse parameters:params withCompletion:^(NSURLResponse *operation, NSDictionary *responseData, NSError *error) {
+        if (completion) {
+            if (!error) {
+                completion(nil);
+            } else {
+                completion(error);
+            }
+        }
+    }];
+}
+
 #pragma mark - Notification handling
 
 - (void)loginUserNotification:(NSNotification *)notification {
@@ -188,7 +188,7 @@ static NSString * const MiddlewareMainBundleCFBundleIdentifier = @"CFBundleIdent
 - (void)logoutUserNotification:(NSNotification *)notification {
     [self.operationQueue waitUntilAllOperationsAreFinished];
     [self.requestSerializer clearAuthorizationHeader];
-
+    
     // Clear cookies for web view
     NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     for (NSHTTPCookie *cookie in cookieStorage.cookies) {

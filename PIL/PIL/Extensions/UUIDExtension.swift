@@ -7,10 +7,6 @@
 
 import Foundation
 
-//enum UUIDError: Error {
-//    case unknown
-//} //wip
-
 extension NSUUID {
     
     @objc(uuidFixerWithString:)

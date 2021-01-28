@@ -143,13 +143,11 @@ extension CallKitDelegate {
     private func findCall(action: CXCallAction) -> Call? {
         print("Attempting to perform \(String(describing: type(of: action))).")
 
-//        guard let call = pil.findCallByUuid(uuid: action.callUUID) else { //wip
-//            return nil
-//        }
-//
-//        return call
-        
-        return nil //wip dlt this
+        guard let call = pil.findCallByUuid(uuid: action.callUUID) else { //wip
+            return nil
+        }
+
+        return call
     }
 
     /**

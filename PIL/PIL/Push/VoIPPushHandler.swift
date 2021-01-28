@@ -13,7 +13,7 @@ import CallKit
 class VoIPPushHandler {
 
     private lazy var pil: PIL = PIL.shared
-    private let voIPPushPayloadTransformer = VoIPPushPayloadTransformer()
+//    private let voIPPushPayloadTransformer = VoIPPushPayloadTransformer() //wip
     
     private lazy var middlewareDelegate = {
         pil.middlewareDelegate
@@ -27,25 +27,33 @@ class VoIPPushHandler {
     // If we do not get this confirmation we can assume the call has failed and cancel the ringing.
     // However, it must always be set to false when a new call is coming in.
     static var incomingCallConfirmed = false
+    
+    private struct PayloadLookup {
+        static let uniqueKey = "unique_key"
+        static let phoneNumber = "phonenumber"
+        static let responseUrl = "response_api"
+        static let callerId = "caller_id"
+    }
 
 
     func handle(payload: PKPushPayload, completion: @escaping () -> ()) {
         VoIPPushHandler.self.incomingCallConfirmed = false
 
-        guard let payload = voIPPushPayloadTransformer.transform(payload: payload) else {
-            print("Unable to properly extract call information from payload. Not handling call.")
+        let payload = payload.dictionaryPayload as NSDictionary
+        guard let uuid = getUUIDFrom(payload: payload) else {
+            print("Handling call failed due to invalid UUID.")
             return
         }
 
-        self.pil.prepareForIncomingCall(uuid: payload.uuid)
+        self.pil.prepareForIncomingCall(uuid: uuid)
 
-        callKit.reportNewIncomingCall(with: payload.uuid, update: createCxCallUpdate(from: payload)) { error in
+        callKit.reportNewIncomingCall(with: uuid, update: createCxCallUpdate(from: payload)) { error in
             if (error != nil) {
                 print("Failed to create incoming call: \(error?.localizedDescription ?? "Unknown error")")
                 return
             }
 
-            self.createLocalCallObject(from: payload)
+            self.rejectSecondIncomingCall(with: payload)
 
             completion()
         }
@@ -53,18 +61,15 @@ class VoIPPushHandler {
         establishConnection(for: payload)
     }
 
-    /**
-        Process an incoming VoIP notification, launching the Call UI and connecting to the back-end.
-     */
-    func createLocalCallObject(from payload: VoIPPushPayload) {
-        let uuid = payload.uuid,
-                _ = payload.phoneNumber,
-                _ = payload.callerId
-
+    func rejectSecondIncomingCall(with payload: NSDictionary) {
         if self.pil.hasActiveCall {
             respond(with: payload, available: false)
+            
+            guard let uuid = getUUIDFrom(payload: payload) else {
+                print("Rejecting call failed due to invalid UUID.")
+                return
+            }
             self.rejectCall(uuid: uuid, description: "Rejecting call as there is already one in progress")
-            return
         }
     }
 
@@ -72,17 +77,20 @@ class VoIPPushHandler {
         Attempts to asynchronously create a VoIP connection, if this fails we must report the call as failed to hide
         the now ringing UI.
     */
-    func establishConnection(for payload: VoIPPushPayload) {
+    func establishConnection(for payload: NSDictionary) { //wip
         if pil.hasActiveCall {
             return
         }
 
-        let uuid = payload.uuid
+        guard let uuid = getUUIDFrom(payload: payload) else {
+            print("Failed to establish connection due to invalid UUID.")
+            return
+        }
 
         pil.register { success in
             if !success {
                 self.rejectCall(uuid: uuid, description: "Failed to register with SIP, rejecting the call...")
-                return;
+                return
             }
 
             self.respond(with: payload, available: true) { error in
@@ -99,15 +107,22 @@ class VoIPPushHandler {
             }
         }
     }
+    
+    func getUUIDFrom(payload: NSDictionary) -> UUID? {
+        guard let uuid = NSUUID.uuidFixer(uuidString: payload[PayloadLookup.uniqueKey] as! String) as UUID? else {
+           return nil
+        }
+        return uuid
+    }
 
     /**
         Respond to the middleware, this will determine if we receive the call or not.
     */
-    private func respond(with payload: VoIPPushPayload, available: Bool, completion: ((Error?) -> ())? = nil) {
+    private func respond(with payload: NSDictionary, available: Bool, completion: ((Error?) -> ())? = nil) {
         if (completion == nil) {
-            middlewareDelegate?.respond(payload: payload.payload.dictionaryPayload as NSDictionary, available: available, completion: nil)
+            middlewareDelegate?.respond?(payload: payload, available: available, completion: nil)
         } else {
-            middlewareDelegate?.respond(payload: payload.payload.dictionaryPayload as NSDictionary, available: available, completion: completion)
+            middlewareDelegate?.respond?(payload: payload, available: available, completion: completion)
         }
     }
 
@@ -123,10 +138,13 @@ class VoIPPushHandler {
     /**
         Creates the CXCallUpdate object with the relevant information from the payload.
     */
-    private func createCxCallUpdate(from payload: VoIPPushPayload) -> CXCallUpdate {
+    private func createCxCallUpdate(from payload: NSDictionary) -> CXCallUpdate {
+        let callerId = payload[PayloadLookup.callerId] as? String
+        let phoneNumber = payload[PayloadLookup.phoneNumber] as? String
+        
         let callUpdate = CXCallUpdate()
-        callUpdate.remoteHandle = CXHandle(type: .phoneNumber, value: payload.phoneNumber)
-        callUpdate.localizedCallerName = payload.callerName
+        callUpdate.remoteHandle = CXHandle(type: .phoneNumber, value: phoneNumber ?? "")
+        callUpdate.localizedCallerName = callerId ?? phoneNumber
         return callUpdate
     }
 }
