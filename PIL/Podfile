@@ -14,7 +14,7 @@ target 'PIL' do
   end
   
   target 'PILExampleApp' do
-    pod 'PIL', :path => '/Users/chris/projects/Vialer/iOS/iOS-platform-integration-layer/PIL'
+    pod 'PIL', :path => '../PIL'
     pod 'AFNetworkActivityLogger'
     pod 'AFNetworking'
     pod 'SAMKeychain'
