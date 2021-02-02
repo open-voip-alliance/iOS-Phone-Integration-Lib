@@ -70,7 +70,7 @@
       - [ ] Password
       - [ ] Register with Middleware
   - [ ] Preferences
-      - [ ] Encryption
+      - [x] Encryption
       - [ ] Use Application Ringtone 
 - [x] Dialer Screen
   - [x] Input numbers
