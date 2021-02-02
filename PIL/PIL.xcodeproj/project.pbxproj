@@ -18,6 +18,8 @@
 		833E436A25C1A2F60006518B /* SystemUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 833E436925C1A2F60006518B /* SystemUser.m */; };
 		833E437125C1A3DA0006518B /* NSString+SubString.m in Sources */ = {isa = PBXBuildFile; fileRef = 833E436F25C1A3DA0006518B /* NSString+SubString.m */; };
 		833E437725C1B4D20006518B /* UrlsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E437625C1B4D20006518B /* UrlsConfiguration.swift */; };
+		833E445D25C98FFC0006518B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833E445C25C98FFC0006518B /* Config.plist */; };
+		833E446225C9914B0006518B /* StagingConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833E446125C9914B0006518B /* StagingConfig.plist */; };
 		836A97F425ACDB4A00497759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836A97F325ACDB4A00497759 /* Main.storyboard */; };
 		837C275A25B8A64E008220C6 /* PushKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C275925B8A64E008220C6 /* PushKitManager.swift */; };
 		837C275B25B8A64E008220C6 /* PushKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C275925B8A64E008220C6 /* PushKitManager.swift */; };
@@ -84,6 +86,8 @@
 		833E437025C1A3DA0006518B /* NSString+SubString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SubString.h"; sourceTree = "<group>"; };
 		833E437625C1B4D20006518B /* UrlsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlsConfiguration.swift; sourceTree = "<group>"; };
 		833E440225C848BC0006518B /* PILExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PILExampleApp.entitlements; sourceTree = "<group>"; };
+		833E445C25C98FFC0006518B /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		833E446125C9914B0006518B /* StagingConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StagingConfig.plist; sourceTree = "<group>"; };
 		836A97F325ACDB4A00497759 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		837C275925B8A64E008220C6 /* PushKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushKitManager.swift; sourceTree = "<group>"; };
 		8385249925BB16E1008F4827 /* MiddlewareDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				833E437625C1B4D20006518B /* UrlsConfiguration.swift */,
+				833E445C25C98FFC0006518B /* Config.plist */,
+				833E446125C9914B0006518B /* StagingConfig.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -447,8 +453,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833E445D25C98FFC0006518B /* Config.plist in Resources */,
 				836A97F425ACDB4A00497759 /* Main.storyboard in Resources */,
 				83C98BA225A8AD1A00CECE31 /* LaunchScreen.storyboard in Resources */,
+				833E446225C9914B0006518B /* StagingConfig.plist in Resources */,
 				83C98B9F25A8AD1A00CECE31 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
