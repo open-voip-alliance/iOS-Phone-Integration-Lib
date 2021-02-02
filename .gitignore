@@ -17,6 +17,9 @@ xcuserdata/
 project.xcworkspace/
 DerivedData/
 
+# AppCode
+.idea
+
 # build products
 build/
 *.[oa]

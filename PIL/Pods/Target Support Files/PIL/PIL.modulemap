@@ -1,6 +1,0 @@
-module PIL {
-  umbrella header "PIL-umbrella.h"
-
-  export *
-  module * { export * }
-}
