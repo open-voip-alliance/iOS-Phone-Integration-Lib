@@ -14,11 +14,8 @@ NSString * const MiddlewareAccountRegistrationIsDoneNotification = @"MiddlewareA
 
 @interface Middleware ()
 @property (strong, nonatomic) MiddlewareRequestOperationManager *commonMiddlewareRequestOperationManager;
-@property (weak, nonatomic) SystemUser *systemUser;
+@property (weak, nonatomic) SystemUser *systemUser; //wip
 @property (nonatomic) int retryCount;
-//wip @property (strong, nonatomic) Reachability *reachability;
-//@property (strong, nonatomic) NSManagedObjectContext* context; //wip
-//@property (strong, nonatomic) NSString *pushNotificationProcessing;
 @end
 
 @implementation Middleware

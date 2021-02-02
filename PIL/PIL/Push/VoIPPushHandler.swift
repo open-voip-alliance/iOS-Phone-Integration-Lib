@@ -13,7 +13,6 @@ import CallKit
 class VoIPPushHandler {
 
     private lazy var pil: PIL = PIL.shared
-//    private let voIPPushPayloadTransformer = VoIPPushPayloadTransformer() //wip
     
     private lazy var middlewareDelegate = {
         pil.middlewareDelegate
@@ -77,7 +76,7 @@ class VoIPPushHandler {
         Attempts to asynchronously create a VoIP connection, if this fails we must report the call as failed to hide
         the now ringing UI.
     */
-    func establishConnection(for payload: NSDictionary) { //wip
+    func establishConnection(for payload: NSDictionary) {
         if pil.hasActiveCall {
             return
         }

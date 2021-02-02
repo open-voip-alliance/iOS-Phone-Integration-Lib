@@ -122,7 +122,7 @@ extension CallKitDelegate: CXProviderDelegate {
     public func provider(_ provider: CXProvider, perform action: CXPlayDTMFCallAction) {
 //        guard let call = findCallOrFail(action: action) else { return }
 
-        print("DTMF not supported yet")//wip
+        print("DTMF not supported yet")
         action.fail()
     }
 
@@ -143,7 +143,7 @@ extension CallKitDelegate {
     private func findCall(action: CXCallAction) -> Call? {
         print("Attempting to perform \(String(describing: type(of: action))).")
 
-        guard let call = pil.findCallByUuid(uuid: action.callUUID) else { //wip
+        guard let call = pil.findCallByUuid(uuid: action.callUUID) else {
             return nil
         }
 

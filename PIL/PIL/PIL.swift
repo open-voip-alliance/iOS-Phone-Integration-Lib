@@ -35,7 +35,7 @@ public class PIL: RegistrationStateDelegate {
     public var auth: Auth? = nil {
         didSet {
             if (auth?.isValid != true) {
-                print("Attempting to set an invalid auth object") //, LogLevel.ERROR) //wip add logging system
+                print("Attempting to set an invalid auth object")
                 auth = nil
             }
         }

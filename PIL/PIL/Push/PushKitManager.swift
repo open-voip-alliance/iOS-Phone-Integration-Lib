@@ -49,7 +49,7 @@ class PushKitManager: NSObject {
         Check if we have registered for voip pushes by seeing if the delgate is registered.
     */
     private func hasRegisteredForVoIPPushes() -> Bool {
-        self.voIPRegistry.delegate != nil
+        return self.voIPRegistry.delegate != nil
     }
 }
 
