@@ -10,13 +10,13 @@
     - [ ] Use app ringtone
 - [ ] Middleware
   - [x] Middleware protocol exists to offload registration to consuming app
-  - [..] Using implementation from consuming app can properly establish push kit integration
-- [..] Events
+  - [ ] Using implementation from consuming app can properly establish push kit integration
+- [ ] Events
   - [ ] Events can be listened for
   - [ ] Events can be broadcast
   - [ ] Events include call object where relevant
 - [ ] Call Management
-  - [..] Immutable call object can be generated
+  - [ ] Immutable call object can be generated
     - [x] Remote number
     - [x] Display name
     - [x] Call state
@@ -29,9 +29,9 @@
 - [ ] Calling
   - [ ] Outgoing
     - [x] Can place an outgoing call to a given number
-    - [..] Hooks up with call kit
+    - [ ] Hooks up with call kit
     - [ ] Automatically displays call screen if chosen
-  - [..] Incoming
+  - [ ] Incoming
     - [ ] App calls while in background
     - [ ] User can answer call
     - [ ] User can decline call
