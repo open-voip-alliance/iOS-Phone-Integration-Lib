@@ -2,9 +2,9 @@
 
 ## PIL
 - [ ] Configuration
-  - [ ] Library supports SIP credentials
+  - [x] Library supports SIP credentials
     - [x] Username/password/domain/port
-    - [ ] Encryption on/off
+    - [x] Encryption on/off
   - [ ] Library supports user preferences
     - [ ] Codec
     - [ ] Use app ringtone
