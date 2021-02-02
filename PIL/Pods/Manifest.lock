@@ -41,7 +41,7 @@ DEPENDENCIES:
   - AFNetworkActivityLogger
   - AFNetworking
   - PhoneLib (from `https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git`)
-  - PIL (from `/Users/chris/projects/Vialer/iOS/iOS-platform-integration-layer/PIL`)
+  - PIL (from `../PIL`)
   - SAMKeychain
 
 SPEC REPOS:
@@ -57,7 +57,7 @@ EXTERNAL SOURCES:
     branch: main
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
   PIL:
-    :path: "/Users/chris/projects/Vialer/iOS/iOS-platform-integration-layer/PIL"
+    :path: "../PIL"
 
 CHECKOUT OPTIONS:
   PhoneLib:
@@ -72,6 +72,6 @@ SPEC CHECKSUMS:
   PIL: 1f2e3304b36a2f5ddd14541ce39ba1f8dd548302
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
 
-PODFILE CHECKSUM: ff10690c3d0030fc3606d4ae81a5f4ee00f00b18
+PODFILE CHECKSUM: b639c0368aec0dee8820c289286c29b50d8685be
 
 COCOAPODS: 1.10.0

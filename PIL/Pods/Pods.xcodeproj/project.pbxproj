@@ -14,10 +14,10 @@
 		09C6A77DE1CB8EA52E53486651B1140C /* AttendedTransferSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD87CEC41914346944662B5ABE08F7A /* AttendedTransferSession.swift */; };
 		0B2448D3F64BE534254A11905A82DE6C /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0C71D5FE6E80BFC47402A61FC0F38 /* AFAutoPurgingImageCache.m */; };
 		0F3CF9E24B4179E017C4A953CFC79CCB /* LinphoneLoggingServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CEB40A4D4F40B58F1E6CFC85B24B2 /* LinphoneLoggingServiceManager.swift */; };
-		101AF5F2AA094D67BAF07DA73187C5F9 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124107D01BCA140617805392580F862 /* Call.swift */; };
+		101AF5F2AA094D67BAF07DA73187C5F9 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28209BB77588477AE94A2AF4957F656A /* Call.swift */; };
 		11F677F9F255BDD5860D25EDF5722285 /* AFNetworkActivityLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 241434DBC51D693D4973195F4C1A1CE0 /* AFNetworkActivityLogger-dummy.m */; };
 		12450CB9DC4AA029A6F65AC67FA90D3F /* Pods-PIL-PILExampleApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D6D1D34E1631820C7A7E44226025A7D /* Pods-PIL-PILExampleApp-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		146F97F106983F8601157EF59C1B0B39 /* CallKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172EE709353D6BF3D35241016BA1245F /* CallKitDelegate.swift */; };
+		146F97F106983F8601157EF59C1B0B39 /* CallKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D3279E684CF90E4167D1BEDD5B927 /* CallKitDelegate.swift */; };
 		14F12FC15CC60920BF5A0C281950BBF6 /* linphone-sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F0D18B07968D65F3992785F589FA56 /* linphone-sdk-dummy.m */; };
 		1954926B26AD8DB0421CAE7B8B742EED /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D098F92D3ACEA2961DF1D8B51439AF /* UIRefreshControl+AFNetworking.m */; };
 		1B60A751B5638329413777DFF463CD43 /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3AA1C24D127BCE101FDEDB8E3D512 /* SessionState.swift */; };
@@ -31,7 +31,7 @@
 		33829FD43F51F4680CE204EB9D5C383E /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C0BA26DE4F57DB5661D0C8D46569C3 /* AFImageDownloader.m */; };
 		39B57B130A698441B39BFFEB8D73F735 /* SipSDKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A71C8C910608FC688660743B828F6 /* SipSDKDelegate.swift */; };
 		40FE323D591164594CB316537CCE8B59 /* Pods-PIL-PILTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 639DC62B84D7921D603A2543BB1F570C /* Pods-PIL-PILTests-dummy.m */; };
-		425679A17D51B30ED41C8DE25B21D9FC /* PIL-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A2C9542365CF5C5B020C2A9518AB89 /* PIL-dummy.m */; };
+		425679A17D51B30ED41C8DE25B21D9FC /* PIL-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7088E1BFBEF198B2840EA74853CE3A98 /* PIL-dummy.m */; };
 		449F3668A16FA917B40E2030BEB4C45D /* Pods-PIL-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B45C8BC34C0A21013A5ACE8AB02D42 /* Pods-PIL-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4AB5C6512E4572294D334C28CAEBFA6A /* PhoneLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F1EFED9E5A92094F4903A2B9E84FC /* PhoneLib.swift */; };
 		5545FA00F35696B53F538A60AC548C65 /* LinphoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60745DD99179298587DD1F46A6487246 /* LinphoneManager.swift */; };
@@ -49,16 +49,16 @@
 		7A241B600E198A2A82058F81ED8B43E1 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDFAF28659D4C6566F5DAD7E2AC41F4 /* UIProgressView+AFNetworking.m */; };
 		7DB11209A57067F218B948E1E9547241 /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A3EF2C6D4F893AA4E26F70E091F2E279 /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7F726143BEBF3988F6DD56CB5ECE5BE8 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E66CFC93C4901B1A95137AE0FA68FD /* UIButton+AFNetworking.m */; };
-		84B6DE7A063467C905005F79D6CA946E /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88BE335A73D992ED48D2C7E9C0960AF /* UUIDExtension.swift */; };
-		86FF61ED2194649AC0BE918B9C10E3B6 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D45C2C0B56954E673F899405686E48 /* Direction.swift */; };
+		84B6DE7A063467C905005F79D6CA946E /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F302968B338035CC393CC1EE40EAC /* UUIDExtension.swift */; };
+		86FF61ED2194649AC0BE918B9C10E3B6 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E875139561BA0F9032F3D97168DD0FD /* Direction.swift */; };
 		878E3018251BD11AC751F30F8FF478AC /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F15E26B312D8E4A4F23D2BDE961CD0 /* UIWebView+AFNetworking.m */; };
-		87A1F6CCCD1E6C111C49CBBFC15E4EFE /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4999DB31B4AB1CDB9624F8F2B5623E /* Auth.swift */; };
+		87A1F6CCCD1E6C111C49CBBFC15E4EFE /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E2D1851D9F9E0EE7583B6C38B8C6F /* Auth.swift */; };
 		8A52C935918BABC0D8791BFFF19D7BDD /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D102399D90722686F3E8BE324E3AAD /* AFURLRequestSerialization.m */; };
-		8B079C3C4B1AD648D34278629F5313FC /* MiddlewareDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A190AD0AFD27A895D1CDCAF2991F2 /* MiddlewareDelegate.swift */; };
+		8B079C3C4B1AD648D34278629F5313FC /* MiddlewareDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BF2FE6868CA9662938527D3A65B88 /* MiddlewareDelegate.swift */; };
 		8C956D2EBD8288BC41CB8BD84E8230CD /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ED678D5B6CCA419E34AEFDE0065FF9C9 /* UIActivityIndicatorView+AFNetworking.m */; };
 		8F4CC2D7D779CDAF51E0F212F6EB02CC /* SAMKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B832438C1576B8EB994EAE785D48A93 /* SAMKeychain-dummy.m */; };
 		8F970A056DD5FCF3D9D5EB07531A13D4 /* SipManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C24A42B7186AD968C01B84AA0679BDF /* SipManagerProtocol.swift */; };
-		92369FDA0E9A82CFF2967F350627C5B2 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB0908B30C74C5A23DB1C2B143A6BFD /* PIL.swift */; };
+		92369FDA0E9A82CFF2967F350627C5B2 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CEDA7607A80F3945F5B2B6D9DBAE50 /* PIL.swift */; };
 		92C814938A8109E8FFAE662A65AFF022 /* BaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF99078AE0B11695FCBB0792B6E221 /* BaseManagerProtocol.swift */; };
 		9C760B447722B42472FEB2B8C62683ED /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = D99A877399BB7E7D8EA87DEFA1ACF8F7 /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9F274B5215735FED6957E9812A1A7E1A /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E63227B004A8399CFEFDA27EB7853733 /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -69,8 +69,8 @@
 		A948789461F894C51C0AE5840F1E880E /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6409F0FE3DB6C857C08766EB44C179FB /* AFSecurityPolicy.m */; };
 		AE31046DE39127C57DF7665EC05327CA /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1191C13E1C5E0BA0D8A499FEA31D2043 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AE94FD76D2C2ED2557ED82FF70E7AEEA /* AFNetworkActivityConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F21610F7AB42600D82CEAA955CFF918 /* AFNetworkActivityConsoleLogger.m */; };
-		B1AAC56A7B798F2DCFDCB5F296DF487F /* PIL-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A6C93796EBE70BD5FC63906C9EBB5D /* PIL-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B5B7DDF9291A4BCAD97E5E600C91995C /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B76E3EC102BDA5F799ED4BFDA5F04 /* Actions.swift */; };
+		B1AAC56A7B798F2DCFDCB5F296DF487F /* PIL-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0CF50F453BD19D6F52B1DFBB1D50E7E /* PIL-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B5B7DDF9291A4BCAD97E5E600C91995C /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546CBB5D6AF650EE51047B38184341B2 /* Actions.swift */; };
 		B76EC0CF205A3274620483C6BFE1155F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4699B4AEE93E73ACC49930F0A2620B7A /* Session.swift */; };
 		BB14C94253C9F3E8AED5A51A87183869 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB1CF81DF641B64C65CCB74569B7E7 /* AFNetworkActivityIndicatorManager.m */; };
 		BEA84C693F514C6F50D821327D16A15B /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 842DD9D54E522A37654FCC44EA58BB35 /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -78,19 +78,19 @@
 		C00EC8C50E94608C0C592233FCD84C34 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F372CCC13A8ACBCDAD3C0D029866B615 /* SessionDelegate.swift */; };
 		C850FF74D4DC1BE48DA8824007B98897 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D1E7EF67B42182DF6E483541272770 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CC38A443CB7A67FDED4E636022D0600A /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = CADD3015AD2315F760725117392AF102 /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D4813852F7BF5B92C8F04AA022909D0E /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1957BAB0A8942894BA31D8A208D1F /* RegistrationError.swift */; };
+		D4813852F7BF5B92C8F04AA022909D0E /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320A5F01FC073DE4474F874EFBE920A /* RegistrationError.swift */; };
 		D536B5BAD84AD07753F4F8968FEF6FDC /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E41710BC653A9843C625EE57A6EA87 /* AFHTTPSessionManager.m */; };
 		D89ABE51EDA5A837B2B531DFD1A6647D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD3031E7BD4C9537873010D495A145 /* UIImageView+AFNetworking.m */; };
-		DC23FB3576DC64F0B57DF4047CFA4458 /* SimpleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B94995DD5FD0768B3F8D933DF729FC6 /* SimpleState.swift */; };
+		DC23FB3576DC64F0B57DF4047CFA4458 /* SimpleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA67205685FFCDB66C750C575C90D18 /* SimpleState.swift */; };
 		E070D8B28E388E57CD88925284150AC4 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C62D01D03525451032B0271692AAF74 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E185018CE5BABA9DE5C550C50B584C19 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DB1982FB7DECBAD0B6413B12490147 /* AFURLResponseSerialization.m */; };
-		E4E4F0A39FB26531573E70E48475A383 /* VoIPPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF709E13D6DC6C2CCA2AF6CB92A22E /* VoIPPushHandler.swift */; };
+		E4E4F0A39FB26531573E70E48475A383 /* VoIPPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EC59679E0064E762C0ACD62C183338 /* VoIPPushHandler.swift */; };
 		EC8BCD7BCC7EB0D3DE997E8E1E8A279F /* AFNetworkActivityLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E8AF9DB12A9AADC3514970B2FB9D703 /* AFNetworkActivityLoggerProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EE699D5C5B11847A8803192E5EFB8C81 /* SAMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F8BA3FBA8EEA6D0EA5E7F982617A91 /* SAMKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		EF0C66419AED0754CDC54DA8AF1381BD /* RegistrationStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8164113129263E2617ADCF52352987 /* RegistrationStateDelegate.swift */; };
 		EF0DEF08A2C17F30FA2971BFC7656A26 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 73568F29C2F0699CDA31D8661A47C9A2 /* AFCompatibilityMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F6AF6876037EAE5825FBFB29C8619153 /* AFNetworkActivityConsoleLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 0017794FEA415F95BA7033DCDDC91654 /* AFNetworkActivityConsoleLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F772C39A3A4548B10E4FA7C3C51446BB /* PushKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F07CCCD7FA681852FA3C469A56C1E3 /* PushKitManager.swift */; };
+		F772C39A3A4548B10E4FA7C3C51446BB /* PushKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E7A58EB68A5E5E0F337829F50D1CF4 /* PushKitManager.swift */; };
 		FE006666A45B5D8D871611C9A907121F /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = EB75AC4F16575443FC50B61F3339B086 /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FED3A8EED42AC977927FF9C70C9A1D54 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A6111D6D690EBBAF0EFF611C7D989033 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
@@ -191,26 +191,23 @@
 
 /* Begin PBXFileReference section */
 		0017794FEA415F95BA7033DCDDC91654 /* AFNetworkActivityConsoleLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityConsoleLogger.h; path = AFNetworkActivityLogger/AFNetworkActivityConsoleLogger.h; sourceTree = "<group>"; };
-		0124107D01BCA140617805392580F862 /* Call.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Call.swift; path = PIL/Call.swift; sourceTree = "<group>"; };
 		013D873BC087DF83BA267E5C829AD474 /* Pods-PIL-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PIL-acknowledgements.markdown"; sourceTree = "<group>"; };
-		05A6C93796EBE70BD5FC63906C9EBB5D /* PIL-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PIL-umbrella.h"; sourceTree = "<group>"; };
 		092ECD26E3B9E83C0FB848A6D2ADDDDA /* Pods-PIL-PILTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PIL-PILTests-resources.sh"; sourceTree = "<group>"; };
 		09E41710BC653A9843C625EE57A6EA87 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		0AA2F84BA4B6A75F3D73D4AD2EDF8151 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
-		0B94995DD5FD0768B3F8D933DF729FC6 /* SimpleState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleState.swift; sourceTree = "<group>"; };
 		0D4CB830C92918E0AAB84758F3C089EB /* linphone-sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "linphone-sdk.debug.xcconfig"; sourceTree = "<group>"; };
 		0D6D1D34E1631820C7A7E44226025A7D /* Pods-PIL-PILExampleApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PIL-PILExampleApp-umbrella.h"; sourceTree = "<group>"; };
 		0E31BD7A8187FFE62896257E2A79228F /* SipManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipManager.swift; path = PhoneLib/Managers/Sip/SipManager.swift; sourceTree = "<group>"; };
 		0E4C441A75133ACDE490DA883FDA744E /* Pods-PIL-PILExampleApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PIL-PILExampleApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		0E8AF9DB12A9AADC3514970B2FB9D703 /* AFNetworkActivityLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityLoggerProtocol.h; path = AFNetworkActivityLogger/AFNetworkActivityLoggerProtocol.h; sourceTree = "<group>"; };
 		0FC4D21FE4CAC1462A981B02AF8601B0 /* AFNetworkActivityLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworkActivityLogger-prefix.pch"; sourceTree = "<group>"; };
-		10D94068C40EAC363183FB7B66A9A145 /* PIL.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PIL.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1191C13E1C5E0BA0D8A499FEA31D2043 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		122D97B8134CEF4C22F967A55251A42C /* bctoolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = bctoolbox.framework; path = "linphone-sdk/apple-darwin/Frameworks/bctoolbox.framework"; sourceTree = "<group>"; };
+		12351C0DA8AC3DE66898F9DAE84B1710 /* PIL.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PIL.modulemap; sourceTree = "<group>"; };
+		12CEDA7607A80F3945F5B2B6D9DBAE50 /* PIL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PIL.swift; path = PIL/PIL.swift; sourceTree = "<group>"; };
 		13B45C8BC34C0A21013A5ACE8AB02D42 /* Pods-PIL-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PIL-umbrella.h"; sourceTree = "<group>"; };
 		13D1E7EF67B42182DF6E483541272770 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		172EE709353D6BF3D35241016BA1245F /* CallKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallKitDelegate.swift; path = PIL/CallKitDelegate.swift; sourceTree = "<group>"; };
-		17D45C2C0B56954E673F899405686E48 /* Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		1B6B51E276880D5219429A67940B4179 /* PIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PIL.release.xcconfig; sourceTree = "<group>"; };
 		1B832438C1576B8EB994EAE785D48A93 /* SAMKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAMKeychain-dummy.m"; sourceTree = "<group>"; };
 		1DFBD45E651BF3ED8F50165DD29F8C2E /* linphone-sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "linphone-sdk.modulemap"; sourceTree = "<group>"; };
 		21E66CFC93C4901B1A95137AE0FA68FD /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
@@ -218,7 +215,9 @@
 		241434DBC51D693D4973195F4C1A1CE0 /* AFNetworkActivityLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworkActivityLogger-dummy.m"; sourceTree = "<group>"; };
 		25F14FF79135AED09B5E21AFDAE69D0F /* belr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = belr.framework; path = "linphone-sdk/apple-darwin/Frameworks/belr.framework"; sourceTree = "<group>"; };
 		264643F472BDE8A69C3F68E8BA146C95 /* linphone-sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "linphone-sdk-prefix.pch"; sourceTree = "<group>"; };
+		28209BB77588477AE94A2AF4957F656A /* Call.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Call.swift; path = PIL/Call.swift; sourceTree = "<group>"; };
 		28761D38237F81D99B05BC3FEF25DC4C /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		2B029396B58BF353DE55E67258B92818 /* PIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PIL.debug.xcconfig; sourceTree = "<group>"; };
 		2CD16DB823BC1228DF21DA85B701949D /* Pods-PIL-PILExampleApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PIL-PILExampleApp.modulemap"; sourceTree = "<group>"; };
 		2F21610F7AB42600D82CEAA955CFF918 /* AFNetworkActivityConsoleLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityConsoleLogger.m; path = AFNetworkActivityLogger/AFNetworkActivityConsoleLogger.m; sourceTree = "<group>"; };
 		301A53C65B77A20BBF496DB39088D7B6 /* liblinphone_tester */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = liblinphone_tester; path = "linphone-sdk/apple-darwin/Resources/liblinphone_tester"; sourceTree = "<group>"; };
@@ -228,6 +227,7 @@
 		348F50A5D0D482FAF6CC9E0FF2B2A3D2 /* SAMKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAMKeychain.h; path = Sources/SAMKeychain.h; sourceTree = "<group>"; };
 		3521CE23FE9E25728BF16546B930E744 /* Pods-PIL-PILTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PIL-PILTests.modulemap"; sourceTree = "<group>"; };
 		3834072B1B1F9082B54AD24F222FBCDF /* linphone-sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "linphone-sdk-umbrella.h"; sourceTree = "<group>"; };
+		3869DD1C3E7C29DB36A7BC33745EBBCC /* PIL-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PIL-prefix.pch"; sourceTree = "<group>"; };
 		38DE3558D17D048BC99025FC8508E1BD /* AFNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.debug.xcconfig; sourceTree = "<group>"; };
 		3905DDD714CABE7A437AD463D6D09F6C /* libPhoneLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPhoneLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B56C3F1A2EED9D6F49F1B8A8C7E2450 /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityLogger.h; path = AFNetworkActivityLogger/AFNetworkActivityLogger.h; sourceTree = "<group>"; };
@@ -240,10 +240,12 @@
 		41D102399D90722686F3E8BE324E3AAD /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
 		45CC39D13B9D03CE348D4049311DB80D /* Pods-PIL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PIL-dummy.m"; sourceTree = "<group>"; };
 		4699B4AEE93E73ACC49930F0A2620B7A /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = PhoneLib/Models/Session.swift; sourceTree = "<group>"; };
-		4BA08D4600648D8977E99751A890D4B1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		4E9ED41AD08B8DD6D81D07F30C30F4C3 /* PIL.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PIL.modulemap; sourceTree = "<group>"; };
+		51E7A58EB68A5E5E0F337829F50D1CF4 /* PushKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PushKitManager.swift; sourceTree = "<group>"; };
 		52F0D18B07968D65F3992785F589FA56 /* linphone-sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "linphone-sdk-dummy.m"; sourceTree = "<group>"; };
+		531E2D1851D9F9E0EE7583B6C38B8C6F /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		546CBB5D6AF650EE51047B38184341B2 /* Actions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Actions.swift; path = PIL/Actions.swift; sourceTree = "<group>"; };
 		547F1EFED9E5A92094F4903A2B9E84FC /* PhoneLib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhoneLib.swift; path = PhoneLib/PhoneLib.swift; sourceTree = "<group>"; };
+		57EC59679E0064E762C0ACD62C183338 /* VoIPPushHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoIPPushHandler.swift; sourceTree = "<group>"; };
 		5A474AD39AA9F5C2792F88EE352665B4 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
 		5C24A42B7186AD968C01B84AA0679BDF /* SipManagerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipManagerProtocol.swift; path = PhoneLib/Managers/SipManagerProtocol.swift; sourceTree = "<group>"; };
 		5DD9F8D73B4866EE252AB30B3CF351B2 /* Pods-PIL-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PIL-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -252,23 +254,26 @@
 		60745DD99179298587DD1F46A6487246 /* LinphoneManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinphoneManager.swift; path = PhoneLib/Managers/Linphone/LinphoneManager.swift; sourceTree = "<group>"; };
 		60D098F92D3ACEA2961DF1D8B51439AF /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		612028EAFF1C2054A0EB821A9C9F2440 /* libSAMKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSAMKeychain.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		62CC32BC013208548115F5107855DBA4 /* PIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PIL.release.xcconfig; sourceTree = "<group>"; };
 		63392D5D07E1E48B1AF35A814B63DA68 /* Pods-PIL-PILExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PIL-PILExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		635F302968B338035CC393CC1EE40EAC /* UUIDExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UUIDExtension.swift; sourceTree = "<group>"; };
 		639DC62B84D7921D603A2543BB1F570C /* Pods-PIL-PILTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PIL-PILTests-dummy.m"; sourceTree = "<group>"; };
 		6409F0FE3DB6C857C08766EB44C179FB /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
-		657B76E3EC102BDA5F799ED4BFDA5F04 /* Actions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Actions.swift; path = PIL/Actions.swift; sourceTree = "<group>"; };
-		691A190AD0AFD27A895D1CDCAF2991F2 /* MiddlewareDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MiddlewareDelegate.swift; sourceTree = "<group>"; };
 		6A7B748F71CFB526C583232F0ACC9658 /* linphone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = linphone.framework; path = "linphone-sdk/apple-darwin/Frameworks/linphone.framework"; sourceTree = "<group>"; };
+		6CB73C45869FA1689B228B6AD3D8D3D4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6EF2F8BB5C6F07F4A3F15E2BB920D8B9 /* mscodec2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mscodec2.framework; path = "linphone-sdk/apple-darwin/Frameworks/mscodec2.framework"; sourceTree = "<group>"; };
 		6FF0C71D5FE6E80BFC47402A61FC0F38 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
+		7088E1BFBEF198B2840EA74853CE3A98 /* PIL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PIL-dummy.m"; sourceTree = "<group>"; };
 		7197422C5387D6B9A39339DFFB079B47 /* libPods-PIL-PILExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIL-PILExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73014FC9217186FCB672DF9D8B522624 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
 		73568F29C2F0699CDA31D8661A47C9A2 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFCompatibilityMacros.h; path = AFNetworking/AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		75E17C7E1E59C9F2C3F1C6FE4C99A38C /* SAMKeychain.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SAMKeychain.bundle; path = Support/SAMKeychain.bundle; sourceTree = "<group>"; };
 		76CDFF892BB5ED906B9C4ECC30FD8CB2 /* Pods-PIL.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PIL.modulemap"; sourceTree = "<group>"; };
+		789BF2FE6868CA9662938527D3A65B88 /* MiddlewareDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MiddlewareDelegate.swift; sourceTree = "<group>"; };
 		79D3AA1C24D127BCE101FDEDB8E3D512 /* SessionState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionState.swift; path = PhoneLib/Enums/SessionState.swift; sourceTree = "<group>"; };
+		7A9EB512FDC013A6FE81AA186EE912BB /* PIL.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PIL.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7AFE12587603A5083DC0704954828824 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
 		7DDFAF28659D4C6566F5DAD7E2AC41F4 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		7E875139561BA0F9032F3D97168DD0FD /* Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		8195B2E9C8544A5C7A7CAAD3E68D4CEF /* belle-sip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "belle-sip.framework"; path = "linphone-sdk/apple-darwin/Frameworks/belle-sip.framework"; sourceTree = "<group>"; };
 		82B06E3378A201A109B6792C11B71543 /* PhoneLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PhoneLib.modulemap; sourceTree = "<group>"; };
 		836DAD77AE1B2226C100A4BEB999C641 /* SAMKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAMKeychainQuery.h; path = Sources/SAMKeychainQuery.h; sourceTree = "<group>"; };
@@ -288,7 +293,6 @@
 		9939DF4D66121448589BADA4E5DD1F5B /* PhoneLib-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PhoneLib-prefix.pch"; sourceTree = "<group>"; };
 		9AA1F2B578FE11419F987CA342B36404 /* ortp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ortp.framework; path = "linphone-sdk/apple-darwin/Frameworks/ortp.framework"; sourceTree = "<group>"; };
 		9C592A136A2CC5F5529D6677A75AAF18 /* belcard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = belcard.framework; path = "linphone-sdk/apple-darwin/Frameworks/belcard.framework"; sourceTree = "<group>"; };
-		9CC1957BAB0A8942894BA31D8A208D1F /* RegistrationError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationError.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1407171FFD9343584B01DF877ACFC78 /* Pods-PIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PIL.release.xcconfig"; sourceTree = "<group>"; };
 		A3EF2C6D4F893AA4E26F70E091F2E279 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
@@ -302,10 +306,10 @@
 		A931B85773D9CA16D44D339D7B9937B9 /* SAMKeychain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAMKeychain.release.xcconfig; sourceTree = "<group>"; };
 		A965D787B7A8C95D8AC1A52BD1FA4BB8 /* Pods-PIL-PILTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PIL-PILTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		AB78118C7C9F0E1D8C4C0B1C71B84EF4 /* SipSdkProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipSdkProtocol.swift; path = PhoneLib/Managers/SipSdkProtocol.swift; sourceTree = "<group>"; };
+		B0CF50F453BD19D6F52B1DFBB1D50E7E /* PIL-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PIL-umbrella.h"; sourceTree = "<group>"; };
 		B44BB6D98AFFE6146DE848F166AA55CD /* SipRegistrationStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipRegistrationStatus.swift; path = PhoneLib/Enums/SipRegistrationStatus.swift; sourceTree = "<group>"; };
 		B58DADE1DAF1780908132A3E75DED807 /* PhoneLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PhoneLib-dummy.m"; sourceTree = "<group>"; };
 		B6F8BA3FBA8EEA6D0EA5E7F982617A91 /* SAMKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAMKeychain.m; path = Sources/SAMKeychain.m; sourceTree = "<group>"; };
-		B88BE335A73D992ED48D2C7E9C0960AF /* UUIDExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UUIDExtension.swift; sourceTree = "<group>"; };
 		B966475C5446FE38D752E618702F336B /* LinphoneWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinphoneWrapper.swift; path = "linphone-sdk/apple-darwin/share/linphonesw/LinphoneWrapper.swift"; sourceTree = "<group>"; };
 		BA81C660396D48BEAD3B44E41BE21259 /* SAMKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAMKeychainQuery.m; path = Sources/SAMKeychainQuery.m; sourceTree = "<group>"; };
 		BB2C21B9352CBEE606730A72BB0B621F /* linphone-sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "linphone-sdk.release.xcconfig"; sourceTree = "<group>"; };
@@ -313,22 +317,21 @@
 		BCEBFF0D841CABDDB1B9C309747A75BF /* limetester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = limetester.framework; path = "linphone-sdk/apple-darwin/Frameworks/limetester.framework"; sourceTree = "<group>"; };
 		BD3E8A6BC93C2DAE126C79E6D4C7FE31 /* liblinphone-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "liblinphone-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBF898A6B994F835DCD4AA47F651318 /* Pods-PIL-PILTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PIL-PILTests.release.xcconfig"; sourceTree = "<group>"; };
+		C32D3279E684CF90E4167D1BEDD5B927 /* CallKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallKitDelegate.swift; path = PIL/CallKitDelegate.swift; sourceTree = "<group>"; };
 		C3AE0AE9067566A640C8C907F62EAEC8 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
-		C6A2C9542365CF5C5B020C2A9518AB89 /* PIL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PIL-dummy.m"; sourceTree = "<group>"; };
 		CA69399402EEBA717E12202AFA94CFD2 /* libPods-PIL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADD3015AD2315F760725117392AF102 /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
 		CB3F2D10356ECE110E24264A11971B08 /* Pods-PIL-PILTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PIL-PILTests-umbrella.h"; sourceTree = "<group>"; };
-		CD0AE25782B5E5BBF36B75FCEAD9C21B /* PIL-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PIL-prefix.pch"; sourceTree = "<group>"; };
-		D0F07CCCD7FA681852FA3C469A56C1E3 /* PushKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PushKitManager.swift; sourceTree = "<group>"; };
 		D223F44D8C5AC201FD2DC9D77563E76E /* PhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PhoneLib.debug.xcconfig; sourceTree = "<group>"; };
 		D2E976D05EF8F062F76A87A6CD2AEDFC /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		D320A5F01FC073DE4474F874EFBE920A /* RegistrationError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationError.swift; sourceTree = "<group>"; };
 		D430244259FC35C9647EBD7B8AB41F15 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		D5601CB52D9FE77ABF7ECF3239FE6434 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		D897FFAA5D49B7BF7835B730D15EBEE6 /* libPods-PIL-PILTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIL-PILTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99A877399BB7E7D8EA87DEFA1ACF8F7 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		DA6EC5B39F6E7954A30791CB0658C3EB /* mediastreamer2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mediastreamer2.framework; path = "linphone-sdk/apple-darwin/Frameworks/mediastreamer2.framework"; sourceTree = "<group>"; };
+		DAA67205685FFCDB66C750C575C90D18 /* SimpleState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleState.swift; sourceTree = "<group>"; };
 		DD8164113129263E2617ADCF52352987 /* RegistrationStateDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegistrationStateDelegate.swift; path = PhoneLib/Protocols/RegistrationStateDelegate.swift; sourceTree = "<group>"; };
-		DEB0908B30C74C5A23DB1C2B143A6BFD /* PIL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PIL.swift; path = PIL/PIL.swift; sourceTree = "<group>"; };
 		E3DB1982FB7DECBAD0B6413B12490147 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		E5EC0CD9DC191C68F10A2C47E68F4D9A /* Pods-PIL-PILExampleApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PIL-PILExampleApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E5F15E26B312D8E4A4F23D2BDE961CD0 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -337,18 +340,15 @@
 		E9DF99078AE0B11695FCBB0792B6E221 /* BaseManagerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseManagerProtocol.swift; path = PhoneLib/Managers/BaseManagerProtocol.swift; sourceTree = "<group>"; };
 		EB75AC4F16575443FC50B61F3339B086 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
 		ED678D5B6CCA419E34AEFDE0065FF9C9 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
-		EF4D0971BAED97B6545AF99E5AB8ED88 /* PIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PIL.debug.xcconfig; sourceTree = "<group>"; };
 		F2757C01C770915DF53990A0A3465920 /* Pods-PIL-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PIL-resources.sh"; sourceTree = "<group>"; };
 		F372CCC13A8ACBCDAD3C0D029866B615 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = PhoneLib/Protocols/SessionDelegate.swift; sourceTree = "<group>"; };
 		F3F31A7AFEB4862E85FC07C46853C986 /* lime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = lime.framework; path = "linphone-sdk/apple-darwin/Frameworks/lime.framework"; sourceTree = "<group>"; };
 		F461458DC6D414B5B32190EF1F9D2C85 /* libAFNetworkActivityLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFNetworkActivityLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7BF709E13D6DC6C2CCA2AF6CB92A22E /* VoIPPushHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoIPPushHandler.swift; sourceTree = "<group>"; };
 		F845355C3C79ED943088DA33EEC82A49 /* Pods-PIL-PILTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PIL-PILTests-frameworks.sh"; sourceTree = "<group>"; };
 		FA40BBB3469FA7F597FB60BD7BBF4F47 /* AFNetworkActivityLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworkActivityLogger.debug.xcconfig; sourceTree = "<group>"; };
 		FAA022CA1948019B64A42AB4FBB66D00 /* bctoolbox-ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "bctoolbox-ios.framework"; path = "linphone-sdk/apple-darwin/Frameworks/bctoolbox-ios.framework"; sourceTree = "<group>"; };
 		FAE1C618668FB2C6EE79CF8106733883 /* SAMKeychain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAMKeychain.debug.xcconfig; sourceTree = "<group>"; };
 		FC2965A1E5D66ADB3903023D25DA8482 /* mswebrtc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mswebrtc.framework; path = "linphone-sdk/apple-darwin/Frameworks/mswebrtc.framework"; sourceTree = "<group>"; };
-		FD4999DB31B4AB1CDB9624F8F2B5623E /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -463,6 +463,17 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		192922CC4B863E212F98C41F1E1A289A /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				789BF2FE6868CA9662938527D3A65B88 /* MiddlewareDelegate.swift */,
+				51E7A58EB68A5E5E0F337829F50D1CF4 /* PushKitManager.swift */,
+				57EC59679E0064E762C0ACD62C183338 /* VoIPPushHandler.swift */,
+			);
+			name = Push;
+			path = PIL/Push;
+			sourceTree = "<group>";
+		};
 		1E461C6EBA941C55687801DAAD1F993C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +505,14 @@
 			);
 			name = "Pods-PIL-PILTests";
 			path = "Target Support Files/Pods-PIL-PILTests";
+			sourceTree = "<group>";
+		};
+		23A912EC94FA7F5CBDC7A24478FD874C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DDC706FC89FAFB73980A4D266254B56 /* PIL */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		27D3584DEE76DEEFF48803157AEEADB5 /* Support Files */ = {
@@ -563,6 +582,24 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		3DDC706FC89FAFB73980A4D266254B56 /* PIL */ = {
+			isa = PBXGroup;
+			children = (
+				546CBB5D6AF650EE51047B38184341B2 /* Actions.swift */,
+				28209BB77588477AE94A2AF4957F656A /* Call.swift */,
+				C32D3279E684CF90E4167D1BEDD5B927 /* CallKitDelegate.swift */,
+				12CEDA7607A80F3945F5B2B6D9DBAE50 /* PIL.swift */,
+				D64B2FD0775C225CD1D4A79AA465DE59 /* Configuration */,
+				5BC4E2A6B681DEDFAFBAF10B5A59800B /* Enums */,
+				AE9175D1959B6DDE898B47797A50BD52 /* Extensions */,
+				5CA350AC49DAC49A01BAB3002E804D45 /* Pod */,
+				192922CC4B863E212F98C41F1E1A289A /* Push */,
+				A8D16FC596D7C49E5089004F60A239E6 /* Support Files */,
+			);
+			name = PIL;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		41973953D6EC5B16492A6C3F3D9998B5 /* Security */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,33 +644,6 @@
 			name = "app-extension";
 			sourceTree = "<group>";
 		};
-		5A7314703C1BA32CC1ED36AB6340C333 /* PIL */ = {
-			isa = PBXGroup;
-			children = (
-				657B76E3EC102BDA5F799ED4BFDA5F04 /* Actions.swift */,
-				0124107D01BCA140617805392580F862 /* Call.swift */,
-				172EE709353D6BF3D35241016BA1245F /* CallKitDelegate.swift */,
-				DEB0908B30C74C5A23DB1C2B143A6BFD /* PIL.swift */,
-				EC830CED18360B8DBF49795C453D52CC /* Configuration */,
-				74B6B485197D85BDD5D3653113C2FC54 /* Enums */,
-				5AE4D0612E0152C62CBDA02A057BBC60 /* Extensions */,
-				E789C5C7AF4D94AA598BEED141E9DED8 /* Pod */,
-				81F569899633E588CF33351DB7778EFA /* Push */,
-				DCA72AA5A22B00E7E40615DE53D068FB /* Support Files */,
-			);
-			name = PIL;
-			path = "/Users/chris/projects/Vialer/iOS/iOS-platform-integration-layer/PIL";
-			sourceTree = "<absolute>";
-		};
-		5AE4D0612E0152C62CBDA02A057BBC60 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B88BE335A73D992ED48D2C7E9C0960AF /* UUIDExtension.swift */,
-			);
-			name = Extensions;
-			path = PIL/Extensions;
-			sourceTree = "<group>";
-		};
 		5B29EE38B0E5E73E12743CB36E7F926A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,6 +654,26 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AFNetworking";
+			sourceTree = "<group>";
+		};
+		5BC4E2A6B681DEDFAFBAF10B5A59800B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				7E875139561BA0F9032F3D97168DD0FD /* Direction.swift */,
+				D320A5F01FC073DE4474F874EFBE920A /* RegistrationError.swift */,
+				DAA67205685FFCDB66C750C575C90D18 /* SimpleState.swift */,
+			);
+			name = Enums;
+			path = PIL/Enums;
+			sourceTree = "<group>";
+		};
+		5CA350AC49DAC49A01BAB3002E804D45 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6CB73C45869FA1689B228B6AD3D8D3D4 /* LICENSE */,
+				7A9EB512FDC013A6FE81AA186EE912BB /* PIL.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		644C39253B63C62ED15E2A26B6428C0D /* Serialization */ = {
@@ -692,17 +722,6 @@
 			path = AFNetworkActivityLogger;
 			sourceTree = "<group>";
 		};
-		74B6B485197D85BDD5D3653113C2FC54 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				17D45C2C0B56954E673F899405686E48 /* Direction.swift */,
-				9CC1957BAB0A8942894BA31D8A208D1F /* RegistrationError.swift */,
-				0B94995DD5FD0768B3F8D933DF729FC6 /* SimpleState.swift */,
-			);
-			name = Enums;
-			path = PIL/Enums;
-			sourceTree = "<group>";
-		};
 		78075A2978853531E4CA2C25099C0A17 /* PhoneLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,15 +767,27 @@
 			path = SAMKeychain;
 			sourceTree = "<group>";
 		};
-		81F569899633E588CF33351DB7778EFA /* Push */ = {
+		A8D16FC596D7C49E5089004F60A239E6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				691A190AD0AFD27A895D1CDCAF2991F2 /* MiddlewareDelegate.swift */,
-				D0F07CCCD7FA681852FA3C469A56C1E3 /* PushKitManager.swift */,
-				F7BF709E13D6DC6C2CCA2AF6CB92A22E /* VoIPPushHandler.swift */,
+				12351C0DA8AC3DE66898F9DAE84B1710 /* PIL.modulemap */,
+				7088E1BFBEF198B2840EA74853CE3A98 /* PIL-dummy.m */,
+				3869DD1C3E7C29DB36A7BC33745EBBCC /* PIL-prefix.pch */,
+				B0CF50F453BD19D6F52B1DFBB1D50E7E /* PIL-umbrella.h */,
+				2B029396B58BF353DE55E67258B92818 /* PIL.debug.xcconfig */,
+				1B6B51E276880D5219429A67940B4179 /* PIL.release.xcconfig */,
 			);
-			name = Push;
-			path = PIL/Push;
+			name = "Support Files";
+			path = "Pods/Target Support Files/PIL";
+			sourceTree = "<group>";
+		};
+		AE9175D1959B6DDE898B47797A50BD52 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				635F302968B338035CC393CC1EE40EAC /* UUIDExtension.swift */,
+			);
+			name = Extensions;
+			path = PIL/Extensions;
 			sourceTree = "<group>";
 		};
 		B3B1ADD4AEE5AE1E5D58BC8BC6B7B8FD /* Frameworks */ = {
@@ -788,12 +819,21 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				DFFDD05E2787B678E51BD34601A859C8 /* Development Pods */,
+				23A912EC94FA7F5CBDC7A24478FD874C /* Development Pods */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				EAEC640B994CFAAA03A329225D21F565 /* Pods */,
 				1E461C6EBA941C55687801DAAD1F993C /* Products */,
 				2F01C67B52557264F613B2214343EB81 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D64B2FD0775C225CD1D4A79AA465DE59 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				531E2D1851D9F9E0EE7583B6C38B8C6F /* Auth.swift */,
+			);
+			name = Configuration;
+			path = PIL/Configuration;
 			sourceTree = "<group>";
 		};
 		D815B417D963622D1BF95F1B86551419 /* Support Files */ = {
@@ -817,33 +857,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DCA72AA5A22B00E7E40615DE53D068FB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4E9ED41AD08B8DD6D81D07F30C30F4C3 /* PIL.modulemap */,
-				C6A2C9542365CF5C5B020C2A9518AB89 /* PIL-dummy.m */,
-				CD0AE25782B5E5BBF36B75FCEAD9C21B /* PIL-prefix.pch */,
-				05A6C93796EBE70BD5FC63906C9EBB5D /* PIL-umbrella.h */,
-				EF4D0971BAED97B6545AF99E5AB8ED88 /* PIL.debug.xcconfig */,
-				62CC32BC013208548115F5107855DBA4 /* PIL.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../../../../../Projects/Vialer/iOS/iOS-platform-integration-layer/PIL/Pods/Target Support Files/PIL";
-			sourceTree = "<group>";
-		};
 		DDBA4512B8BED46AC4D9A9BB11FF9E45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DFFDD05E2787B678E51BD34601A859C8 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5A7314703C1BA32CC1ED36AB6340C333 /* PIL */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		E4D8AB5AB82BCD953A0F7F5A89650DC1 /* Pods-PIL */ = {
@@ -862,15 +880,6 @@
 			path = "Target Support Files/Pods-PIL";
 			sourceTree = "<group>";
 		};
-		E789C5C7AF4D94AA598BEED141E9DED8 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				4BA08D4600648D8977E99751A890D4B1 /* LICENSE */,
-				10D94068C40EAC363183FB7B66A9A145 /* PIL.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		EAEC640B994CFAAA03A329225D21F565 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,15 +890,6 @@
 				7C7C2A329D01835BEDBB58995FE85812 /* SAMKeychain */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		EC830CED18360B8DBF49795C453D52CC /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				FD4999DB31B4AB1CDB9624F8F2B5623E /* Auth.swift */,
-			);
-			name = Configuration;
-			path = PIL/Configuration;
 			sourceTree = "<group>";
 		};
 		F091C0B1FB59DF5C568074EFCECE3BB3 /* all-frameworks */ = {
@@ -1857,7 +1857,7 @@
 		};
 		CDC643AD3C14B0E249BB76D619D36BDF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF4D0971BAED97B6545AF99E5AB8ED88 /* PIL.debug.xcconfig */;
+			baseConfigurationReference = 2B029396B58BF353DE55E67258B92818 /* PIL.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1908,7 +1908,7 @@
 		};
 		E4D794D677DB7DD4F5C13161CD27D9C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62CC32BC013208548115F5107855DBA4 /* PIL.release.xcconfig */;
+			baseConfigurationReference = 1B6B51E276880D5219429A67940B4179 /* PIL.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
