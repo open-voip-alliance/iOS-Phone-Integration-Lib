@@ -21,7 +21,7 @@
     - [x] Display name
     - [x] Call state
     - [x] Direction
-    - [ ] Hold State
+    - [ ] Hold State 
     - [x] UUID
     - [ ] Mos Value
     - [ ] Contact information
@@ -80,7 +80,7 @@
     - [ ] Call Information Display
       - [ ] Show third party
       - [ ] Show call duration  
-    - [ ] Hold
+    - [ ] Hold 💎👐
     - [ ] Mute
     - [ ] Transfer
     - [ ] Route to Bluetooth
