@@ -1,0 +1,56 @@
+# TODO - iOS Platform Integration Layer
+
+## PIL
+- [ ] Calling
+  - [ ] Outgoing
+    - [ ] Can place an outgoing call to a given number
+    - [ ] Hooks up with call kit
+    - [ ] Automatically displays call screen if chosen
+  - [ ] Incoming
+    - [ ] App calls while in background
+    - [ ] User can answer call
+    - [ ] User can decline call
+    - [ ] Works with bluetooth devices
+    - [ ] User is taken to call screen after accepting call
+  - [ ] General
+    - [ ] Audio can be routed to bluetooth
+    - [ ] Audio can be routed to speaker
+    - [ ] Audio can be routed to earpiece
+    - [ ] Call can be muted
+    - [ ] Call can be put on hold
+    - [ ] Transfer
+      - [ ] User can begin transfer to new number
+      - [ ] User hears audio from second call after beginning transfer
+      - [ ] User can complete transfer
+- [ ] Lifecycle
+  - [ ] Is aware when the app is in the background
+  - [ ] Boot the library when the app is brought to foreground (if not already)
+  
+## Example App
+- [ ] Setting Screen
+  - [ ] SIP Auth
+    - [ ] Username
+    - [ ] Password
+    - [ ] Domain
+    - [ ] Port
+  - [ ] VoIPGRID Auth
+      - [ ] Username
+      - [ ] Password
+      - [ ] Register with Middleware
+  - [ ] Preferences
+      - [ ] Encryption
+      - [ ] Use Application Ringtone 
+- [ ] Dialer Screen
+  - [ ] Input numbers
+  - [ ] View number input
+  - [ ] Place call
+- [ ] Call Screen
+    - [ ] Call Information Display
+      - [ ] Show third party
+      - [ ] Show call duration  
+    - [ ] Hold
+    - [ ] Mute
+    - [ ] Transfer
+    - [ ] Route to Bluetooth
+    - [ ] Route to Speaker
+    - [ ] Route to Earpiece
