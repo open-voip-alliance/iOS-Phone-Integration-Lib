@@ -1,6 +1,31 @@
 # TODO - iOS Platform Integration Layer
 
 ## PIL
+- [ ] Configuration
+  - [ ] Library supports SIP credentials
+    - [ ] Username/password/domain/port
+    - [ ] Encryption on/off
+  - [ ] Library supports user preferences
+    - [ ] Codec
+    - [ ] Use app ringtone
+- [ ] Middleware
+  - [ ] Middleware protocol exists to offload registration to consuming app
+  - [ ] Using implementation from consuming app can properly establish push kit integration
+- [ ] Events
+  - [ ] Events can be listened for
+  - [ ] Events can be broadcast
+  - [ ] Events include call object where relevant
+- [ ] Call Management
+  - [ ] Immutable call object can be generated
+    - [ ] Remote number
+    - [ ] Display name
+    - [ ] Call state
+    - [ ] Direction
+    - [ ] Hold State
+    - [ ] UUID
+    - [ ] Mos Value
+    - [ ] Contact information
+  - [ ] Calls are stored/tracked in the PIL based on events from the phonelib
 - [ ] Calling
   - [ ] Outgoing
     - [ ] Can place an outgoing call to a given number
@@ -25,6 +50,9 @@
 - [ ] Lifecycle
   - [ ] Is aware when the app is in the background
   - [ ] Boot the library when the app is brought to foreground (if not already)
+- [ ] Code/Code Quality
+  - [ ] Only the absolutely necessary apis are exposed to the consuming applications
+  - [ ] A DI framework is used
   
 ## Example App
 - [ ] Setting Screen
