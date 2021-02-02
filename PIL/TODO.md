@@ -3,35 +3,35 @@
 ## PIL
 - [ ] Configuration
   - [ ] Library supports SIP credentials
-    - [ ] Username/password/domain/port
+    - [x] Username/password/domain/port
     - [ ] Encryption on/off
   - [ ] Library supports user preferences
     - [ ] Codec
     - [ ] Use app ringtone
 - [ ] Middleware
-  - [ ] Middleware protocol exists to offload registration to consuming app
-  - [ ] Using implementation from consuming app can properly establish push kit integration
-- [ ] Events
+  - [x] Middleware protocol exists to offload registration to consuming app
+  - [..] Using implementation from consuming app can properly establish push kit integration
+- [..] Events
   - [ ] Events can be listened for
   - [ ] Events can be broadcast
   - [ ] Events include call object where relevant
 - [ ] Call Management
-  - [ ] Immutable call object can be generated
-    - [ ] Remote number
-    - [ ] Display name
-    - [ ] Call state
-    - [ ] Direction
+  - [..] Immutable call object can be generated
+    - [x] Remote number
+    - [x] Display name
+    - [x] Call state
+    - [x] Direction
     - [ ] Hold State
-    - [ ] UUID
+    - [x] UUID
     - [ ] Mos Value
     - [ ] Contact information
-  - [ ] Calls are stored/tracked in the PIL based on events from the phonelib
+  - [x] Calls are stored/tracked in the PIL based on events from the phonelib
 - [ ] Calling
   - [ ] Outgoing
-    - [ ] Can place an outgoing call to a given number
-    - [ ] Hooks up with call kit
+    - [x] Can place an outgoing call to a given number
+    - [..] Hooks up with call kit
     - [ ] Automatically displays call screen if chosen
-  - [ ] Incoming
+  - [..] Incoming
     - [ ] App calls while in background
     - [ ] User can answer call
     - [ ] User can decline call
@@ -47,7 +47,7 @@
       - [ ] User can begin transfer to new number
       - [ ] User hears audio from second call after beginning transfer
       - [ ] User can complete transfer
-- [ ] Call Kit
+- [..] Call Kit
   - [ ] Call kit integration is working
   - [ ] Calls respond to presses on notifications
   - [ ] Works with smart-watches
@@ -55,16 +55,16 @@
   - [ ] Is aware when the app is in the background
   - [ ] Boot the library when the app is brought to foreground (if not already)
 - [ ] Code/Code Quality
-  - [ ] Only the absolutely necessary apis are exposed to the consuming applications
+  - [..] Only the absolutely necessary apis are exposed to the consuming applications
   - [ ] A DI framework is used
   
 ## Example App
 - [ ] Setting Screen
-  - [ ] SIP Auth
-    - [ ] Username
-    - [ ] Password
-    - [ ] Domain
-    - [ ] Port
+  - [x] SIP Auth
+    - [x] Username
+    - [x] Password
+    - [x] Domain
+    - [x] Port
   - [ ] VoIPGRID Auth
       - [ ] Username
       - [ ] Password
@@ -72,10 +72,10 @@
   - [ ] Preferences
       - [ ] Encryption
       - [ ] Use Application Ringtone 
-- [ ] Dialer Screen
-  - [ ] Input numbers
-  - [ ] View number input
-  - [ ] Place call
+- [x] Dialer Screen
+  - [x] Input numbers
+  - [x] View number input
+  - [x] Place call
 - [ ] Call Screen
     - [ ] Call Information Display
       - [ ] Show third party
