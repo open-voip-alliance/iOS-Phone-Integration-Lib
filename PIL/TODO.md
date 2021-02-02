@@ -47,7 +47,7 @@
       - [ ] User can begin transfer to new number
       - [ ] User hears audio from second call after beginning transfer
       - [ ] User can complete transfer
-- [..] Call Kit
+- [ ] Call Kit
   - [ ] Call kit integration is working
   - [ ] Calls respond to presses on notifications
   - [ ] Works with smart-watches
@@ -55,7 +55,7 @@
   - [ ] Is aware when the app is in the background
   - [ ] Boot the library when the app is brought to foreground (if not already)
 - [ ] Code/Code Quality
-  - [..] Only the absolutely necessary apis are exposed to the consuming applications
+  - [ ] Only the absolutely necessary apis are exposed to the consuming applications
   - [ ] A DI framework is used
   
 ## Example App
