@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E5DE2E6555F562EA04024F1 /* libPods-PIL-PILExampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C8A3B1475C8634088360AD /* libPods-PIL-PILExampleApp.a */; };
-		45F444B05021D8B5DBBB2013 /* libPods-PIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E42DDA458380DF36B924EA65 /* libPods-PIL.a */; };
+		02E73DEC50BE2BE0BAEDE837 /* Pods_PIL_PILExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DC01A3B438F010368D4E06 /* Pods_PIL_PILExampleApp.framework */; };
+		4DAC77D3E027A8A2EDEC813D /* Pods_PIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE051288AC0AD01D07F6DE8E /* Pods_PIL.framework */; };
+		5C92D7CA25DA93F8003019D1 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D7C925DA93F8003019D1 /* EventsManager.swift */; };
+		5C92D7CB25DA93F8003019D1 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D7C925DA93F8003019D1 /* EventsManager.swift */; };
+		5C92D7EF25DAA9B1003019D1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D7EE25DAA9B1003019D1 /* Preferences.swift */; };
+		5C92D7F025DAA9B1003019D1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D7EE25DAA9B1003019D1 /* Preferences.swift */; };
+		5C92D81325DAC9AE003019D1 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D81225DAC9AE003019D1 /* Container.swift */; };
+		5C92D81425DAC9AE003019D1 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D81225DAC9AE003019D1 /* Container.swift */; };
+		5C92D8BC25DC2510003019D1 /* VoIPGRIDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D8BB25DC2510003019D1 /* VoIPGRIDLogin.swift */; };
+		5C92D8D025DC2E14003019D1 /* VoIPGRIDMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D8CF25DC2E14003019D1 /* VoIPGRIDMiddleware.swift */; };
+		5CAB167E25D6AD3E00BC12E5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB167D25D6AD3E00BC12E5 /* SettingsViewController.swift */; };
+		5CAB169125D6E05600BC12E5 /* DialerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB169025D6E05600BC12E5 /* DialerViewController.swift */; };
+		5CAB169625DA6A1300BC12E5 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB169525DA6A1300BC12E5 /* CallViewController.swift */; };
+		5CAB174625DA8FCE00BC12E5 /* CallDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB174025DA8FCE00BC12E5 /* CallDirection.swift */; };
+		5CAB174725DA8FCE00BC12E5 /* CallState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB174125DA8FCE00BC12E5 /* CallState.swift */; };
+		5CAB174825DA8FCE00BC12E5 /* PILCallFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB174225DA8FCE00BC12E5 /* PILCallFactory.swift */; };
+		5CAB174925DA8FCE00BC12E5 /* Calls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB174325DA8FCE00BC12E5 /* Calls.swift */; };
+		5CAB174A25DA8FCE00BC12E5 /* PILCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB174425DA8FCE00BC12E5 /* PILCall.swift */; };
+		5CAB174B25DA8FCE00BC12E5 /* CallActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB174525DA8FCE00BC12E5 /* CallActions.swift */; };
+		5CAB174F25DA8FF800BC12E5 /* CallActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB174525DA8FCE00BC12E5 /* CallActions.swift */; };
+		5CAB17D025DA92D200BC12E5 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */; };
+		5CAB17D125DA92D200BC12E5 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */; };
 		8319D8B22576AD8D0095E54E /* PIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8319D8A82576AD8D0095E54E /* PIL.framework */; };
 		8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319D8B62576AD8D0095E54E /* PILTests.swift */; };
 		8319D8B92576AD8D0095E54E /* PIL.h in Headers */ = {isa = PBXBuildFile; fileRef = 8319D8AB2576AD8D0095E54E /* PIL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		833E42F225C039000006518B /* MiddlewareRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 833E42EE25C039000006518B /* MiddlewareRequestOperationManager.m */; };
-		833E42F325C039000006518B /* Middleware.m in Sources */ = {isa = PBXBuildFile; fileRef = 833E42EF25C039000006518B /* Middleware.m */; };
-		833E430025C040520006518B /* VoIPGRIDRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 833E42FE25C040520006518B /* VoIPGRIDRequestOperationManager.m */; };
-		833E436A25C1A2F60006518B /* SystemUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 833E436925C1A2F60006518B /* SystemUser.m */; };
 		833E437125C1A3DA0006518B /* NSString+SubString.m in Sources */ = {isa = PBXBuildFile; fileRef = 833E436F25C1A3DA0006518B /* NSString+SubString.m */; };
 		833E437725C1B4D20006518B /* UrlsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E437625C1B4D20006518B /* UrlsConfiguration.swift */; };
 		833E445D25C98FFC0006518B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833E445C25C98FFC0006518B /* Config.plist */; };
@@ -31,7 +47,6 @@
 		83C98B9625A8AD1900CECE31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C98B9525A8AD1900CECE31 /* AppDelegate.swift */; };
 		83C98B9F25A8AD1A00CECE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C98B9E25A8AD1A00CECE31 /* Assets.xcassets */; };
 		83C98BA225A8AD1A00CECE31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C98BA025A8AD1A00CECE31 /* LaunchScreen.storyboard */; };
-		83C98BB525ACC2A100CECE31 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C98BB425ACC2A100CECE31 /* TableViewController.swift */; };
 		83F69EA7258FCF1E0076B8F0 /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */; };
 		83F69EA8258FCF1E0076B8F0 /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */; };
 		83F69EAE25922CE60076B8F0 /* CallKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */; };
@@ -48,7 +63,10 @@
 		83F69ED6259A23F00076B8F0 /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */; };
 		83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADAC5258BD81100CA64C8 /* Auth.swift */; };
 		83FADAC7258BD81100CA64C8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADAC5258BD81100CA64C8 /* Auth.swift */; };
-		876CC1C2FFF2293F6EF26090 /* libPods-PIL-PILTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC694B131CEB7EBC72B2BF1 /* libPods-PIL-PILTests.a */; };
+		B0F39AA7558143F5D0E8DFEB /* Pods_PIL_PILTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921A0DE928C35CE8E10064AE /* Pods_PIL_PILTests.framework */; };
+		F81F00E722A6D17CBFF791E1 /* PILCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F0F69C7B15123DAAD4D85 /* PILCall.swift */; };
+		F81F06860533E6AB96B28CBA /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F00A7ECF3E120DDA5BB05 /* Builder.swift */; };
+		F81F0A14AE85262D7380D5C1 /* ApplicationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F0BA8A9D7361D3FD907A2 /* ApplicationSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +80,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01C8A3B1475C8634088360AD /* libPods-PIL-PILExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIL-PILExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2234830DFE34A018CA974415 /* Pods-PIL-PILTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILTests.debug.xcconfig"; path = "Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests.debug.xcconfig"; sourceTree = "<group>"; };
+		23DC01A3B438F010368D4E06 /* Pods_PIL_PILExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PIL_PILExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F576E5D2DB8DFA2CD7EC619 /* Pods-PIL-PILExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILExampleApp.release.xcconfig"; path = "Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		5C92D7C925DA93F8003019D1 /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
+		5C92D7EE25DAA9B1003019D1 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		5C92D81225DAC9AE003019D1 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		5C92D8BB25DC2510003019D1 /* VoIPGRIDLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPGRIDLogin.swift; sourceTree = "<group>"; };
+		5C92D8CF25DC2E14003019D1 /* VoIPGRIDMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPGRIDMiddleware.swift; sourceTree = "<group>"; };
+		5CAB167D25D6AD3E00BC12E5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5CAB169025D6E05600BC12E5 /* DialerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialerViewController.swift; sourceTree = "<group>"; };
+		5CAB169525DA6A1300BC12E5 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		5CAB174025DA8FCE00BC12E5 /* CallDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallDirection.swift; sourceTree = "<group>"; };
+		5CAB174125DA8FCE00BC12E5 /* CallState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallState.swift; sourceTree = "<group>"; };
+		5CAB174225DA8FCE00BC12E5 /* PILCallFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PILCallFactory.swift; sourceTree = "<group>"; };
+		5CAB174325DA8FCE00BC12E5 /* Calls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calls.swift; sourceTree = "<group>"; };
+		5CAB174425DA8FCE00BC12E5 /* PILCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PILCall.swift; sourceTree = "<group>"; };
+		5CAB174525DA8FCE00BC12E5 /* CallActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallActions.swift; sourceTree = "<group>"; };
+		5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		5F9709B49935F95F1CC8CA67 /* Pods-PIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL.debug.xcconfig"; path = "Target Support Files/Pods-PIL/Pods-PIL.debug.xcconfig"; sourceTree = "<group>"; };
 		6FE02223E5C763F95DDF0368 /* Pods-PIL-PILExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8319D8A82576AD8D0095E54E /* PIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,15 +106,6 @@
 		8319D8B12576AD8D0095E54E /* PILTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PILTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8319D8B62576AD8D0095E54E /* PILTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PILTests.swift; sourceTree = "<group>"; };
 		8319D8B82576AD8D0095E54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		833E42ED25C038FF0006518B /* PILExampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PILExampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		833E42EE25C039000006518B /* MiddlewareRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiddlewareRequestOperationManager.m; sourceTree = "<group>"; };
-		833E42EF25C039000006518B /* Middleware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Middleware.m; sourceTree = "<group>"; };
-		833E42F025C039000006518B /* MiddlewareRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiddlewareRequestOperationManager.h; sourceTree = "<group>"; };
-		833E42F125C039000006518B /* Middleware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Middleware.h; sourceTree = "<group>"; };
-		833E42FE25C040520006518B /* VoIPGRIDRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoIPGRIDRequestOperationManager.m; sourceTree = "<group>"; };
-		833E42FF25C040520006518B /* VoIPGRIDRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoIPGRIDRequestOperationManager.h; sourceTree = "<group>"; };
-		833E436825C1A2F60006518B /* SystemUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemUser.h; sourceTree = "<group>"; };
-		833E436925C1A2F60006518B /* SystemUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemUser.m; sourceTree = "<group>"; };
 		833E436F25C1A3DA0006518B /* NSString+SubString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SubString.m"; sourceTree = "<group>"; };
 		833E437025C1A3DA0006518B /* NSString+SubString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SubString.h"; sourceTree = "<group>"; };
 		833E437625C1B4D20006518B /* UrlsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlsConfiguration.swift; sourceTree = "<group>"; };
@@ -98,7 +122,6 @@
 		83C98B9E25A8AD1A00CECE31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83C98BA125A8AD1A00CECE31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83C98BA325A8AD1A00CECE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83C98BB425ACC2A100CECE31 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationError.swift; sourceTree = "<group>"; };
 		83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKitDelegate.swift; sourceTree = "<group>"; };
 		83F69EB22592306E0076B8F0 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
@@ -107,10 +130,13 @@
 		83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushHandler.swift; sourceTree = "<group>"; };
 		83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDExtension.swift; sourceTree = "<group>"; };
 		83FADAC5258BD81100CA64C8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		921A0DE928C35CE8E10064AE /* Pods_PIL_PILTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PIL_PILTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11562F028AED5C11AE54AEB /* Pods-PIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL.release.xcconfig"; path = "Target Support Files/Pods-PIL/Pods-PIL.release.xcconfig"; sourceTree = "<group>"; };
 		CD379AFE14075D0FD87BC715 /* Pods-PIL-PILTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILTests.release.xcconfig"; path = "Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests.release.xcconfig"; sourceTree = "<group>"; };
-		DBC694B131CEB7EBC72B2BF1 /* libPods-PIL-PILTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIL-PILTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E42DDA458380DF36B924EA65 /* libPods-PIL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PIL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE051288AC0AD01D07F6DE8E /* Pods_PIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81F00A7ECF3E120DDA5BB05 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		F81F0BA8A9D7361D3FD907A2 /* ApplicationSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationSetup.swift; sourceTree = "<group>"; };
+		F81F0F69C7B15123DAAD4D85 /* PILCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PILCall.swift; path = Calls/PILCall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F444B05021D8B5DBBB2013 /* libPods-PIL.a in Frameworks */,
+				4DAC77D3E027A8A2EDEC813D /* Pods_PIL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8319D8B22576AD8D0095E54E /* PIL.framework in Frameworks */,
-				876CC1C2FFF2293F6EF26090 /* libPods-PIL-PILTests.a in Frameworks */,
+				B0F39AA7558143F5D0E8DFEB /* Pods_PIL_PILTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E5DE2E6555F562EA04024F1 /* libPods-PIL-PILExampleApp.a in Frameworks */,
+				02E73DEC50BE2BE0BAEDE837 /* Pods_PIL_PILExampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,11 +184,57 @@
 		48128BE393B3262B4E2C8807 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E42DDA458380DF36B924EA65 /* libPods-PIL.a */,
-				DBC694B131CEB7EBC72B2BF1 /* libPods-PIL-PILTests.a */,
-				01C8A3B1475C8634088360AD /* libPods-PIL-PILExampleApp.a */,
+				DE051288AC0AD01D07F6DE8E /* Pods_PIL.framework */,
+				23DC01A3B438F010368D4E06 /* Pods_PIL_PILExampleApp.framework */,
+				921A0DE928C35CE8E10064AE /* Pods_PIL_PILTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C92D7C825DA93E8003019D1 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				5C92D7C925DA93F8003019D1 /* EventsManager.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		5C92D81125DAC997003019D1 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				5C92D81225DAC9AE003019D1 /* Container.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		5C92D8BA25DC24FA003019D1 /* VoIPGRID */ = {
+			isa = PBXGroup;
+			children = (
+				5C92D8BB25DC2510003019D1 /* VoIPGRIDLogin.swift */,
+				5C92D8CF25DC2E14003019D1 /* VoIPGRIDMiddleware.swift */,
+			);
+			path = VoIPGRID;
+			sourceTree = "<group>";
+		};
+		5CAB173F25DA8FCE00BC12E5 /* Calls */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB174025DA8FCE00BC12E5 /* CallDirection.swift */,
+				5CAB174125DA8FCE00BC12E5 /* CallState.swift */,
+				5CAB174225DA8FCE00BC12E5 /* PILCallFactory.swift */,
+				5CAB174325DA8FCE00BC12E5 /* Calls.swift */,
+				5CAB174425DA8FCE00BC12E5 /* PILCall.swift */,
+				5CAB174525DA8FCE00BC12E5 /* CallActions.swift */,
+			);
+			path = Calls;
+			sourceTree = "<group>";
+		};
+		5CAB17CE25DA92D100BC12E5 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		8319D89E2576AD8D0095E54E = {
@@ -190,6 +262,10 @@
 		8319D8AA2576AD8D0095E54E /* PIL */ = {
 			isa = PBXGroup;
 			children = (
+				5C92D81125DAC997003019D1 /* DI */,
+				5C92D7C825DA93E8003019D1 /* Events */,
+				5CAB17CE25DA92D100BC12E5 /* Audio */,
+				5CAB173F25DA8FCE00BC12E5 /* Calls */,
 				83F69ED3259A23BB0076B8F0 /* Extensions */,
 				83F69EA5258FCEF80076B8F0 /* Enums */,
 				83FADAC4258BD7F500CA64C8 /* Configuration */,
@@ -200,6 +276,8 @@
 				8396095425B1D78700392B5E /* Actions.swift */,
 				83F69EB22592306E0076B8F0 /* Call.swift */,
 				83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */,
+				F81F0F69C7B15123DAAD4D85 /* PILCall.swift */,
+				F81F00A7ECF3E120DDA5BB05 /* Builder.swift */,
 			);
 			path = PIL;
 			sourceTree = "<group>";
@@ -211,35 +289,6 @@
 				8319D8B82576AD8D0095E54E /* Info.plist */,
 			);
 			path = PILTests;
-			sourceTree = "<group>";
-		};
-		833E42EC25C037A40006518B /* Middleware */ = {
-			isa = PBXGroup;
-			children = (
-				833E42F125C039000006518B /* Middleware.h */,
-				833E42EF25C039000006518B /* Middleware.m */,
-				833E42F025C039000006518B /* MiddlewareRequestOperationManager.h */,
-				833E42EE25C039000006518B /* MiddlewareRequestOperationManager.m */,
-			);
-			path = Middleware;
-			sourceTree = "<group>";
-		};
-		833E42FD25C040360006518B /* Api */ = {
-			isa = PBXGroup;
-			children = (
-				833E42FF25C040520006518B /* VoIPGRIDRequestOperationManager.h */,
-				833E42FE25C040520006518B /* VoIPGRIDRequestOperationManager.m */,
-			);
-			path = Api;
-			sourceTree = "<group>";
-		};
-		833E436725C1A2D40006518B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				833E436825C1A2F60006518B /* SystemUser.h */,
-				833E436925C1A2F60006518B /* SystemUser.m */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		833E436E25C1A3CD0006518B /* Extensions */ = {
@@ -264,19 +313,18 @@
 		83C98B9425A8AD1900CECE31 /* PILExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				5C92D8BA25DC24FA003019D1 /* VoIPGRID */,
 				833E440225C848BC0006518B /* PILExampleApp.entitlements */,
 				833E437525C1B4C20006518B /* Configuration */,
 				833E436E25C1A3CD0006518B /* Extensions */,
-				833E436725C1A2D40006518B /* Models */,
-				833E42FD25C040360006518B /* Api */,
-				833E42EC25C037A40006518B /* Middleware */,
 				83C98B9525A8AD1900CECE31 /* AppDelegate.swift */,
-				83C98BB425ACC2A100CECE31 /* TableViewController.swift */,
 				836A97F325ACDB4A00497759 /* Main.storyboard */,
 				83C98B9E25A8AD1A00CECE31 /* Assets.xcassets */,
 				83C98BA025A8AD1A00CECE31 /* LaunchScreen.storyboard */,
 				83C98BA325A8AD1A00CECE31 /* Info.plist */,
-				833E42ED25C038FF0006518B /* PILExampleApp-Bridging-Header.h */,
+				5CAB167D25D6AD3E00BC12E5 /* SettingsViewController.swift */,
+				5CAB169025D6E05600BC12E5 /* DialerViewController.swift */,
+				5CAB169525DA6A1300BC12E5 /* CallViewController.swift */,
 			);
 			path = PILExampleApp;
 			sourceTree = "<group>";
@@ -313,6 +361,8 @@
 			isa = PBXGroup;
 			children = (
 				83FADAC5258BD81100CA64C8 /* Auth.swift */,
+				F81F0BA8A9D7361D3FD907A2 /* ApplicationSetup.swift */,
+				5C92D7EE25DAA9B1003019D1 /* Preferences.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -340,7 +390,6 @@
 				8319D8A42576AD8D0095E54E /* Sources */,
 				8319D8A52576AD8D0095E54E /* Frameworks */,
 				8319D8A62576AD8D0095E54E /* Resources */,
-				BD285E6CD406BD57BE87F9EC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,7 +409,6 @@
 				8319D8AE2576AD8D0095E54E /* Frameworks */,
 				8319D8AF2576AD8D0095E54E /* Resources */,
 				8C8F570141C7932B54B941DA /* [CP] Embed Pods Frameworks */,
-				40E77AB301BF84778802F356 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -381,7 +429,6 @@
 				83C98B9025A8AD1900CECE31 /* Frameworks */,
 				83C98B9125A8AD1900CECE31 /* Resources */,
 				3D11120D53B488332EFE9A34 /* [CP] Embed Pods Frameworks */,
-				DF2E4DD1EA8889E7F529A8B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -503,23 +550,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		40E77AB301BF84778802F356 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8436842C5FA6AE61E4327232 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -581,40 +611,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BD285E6CD406BD57BE87F9EC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PIL/Pods-PIL-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PIL/Pods-PIL-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PIL/Pods-PIL-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF2E4DD1EA8889E7F529A8B5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -623,17 +619,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F69EBD2592369C0076B8F0 /* Direction.swift in Sources */,
+				5CAB174925DA8FCE00BC12E5 /* Calls.swift in Sources */,
 				83B84F82257D7B1900BABAC7 /* PIL.swift in Sources */,
 				83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */,
 				83F69ED5259A23F00076B8F0 /* UUIDExtension.swift in Sources */,
+				5CAB174A25DA8FCE00BC12E5 /* PILCall.swift in Sources */,
 				83F69EB32592306E0076B8F0 /* Call.swift in Sources */,
+				5C92D7CA25DA93F8003019D1 /* EventsManager.swift in Sources */,
 				83F69EC32593CD930076B8F0 /* VoIPPushHandler.swift in Sources */,
 				83F69EB8259230A60076B8F0 /* SimpleState.swift in Sources */,
 				8396095525B1D78700392B5E /* Actions.swift in Sources */,
 				83F69EA7258FCF1E0076B8F0 /* RegistrationError.swift in Sources */,
+				5C92D81325DAC9AE003019D1 /* Container.swift in Sources */,
 				837C275A25B8A64E008220C6 /* PushKitManager.swift in Sources */,
 				83F69EAE25922CE60076B8F0 /* CallKitDelegate.swift in Sources */,
+				5C92D7EF25DAA9B1003019D1 /* Preferences.swift in Sources */,
 				8385249A25BB16E1008F4827 /* MiddlewareDelegate.swift in Sources */,
+				5CAB17D025DA92D200BC12E5 /* AudioManager.swift in Sources */,
+				F81F00E722A6D17CBFF791E1 /* PILCall.swift in Sources */,
+				5CAB174625DA8FCE00BC12E5 /* CallDirection.swift in Sources */,
+				F81F06860533E6AB96B28CBA /* Builder.swift in Sources */,
+				5CAB174825DA8FCE00BC12E5 /* PILCallFactory.swift in Sources */,
+				5CAB174B25DA8FCE00BC12E5 /* CallActions.swift in Sources */,
+				F81F0A14AE85262D7380D5C1 /* ApplicationSetup.swift in Sources */,
+				5CAB174725DA8FCE00BC12E5 /* CallState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,15 +653,20 @@
 				83F69ED6259A23F00076B8F0 /* UUIDExtension.swift in Sources */,
 				8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */,
 				83F69EB42592306E0076B8F0 /* Call.swift in Sources */,
+				5C92D7CB25DA93F8003019D1 /* EventsManager.swift in Sources */,
+				5CAB17D125DA92D200BC12E5 /* AudioManager.swift in Sources */,
 				83F69EB9259230A60076B8F0 /* SimpleState.swift in Sources */,
 				83F69EBE2592369C0076B8F0 /* Direction.swift in Sources */,
 				83F69EC42593CD930076B8F0 /* VoIPPushHandler.swift in Sources */,
 				83F69EAF25922CE60076B8F0 /* CallKitDelegate.swift in Sources */,
 				83B84F83257D7B1900BABAC7 /* PIL.swift in Sources */,
+				5CAB174F25DA8FF800BC12E5 /* CallActions.swift in Sources */,
 				83FADAC7258BD81100CA64C8 /* Auth.swift in Sources */,
 				837C275B25B8A64E008220C6 /* PushKitManager.swift in Sources */,
 				83F69EA8258FCF1E0076B8F0 /* RegistrationError.swift in Sources */,
+				5C92D7F025DAA9B1003019D1 /* Preferences.swift in Sources */,
 				8385249B25BB16E1008F4827 /* MiddlewareDelegate.swift in Sources */,
+				5C92D81425DAC9AE003019D1 /* Container.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,14 +674,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CAB169625DA6A1300BC12E5 /* CallViewController.swift in Sources */,
 				833E437725C1B4D20006518B /* UrlsConfiguration.swift in Sources */,
 				83C98B9625A8AD1900CECE31 /* AppDelegate.swift in Sources */,
-				833E42F325C039000006518B /* Middleware.m in Sources */,
-				833E430025C040520006518B /* VoIPGRIDRequestOperationManager.m in Sources */,
-				833E436A25C1A2F60006518B /* SystemUser.m in Sources */,
+				5C92D8BC25DC2510003019D1 /* VoIPGRIDLogin.swift in Sources */,
+				5CAB169125D6E05600BC12E5 /* DialerViewController.swift in Sources */,
+				5C92D8D025DC2E14003019D1 /* VoIPGRIDMiddleware.swift in Sources */,
 				833E437125C1A3DA0006518B /* NSString+SubString.m in Sources */,
-				83C98BB525ACC2A100CECE31 /* TableViewController.swift in Sources */,
-				833E42F225C039000006518B /* MiddlewareRequestOperationManager.m in Sources */,
+				5CAB167E25D6AD3E00BC12E5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,7 +951,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.voipgrid.PILExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "PILExampleApp Development Profile";
-				SWIFT_OBJC_BRIDGING_HEADER = "PILExampleApp/PILExampleApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -965,7 +978,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.voipgrid.PILExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "PILExampleApp Development Profile";
-				SWIFT_OBJC_BRIDGING_HEADER = "PILExampleApp/PILExampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

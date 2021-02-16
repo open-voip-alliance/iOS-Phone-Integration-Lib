@@ -11,7 +11,12 @@ import CallKit
 
 public class PIL: RegistrationStateDelegate {
 
-    static public let shared = PIL()
+    public let actions = di.resolve(CallActions.self)!
+    public let audio = di.resolve(AudioManager.self)!
+    public let events = di.resolve(EventsManager.self)!
+    public let calls = di.resolve(Calls.self)!
+    
+    static public var shared: PIL?
     
     lazy var phoneLib: PhoneLib = PhoneLib.shared
     public var registrationStatus: SipRegistrationStatus {
@@ -25,8 +30,7 @@ public class PIL: RegistrationStateDelegate {
     var secondTransferCall: Call?
     
     public var call: Call?
-    public weak var middlewareDelegate: MiddlewareDelegate?
-    let pushKitManager = PushKitManager()
+    let pushKitManager: PushKitManager
     
     //private var onRegister: ((Bool) -> ()) //wip
     private var incomingUuid: UUID?
@@ -47,10 +51,12 @@ public class PIL: RegistrationStateDelegate {
         }
     }
     
-    init() {
+    init(applicationSetup: ApplicationSetup) {
+        pushKitManager = PushKitManager(middleware: applicationSetup.middleware!)
         callKitProviderDelegate = CallKitDelegate(pil: self)
         phoneLib.sessionDelegate = self
         phoneLib.setAudioCodecs([Codec.OPUS])
+        PIL.shared = self
     }
     
     /// Start the PIL.
