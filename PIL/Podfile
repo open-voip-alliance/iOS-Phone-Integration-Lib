@@ -4,10 +4,13 @@ target 'PIL' do
 
   source 'https://gitlab.linphone.org/BC/public/podspec.git'
   source 'https://github.com/CocoaPods/Specs.git'
-  
+  use_frameworks!
+
   #//wip pod 'PhoneLib' ,:git => 'https://github.com/open-voip-alliance/iOSPhoneLib.git', 'branch' => 'main'
   #//wip pod 'PhoneLib', :path => '/Users/chris/projects/Vialer/iOS/ios-phone-lib'
   pod 'PhoneLib' ,:git => 'https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git', 'branch' => 'main'
+
+  pod 'Swinject'
 
   target 'PILTests' do
     # Pods for testing
@@ -18,6 +21,8 @@ target 'PIL' do
     pod 'AFNetworkActivityLogger'
     pod 'AFNetworking'
     pod 'SAMKeychain'
+    pod 'QuickTableViewController'
+    pod 'Alamofire', '~> 5.2'
   end
 
 end

@@ -12,11 +12,9 @@ import CallKit
 
 class VoIPPushHandler {
 
-    private lazy var pil: PIL = PIL.shared
+    private lazy var pil: PIL = PIL.shared!
     
-    private lazy var middlewareDelegate = {
-        pil.middlewareDelegate
-    }()
+    private let middleware: MiddlewareDelegate
     
     private lazy var callKit: CXProvider = {
         pil.callKitProviderDelegate.provider
@@ -32,6 +30,10 @@ class VoIPPushHandler {
         static let phoneNumber = "phonenumber"
         static let responseUrl = "response_api"
         static let callerId = "caller_id"
+    }
+    
+    init(middleware: MiddlewareDelegate) {
+        self.middleware = middleware
     }
 
 
@@ -119,9 +121,9 @@ class VoIPPushHandler {
     */
     private func respond(with payload: NSDictionary, available: Bool, completion: ((Error?) -> ())? = nil) {
         if (completion == nil) {
-            middlewareDelegate?.respond?(payload: payload, available: available, completion: nil)
+            middleware.respond(payload: payload, available: available)
         } else {
-            middlewareDelegate?.respond?(payload: payload, available: available, completion: completion)
+            middleware.respond(payload: payload, available: available)
         }
     }
 

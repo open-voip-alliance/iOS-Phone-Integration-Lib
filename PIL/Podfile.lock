@@ -16,6 +16,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Alamofire (5.4.1)
   - linphone-sdk (4.4.1):
     - linphone-sdk/all-frameworks (= 4.4.1)
     - linphone-sdk/app-extension (= 4.4.1)
@@ -35,20 +36,29 @@ PODS:
     - linphone-sdk (= 4.4.1)
   - PIL (0.1.0):
     - PhoneLib (~> 0.1.0)
+    - Swinject (~> 2.7.1)
+  - QuickTableViewController (1.3.1)
   - SAMKeychain (1.5.3)
+  - Swinject (2.7.1)
 
 DEPENDENCIES:
   - AFNetworkActivityLogger
   - AFNetworking
+  - Alamofire (~> 5.2)
   - PhoneLib (from `https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git`)
   - PIL (from `../PIL`)
+  - QuickTableViewController
   - SAMKeychain
+  - Swinject
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworkActivityLogger
     - AFNetworking
+    - Alamofire
+    - QuickTableViewController
     - SAMKeychain
+    - Swinject
   https://gitlab.linphone.org/BC/public/podspec.git:
     - linphone-sdk
 
@@ -67,11 +77,14 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworkActivityLogger: e77f68d014becb33c4306a23f56a64906ff72670
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   linphone-sdk: 91183cb3e3224d2d1a211357cd6a39d61636d17d
   PhoneLib: 0a062ca52a13fee76b5858464b5e8f12014a07ec
-  PIL: 1f2e3304b36a2f5ddd14541ce39ba1f8dd548302
+  PIL: 83a2d857330ad2d6f5a95b1a4a4e8224c474550a
+  QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: b639c0368aec0dee8820c289286c29b50d8685be
+PODFILE CHECKSUM: 303c150f44868c2b113f191e34f1b094aaa05ab4
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.8.4

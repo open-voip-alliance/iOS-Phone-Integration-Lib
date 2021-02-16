@@ -72,7 +72,7 @@ extension CallKitDelegate: CXProviderDelegate {
     }
 
     public func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
-        PIL.shared.acceptIncomingCall {
+        PIL.shared?.acceptIncomingCall {
             action.fulfill()
         }
     }

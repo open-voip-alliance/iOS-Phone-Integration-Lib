@@ -10,13 +10,11 @@ import PushKit
 
 class PushKitManager: NSObject {
     
-    private lazy var pil: PIL = PIL.shared
-    private lazy var middlewareDelegate = {
-        pil.middlewareDelegate
-    }()
-
+    private lazy var pil: PIL = PIL.shared!
+    
+    private let middleware: MiddlewareDelegate
     private let voIPRegistry = PKPushRegistry(queue: nil)
-    private let voIPPushHandler = VoIPPushHandler()
+    private let voIPPushHandler: VoIPPushHandler
     private let notifications = NotificationCenter.default
 
     var token: String? {
@@ -28,6 +26,13 @@ class PushKitManager: NSObject {
             return String(apnsToken: token)
         }
     }
+    
+    init(middleware: MiddlewareDelegate) {
+        self.middleware = middleware
+        self.voIPPushHandler = VoIPPushHandler(middleware: middleware)
+        super.init()
+        self.registerForVoIPPushes()
+    }
 
     /**
         Register to receive push notifications, this method can be called as regularly as needed
@@ -36,7 +41,7 @@ class PushKitManager: NSObject {
     func registerForVoIPPushes() {
         if hasRegisteredForVoIPPushes() {
             if let token = self.token {
-                middlewareDelegate?.sendToken?(token: token)
+                middleware.tokenReceived(token: token)
             }
             return
         }
@@ -58,8 +63,8 @@ extension PushKitManager: PKPushRegistryDelegate {
     func pushRegistry(_ registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
         let token = String(apnsToken: pushCredentials.token)
         print("Received a new APNS token: \(token)")
-
-        middlewareDelegate?.sendToken?(token: token)
+        
+        middleware.tokenReceived(token: token)
     }
 
     func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> ()) {
