@@ -51,6 +51,12 @@ public class PIL: RegistrationStateDelegate {
         }
     }
     
+    var isMicrophoneMuted: Bool {
+        get {
+            self.phoneLib.isMicrophoneMuted
+        }
+    }
+    
     init(applicationSetup: ApplicationSetup) {
         pushKitManager = PushKitManager(middleware: applicationSetup.middleware!)
         callKitProviderDelegate = CallKitDelegate(pil: self)
@@ -74,7 +80,7 @@ public class PIL: RegistrationStateDelegate {
         guard auth != nil else {
             completion(false)
             return
-        } //wip throw NoAuthenticationCredentialsException()
+        } // TODO: throw NoAuthenticationCredentialsException()
 
         if (forceInitialize) {
             unregister()
@@ -128,23 +134,33 @@ public class PIL: RegistrationStateDelegate {
         pushKitManager.registerForVoIPPushes()
     }
     
-    public func call(number: String) -> Session? {
-        var session : Session?
-        register { success in
-            if !success {
-                print("Unable to register.")
-                return
-            }
-
-            print("Attempting to call.")
-            session = phoneLib.call(to: number)
+    public func call(number: String) -> Call? {
+        var outgoingCall: Call? = nil
+        print("Attempting to call.")
+        if let session = phoneLib.call(to: number) {
+            outgoingCall = Call(session: session, direction: Direction.outbound, uuid:session.sessionId)
         }
-//        let call = Call(session: session, direction: session.direction, uuid:session.uuid) //wip don't return session but call
-        return session
+        return outgoingCall
     }
     
     public func end(call: Call) -> Bool {
         return phoneLib.endCall(for: call.session)
+    }
+    
+    public func setMicrophone(muted: Bool) {
+        phoneLib.setMicrophone(muted: muted)
+    }
+    
+    public func setHold(call: Call, onHold: Bool) -> Bool {
+        return phoneLib.setHold(session: call.session, onHold: onHold)
+    }
+    
+    public func sendDtmf(call: Call, dtmf:String){
+        phoneLib.sendDtmf(session: call.session, dtmf: dtmf)
+    }
+    
+    func toggleSpeaker() {
+        _ = phoneLib.setSpeaker(phoneLib.isSpeakerOn ? false : true)
     }
     
     func acceptIncomingCall(callback: @escaping () -> ()) {

@@ -12,6 +12,8 @@ import PIL
 class DialerViewController: UIViewController {
     
     @IBOutlet weak var numberPreview: UITextField!
+        
+    private let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,25 @@ class DialerViewController: UIViewController {
     }
 
     @IBAction func callButtonWasPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "callSegue", sender: self)
+        guard let number = numberPreview.text,
+              let pil = PIL.shared else { return }
+        pil.auth = Auth(
+            username: self.userDefault(key: "username"),
+            password: self.userDefault(key: "password"),
+            domain: self.userDefault(key: "domain"),
+            port: Int(self.userDefault(key: "port")) ?? 0,
+            secure: self.defaults.bool(forKey: "encryption")
+        )
+        pil.start { success in
+            if success {
+                MicPermissionHelper.requestMicrophonePermission { startCalling in
+                    if startCalling {
+                        _ = pil.call(number: number)
+                        self.performSegue(withIdentifier: "callSegue", sender: self)
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func deleteButtonWasPressed(_ sender: UIButton) {
@@ -38,4 +58,8 @@ class DialerViewController: UIViewController {
         numberPreview.text = currentNumberPreview + buttonNumber
     
     }
+    
+    private func userDefault(key: String) -> String {
+        defaults.object(forKey: key) as? String ?? ""
+    } // TODO move this outside ViewControllers
 }

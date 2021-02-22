@@ -37,7 +37,7 @@ class CallKitDelegate: NSObject {
         providerConfiguration.supportsVideo = false
         providerConfiguration.supportedHandleTypes = [CXHandle.HandleType.phoneNumber]
 
-//        if !SystemUser.current().usePhoneRingtone { //wip implement ringtone selection
+//        if !SystemUser.current().usePhoneRingtone { // TODO: implement ringtone selection
 //            if Bundle.main.path(forResource: "ringtone", ofType: "wav") != nil {
 //                providerConfiguration.ringtoneSound = "ringtone.wav"
 //            }
@@ -68,7 +68,7 @@ class CallKitDelegate: NSObject {
 extension CallKitDelegate: CXProviderDelegate {
 
     func providerDidReset(_ provider: CXProvider) {
-        print("Provider reset, end all the calls") //wip terminate the ongoing audio session and dispose of any active calls
+        print("Provider reset, end all the calls") // TODO terminate the ongoing audio session and dispose of any active calls
     }
 
     public func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
@@ -101,22 +101,21 @@ extension CallKitDelegate: CXProviderDelegate {
 
     public func provider(_ provider: CXProvider, perform action: CXSetMutedCallAction) {
         guard findCallOrFail(action: action) != nil else { return }
-
-//        PhoneLib.shared.setMicrophone(muted: action.isMuted)
+        pil.setMicrophone(muted: action.isMuted)
 
         action.fulfill()
     }
 
     public func provider(_ provider: CXProvider, perform action: CXSetHeldCallAction) {
-//        guard let call = findCallOrFail(action: action) else { return }
+        guard let call = findCallOrFail(action: action) else { return }
 
-//        let success = PhoneLib.shared.setHold(session: call.session, onHold: action.isOnHold)
-//
-//        if success {
-//            action.fulfill()
-//        } else {
-//            action.fail()
-//        }
+        let success = pil.setHold(call: call, onHold: action.isOnHold)
+
+        if success {
+            action.fulfill()
+        } else {
+            action.fail()
+        }
     }
 
     public func provider(_ provider: CXProvider, perform action: CXPlayDTMFCallAction) {

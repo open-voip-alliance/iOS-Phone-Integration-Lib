@@ -20,7 +20,7 @@ public class Call {
         }
     }
 
-    var simpleState: SimpleState {
+    public var simpleState: SimpleState {
         get {
             switch session.state {
             case .idle:
@@ -41,7 +41,7 @@ public class Call {
         get { session.durationInSec ?? 0 }
     }
 
-    var state: SessionState {
+    public var state: SessionState {
         get { session.state }
     }
 
