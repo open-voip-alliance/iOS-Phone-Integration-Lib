@@ -46,8 +46,6 @@
 		83C98B9625A8AD1900CECE31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C98B9525A8AD1900CECE31 /* AppDelegate.swift */; };
 		83C98B9F25A8AD1A00CECE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C98B9E25A8AD1A00CECE31 /* Assets.xcassets */; };
 		83C98BA225A8AD1A00CECE31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C98BA025A8AD1A00CECE31 /* LaunchScreen.storyboard */; };
-		83F69EA7258FCF1E0076B8F0 /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */; };
-		83F69EA8258FCF1E0076B8F0 /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */; };
 		83F69EAE25922CE60076B8F0 /* CallKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */; };
 		83F69EAF25922CE60076B8F0 /* CallKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */; };
 		83F69EB32592306E0076B8F0 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EB22592306E0076B8F0 /* Call.swift */; };
@@ -116,7 +114,6 @@
 		83C98B9E25A8AD1A00CECE31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83C98BA125A8AD1A00CECE31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83C98BA325A8AD1A00CECE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationError.swift; sourceTree = "<group>"; };
 		83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKitDelegate.swift; sourceTree = "<group>"; };
 		83F69EB22592306E0076B8F0 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
 		83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushHandler.swift; sourceTree = "<group>"; };
@@ -259,7 +256,6 @@
 				83E9116925E52A34001D4A49 /* CallKit */,
 				5CAB173F25DA8FCE00BC12E5 /* Calls */,
 				83F69ED3259A23BB0076B8F0 /* Extensions */,
-				83F69EA5258FCEF80076B8F0 /* Enums */,
 				83FADAC4258BD7F500CA64C8 /* Configuration */,
 				83F69EC12593CD0C0076B8F0 /* Push */,
 				8319D8AC2576AD8D0095E54E /* Info.plist */,
@@ -333,14 +329,6 @@
 				83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */,
 			);
 			path = CallKit;
-			sourceTree = "<group>";
-		};
-		83F69EA5258FCEF80076B8F0 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				83F69EA6258FCF1E0076B8F0 /* RegistrationError.swift */,
-			);
-			path = Enums;
 			sourceTree = "<group>";
 		};
 		83F69EC12593CD0C0076B8F0 /* Push */ = {
@@ -630,7 +618,6 @@
 				83F69EB32592306E0076B8F0 /* Call.swift in Sources */,
 				5C92D7CA25DA93F8003019D1 /* EventsManager.swift in Sources */,
 				83F69EC32593CD930076B8F0 /* VoIPPushHandler.swift in Sources */,
-				83F69EA7258FCF1E0076B8F0 /* RegistrationError.swift in Sources */,
 				5C92D81325DAC9AE003019D1 /* Container.swift in Sources */,
 				837C275A25B8A64E008220C6 /* PushKitManager.swift in Sources */,
 				83F69EAE25922CE60076B8F0 /* CallKitDelegate.swift in Sources */,
@@ -660,7 +647,6 @@
 				83B84F83257D7B1900BABAC7 /* PIL.swift in Sources */,
 				83FADAC7258BD81100CA64C8 /* Auth.swift in Sources */,
 				837C275B25B8A64E008220C6 /* PushKitManager.swift in Sources */,
-				83F69EA8258FCF1E0076B8F0 /* RegistrationError.swift in Sources */,
 				5C92D7F025DAA9B1003019D1 /* Preferences.swift in Sources */,
 				8385249B25BB16E1008F4827 /* MiddlewareDelegate.swift in Sources */,
 				5C92D81425DAC9AE003019D1 /* Container.swift in Sources */,
