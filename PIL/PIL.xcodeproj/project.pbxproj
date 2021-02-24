@@ -48,8 +48,6 @@
 		83C98BA225A8AD1A00CECE31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C98BA025A8AD1A00CECE31 /* LaunchScreen.storyboard */; };
 		83F69EAE25922CE60076B8F0 /* CallKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */; };
 		83F69EAF25922CE60076B8F0 /* CallKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */; };
-		83F69EB32592306E0076B8F0 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EB22592306E0076B8F0 /* Call.swift */; };
-		83F69EB42592306E0076B8F0 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EB22592306E0076B8F0 /* Call.swift */; };
 		83F69EC32593CD930076B8F0 /* VoIPPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */; };
 		83F69EC42593CD930076B8F0 /* VoIPPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */; };
 		83F69ED5259A23F00076B8F0 /* UUIDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */; };
@@ -115,7 +113,6 @@
 		83C98BA125A8AD1A00CECE31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83C98BA325A8AD1A00CECE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83F69EAD25922CE50076B8F0 /* CallKitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKitDelegate.swift; sourceTree = "<group>"; };
-		83F69EB22592306E0076B8F0 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
 		83F69EC22593CD930076B8F0 /* VoIPPushHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPPushHandler.swift; sourceTree = "<group>"; };
 		83F69ED4259A23F00076B8F0 /* UUIDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDExtension.swift; sourceTree = "<group>"; };
 		83FADAC5258BD81100CA64C8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
@@ -261,7 +258,6 @@
 				8319D8AC2576AD8D0095E54E /* Info.plist */,
 				8319D8AB2576AD8D0095E54E /* PIL.h */,
 				83B84F81257D7B1900BABAC7 /* PIL.swift */,
-				83F69EB22592306E0076B8F0 /* Call.swift */,
 				F81F00A7ECF3E120DDA5BB05 /* Builder.swift */,
 			);
 			path = PIL;
@@ -615,7 +611,6 @@
 				83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */,
 				83F69ED5259A23F00076B8F0 /* UUIDExtension.swift in Sources */,
 				5CAB174A25DA8FCE00BC12E5 /* PILCall.swift in Sources */,
-				83F69EB32592306E0076B8F0 /* Call.swift in Sources */,
 				5C92D7CA25DA93F8003019D1 /* EventsManager.swift in Sources */,
 				83F69EC32593CD930076B8F0 /* VoIPPushHandler.swift in Sources */,
 				5C92D81325DAC9AE003019D1 /* Container.swift in Sources */,
@@ -639,7 +634,6 @@
 			files = (
 				83F69ED6259A23F00076B8F0 /* UUIDExtension.swift in Sources */,
 				8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */,
-				83F69EB42592306E0076B8F0 /* Call.swift in Sources */,
 				5C92D7CB25DA93F8003019D1 /* EventsManager.swift in Sources */,
 				5CAB17D125DA92D200BC12E5 /* AudioManager.swift in Sources */,
 				83F69EC42593CD930076B8F0 /* VoIPPushHandler.swift in Sources */,
