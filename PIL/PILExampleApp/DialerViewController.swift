@@ -35,7 +35,7 @@ class DialerViewController: UIViewController {
             if success {
                 MicPermissionHelper.requestMicrophonePermission { startCalling in
                     if startCalling {
-                        _ = pil.call(number: number)
+                        _ = pil.actions.call(number: number)
                         self.performSegue(withIdentifier: "callSegue", sender: self)
                     }
                 }
@@ -61,5 +61,5 @@ class DialerViewController: UIViewController {
     
     private func userDefault(key: String) -> String {
         defaults.object(forKey: key) as? String ?? ""
-    } // TODO move this outside ViewControllers
+    } //TODO: move this outside ViewControllers
 }

@@ -26,15 +26,15 @@ public class PIL: RegistrationStateDelegate {
     }
     
     var callKitProviderDelegate: CallKitDelegate!
-    var firstTransferCall: Call?
-    var secondTransferCall: Call?
+    var firstTransferCall: PILCall?
+    var secondTransferCall: PILCall?
     
-    public var call: Call?
+    public var call: PILCall?
     let pushKitManager: PushKitManager
     
     //private var onRegister: ((Bool) -> ()) //wip
     private var incomingUuid: UUID?
-    private var onIncomingCall: ((Call) -> ())?
+    private var onIncomingCall: ((PILCall) -> ())?
     
     public var auth: Auth? = nil {
         didSet {
@@ -80,7 +80,7 @@ public class PIL: RegistrationStateDelegate {
         guard auth != nil else {
             completion(false)
             return
-        } // TODO: throw NoAuthenticationCredentialsException()
+        } //TODO: throw NoAuthenticationCredentialsException()
 
         if (forceInitialize) {
             unregister()
@@ -134,35 +134,6 @@ public class PIL: RegistrationStateDelegate {
         pushKitManager.registerForVoIPPushes()
     }
     
-    public func call(number: String) -> Call? {
-        var outgoingCall: Call? = nil
-        print("Attempting to call.")
-        if let session = phoneLib.call(to: number) {
-            outgoingCall = Call(session: session, direction: Direction.outbound, uuid:session.sessionId)
-        }
-        return outgoingCall
-    }
-    
-    public func end(call: Call) -> Bool {
-        return phoneLib.endCall(for: call.session)
-    }
-    
-    public func setMicrophone(muted: Bool) {
-        phoneLib.setMicrophone(muted: muted)
-    }
-    
-    public func setHold(call: Call, onHold: Bool) -> Bool {
-        return phoneLib.setHold(session: call.session, onHold: onHold)
-    }
-    
-    public func sendDtmf(call: Call, dtmf:String){
-        phoneLib.sendDtmf(session: call.session, dtmf: dtmf)
-    }
-    
-    func toggleSpeaker() {
-        _ = phoneLib.setSpeaker(phoneLib.isSpeakerOn ? false : true)
-    }
-    
     func acceptIncomingCall(callback: @escaping () -> ()) {
         self.onIncomingCall = { call in
             _ = self.phoneLib.acceptCall(for: call.session)
@@ -183,7 +154,7 @@ public class PIL: RegistrationStateDelegate {
         self.incomingUuid = uuid
     }
     
-    func findCallByUuid(uuid: UUID) -> Call? {
+    func findCallByUuid(uuid: UUID) -> PILCall? { //TODO: if this will not be called from here move it to CallKitDelegate
         if call?.uuid == uuid {
             return call
         }
@@ -221,7 +192,7 @@ extension PIL: SessionDelegate {
 
         DispatchQueue.main.async {
             print("Incoming call block invoked, routing through CallKit.")
-            self.call = Call(session: incomingSession, direction: Direction.inbound, uuid: uuid)
+            self.call = PILCall(session: incomingSession, direction: CallDirection.inbound, uuid: uuid)
             self.callKitProviderDelegate.reportIncomingCall()
             self.onIncomingCall?(self.call!)
             self.onIncomingCall = nil
@@ -231,7 +202,7 @@ extension PIL: SessionDelegate {
     public func outgoingDidInitialize(session: Session) {
         print("On outgoingDidInitialize.")
         
-        self.call = Call(session: session, direction: Direction.outbound)
+        self.call = PILCall(session: session, direction: CallDirection.outbound)
         guard let call = self.call else {
             print("Unable to find call setup...")
             return

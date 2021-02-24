@@ -48,21 +48,21 @@ class CallViewController: UIViewController {
     }
 
     @IBAction func transferButtonWasPressed(_ sender: Any) {
-        guard let call = pil?.call, pil?.call?.simpleState == .inProgress else { return }
-        if call.state != .paused {
-            actions?.hold()
+        guard let call = pil?.call else { return }
+        if !call.isOnHold {
+            actions?.performHold()
             holdButton.isSelected = !holdButton.isSelected
         }
-        //wip present UI to select number and call actions?.beginAttendedTransfer(number: <#T##String#>)
+        //wip present UI to select number and call actions?.beginAttendedTransfer(number:)
     }
 
     @IBAction func holdButtonWasPressed(_ sender: Any) {
-        actions?.toggleHold()
+        actions?.performToggleHold()
         holdButton.isSelected = !holdButton.isSelected
     }
 
     @IBAction func muteButtonWasPressed(_ sender: Any) {
-        actions?.mute()
+        actions?.performMute()
         muteButton.isSelected = !muteButton.isSelected 
     }
 }

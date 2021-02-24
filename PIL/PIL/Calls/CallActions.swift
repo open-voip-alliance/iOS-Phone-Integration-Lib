@@ -4,63 +4,58 @@
 
 import Foundation
 import CallKit
+import PhoneLib
 
 public class CallActions {
-        
-    public func hold() {
+    
+    lazy var phoneLib: PhoneLib = PhoneLib.shared
+     
+    // MARK: Callkit actions
+    public func performHold() {
         performCallAction { uuid in
             CXSetHeldCallAction(call: uuid, onHold: true)
         }
     }
     
-    public func unhold() {
+    public func performUnhold() {
         performCallAction { uuid in
             CXSetHeldCallAction(call: uuid, onHold: false)
         }
     }
     
-    public func toggleHold() {
+    public func performToggleHold() {
         let pil = PIL.shared
         performCallAction { uuid in
             CXSetHeldCallAction(call: uuid, onHold: !(pil?.call?.session.state == .paused))
         }
     }
     
-    public func mute() {
+    public func performMute() {
         guard let pil = PIL.shared else {return}
         performCallAction { uuid in
             CXSetMutedCallAction(call: uuid, muted: !pil.isMicrophoneMuted)
         }
     }
     
-    public func toggleSpeaker() {
-        guard let pil = PIL.shared else {return}
-        pil.toggleSpeaker()
-    }
-    
-    public func sendDtmf(dtmf: String) {
-        // TODO
-    }
-    
     public func beginAttendedTransfer(number: String) {
-        // TODO
+        //TODO:
     }
     
     public func completeAttendedTransfer() {
-        // TODO
+        //TODO:
     }
     
     public func answer() {
-        // TODO
+        //TODO:
     }
     
     public func decline() {
-        // TODO
+        //TODO:
     }
     
     public func end() {
         let pil = PIL.shared
-        guard let call = pil?.call, call.simpleState != .finished else { return }
+        guard let call = pil?.call, call.state != .ended else { return }
 
         performCallAction { uuid in
             CXEndCallAction(call: uuid)
@@ -84,5 +79,37 @@ public class CallActions {
                 debugPrint("Performed \(action.description))")
             }
         }
+    }
+    
+    // MARK: PhoneLib actions
+    public func call(number: String) -> PILCall? {
+        var outgoingCall: PILCall? = nil
+        print("Attempting to call.")
+        if let session = phoneLib.call(to: number) {
+            outgoingCall = PILCall(session: session, direction: CallDirection.outbound, uuid:session.sessionId)
+        }
+        return outgoingCall
+    }
+    
+    public func setMicrophone(muted: Bool) {
+        phoneLib.setMicrophone(muted: muted)
+    }
+    
+    public func setHold(call: PILCall, onHold: Bool) -> Bool {
+        return phoneLib.setHold(session: call.session, onHold: onHold)
+    }
+    
+    public func sendDtmf(dtmf: String) {
+        guard let pil = PIL.shared,
+              let session = pil.call?.session else {return}
+        phoneLib.sendDtmf(session: session, dtmf: dtmf)
+    }
+    
+    public func toggleSpeaker() {
+        _ = phoneLib.setSpeaker(phoneLib.isSpeakerOn ? false : true)
+    }
+    
+    public func end(call: PILCall) -> Bool {
+        return phoneLib.endCall(for: call.session)
     }
 }
