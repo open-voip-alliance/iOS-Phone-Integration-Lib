@@ -21,16 +21,16 @@
     - [x] Display name
     - [x] Call state
     - [x] Direction
-    - [ ] Hold State 
+    - [x] Hold State 
     - [x] UUID
-    - [ ] Mos Value
+    - [x] Mos Value
     - [ ] Contact information
   - [x] Calls are stored/tracked in the PIL based on events from the phonelib
 - [ ] Calling
   - [ ] Outgoing
     - [x] Can place an outgoing call to a given number
-    - [ ] Hooks up with call kit
-    - [ ] Automatically displays call screen if chosen
+    - [x] Hooks up with call kit
+    - [x] Automatically displays call screen if chosen
   - [ ] Incoming
     - [ ] App calls while in background
     - [ ] User can answer call
@@ -39,10 +39,10 @@
     - [ ] User is taken to call screen after accepting call
   - [ ] General
     - [ ] Audio can be routed to bluetooth
-    - [ ] Audio can be routed to speaker
+    - [x] Audio can be routed to speaker
     - [ ] Audio can be routed to earpiece
-    - [ ] Call can be muted
-    - [ ] Call can be put on hold
+    - [x] Call can be muted
+    - [x] Call can be put on hold
     - [ ] Transfer
       - [ ] User can begin transfer to new number
       - [ ] User hears audio from second call after beginning transfer
@@ -56,7 +56,7 @@
   - [ ] Boot the library when the app is brought to foreground (if not already)
 - [ ] Code/Code Quality
   - [ ] Only the absolutely necessary apis are exposed to the consuming applications
-  - [ ] A DI framework is used
+  - [x] A DI framework is used
   
 ## Example App
 - [ ] Setting Screen
@@ -65,10 +65,10 @@
     - [x] Password
     - [x] Domain
     - [x] Port
-  - [ ] VoIPGRID Auth
-      - [ ] Username
-      - [ ] Password
-      - [ ] Register with Middleware
+  - [x] VoIPGRID Auth
+      - [x] Username
+      - [x] Password
+      - [x] Register with Middleware
   - [ ] Preferences
       - [x] Encryption
       - [ ] Use Application Ringtone 
@@ -80,9 +80,9 @@
     - [ ] Call Information Display
       - [ ] Show third party
       - [ ] Show call duration  
-    - [ ] Hold 💎👐
-    - [ ] Mute
+    - [x] Hold 💎👐
+    - [x] Mute
     - [ ] Transfer
     - [ ] Route to Bluetooth
-    - [ ] Route to Speaker
+    - [x] Route to Speaker
     - [ ] Route to Earpiece
