@@ -27,7 +27,7 @@
     - [ ] Contact information
   - [x] Calls are stored/tracked in the PIL based on events from the phonelib
 - [ ] Calling
-  - [ ] Outgoing
+  - [x] Outgoing
     - [x] Can place an outgoing call to a given number
     - [x] Hooks up with call kit
     - [x] Automatically displays call screen if chosen
