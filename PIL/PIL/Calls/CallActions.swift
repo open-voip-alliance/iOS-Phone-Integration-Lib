@@ -4,7 +4,7 @@
 
 import Foundation
 import CallKit
-import PhoneLib
+import iOSPhoneLib
 
 public class CallActions {
     
@@ -26,7 +26,7 @@ public class CallActions {
     public func performToggleHold() {
         let pil = PIL.shared
         performCallAction { uuid in
-            CXSetHeldCallAction(call: uuid, onHold: !(pil?.call?.session.state == .paused))
+            CXSetHeldCallAction(call: uuid, onHold: !(pil?.call?.sessionState == .paused))
         }
     }
     
@@ -86,7 +86,8 @@ public class CallActions {
         var outgoingCall: PILCall? = nil
         print("Attempting to call.")
         if let session = phoneLib.call(to: number) {
-            outgoingCall = PILCall(session: session, direction: CallDirection.outbound, uuid:session.sessionId)
+//wip outgoingCall = PILCall(session: session, direction: CallDirection.outbound, uuid:session.sessionId) 
+            outgoingCall = PILCallFactory.make(session:session)
         }
         return outgoingCall
     }

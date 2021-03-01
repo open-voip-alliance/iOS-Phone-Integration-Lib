@@ -9,7 +9,7 @@ import Foundation
 import CallKit
 import UserNotifications
 import AVKit
-import PhoneLib
+import iOSPhoneLib
 
 class CallKitDelegate: NSObject {
 
@@ -84,7 +84,7 @@ extension CallKitDelegate: CXProviderDelegate {
             return
         }
         
-        print("Call is ending with average rating: \(call.session.getAverageRating())/5")
+//        print("Call is ending with average rating: \(call.session.getAverageRating())/5") //wip
         let success = pil.actions.end(call:call)
 
         if success {

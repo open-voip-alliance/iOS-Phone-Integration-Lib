@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
                  :tag => "#{s.version}" }
 
     s.framework = "UIKit"
-    s.dependency 'PhoneLib', '~> 0.1.0'
+    s.dependency 'iOSPhoneLib', '~> 0.1.0'
     s.dependency 'Swinject', '~> 2.7.1'
 
     s.source_files = "PIL/**/*.{swift}"

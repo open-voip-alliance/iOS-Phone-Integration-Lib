@@ -6,8 +6,10 @@ target 'PIL' do
   source 'https://github.com/CocoaPods/Specs.git'
   use_frameworks!
 
-  pod 'PhoneLib', :git => 'https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git', 'branch' => 'main'
-
+  #//wip pod 'PhoneLib', :git => 'https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git', 'branch' => 'main'
+  pod 'iOSPhoneLib', :path => '/Users/chris/projects/Vialer/iOS/ios-phone-lib'
+#  pod 'iOSPhoneLib', :git => 'https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git'
+  
   pod 'Swinject'
 
   target 'PILTests' do

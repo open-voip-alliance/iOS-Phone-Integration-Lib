@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import PhoneLib
+import iOSPhoneLib
 import CallKit
 
 public class PIL: RegistrationStateDelegate {
@@ -181,7 +181,7 @@ extension PIL: SessionDelegate {
     public func didReceive(incomingSession: Session) {
         print("Incoming session didReceive")
 
-        guard let uuid = self.incomingUuid else {
+        guard let uuid = self.incomingUuid else { //wip check if the session has the same sesionid with this
             print("No incoming uuid set, cannot accept incoming call")
             return
         }
@@ -192,7 +192,8 @@ extension PIL: SessionDelegate {
 
         DispatchQueue.main.async {
             print("Incoming call block invoked, routing through CallKit.")
-            self.call = PILCall(session: incomingSession, direction: CallDirection.inbound, uuid: uuid)
+            //wip self.call = PILCall(session: incomingSession, direction: CallDirection.inbound, uuid: uuid)
+            self.call = PILCallFactory.make(session: incomingSession)
             self.callKitProviderDelegate.reportIncomingCall()
             self.onIncomingCall?(self.call!)
             self.onIncomingCall = nil
@@ -201,8 +202,9 @@ extension PIL: SessionDelegate {
 
     public func outgoingDidInitialize(session: Session) {
         print("On outgoingDidInitialize.")
-        
-        self.call = PILCall(session: session, direction: CallDirection.outbound)
+            
+//        self.call = PILCall(session: session, direction: CallDirection.outbound)
+        self.call = PILCallFactory.make(session: session)
         guard let call = self.call else {
             print("Unable to find call setup...")
             return
