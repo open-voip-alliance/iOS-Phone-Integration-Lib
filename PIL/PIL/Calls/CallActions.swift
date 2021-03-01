@@ -87,7 +87,8 @@ public class CallActions {
         print("Attempting to call.")
         if let session = phoneLib.call(to: number) {
 //wip outgoingCall = PILCall(session: session, direction: CallDirection.outbound, uuid:session.sessionId) 
-            outgoingCall = PILCallFactory.make(session:session)
+            let pil = PIL.shared
+            outgoingCall = pil?.callFactory.make(session:session)
         }
         return outgoingCall
     }

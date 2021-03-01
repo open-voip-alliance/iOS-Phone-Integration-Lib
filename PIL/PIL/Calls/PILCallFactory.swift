@@ -5,9 +5,9 @@
 import Foundation
 import iOSPhoneLib
 
-class PILCallFactory {
+public class PILCallFactory {
     
-    public static func make(session:Session) -> PILCall {
+    public func make(session:Session) -> PILCall {
         let phoneNumber = session.remoteNumber
         let displayName = session.displayName ?? ""
         let state = convertCallState(state: session.state)
@@ -27,7 +27,7 @@ class PILCallFactory {
         //wip check if UUID AND Direction have correct values
     }
     
-    private static func convertCallState(state: SessionState) -> CallState {
+    private func convertCallState(state: SessionState) -> CallState {
         switch state {
         case .idle:
             return .initializing

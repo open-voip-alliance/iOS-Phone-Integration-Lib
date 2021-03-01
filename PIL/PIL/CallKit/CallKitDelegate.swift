@@ -84,7 +84,7 @@ extension CallKitDelegate: CXProviderDelegate {
             return
         }
         
-//        print("Call is ending with average rating: \(call.session.getAverageRating())/5") //wip
+        print("Call is ending with average rating: \(call.mos)/5")
         let success = pil.actions.end(call:call)
 
         if success {
