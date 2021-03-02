@@ -20,9 +20,9 @@ public class PIL: RegistrationStateDelegate {
     static public var shared: PIL?
     
     lazy var phoneLib: PhoneLib = PhoneLib.shared
-    public var registrationStatus: SipRegistrationStatus {
+    public var isRegistered: Bool {
         get{
-          return PhoneLib.shared.registrationStatus //wip SipRegistrationStatus?
+          return PhoneLib.shared.isRegistered
         }
     }
     
@@ -87,7 +87,7 @@ public class PIL: RegistrationStateDelegate {
             unregister()
         }
 
-        if (!forceReregister && registrationStatus == .registered){
+        if (!forceReregister && isRegistered){
             print("The user was already registered and will not force re-registration.")
             completion(true)
         }
@@ -166,7 +166,7 @@ public class PIL: RegistrationStateDelegate {
 // MARK: - RegistrationStateDelegate
     public func didChangeRegisterState(_ state: SipRegistrationStatus, message: String?) {
         print("Registration state: \(String(reflecting: state)) with message \(String(describing: message))")
-
+        
         if state == .failed {
             if let uuid = incomingUuid {
                 print("Reporting call ended with uuid: \(uuid)")
