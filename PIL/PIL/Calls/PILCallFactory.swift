@@ -8,7 +8,7 @@ import iOSPhoneLib
 public class PILCallFactory {
     
     public func make(session:Session) -> PILCall {
-        let phoneNumber = session.remoteNumber
+        let remoteNumber = session.remoteNumber
         let displayName = session.displayName ?? ""
         let state = convertCallState(state: session.state)
         let direction: CallDirection = session.isIncoming ? .inbound : .outbound
@@ -21,7 +21,7 @@ public class PILCallFactory {
         let sessionState = session.state
         //TODO: contact =
         
-        let call = PILCall(phoneNumber: phoneNumber, displayName: displayName, state: state, direction: direction, duration: duration, isOnHold: isOnHold, uuid: uuid, mos: mos, isIncoming: isIncoming, session: session, sessionState: sessionState)
+        let call = PILCall(remoteNumber: remoteNumber, displayName: displayName, state: state, direction: direction, duration: duration, isOnHold: isOnHold, uuid: uuid, mos: mos, isIncoming: isIncoming, session: session, sessionState: sessionState)
         return call
         
         //wip check if UUID AND Direction have correct values

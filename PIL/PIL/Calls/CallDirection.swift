@@ -4,7 +4,7 @@
 
 import Foundation
 
-enum CallDirection {
+public enum CallDirection {
     case inbound
     case outbound
 }

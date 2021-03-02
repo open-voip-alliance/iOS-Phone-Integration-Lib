@@ -61,8 +61,6 @@ public class PIL: RegistrationStateDelegate {
     init(applicationSetup: ApplicationSetup) {
         pushKitManager = PushKitManager(middleware: applicationSetup.middleware!)
         callKitProviderDelegate = CallKitDelegate(pil: self)
-        phoneLib.callDelegate = self //wip was sessionDelegate
-        phoneLib.setAudioCodecs([Codec.OPUS])
         PIL.shared = self
     }
     
@@ -91,6 +89,10 @@ public class PIL: RegistrationStateDelegate {
             print("The user was already registered and will not force re-registration.")
             completion(true)
         }
+        
+        //phoneLib.initialize(config: <#T##Config#>) //wip create the Config file
+//        config.callDelegate = self
+        
         
         register { success in
             if !success {
