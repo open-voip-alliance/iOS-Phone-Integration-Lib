@@ -11,7 +11,7 @@ public class PILCallFactory {
         let remoteNumber = session.remoteNumber
         let displayName = session.displayName ?? ""
         let state = convertCallState(state: session.state)
-        let direction: CallDirection = session.isIncoming ? .inbound : .outbound
+        let direction: CallDirection = session.direction == .inbound ? .inbound : .outbound
         let duration = session.durationInSec ?? 0
         let isOnHold = (session.state == .pausedByRemote || session.state == .paused)
         let uuid = session.sessionId

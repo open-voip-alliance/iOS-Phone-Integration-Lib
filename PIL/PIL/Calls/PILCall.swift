@@ -15,23 +15,7 @@ public struct PILCall {
     public let uuid: UUID
     public let mos: Float
 //TODO:    let contact: Contact?
-    let isIncoming: Bool
+    public let isIncoming: Bool
     let session: Session
     public let sessionState: SessionState
-    
-    //wip without init
-//    init(phoneNumber: String, displayName: String, state: CallState, direction: CallDirection, duration: Int, isOnHold: Bool, uuid: UUID, mos: Float, isIncoming: Bool, session: Session, sessionState: SessionState) {
-//        self.remoteNumber = phoneNumber
-//        self.displayName = displayName
-//        self.state = state
-//        self.direction = direction
-//        self.duration = duration
-//        self.isOnHold = isOnHold
-//        self.uuid = uuid
-//        self.mos = mos
-////TODO:        self.contact = contact
-//        self.isIncoming = isIncoming
-//        self.session = session
-//        self.sessionState = sessionState
-//    }
 }
