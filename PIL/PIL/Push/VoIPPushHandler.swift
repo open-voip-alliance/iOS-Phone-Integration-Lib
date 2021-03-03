@@ -7,7 +7,7 @@
 
 import Foundation
 import PushKit
-import PhoneLib
+import iOSPhoneLib
 import CallKit
 
 class VoIPPushHandler {

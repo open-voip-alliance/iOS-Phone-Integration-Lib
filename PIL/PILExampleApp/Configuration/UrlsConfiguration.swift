@@ -38,7 +38,7 @@ import Foundation
 
     @objc static let shared = UrlsConfiguration()
 
-    fileprivate var plistUrl: URL = Bundle.main.url(forResource: "Config", withExtension: "plist")! //wip set staging config plist file or not here
+    fileprivate var plistUrl: URL = Bundle.main.url(forResource: "Config", withExtension: "plist")! //For staging use forResource: "StangingConfig" 
     fileprivate var urlsConfig: Keys?
 
     private override init() {

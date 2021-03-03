@@ -34,7 +34,7 @@ final class SettingsViewController: QuickTableViewController {
                     )
                     pil.start { success in
                         let alert = UIAlertController(title: "Authentication Test", message: success ? "Authenticated successfully!" : "Authentication failed :(", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                         self.present(alert, animated: true)
                         pil.unregister()
                     }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import PhoneLib
+import iOSPhoneLib
 import CallKit
 
 public class PIL: RegistrationStateDelegate {
@@ -15,26 +15,27 @@ public class PIL: RegistrationStateDelegate {
     public let audio = di.resolve(AudioManager.self)!
     public let events = di.resolve(EventsManager.self)!
     public let calls = di.resolve(Calls.self)!
+    public let callFactory = di.resolve(PILCallFactory.self)!
     
     static public var shared: PIL?
     
     lazy var phoneLib: PhoneLib = PhoneLib.shared
-    public var registrationStatus: SipRegistrationStatus {
+    public var isRegistered: Bool {
         get{
-          return PhoneLib.shared.registrationStatus
+          return PhoneLib.shared.isRegistered
         }
     }
     
     var callKitProviderDelegate: CallKitDelegate!
-    var firstTransferCall: Call?
-    var secondTransferCall: Call?
+    var firstTransferCall: PILCall?
+    var secondTransferCall: PILCall?
     
-    public var call: Call?
+    public var call: PILCall?
     let pushKitManager: PushKitManager
     
     //private var onRegister: ((Bool) -> ()) //wip
     private var incomingUuid: UUID?
-    private var onIncomingCall: ((Call) -> ())?
+    private var onIncomingCall: ((PILCall) -> ())?
     
     public var auth: Auth? = nil {
         didSet {
@@ -51,11 +52,15 @@ public class PIL: RegistrationStateDelegate {
         }
     }
     
+    var isMicrophoneMuted: Bool {
+        get {
+            self.phoneLib.isMicrophoneMuted
+        }
+    }
+    
     init(applicationSetup: ApplicationSetup) {
         pushKitManager = PushKitManager(middleware: applicationSetup.middleware!)
         callKitProviderDelegate = CallKitDelegate(pil: self)
-        phoneLib.sessionDelegate = self
-        phoneLib.setAudioCodecs([Codec.OPUS])
         PIL.shared = self
     }
     
@@ -74,16 +79,20 @@ public class PIL: RegistrationStateDelegate {
         guard auth != nil else {
             completion(false)
             return
-        } //wip throw NoAuthenticationCredentialsException()
+        } //TODO: throw NoAuthenticationCredentialsException()
 
         if (forceInitialize) {
             unregister()
         }
 
-        if (!forceReregister && registrationStatus == .registered){
+        if (!forceReregister && isRegistered){
             print("The user was already registered and will not force re-registration.")
             completion(true)
         }
+        
+        //phoneLib.initialize(config: <#T##Config#>) //wip create the Config file
+//        config.callDelegate = self
+        
         
         register { success in
             if !success {
@@ -110,12 +119,12 @@ public class PIL: RegistrationStateDelegate {
         }
         
         print("Registering with \(username) + \(password) encrypted:\(secure) at \(domain):\(port)")
-        let success = phoneLib.register(domain: domain, port: port, username: username, password: password, encrypted: secure)
+        let success = phoneLib.register
 
-        if !success {
+        if !success() {
             print("Failed to register.")
         }
-        onRegister(success)
+        onRegister(success())
     }
 
     public func unregister() {
@@ -126,25 +135,6 @@ public class PIL: RegistrationStateDelegate {
     
     public func registerForVoIPPushes(){
         pushKitManager.registerForVoIPPushes()
-    }
-    
-    public func call(number: String) -> Session? {
-        var session : Session?
-        register { success in
-            if !success {
-                print("Unable to register.")
-                return
-            }
-
-            print("Attempting to call.")
-            session = phoneLib.call(to: number)
-        }
-//        let call = Call(session: session, direction: session.direction, uuid:session.uuid) //wip don't return session but call
-        return session
-    }
-    
-    public func end(call: Call) -> Bool {
-        return phoneLib.endCall(for: call.session)
     }
     
     func acceptIncomingCall(callback: @escaping () -> ()) {
@@ -167,7 +157,7 @@ public class PIL: RegistrationStateDelegate {
         self.incomingUuid = uuid
     }
     
-    func findCallByUuid(uuid: UUID) -> Call? {
+    func findCallByUuid(uuid: UUID) -> PILCall? { //TODO: if this will not be called from here move it to CallKitDelegate
         if call?.uuid == uuid {
             return call
         }
@@ -178,7 +168,7 @@ public class PIL: RegistrationStateDelegate {
 // MARK: - RegistrationStateDelegate
     public func didChangeRegisterState(_ state: SipRegistrationStatus, message: String?) {
         print("Registration state: \(String(reflecting: state)) with message \(String(describing: message))")
-
+        
         if state == .failed {
             if let uuid = incomingUuid {
                 print("Reporting call ended with uuid: \(uuid)")
@@ -189,12 +179,12 @@ public class PIL: RegistrationStateDelegate {
 }
 
 // MARK: - SessionDelegate
-extension PIL: SessionDelegate {
+extension PIL: CallDelegate {
 
     public func didReceive(incomingSession: Session) {
         print("Incoming session didReceive")
 
-        guard let uuid = self.incomingUuid else {
+        guard let uuid = self.incomingUuid else { //wip check if the session has the same sesionid with this
             print("No incoming uuid set, cannot accept incoming call")
             return
         }
@@ -205,7 +195,9 @@ extension PIL: SessionDelegate {
 
         DispatchQueue.main.async {
             print("Incoming call block invoked, routing through CallKit.")
-            self.call = Call(session: incomingSession, direction: Direction.inbound, uuid: uuid)
+            //wip self.call = PILCall(session: incomingSession, direction: CallDirection.inbound, uuid: uuid)
+            self.call = self.callFactory.make(session: incomingSession)
+            
             self.callKitProviderDelegate.reportIncomingCall()
             self.onIncomingCall?(self.call!)
             self.onIncomingCall = nil
@@ -214,8 +206,9 @@ extension PIL: SessionDelegate {
 
     public func outgoingDidInitialize(session: Session) {
         print("On outgoingDidInitialize.")
-        
-        self.call = Call(session: session, direction: Direction.outbound)
+            
+//        self.call = PILCall(session: session, direction: CallDirection.outbound)
+        self.call = callFactory.make(session: session)
         guard let call = self.call else {
             print("Unable to find call setup...")
             return

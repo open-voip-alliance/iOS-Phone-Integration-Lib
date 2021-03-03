@@ -3,15 +3,19 @@
 //
 
 import Foundation
+import iOSPhoneLib
 
-struct PILCall {
-    let remoteNumber: String
-    let displayName: String
-    let state: CallState
-    let direction: CallDirection
-    let duration: Int
-    let isOnHold: Bool
-    let uuid: String
-    let mos: Float
-    let contact: Bool
+public struct PILCall {
+    public let remoteNumber: String
+    public let displayName: String
+    public let state: CallState
+    public let direction: CallDirection
+    public let duration: Int
+    public let isOnHold: Bool
+    public let uuid: UUID
+    public let mos: Float
+//TODO:    let contact: Contact?
+    public let isIncoming: Bool
+    let session: Session
+    public let sessionState: SessionState
 }

@@ -4,7 +4,7 @@
 
 import Foundation
 
-enum CallState {
+public enum CallState {
     case initializing
     case ringing
     case connected

@@ -9,6 +9,7 @@ import Foundation
 import CallKit
 import UserNotifications
 import AVKit
+import iOSPhoneLib
 
 class CallKitDelegate: NSObject {
 
@@ -37,7 +38,7 @@ class CallKitDelegate: NSObject {
         providerConfiguration.supportsVideo = false
         providerConfiguration.supportedHandleTypes = [CXHandle.HandleType.phoneNumber]
 
-//        if !SystemUser.current().usePhoneRingtone { //wip implement ringtone selection
+//        if !SystemUser.current().usePhoneRingtone { //TODO: implement ringtone selection
 //            if Bundle.main.path(forResource: "ringtone", ofType: "wav") != nil {
 //                providerConfiguration.ringtoneSound = "ringtone.wav"
 //            }
@@ -68,7 +69,7 @@ class CallKitDelegate: NSObject {
 extension CallKitDelegate: CXProviderDelegate {
 
     func providerDidReset(_ provider: CXProvider) {
-        print("Provider reset, end all the calls") //wip terminate the ongoing audio session and dispose of any active calls
+        print("Provider reset, end all the calls") //TODO: terminate the ongoing audio session and dispose of any active calls
     }
 
     public func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
@@ -83,8 +84,8 @@ extension CallKitDelegate: CXProviderDelegate {
             return
         }
         
-        print("Call is ending with average rating: \(call.session.getAverageRating())/5")
-        let success = pil.end(call:call)
+        print("Call is ending with average rating: \(call.mos)/5")
+        let success = pil.actions.end(call:call)
 
         if success {
             action.fulfill(withDateEnded: Date())
@@ -101,37 +102,36 @@ extension CallKitDelegate: CXProviderDelegate {
 
     public func provider(_ provider: CXProvider, perform action: CXSetMutedCallAction) {
         guard findCallOrFail(action: action) != nil else { return }
-
-//        PhoneLib.shared.setMicrophone(muted: action.isMuted)
+        pil.actions.setMicrophone(muted: action.isMuted)
 
         action.fulfill()
     }
 
     public func provider(_ provider: CXProvider, perform action: CXSetHeldCallAction) {
-//        guard let call = findCallOrFail(action: action) else { return }
+        guard let call = findCallOrFail(action: action) else { return }
 
-//        let success = PhoneLib.shared.setHold(session: call.session, onHold: action.isOnHold)
-//
-//        if success {
-//            action.fulfill()
-//        } else {
-//            action.fail()
-//        }
+        let success = pil.actions.setHold(call: call, onHold: action.isOnHold)
+
+        if success {
+            action.fulfill()
+        } else {
+            action.fail()
+        }
     }
 
     public func provider(_ provider: CXProvider, perform action: CXPlayDTMFCallAction) {
 //        guard let call = findCallOrFail(action: action) else { return }
 
-        print("DTMF not supported yet")
+        print("DTMF not supported yet") //wip
         action.fail()
     }
 
     public func provider(_ provider: CXProvider, didActivate audioSession: AVAudioSession) {
-//        PhoneLib.shared.setAudio(enabled: true)
+        PhoneLib.shared.setAudio(enabled: true)
     }
 
     public func provider(_ provider: CXProvider, didDeactivate audioSession: AVAudioSession) {
-//        PhoneLib.shared.setAudio(enabled: false)
+        PhoneLib.shared.setAudio(enabled: false)
     }
 }
 
@@ -140,7 +140,7 @@ extension CallKitDelegate {
     /**
         Attempts to find the call, if is not find, will automatically fail the action.
     */
-    private func findCall(action: CXCallAction) -> Call? {
+    private func findCall(action: CXCallAction) -> PILCall? {
         print("Attempting to perform \(String(describing: type(of: action))).")
 
         guard let call = pil.findCallByUuid(uuid: action.callUUID) else {
@@ -153,7 +153,7 @@ extension CallKitDelegate {
     /**
         Attempts to find the call. If it is not found, will automatically fail the action.
     */
-    private func findCallOrFail(action: CXCallAction) -> Call? {
+    private func findCallOrFail(action: CXCallAction) -> PILCall? {
         guard let call = findCall(action: action) else {
             print("Failed to execute action \(String(describing: type(of: action))), call not found.")
             action.fail()
@@ -163,12 +163,12 @@ extension CallKitDelegate {
         return call
     }
 
-    private func logError(error: Error?, call: Call) {
+    private func logError(error: Error?, call: PILCall) {
         print("Unable to perform action on call (\(call.uuid.uuidString)), error: \(error!.localizedDescription)")
     }
 
-    private func waitForCallConfirmation(call: Call) -> Bool {
-        if call.direction == Direction.outbound {
+    private func waitForCallConfirmation(call: PILCall) -> Bool {
+        if call.direction == CallDirection.outbound {
             return true
         }
 
