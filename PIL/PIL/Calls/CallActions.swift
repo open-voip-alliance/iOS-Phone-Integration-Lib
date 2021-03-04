@@ -94,24 +94,24 @@ public class CallActions {
     }
     
     public func setMicrophone(muted: Bool) {
-        phoneLib.setMicrophone(muted: muted)
+        //phoneLib.setMicrophone(muted: muted)
     }
     
     public func setHold(call: PILCall, onHold: Bool) -> Bool {
-        return phoneLib.setHold(session: call.session, onHold: onHold)
+        return true//phoneLib.setHold(session: call.session, onHold: onHold)
     }
     
     public func sendDtmf(dtmf: String) {
         guard let pil = PIL.shared,
               let session = pil.call?.session else {return}
-        phoneLib.sendDtmf(session: session, dtmf: dtmf)
+       // phoneLib.sendDtmf(session: session, dtmf: dtmf)
     }
     
     public func toggleSpeaker() {
-        _ = phoneLib.setSpeaker(phoneLib.isSpeakerOn ? false : true)
+       // _ = phoneLib.setSpeaker(phoneLib.isSpeakerOn ? false : true)
     }
     
     public func end(call: PILCall) -> Bool {
-        return phoneLib.endCall(for: call.session)
+        return true//phoneLib.endCall(for: call.session)
     }
 }
