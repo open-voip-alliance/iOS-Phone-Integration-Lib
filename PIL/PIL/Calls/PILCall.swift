@@ -5,6 +5,8 @@
 import Foundation
 import iOSPhoneLib
 
+public typealias PhoneLibCallState = iOSPhoneLib.CallState
+
 public struct PILCall {
     public let remoteNumber: String
     public let displayName: String
@@ -15,7 +17,8 @@ public struct PILCall {
     public let uuid: UUID
     public let mos: Float
 //TODO:    let contact: Contact?
+    //wip We will see if we keep the below properties
     public let isIncoming: Bool
-    let session: Session
-    public let sessionState: SessionState
+    let phoneLibCall: Call
+    public let phoneLibCallState: PhoneLibCallState
 }
