@@ -127,11 +127,11 @@ extension CallKitDelegate: CXProviderDelegate {
     }
 
     public func provider(_ provider: CXProvider, didActivate audioSession: AVAudioSession) {
-        PhoneLib.shared.setAudio(enabled: true)
+        //PhoneLib.shared.setAudio(enabled: true)
     }
 
     public func provider(_ provider: CXProvider, didDeactivate audioSession: AVAudioSession) {
-        PhoneLib.shared.setAudio(enabled: false)
+       // PhoneLib.shared.setAudio(enabled: false)
     }
 }
 

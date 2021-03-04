@@ -106,25 +106,25 @@ public class PIL: RegistrationStateDelegate {
     }
     
     func register(onRegister: ((Bool) -> ())) {
-        PhoneLib.shared.registrationDelegate = self
+        //PhoneLib.shared.registrationDelegate = self
 
-        guard let username = auth?.username,
-              let password = auth?.password,
-              let domain = auth?.domain,
-              let port = auth?.port,
-              let secure = auth?.secure
-        else {
-            onRegister(false)
-            return
-        }
-        
-        print("Registering with \(username) + \(password) encrypted:\(secure) at \(domain):\(port)")
-        let success = phoneLib.register
-
-        if !success() {
-            print("Failed to register.")
-        }
-        onRegister(success())
+//        guard let username = auth?.username,
+//              let password = auth?.password,
+//              let domain = auth?.domain,
+//              let port = auth?.port,
+//              let secure = auth?.secure
+//        else {
+//            onRegister(false)
+//            return
+//        }
+//        
+//        print("Registering with \(username) + \(password) encrypted:\(secure) at \(domain):\(port)")
+//        let success = phoneLib.register
+//
+//        if !success() {
+//            print("Failed to register.")
+//        }
+//        onRegister(success())
     }
 
     public func unregister() {
@@ -138,19 +138,19 @@ public class PIL: RegistrationStateDelegate {
     }
     
     func acceptIncomingCall(callback: @escaping () -> ()) {
-        self.onIncomingCall = { call in
-            _ = self.phoneLib.acceptCall(for: call.session)
-            callback()
-        }
-
-        if let call = self.call {
-            print("We have found the call already and can accept it.")
-            self.onIncomingCall?(call)
-            self.onIncomingCall = nil
-            return
-        }
-
-        print("We have no call yet, so we will queue to accept as soon as possible.")
+//        self.onIncomingCall = { call in
+//            _ = self.phoneLib.acceptCall(for: call.session)
+//            callback()
+//        }
+//
+//        if let call = self.call {
+//            print("We have found the call already and can accept it.")
+//            self.onIncomingCall?(call)
+//            self.onIncomingCall = nil
+//            return
+//        }
+//
+//        print("We have no call yet, so we will queue to accept as soon as possible.")
     }
     
     func prepareForIncomingCall(uuid: UUID) {
