@@ -90,10 +90,6 @@ public class PIL: RegistrationStateDelegate {
             completion(true)
         }
         
-        //phoneLib.initialize(config: <#T##Config#>) //wip create the Config file
-//        config.callDelegate = self
-        
-        
         register { success in
             if !success {
                 print("Unable to register.")
@@ -178,13 +174,13 @@ public class PIL: RegistrationStateDelegate {
     }
 }
 
-// MARK: - SessionDelegate
+// MARK: - CallDelegate
 extension PIL: CallDelegate {
 
-    public func didReceive(incomingSession: Session) {
+    public func didReceive(incomingCall: Call) {
         print("Incoming session didReceive")
 
-        guard let uuid = self.incomingUuid else { //wip check if the session has the same sesionid with this
+        guard let _ = self.incomingUuid else { //wip check if the call has the same callId with this
             print("No incoming uuid set, cannot accept incoming call")
             return
         }
@@ -195,8 +191,7 @@ extension PIL: CallDelegate {
 
         DispatchQueue.main.async {
             print("Incoming call block invoked, routing through CallKit.")
-            //wip self.call = PILCall(session: incomingSession, direction: CallDirection.inbound, uuid: uuid)
-            self.call = self.callFactory.make(session: incomingSession)
+            self.call = self.callFactory.make(phoneLibCall: incomingCall)
             
             self.callKitProviderDelegate.reportIncomingCall()
             self.onIncomingCall?(self.call!)
@@ -204,11 +199,10 @@ extension PIL: CallDelegate {
         }
     }
 
-    public func outgoingDidInitialize(session: Session) {
+    public func outgoingDidInitialize(call: Call) {
         print("On outgoingDidInitialize.")
             
-//        self.call = PILCall(session: session, direction: CallDirection.outbound)
-        self.call = callFactory.make(session: session)
+        self.call = callFactory.make(phoneLibCall: call)
         guard let call = self.call else {
             print("Unable to find call setup...")
             return
@@ -217,7 +211,7 @@ extension PIL: CallDelegate {
         print("Have call with uuid \(call.uuid)")
 
         let controller = CXCallController()
-        let handle = CXHandle(type: .phoneNumber, value: call.session.remoteNumber)
+        let handle = CXHandle(type: .phoneNumber, value: call.remoteNumber)
         let startCallAction = CXStartCallAction(call: call.uuid, handle: handle)
 
         let transaction = CXTransaction(action: startCallAction)
@@ -230,59 +224,59 @@ extension PIL: CallDelegate {
         }
     }
 
-    public func sessionUpdated(_ session: Session, message: String) {
-        print("sessionUpdated: \(message)")
+    public func callUpdated(_ call: Call, message: String) {
+        print("callUpdated: \(message)")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "call-update"), object: nil)
     }
 
-    public func sessionConnected(_ session: Session) {
-        print("sessionConnected")
+    public func callConnected(_ call: Call) {
+        print("CallConnected")
     }
 
-    public func sessionEnded(_ session: Session) {
-        print("Session has ended with session.uuid: \(session.sessionId).")
+    public func callEnded(_ call: Call) {
+        print("Call has ended with call.uuid: \(call.callId).")
         
-        if session.sessionId == firstTransferCall?.session.sessionId {
-            call = firstTransferCall
+        if call.callId == firstTransferCall?.phoneLibCall.callId {
+            self.call = firstTransferCall
             print("First Transfer Call is ending.")
-        } else if session.sessionId == secondTransferCall?.session.sessionId {
-            call = secondTransferCall
+        } else if call.callId == secondTransferCall?.phoneLibCall.callId {
+            self.call = secondTransferCall
             print("Second Transfer Call is ending.")
         }
         
         if self.call == nil {
-            print("Session ended with nil call object, not reporting call ended to callKitDelegate.")
+            print("Call ended with nil call object, not reporting it to callKitDelegate.")
             return
         }
             
-        print("Ending call with sessionId:\(call!.session.sessionId) because session ended with uuid:\(session.sessionId)")
-        callKitProviderDelegate.provider.reportCall(with: call!.uuid, endedAt: Date(), reason: CXCallEndedReason.remoteEnded)
+        print("Ending call with callId:\(self.call!.phoneLibCall.callId) because callEnded was called for uuid:\(call.callId)")
+        callKitProviderDelegate.provider.reportCall(with: self.call!.uuid, endedAt: Date(), reason: CXCallEndedReason.remoteEnded)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "call-update"), object: nil)
         self.call = nil
     }
 
-    public func sessionReleased(_ session: Session) {
-        print("Session released.")
+    public func callReleased(_ call: Call) {
+        print("Call released.")
         
-        if firstTransferCall != nil && firstTransferCall?.session.sessionId != session.sessionId {
+        if firstTransferCall != nil && firstTransferCall?.phoneLibCall.callId != call.callId {
             print("Transfer's second call was cancelled or declined.")
-            if let uuid = call?.uuid {
+            if let uuid = self.call?.uuid {
                 callKitProviderDelegate.provider.reportCall(with: uuid, endedAt: Date(), reason: CXCallEndedReason.remoteEnded)
             }
             self.call = firstTransferCall
         }
         
-        if let call = self.call {
-            if call.session.state == .released {
-                print("Setting call with UUID: \(call.uuid) to nil because its session has been released.")
-                callKitProviderDelegate.provider.reportCall(with: call.uuid, endedAt: Date(), reason: CXCallEndedReason.remoteEnded)
+        if let pilCall = self.call {
+            if pilCall.phoneLibCallState == .released {
+                print("Setting call with UUID: \(pilCall.uuid) to nil because its session has been released.")
+                callKitProviderDelegate.provider.reportCall(with: pilCall.uuid, endedAt: Date(), reason: CXCallEndedReason.remoteEnded)
                 self.call = nil
             }
         }
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "call-update"), object: nil)
     }
 
-    public func error(session: Session, message: String) {
-        print("Error: \(message) for call with sessionUUID: \(session.sessionId)")
+    public func error(call: Call, message: String) {
+        print("Error: \(message) for call with sessionUUID: \(call.callId)")
     }
 }

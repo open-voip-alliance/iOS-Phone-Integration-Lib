@@ -26,7 +26,7 @@ public class CallActions {
     public func performToggleHold() {
         let pil = PIL.shared
         performCallAction { uuid in
-            CXSetHeldCallAction(call: uuid, onHold: !(pil?.call?.sessionState == .paused))
+            CXSetHeldCallAction(call: uuid, onHold: !(pil?.call?.phoneLibCallState == .paused))
         }
     }
     
@@ -85,10 +85,9 @@ public class CallActions {
     public func call(number: String) -> PILCall? {
         var outgoingCall: PILCall? = nil
         print("Attempting to call.")
-        if let session = phoneLib.call(to: number) {
-//wip outgoingCall = PILCall(session: session, direction: CallDirection.outbound, uuid:session.sessionId) 
+        if let phoneLibCall = phoneLib.call(to: number) {
             let pil = PIL.shared
-            outgoingCall = pil?.callFactory.make(session:session)
+            outgoingCall = pil?.callFactory.make(phoneLibCall: phoneLibCall)
         }
         return outgoingCall
     }
@@ -103,7 +102,7 @@ public class CallActions {
     
     public func sendDtmf(dtmf: String) {
         guard let pil = PIL.shared,
-              let session = pil.call?.session else {return}
+              let phoneLibCall = pil.call?.phoneLibCall else {return}
        // phoneLib.sendDtmf(session: session, dtmf: dtmf)
     }
     

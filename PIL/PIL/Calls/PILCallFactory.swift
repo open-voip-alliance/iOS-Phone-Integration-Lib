@@ -7,28 +7,27 @@ import iOSPhoneLib
 
 public class PILCallFactory {
     
-    public func make(session:Session) -> PILCall {
-        let remoteNumber = session.remoteNumber
-        let displayName = session.displayName ?? ""
-        let state = convertCallState(state: session.state)
-        let direction: CallDirection = session.direction == .inbound ? .inbound : .outbound
-        let duration = session.durationInSec ?? 0
-        let isOnHold = (session.state == .pausedByRemote || session.state == .paused)
-        let uuid = session.sessionId
-        let mos = session.getAverageRating()
-        let isIncoming = session.isIncoming
-        let session = session
-        let sessionState = session.state
+    public func make(phoneLibCall:Call) -> PILCall {
+        let remoteNumber = phoneLibCall.remoteNumber
+        let displayName = phoneLibCall.displayName ?? ""
+        let callState = convertCallState(phoneLibCallState: phoneLibCall.state)
+        let direction: CallDirection = phoneLibCall.direction == .inbound ? .inbound : .outbound
+        let duration = phoneLibCall.durationInSec ?? 0
+        let isOnHold = (phoneLibCall.state == .pausedByRemote || phoneLibCall.state == .paused)
+        let uuid = phoneLibCall.callId
+        let mos = phoneLibCall.getAverageRating()
         //TODO: contact =
-        
-        let call = PILCall(remoteNumber: remoteNumber, displayName: displayName, state: state, direction: direction, duration: duration, isOnHold: isOnHold, uuid: uuid, mos: mos, isIncoming: isIncoming, session: session, sessionState: sessionState)
+        let isIncoming = phoneLibCall.isIncoming
+        let phoneLibCallState = phoneLibCall.state
+    
+        let call = PILCall(remoteNumber: remoteNumber, displayName: displayName, state: callState, direction: direction, duration: duration, isOnHold: isOnHold, uuid: uuid, mos: mos, isIncoming: isIncoming, phoneLibCall: phoneLibCall, phoneLibCallState: phoneLibCallState)
         return call
         
-        //wip check if UUID AND Direction have correct values
+        //wip check if UUID and Direction have correct values / get rid of isIncoming since we have direction now
     }
     
-    private func convertCallState(state: SessionState) -> CallState {
-        switch state {
+    private func convertCallState(phoneLibCallState: PhoneLibCallState) -> CallState {
+        switch phoneLibCallState {
         case .idle:
             return .initializing
         case .incomingReceived, .outgoingDidInitialize, .outgoingProgress, .outgoingRinging:
