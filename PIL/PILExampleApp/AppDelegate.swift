@@ -15,23 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private let defaults = UserDefaults.standard
     
+    private weak var pil: PIL?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
         let applicationSetup = ApplicationSetup(
             middleware: VoIPGRIDMiddleware(),
             requestCallUi: {
-                let sb = UIStoryboard(name: "Main", bundle: nil)
-                
+              
                 if let nav = self.window?.rootViewController as? UITabBarController {
                     nav.performSegue(withIdentifier: "LaunchCallSegue", sender: nav)
                 }
             }
         )
         
-        let pil = startIOSPIL(applicationSetup: applicationSetup)
+        pil = startIOSPIL(applicationSetup: applicationSetup)
 
-        pil.auth = Auth(
+        pil?.auth = Auth(
             username: self.userDefault(key: "username"),
             password: self.userDefault(key: "password"),
             domain: self.userDefault(key: "domain"),
@@ -39,11 +40,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             secure: self.defaults.bool(forKey: "encryption")
         )
         
-        pil.start {
+        pil?.start {
             
         }
         
         return true
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        pil?.iOS.applicationWillEnterForeground()
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        pil?.iOS.applicationDidEnterBackground()
     }
     
     private func userDefault(key: String) -> String {
