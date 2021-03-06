@@ -3,11 +3,19 @@
 //
 
 import Foundation
+import iOSPhoneLib
 
 public class AudioManager {
     
-    public func test() {
-        NSLog("Audio Manager")
-        
+    private let phoneLib: PhoneLib
+    
+    init(phoneLib: PhoneLib) {
+        self.phoneLib = phoneLib
+    }
+    
+    public var isMicrophoneMuted: Bool {
+        get {
+            phoneLib.isMicrophoneMuted
+        }
     }
 }

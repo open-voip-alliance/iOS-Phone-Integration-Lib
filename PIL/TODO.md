@@ -5,18 +5,18 @@
   - [x] Library supports SIP credentials
     - [x] Username/password/domain/port
     - [x] Encryption on/off
-  - [ ] Library supports user preferences
-    - [ ] Codec
-    - [ ] Use app ringtone
-- [ ] Middleware
+  - [x] Library supports user preferences
+    - [x] Codec
+    - [x] Use app ringtone
+- [x] Middleware
   - [x] Middleware protocol exists to offload registration to consuming app
-  - [ ] Using implementation from consuming app can properly establish push kit integration
-- [ ] Events
-  - [ ] Events can be listened for
-  - [ ] Events can be broadcast
-  - [ ] Events include call object where relevant
-- [ ] Call Management
-  - [ ] Immutable call object can be generated
+  - [x] Using implementation from consuming app can properly establish push kit integration
+- [x] Events
+  - [x] Events can be listened for
+  - [x] Events can be broadcast
+  - [x] Events include call object where relevant
+- [x] Call Management
+  - [x] Immutable call object can be generated
     - [x] Remote number
     - [x] Display name
     - [x] Call state
@@ -31,12 +31,12 @@
     - [x] Can place an outgoing call to a given number
     - [x] Hooks up with call kit
     - [x] Automatically displays call screen if chosen
-  - [ ] Incoming
+  - [x] Incoming
     - [ ] App calls while in background
-    - [ ] User can answer call
-    - [ ] User can decline call
+    - [x] User can answer call
+    - [x] User can decline call
     - [ ] Works with bluetooth devices
-    - [ ] User is taken to call screen after accepting call
+    - [x] User is taken to call screen after accepting call
   - [ ] General
     - [ ] Audio can be routed to bluetooth
     - [x] Audio can be routed to speaker
@@ -47,19 +47,19 @@
       - [ ] User can begin transfer to new number
       - [ ] User hears audio from second call after beginning transfer
       - [ ] User can complete transfer
-- [ ] Call Kit
-  - [ ] Call kit integration is working
-  - [ ] Calls respond to presses on notifications
+- [x] Call Kit
+  - [x] Call kit integration is working
+  - [x] Calls respond to presses on notifications
   - [ ] Works with smart-watches
 - [ ] Lifecycle
   - [ ] Is aware when the app is in the background
   - [ ] Boot the library when the app is brought to foreground (if not already)
 - [ ] Code/Code Quality
-  - [ ] Only the absolutely necessary apis are exposed to the consuming applications
+  - [x] Only the absolutely necessary apis are exposed to the consuming applications
   - [x] A DI framework is used
   
 ## Example App
-- [ ] Setting Screen
+- [x] Setting Screen
   - [x] SIP Auth
     - [x] Username
     - [x] Password
@@ -69,17 +69,17 @@
       - [x] Username
       - [x] Password
       - [x] Register with Middleware
-  - [ ] Preferences
+  - [x] Preferences
       - [x] Encryption
-      - [ ] Use Application Ringtone 
+      - [x] Use Application Ringtone 
 - [x] Dialer Screen
   - [x] Input numbers
   - [x] View number input
   - [x] Place call
 - [ ] Call Screen
     - [ ] Call Information Display
-      - [ ] Show third party
-      - [ ] Show call duration  
+      - [x] Show third party
+      - [x] Show call duration  
     - [x] Hold 💎👐
     - [x] Mute
     - [ ] Transfer

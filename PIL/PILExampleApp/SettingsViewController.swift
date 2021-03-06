@@ -32,11 +32,12 @@ final class SettingsViewController: QuickTableViewController {
                         port: Int(self.userDefault(key: "port")) ?? 0,
                         secure: self.defaults.bool(forKey: "encryption")
                     )
-                    pil.start { success in
-                        let alert = UIAlertController(title: "Authentication Test", message: success ? "Authenticated successfully!" : "Authentication failed :(", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                        self.present(alert, animated: true)
-                        pil.unregister()
+                    pil.performRegistrationCheck { (success) in
+                        DispatchQueue.main.async {
+                            let alert = UIAlertController(title: "Authentication Test", message: success ? "Authenticated successfully!" : "Authentication failed :(", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                            self.present(alert, animated: true)
+                        }
                     }
                 })
             ]),

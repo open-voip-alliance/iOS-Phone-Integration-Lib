@@ -14,8 +14,4 @@ public struct PILCall {
     public let isOnHold: Bool
     public let uuid: UUID
     public let mos: Float
-//TODO:    let contact: Contact?
-    public let isIncoming: Bool
-    let session: Session
-    public let sessionState: SessionState
 }

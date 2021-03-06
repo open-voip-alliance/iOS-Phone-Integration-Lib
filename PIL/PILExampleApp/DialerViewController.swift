@@ -31,15 +31,13 @@ class DialerViewController: UIViewController {
             port: Int(self.userDefault(key: "port")) ?? 0,
             secure: self.defaults.bool(forKey: "encryption")
         )
-        pil.start { success in
-            if success {
+        pil.start { 
                 MicPermissionHelper.requestMicrophonePermission { startCalling in
                     if startCalling {
-                        _ = pil.actions.call(number: number)
+                        pil.call(number: number)
                         self.performSegue(withIdentifier: "callSegue", sender: self)
                     }
                 }
-            }
         }
     }
     

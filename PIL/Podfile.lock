@@ -70,7 +70,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   iOSPhoneLib:
-    :commit: c5a344aa8de7cc080b7c70c909e19a9fab8e2a72
+    :commit: ae9f9bbf0d28ad42f859d6f849930838def4633f
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
 
 SPEC CHECKSUMS:
@@ -79,11 +79,11 @@ SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   iOSPhoneLib: 0730c82fd91d77df1584b6dcb38dc985ee3e7986
   linphone-sdk: 91183cb3e3224d2d1a211357cd6a39d61636d17d
-  PIL: fd34c3f5657c96a88201e1646b10dacbd993a0e7
+  PIL: 170d29616dd98f8be9abb22c5d6f3d600f1911ee
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 67bb6e45e2793a8dcfd99d3debdfd15d9b5af5cc
+PODFILE CHECKSUM: 84a8f65ddc9edd8fe130bc11416e08f3a36ed86c
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0

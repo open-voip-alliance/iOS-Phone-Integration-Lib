@@ -22,8 +22,8 @@ Pod::Spec.new do |s|
     s.dependency 'Swinject', '~> 2.7.1'
 
     s.source_files = "PIL/**/*.{swift}"
+    s.resources = "PIL/Resources/**"
 
-    s.resources = "PIL/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
     s.swift_version = "5"
 
