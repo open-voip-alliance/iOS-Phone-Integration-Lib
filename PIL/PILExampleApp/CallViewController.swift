@@ -63,6 +63,18 @@ class CallViewController: UIViewController, PILEventDelegate {
         } else {
             holdButton.setTitle("Unhold", for: .normal)
         }
+        
+        let state = pil.audio.state
+        
+        bluetoothButton.isEnabled = state.availableRoutes.contains(.bluetooth)
+        earpieceButton.isEnabled = state.availableRoutes.contains(.phone)
+        speakerButton.isEnabled = state.availableRoutes.contains(.speaker)
+        
+        speakerButton.isSelected = state.currentRoute == .speaker
+        bluetoothButton.isSelected = state.currentRoute == .bluetooth
+        earpieceButton.isSelected = state.currentRoute == .phone
+        
+        bluetoothButton.setTitle(state.bluetoothDeviceName ?? "Bluetooth", for: .normal)
     }
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {}
@@ -72,18 +84,18 @@ class CallViewController: UIViewController, PILEventDelegate {
     }
     
     @IBAction func bluetoothButtonWasPressed(_ sender: Any) {
-        //wip
-        bluetoothButton.isSelected = !bluetoothButton.isSelected
+        pil.audio.routeAudio(route: .bluetooth)
+        render()
     }
 
     @IBAction func earpieceButtonWasPressed(_ sender: Any) {
-        //wip
-        earpieceButton.isSelected = !earpieceButton.isSelected
+        pil.audio.routeAudio(route: .phone)
+        render()
     }
 
     @IBAction func speakerButtonWasPressed(_ sender: Any) {
-        //pil?.actions
-        speakerButton.isSelected = !speakerButton.isSelected
+        pil.audio.routeAudio(route: .speaker)
+        render()
     }
 
     @IBAction func transferButtonWasPressed(_ sender: Any) {

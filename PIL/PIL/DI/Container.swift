@@ -9,6 +9,7 @@ import Foundation
 import Swinject
 import iOSPhoneLib
 import CallKit
+import AVFoundation
 
 var register: (Container) -> Container = {
     
@@ -26,7 +27,10 @@ var register: (Container) -> Container = {
     }.inObjectScope(.container)
     
     $0.register(EventsManager.self) { c in
-        EventsManager(callFactory: c.resolve(PILCallFactory.self)!)
+        EventsManager(
+            callManager: c.resolve(CallManager.self)!,
+            callFactory: c.resolve(PILCallFactory.self)!
+        )
     }.inObjectScope(.container)
     
     $0.register(Calls.self) { c in
@@ -34,7 +38,11 @@ var register: (Container) -> Container = {
         
     }.inObjectScope(.container)
     
-    $0.register(AudioManager.self) { c in AudioManager(phoneLib: c.resolve(PhoneLib.self)!) }.inObjectScope(.container)
+    $0.register(AudioManager.self) { c in AudioManager(
+        pil: c.resolve(PIL.self)!,
+        phoneLib: c.resolve(PhoneLib.self)!,
+        audioSession: AVAudioSession.sharedInstance()
+    ) }.inObjectScope(.container)
     
     $0.register(PILCallFactory.self) { _ in PILCallFactory() }.inObjectScope(.container)
     
@@ -42,6 +50,10 @@ var register: (Container) -> Container = {
     
     $0.register(CallManager.self) { c in
         CallManager(pil: c.resolve(PIL.self)!)
+    }.inObjectScope(.container)
+    
+    $0.register(IOS.self) { c in
+        IOS(pil: c.resolve(PIL.self)!)
     }.inObjectScope(.container)
     
     $0.register(PhoneLibHelper.self) { c in

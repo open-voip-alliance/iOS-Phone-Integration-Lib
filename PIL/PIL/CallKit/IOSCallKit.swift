@@ -144,12 +144,16 @@ extension IOSCallKit: CXProviderDelegate {
         callExists { call in
             phoneLib.actions(call: call).setAudio(enabled: true)
         }
+        
+        pil.audio.onActivateAudioSession()
     }
 
     public func provider(_ provider: CXProvider, didDeactivate audioSession: AVAudioSession) {
         callExists { call in
             phoneLib.actions(call: call).setAudio(enabled: false)
         }
+        
+        pil.audio.onDeactivateAudioSession()
     }
 }
 

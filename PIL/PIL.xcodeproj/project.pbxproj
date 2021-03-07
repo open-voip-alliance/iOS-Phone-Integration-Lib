@@ -28,12 +28,15 @@
 		5CAB174B25DA8FCE00BC12E5 /* CallActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB174525DA8FCE00BC12E5 /* CallActions.swift */; };
 		5CAB17D025DA92D200BC12E5 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */; };
 		5CAB17D125DA92D200BC12E5 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */; };
+		5CAED46325F4C72C00F9F4B1 /* AudioRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAED46225F4C72C00F9F4B1 /* AudioRoute.swift */; };
+		5CAED46825F4C74B00F9F4B1 /* AudioState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAED46725F4C74B00F9F4B1 /* AudioState.swift */; };
 		5CBE0A5025F130BC00E797EE /* PhoneLibHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A4F25F130BC00E797EE /* PhoneLibHelper.swift */; };
 		5CBE0A5525F143FC00E797EE /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A5425F143FC00E797EE /* CallManager.swift */; };
 		5CBE0A5B25F1450D00E797EE /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A5925F1450D00E797EE /* Middleware.swift */; };
 		5CBE0A5C25F1450D00E797EE /* PushKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A5A25F1450D00E797EE /* PushKitDelegate.swift */; };
 		5CBE0B0B25F236E800E797EE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0B0A25F236E800E797EE /* Event.swift */; };
 		5CBE0B1025F2382000E797EE /* PILEventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0B0F25F2382000E797EE /* PILEventDelegate.swift */; };
+		5CBE0C9125F4072300E797EE /* IOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0C9025F4072300E797EE /* IOS.swift */; };
 		8319D8B22576AD8D0095E54E /* PIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8319D8A82576AD8D0095E54E /* PIL.framework */; };
 		8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319D8B62576AD8D0095E54E /* PILTests.swift */; };
 		8322DB4225DF12A500C7B67E /* MicPermissionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322DB4125DF12A500C7B67E /* MicPermissionHelper.swift */; };
@@ -86,12 +89,15 @@
 		5CAB174425DA8FCE00BC12E5 /* PILCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PILCall.swift; sourceTree = "<group>"; };
 		5CAB174525DA8FCE00BC12E5 /* CallActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallActions.swift; sourceTree = "<group>"; };
 		5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		5CAED46225F4C72C00F9F4B1 /* AudioRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRoute.swift; sourceTree = "<group>"; };
+		5CAED46725F4C74B00F9F4B1 /* AudioState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioState.swift; sourceTree = "<group>"; };
 		5CBE0A4F25F130BC00E797EE /* PhoneLibHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneLibHelper.swift; sourceTree = "<group>"; };
 		5CBE0A5425F143FC00E797EE /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		5CBE0A5925F1450D00E797EE /* Middleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		5CBE0A5A25F1450D00E797EE /* PushKitDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushKitDelegate.swift; sourceTree = "<group>"; };
 		5CBE0B0A25F236E800E797EE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5CBE0B0F25F2382000E797EE /* PILEventDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PILEventDelegate.swift; sourceTree = "<group>"; };
+		5CBE0C9025F4072300E797EE /* IOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS.swift; sourceTree = "<group>"; };
 		5F9709B49935F95F1CC8CA67 /* Pods-PIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL.debug.xcconfig"; path = "Target Support Files/Pods-PIL/Pods-PIL.debug.xcconfig"; sourceTree = "<group>"; };
 		6FE02223E5C763F95DDF0368 /* Pods-PIL-PILExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8319D8A82576AD8D0095E54E /* PIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */,
+				5CAED46225F4C72C00F9F4B1 /* AudioRoute.swift */,
+				5CAED46725F4C74B00F9F4B1 /* AudioState.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -238,6 +246,14 @@
 			children = (
 			);
 			path = Exception;
+			sourceTree = "<group>";
+		};
+		5CBE0C8F25F4071900E797EE /* IOS */ = {
+			isa = PBXGroup;
+			children = (
+				5CBE0C9025F4072300E797EE /* IOS.swift */,
+			);
+			path = IOS;
 			sourceTree = "<group>";
 		};
 		8319D89E2576AD8D0095E54E = {
@@ -265,6 +281,7 @@
 		8319D8AA2576AD8D0095E54E /* PIL */ = {
 			isa = PBXGroup;
 			children = (
+				5CBE0C8F25F4071900E797EE /* IOS */,
 				5CBE0AC925F14C5D00E797EE /* Exception */,
 				5CBE0A4E25F130BC00E797EE /* Helpers */,
 				5C92D81125DAC997003019D1 /* DI */,
@@ -619,6 +636,7 @@
 				83B84F82257D7B1900BABAC7 /* PIL.swift in Sources */,
 				83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */,
 				5CAB174A25DA8FCE00BC12E5 /* PILCall.swift in Sources */,
+				5CAED46825F4C74B00F9F4B1 /* AudioState.swift in Sources */,
 				5C92D7CA25DA93F8003019D1 /* EventsManager.swift in Sources */,
 				5C92D81325DAC9AE003019D1 /* Container.swift in Sources */,
 				83F69EAE25922CE60076B8F0 /* IOSCallKit.swift in Sources */,
@@ -632,8 +650,10 @@
 				5CAB174625DA8FCE00BC12E5 /* CallDirection.swift in Sources */,
 				F81F06860533E6AB96B28CBA /* Builder.swift in Sources */,
 				5CAB174825DA8FCE00BC12E5 /* PILCallFactory.swift in Sources */,
+				5CBE0C9125F4072300E797EE /* IOS.swift in Sources */,
 				5CAB174B25DA8FCE00BC12E5 /* CallActions.swift in Sources */,
 				5CBE0A5B25F1450D00E797EE /* Middleware.swift in Sources */,
+				5CAED46325F4C72C00F9F4B1 /* AudioRoute.swift in Sources */,
 				F81F0A14AE85262D7380D5C1 /* ApplicationSetup.swift in Sources */,
 				5CAB174725DA8FCE00BC12E5 /* CallState.swift in Sources */,
 				F81F0CA31FFC5B319E097C24 /* PhoneLibHelper.swift in Sources */,

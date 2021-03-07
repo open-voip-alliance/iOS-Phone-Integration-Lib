@@ -11,10 +11,12 @@ import iOSPhoneLib
 public class EventsManager {
     
     private let callFactory: PILCallFactory
+    private let callManager: CallManager
     private var listeners = [ObjectIdentifier : EventListener]()
     
-    init(callFactory: PILCallFactory) {
+    init(callManager: CallManager, callFactory: PILCallFactory) {
         self.callFactory = callFactory
+        self.callManager = callManager
     }
     
     public func listen(delegate: PILEventDelegate) {
@@ -37,9 +39,12 @@ public class EventsManager {
             if let call = call {
                 delegate.onEvent(event: event, call: self.callFactory.make(libraryCall: call))
             } else {
-                delegate.onEvent(event: event, call: nil)
+                if (callManager.isInCall) {
+                    delegate.onEvent(event: event, call: self.callFactory.make(libraryCall: callManager.call))
+                } else {
+                    delegate.onEvent(event: event, call: nil)
+                }
             }
-            
         }
     }
 

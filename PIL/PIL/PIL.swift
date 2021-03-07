@@ -21,9 +21,10 @@ public class PIL {
     lazy var iOSCallKit = { di.resolve(IOSCallKit.self)! }()
     
     public lazy var actions = { di.resolve(CallActions.self)! }()
-    public let audio = di.resolve(AudioManager.self)!
-    public let events = di.resolve(EventsManager.self)!
+    public lazy var audio = { di.resolve(AudioManager.self)! }()
+    public lazy var events = { di.resolve(EventsManager.self)! }()
     public lazy var calls = { di.resolve(Calls.self)! }()
+    public lazy var iOS = { di.resolve(IOS.self)! }()
     
     static public var shared: PIL?
     
@@ -65,7 +66,8 @@ public class PIL {
     
     public func start(forceInitialize: Bool = false, forceReregister: Bool = false, completion: (() -> Void)? = nil) {
         guard let auth = self.auth else {
-            fatalError("There are not authentication details provided")
+            print("There are not authentication details provided")
+            return
         }
 
         pushKit.registerForVoipPushes()
