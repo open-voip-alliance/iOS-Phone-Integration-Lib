@@ -28,8 +28,7 @@ var register: (Container) -> Container = {
     
     $0.register(EventsManager.self) { c in
         EventsManager(
-            callManager: c.resolve(CallManager.self)!,
-            callFactory: c.resolve(PILCallFactory.self)!
+            calls: c.resolve(Calls.self)!
         )
     }.inObjectScope(.container)
     
@@ -44,7 +43,11 @@ var register: (Container) -> Container = {
         audioSession: AVAudioSession.sharedInstance()
     ) }.inObjectScope(.container)
     
-    $0.register(PILCallFactory.self) { _ in PILCallFactory() }.inObjectScope(.container)
+    $0.register(Contacts.self) { _ in Contacts() }.inObjectScope(.container)
+    
+    $0.register(PILCallFactory.self) { c in
+        PILCallFactory(contacts: c.resolve(Contacts.self)!)
+    }.inObjectScope(.container)
     
     $0.register(PhoneLib.self) { _ in PhoneLib.shared }.inObjectScope(.container)
     

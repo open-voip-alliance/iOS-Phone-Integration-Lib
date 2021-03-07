@@ -30,6 +30,7 @@
 		5CAB17D125DA92D200BC12E5 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */; };
 		5CAED46325F4C72C00F9F4B1 /* AudioRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAED46225F4C72C00F9F4B1 /* AudioRoute.swift */; };
 		5CAED46825F4C74B00F9F4B1 /* AudioState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAED46725F4C74B00F9F4B1 /* AudioState.swift */; };
+		5CAED4F625F5294400F9F4B1 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAED4F525F5294400F9F4B1 /* Contacts.swift */; };
 		5CBE0A5025F130BC00E797EE /* PhoneLibHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A4F25F130BC00E797EE /* PhoneLibHelper.swift */; };
 		5CBE0A5525F143FC00E797EE /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A5425F143FC00E797EE /* CallManager.swift */; };
 		5CBE0A5B25F1450D00E797EE /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A5925F1450D00E797EE /* Middleware.swift */; };
@@ -91,6 +92,7 @@
 		5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		5CAED46225F4C72C00F9F4B1 /* AudioRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRoute.swift; sourceTree = "<group>"; };
 		5CAED46725F4C74B00F9F4B1 /* AudioState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioState.swift; sourceTree = "<group>"; };
+		5CAED4F525F5294400F9F4B1 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		5CBE0A4F25F130BC00E797EE /* PhoneLibHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneLibHelper.swift; sourceTree = "<group>"; };
 		5CBE0A5425F143FC00E797EE /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		5CBE0A5925F1450D00E797EE /* Middleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
@@ -233,6 +235,14 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
+		5CAED4F425F5293A00F9F4B1 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				5CAED4F525F5294400F9F4B1 /* Contacts.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
 		5CBE0A4E25F130BC00E797EE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +291,7 @@
 		8319D8AA2576AD8D0095E54E /* PIL */ = {
 			isa = PBXGroup;
 			children = (
+				5CAED4F425F5293A00F9F4B1 /* Contacts */,
 				5CBE0C8F25F4071900E797EE /* IOS */,
 				5CBE0AC925F14C5D00E797EE /* Exception */,
 				5CBE0A4E25F130BC00E797EE /* Helpers */,
@@ -640,6 +651,7 @@
 				5C92D7CA25DA93F8003019D1 /* EventsManager.swift in Sources */,
 				5C92D81325DAC9AE003019D1 /* Container.swift in Sources */,
 				83F69EAE25922CE60076B8F0 /* IOSCallKit.swift in Sources */,
+				5CAED4F625F5294400F9F4B1 /* Contacts.swift in Sources */,
 				5C92D7EF25DAA9B1003019D1 /* Preferences.swift in Sources */,
 				5CBE0B1025F2382000E797EE /* PILEventDelegate.swift in Sources */,
 				5CBE0A5C25F1450D00E797EE /* PushKitDelegate.swift in Sources */,

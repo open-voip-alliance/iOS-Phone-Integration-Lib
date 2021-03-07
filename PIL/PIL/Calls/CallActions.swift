@@ -90,7 +90,7 @@ public class CallActions {
     
     public func beginAttendedTransfer(number: String) {
         callExists { call in
-            phoneLib.actions(call: call).beginAttendedTransfer(to: number)
+            self.callManager.transferSession = phoneLib.actions(call: call).beginAttendedTransfer(to: number)
         }
     }
     
@@ -121,7 +121,7 @@ public class CallActions {
         
         if let call = callManager.call {
             callback(call)
-            pil.events.broadcast(event: .callUpdated, call: call)
+            pil.events.broadcast(event: .callUpdated)
             return
         }
     }

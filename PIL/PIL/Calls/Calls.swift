@@ -22,6 +22,12 @@ public class Calls {
         }
     }
 
+    public var isInCall: Bool {
+        get {
+            callManager.call != nil
+        }
+    }
+    
     public var isInTranfer: Bool {
         get {
             callManager.transferSession != nil

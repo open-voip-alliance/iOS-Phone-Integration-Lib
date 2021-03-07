@@ -28,7 +28,7 @@ class CallManager: CallDelegate {
     public func didReceive(incomingCall: Call) {
         if !isInCall {
             self.call = incomingCall
-            pil.events.broadcast(event: .incomingCallReceived, call: incomingCall)
+            pil.events.broadcast(event: .incomingCallReceived)
             callKitUpdateCurrentCall(incomingCall)
         }
     }
@@ -37,19 +37,19 @@ class CallManager: CallDelegate {
         if !isInCall {
             self.call = call
             pil.iOSCallKit.provider.reportOutgoingCall(with: pil.iOSCallKit.uuid!, startedConnectingAt: Date())
-            pil.events.broadcast(event: .outgoingCallStarted, call: call)
+            pil.events.broadcast(event: .outgoingCallStarted)
         }
     }
 
     public func callUpdated(_ call: Call, message: String) {
-        pil.events.broadcast(event: .callUpdated, call: call)
+        pil.events.broadcast(event: .callUpdated)
         callKitUpdateCurrentCall(call)
     }
 
     public func callConnected(_ call: Call) {
         callKitUpdateCurrentCall(call)
         pil.app.requestCallUi()
-        pil.events.broadcast(event: .callConnected, call: call)
+        pil.events.broadcast(event: .callConnected)
     }
 
     public func callEnded(_ session: Call) {
@@ -58,7 +58,7 @@ class CallManager: CallDelegate {
             self.call = nil
         }
         
-        pil.events.broadcast(event: .callEnded, call: call)
+        pil.events.broadcast(event: .callEnded)
         transferSession = nil
     }
 
@@ -72,7 +72,6 @@ class CallManager: CallDelegate {
     }
     
     private func callKitUpdateCurrentCall(_ call: Call) {
-        print("TEST123: CALL KIT UPDATE NOW:")
         let update = CXCallUpdate()
         update.hasVideo = false
         update.localizedCallerName = call.remoteNumber

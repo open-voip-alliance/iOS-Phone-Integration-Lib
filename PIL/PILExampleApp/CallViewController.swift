@@ -49,7 +49,7 @@ class CallViewController: UIViewController, PILEventDelegate {
     
         let call = call ?? pil.calls.active!
         
-        callTitle.text = "\(call.remoteNumber) - \(call.displayName)"
+        callTitle.text = "\(call.remotePartyHeading) - \(call.remotePartySubheading)"
         callSubtitle.text = String(describing: call.direction)
         callDuration.text = String(describing: call.duration)
         callStatus.text = String(describing: call.state)
@@ -85,7 +85,7 @@ class CallViewController: UIViewController, PILEventDelegate {
         if pil.calls.isInTranfer {
             inactiveCallStatus.isHidden = false
             if let inactiveCall = pil.calls.inactive {
-                inactiveCallStatus.text = "\(inactiveCall.remoteNumber) - \(inactiveCall.displayName)"
+                inactiveCallStatus.text = "\(inactiveCall.remotePartyHeading) - \(inactiveCall.remotePartySubheading)"
             }
             transferButton.setTitle("MERGE", for: .normal)
         } else {

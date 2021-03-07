@@ -1,7 +1,7 @@
 # TODO - iOS Platform Integration Layer
 
 ## PIL
-- [ ] Configuration
+- [x] Configuration
   - [x] Library supports SIP credentials
     - [x] Username/password/domain/port
     - [x] Encryption on/off
@@ -24,37 +24,37 @@
     - [x] Hold State 
     - [x] UUID
     - [x] Mos Value
-    - [ ] Contact information
+    - [x] Contact information
   - [x] Calls are stored/tracked in the PIL based on events from the phonelib
-- [ ] Calling
+- [x] Calling
   - [x] Outgoing
     - [x] Can place an outgoing call to a given number
     - [x] Hooks up with call kit
     - [x] Automatically displays call screen if chosen
   - [x] Incoming
-    - [ ] App calls while in background
+    - [x] App calls while in background
     - [x] User can answer call
     - [x] User can decline call
-    - [ ] Works with bluetooth devices
+    - [x] Works with bluetooth devices
     - [x] User is taken to call screen after accepting call
-  - [ ] General
-    - [ ] Audio can be routed to bluetooth
+  - [x] General
+    - [x] Audio can be routed to bluetooth
     - [x] Audio can be routed to speaker
-    - [ ] Audio can be routed to earpiece
+    - [x] Audio can be routed to earpiece
     - [x] Call can be muted
     - [x] Call can be put on hold
-    - [ ] Transfer
-      - [ ] User can begin transfer to new number
-      - [ ] User hears audio from second call after beginning transfer
-      - [ ] User can complete transfer
+    - [x] Transfer
+      - [x] User can begin transfer to new number
+      - [x] User hears audio from second call after beginning transfer
+      - [x] User can complete transfer
 - [x] Call Kit
   - [x] Call kit integration is working
   - [x] Calls respond to presses on notifications
-  - [ ] Works with smart-watches
-- [ ] Lifecycle
-  - [ ] Is aware when the app is in the background
-  - [ ] Boot the library when the app is brought to foreground (if not already)
-- [ ] Code/Code Quality
+  - [x] Works with smart-watches
+- [x] Lifecycle
+  - [x] Is aware when the app is in the background
+  - [x] Boot the library when the app is brought to foreground (if not already)
+- [x] Code/Code Quality
   - [x] Only the absolutely necessary apis are exposed to the consuming applications
   - [x] A DI framework is used
   
@@ -76,13 +76,17 @@
   - [x] Input numbers
   - [x] View number input
   - [x] Place call
-- [ ] Call Screen
-    - [ ] Call Information Display
+- [x] Call Screen
+    - [x] Call Information Display
       - [x] Show third party
       - [x] Show call duration  
     - [x] Hold 💎👐
     - [x] Mute
-    - [ ] Transfer
-    - [ ] Route to Bluetooth
+    - [x] Transfer
+    - [x] Route to Bluetooth
     - [x] Route to Speaker
-    - [ ] Route to Earpiece
+    - [x] Route to Earpiece
+
+## Known Issues
+- [ ] PhoneLib: Sometimes crashes when starting, seems to be an issue with DNS not resolving??
+- [ ] PhoneLib: Not getting Remote-Party-ID

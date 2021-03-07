@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import PIL
+import Contacts
 
 class DialerViewController: UIViewController {
     
@@ -19,6 +20,10 @@ class DialerViewController: UIViewController {
         super.viewDidLoad()
 
         numberPreview.text = ""
+        
+        CNContactStore().requestAccess(for: .contacts) { (granted, error) in
+            
+        }
     }
 
     @IBAction func callButtonWasPressed(_ sender: UIButton) {

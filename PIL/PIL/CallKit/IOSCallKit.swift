@@ -13,6 +13,7 @@ import iOSPhoneLib
 
 class IOSCallKit: NSObject {
 
+    private var timer: Timer?
     public let provider: CXProvider
     public let controller = CXCallController()
     private let notifications = NotificationCenter.default
@@ -99,7 +100,7 @@ class IOSCallKit: NSObject {
 }
 
 extension IOSCallKit: CXProviderDelegate {
-
+    
     func providerDidReset(_ provider: CXProvider) {
         phoneLib.terminateAllCalls()
     }
@@ -146,6 +147,14 @@ extension IOSCallKit: CXProviderDelegate {
         }
         
         pil.audio.onActivateAudioSession()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { timer in
+            if self.pil.calls.active == nil {
+                timer.invalidate()
+            }
+            
+            self.pil.events.broadcast(event: .callUpdated)
+        })
     }
 
     public func provider(_ provider: CXProvider, didDeactivate audioSession: AVAudioSession) {
@@ -154,6 +163,7 @@ extension IOSCallKit: CXProviderDelegate {
         }
         
         pil.audio.onDeactivateAudioSession()
+        timer?.invalidate()
     }
 }
 
@@ -169,7 +179,7 @@ extension IOSCallKit {
         if let call = callManager.call {
             callback(call)
             action?.fulfill()
-            pil.events.broadcast(event: .callUpdated, call: call)
+            pil.events.broadcast(event: .callUpdated)
             return
         }
         

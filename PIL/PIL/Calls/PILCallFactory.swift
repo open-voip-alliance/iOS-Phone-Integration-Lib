@@ -9,28 +9,27 @@ public typealias PhoneLibCall = iOSPhoneLib.Call
 
 public class PILCallFactory {
     
+    private let contacts: Contacts
+    
+    init(contacts: Contacts) {
+        self.contacts = contacts
+    }
+    
     public func make(libraryCall: PhoneLibCall?) -> PILCall? {
         guard let libraryCall = libraryCall else {
             return nil
         }
-        
-        let remoteNumber = libraryCall.remoteNumber
-        let displayName = libraryCall.displayName ?? ""
-        let state = convertCallState(state: libraryCall.state)
-        let direction: CallDirection = libraryCall.direction == .inbound ? .inbound : .outbound
-        let duration = libraryCall.durationInSec ?? 0
-        let isOnHold = (libraryCall.state == .pausedByRemote || libraryCall.state == .paused)
-        let uuid = UUID.init()
-        let mos = libraryCall.quality.average
-        
+            
         return PILCall(
-            remoteNumber: remoteNumber,
-            displayName: displayName,
-            state: state, direction: direction,
-            duration: duration,
-            isOnHold: isOnHold,
-            uuid: uuid,
-            mos: mos
+            remoteNumber: libraryCall.remoteNumber,
+            displayName: libraryCall.displayName ?? "",
+            state: convertCallState(state: libraryCall.state),
+            direction: libraryCall.direction == .inbound ? .inbound : .outbound,
+            duration: libraryCall.durationInSec ?? 0,
+            isOnHold: (libraryCall.state == .pausedByRemote || libraryCall.state == .paused),
+            uuid: UUID.init(),
+            mos: libraryCall.quality.average,
+            contact: contacts.find(number: libraryCall.remoteNumber)
         )
     }
     
