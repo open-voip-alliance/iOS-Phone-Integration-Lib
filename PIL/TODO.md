@@ -86,7 +86,3 @@
     - [x] Route to Bluetooth
     - [x] Route to Speaker
     - [x] Route to Earpiece
-
-## Known Issues
-- [ ] PhoneLib: Sometimes crashes when starting, seems to be an issue with DNS not resolving??
-- [ ] PhoneLib: Not getting Remote-Party-ID

@@ -33,7 +33,7 @@ extension PushKitDelegate: PKPushRegistryDelegate {
         
         pil.iOSCallKit.reportIncomingCall(detail: self.middleware.extractCallDetail(from: payload))
         
-        if pil.calls.active != nil {
+        if pil.calls.isInCall {
             print("Not taking call as we already have an active one!")
             return
         }

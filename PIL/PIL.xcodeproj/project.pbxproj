@@ -58,7 +58,6 @@
 		B0F39AA7558143F5D0E8DFEB /* Pods_PIL_PILTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921A0DE928C35CE8E10064AE /* Pods_PIL_PILTests.framework */; };
 		F81F06860533E6AB96B28CBA /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F00A7ECF3E120DDA5BB05 /* Builder.swift */; };
 		F81F0A14AE85262D7380D5C1 /* ApplicationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F0BA8A9D7361D3FD907A2 /* ApplicationSetup.swift */; };
-		F81F0CA31FFC5B319E097C24 /* PhoneLibHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F03F8F1764E66FC979516 /* PhoneLibHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,7 +127,6 @@
 		CD379AFE14075D0FD87BC715 /* Pods-PIL-PILTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILTests.release.xcconfig"; path = "Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests.release.xcconfig"; sourceTree = "<group>"; };
 		DE051288AC0AD01D07F6DE8E /* Pods_PIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81F00A7ECF3E120DDA5BB05 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
-		F81F03F8F1764E66FC979516 /* PhoneLibHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneLibHelper.swift; path = Helpers/PhoneLibHelper.swift; sourceTree = "<group>"; };
 		F81F0BA8A9D7361D3FD907A2 /* ApplicationSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -305,7 +303,6 @@
 				8319D8AC2576AD8D0095E54E /* Info.plist */,
 				83B84F81257D7B1900BABAC7 /* PIL.swift */,
 				F81F00A7ECF3E120DDA5BB05 /* Builder.swift */,
-				F81F03F8F1764E66FC979516 /* PhoneLibHelper.swift */,
 			);
 			path = PIL;
 			sourceTree = "<group>";
@@ -668,7 +665,6 @@
 				5CAED46325F4C72C00F9F4B1 /* AudioRoute.swift in Sources */,
 				F81F0A14AE85262D7380D5C1 /* ApplicationSetup.swift in Sources */,
 				5CAB174725DA8FCE00BC12E5 /* CallState.swift in Sources */,
-				F81F0CA31FFC5B319E097C24 /* PhoneLibHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

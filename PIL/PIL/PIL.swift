@@ -84,6 +84,10 @@ public class PIL {
     }
     
     public func call(number: String) {
+        if calls.isInCall {
+            return
+        }
+        
         start {
             self.iOSCallKit.startCall(number: number)
         }
