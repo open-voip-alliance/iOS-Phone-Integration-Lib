@@ -15,8 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private let defaults = UserDefaults.standard
     
-    private weak var pil: PIL?
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
@@ -30,29 +28,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         )
         
-        pil = startIOSPIL(applicationSetup: applicationSetup)
-
-        pil?.auth = Auth(
-            username: self.userDefault(key: "username"),
-            password: self.userDefault(key: "password"),
-            domain: self.userDefault(key: "domain"),
-            port: Int(self.userDefault(key: "port")) ?? 0,
-            secure: self.defaults.bool(forKey: "encryption")
+        _ = startIOSPIL(
+            applicationSetup: applicationSetup,
+            auth: Auth(
+                username: self.userDefault(key: "username"),
+                password: self.userDefault(key: "password"),
+                domain: self.userDefault(key: "domain"),
+                port: Int(self.userDefault(key: "port")) ?? 0,
+                secure: self.defaults.bool(forKey: "encryption")
+            ),
+            autoStart: true
         )
         
-        pil?.start {
-            
-        }
-        
         return true
-    }
-    
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        pil?.iOS.applicationWillEnterForeground()
-    }
-    
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        pil?.iOS.applicationDidEnterBackground()
     }
     
     private func userDefault(key: String) -> String {
