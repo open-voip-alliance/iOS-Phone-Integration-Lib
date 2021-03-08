@@ -70,7 +70,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   iOSPhoneLib:
-    :commit: d0180bde087514585ed8259e8175b94f2e54d649
+    :commit: 9f4818f279be4729db5bce023fb216a6c2c6dd1c
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
 
 SPEC CHECKSUMS:

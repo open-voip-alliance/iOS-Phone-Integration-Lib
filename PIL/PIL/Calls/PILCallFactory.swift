@@ -19,10 +19,12 @@ public class PILCallFactory {
         guard let libraryCall = libraryCall else {
             return nil
         }
-            
+        
+        let remotePartyDetails = findRemotePartyDetails(call: libraryCall)
+        
         return PILCall(
-            remoteNumber: libraryCall.remoteNumber,
-            displayName: libraryCall.displayName ?? "",
+            remoteNumber: remotePartyDetails.0,
+            displayName: remotePartyDetails.1,
             state: convertCallState(state: libraryCall.state),
             direction: libraryCall.direction == .inbound ? .inbound : .outbound,
             duration: libraryCall.durationInSec ?? 0,
@@ -31,6 +33,47 @@ public class PILCallFactory {
             mos: libraryCall.quality.average,
             contact: contacts.find(number: libraryCall.remoteNumber)
         )
+    }
+    
+    private func findRemotePartyDetails(call: PhoneLibCall) -> (String, String) {
+        if !call.pAssertedIdentity.isEmpty {
+            let value = extractHeaderValue(rawHeader: call.pAssertedIdentity)
+            return (value.0, value.1)
+        }
+        
+        if !call.remotePartyId.isEmpty {
+            let value = extractHeaderValue(rawHeader: call.remotePartyId)
+            return (value.0, value.1)
+        }
+        
+        return (call.remoteNumber, call.displayName ?? "")
+    }
+    
+    private func extractHeaderValue(rawHeader: String) -> (String, String) {
+        let numberPattern = "<?sip:(.+)@"
+        let namePattern = "^\"(.+)\" "
+    
+        return (
+            extractCaptureGroup(target: rawHeader, pattern: numberPattern),
+            extractCaptureGroup(target: rawHeader, pattern: namePattern)
+        )
+    }
+    
+    private func extractCaptureGroup(target: String, pattern: String) -> String {
+        let regex = try! NSRegularExpression(pattern: pattern)
+        let result = regex.matches(in: target, range: NSMakeRange(0, target.utf16.count))
+        
+        if result.isEmpty {
+            return ""
+        }
+        
+        let nsRange = result[0].range(at: 1)
+        
+        if let range = Range(nsRange, in: target) {
+            return String(target[range])
+        }
+        
+        return ""
     }
     
     private func convertCallState(state: iOSPhoneLib.CallState) -> CallState {
@@ -52,3 +95,4 @@ public class PILCallFactory {
         }
     }
 }
+
