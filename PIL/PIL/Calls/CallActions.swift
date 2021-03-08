@@ -8,70 +8,102 @@ import iOSPhoneLib
 
 public class CallActions {
     
-    lazy var phoneLib: PhoneLib = PhoneLib.shared
-     
-    // MARK: Callkit actions
-    public func performHold() {
-        performCallAction { uuid in
+    private let controller: CXCallController
+    private let pil: PIL
+    private let phoneLib: PhoneLib
+    private let callManager: CallManager
+    
+    init(controller: CXCallController, pil: PIL, phoneLib: PhoneLib, callManager: CallManager) {
+        self.controller = controller
+        self.pil = pil
+        self.phoneLib = phoneLib
+        self.callManager = callManager
+    }
+
+    public func hold() {
+        performCallAction { uuid -> CXCallAction in
             CXSetHeldCallAction(call: uuid, onHold: true)
         }
     }
     
-    public func performUnhold() {
-        performCallAction { uuid in
+    public func unhold() {
+        performCallAction { uuid -> CXCallAction in
             CXSetHeldCallAction(call: uuid, onHold: false)
         }
     }
     
-    public func performToggleHold() {
-        let pil = PIL.shared
-        performCallAction { uuid in
-            CXSetHeldCallAction(call: uuid, onHold: !(pil?.call?.phoneLibCallState == .paused))
+    public func toggleHold() {
+        let isOnHold: Bool = pil.calls.active!.isOnHold
+        
+        if isOnHold {
+            unhold()
+        } else {
+            hold()
         }
-    }
-    
-    public func performMute() {
-        guard let pil = PIL.shared else {return}
-        performCallAction { uuid in
-            CXSetMutedCallAction(call: uuid, muted: !pil.isMicrophoneMuted)
-        }
-    }
-    
-    public func beginAttendedTransfer(number: String) {
-        //TODO:
-    }
-    
-    public func completeAttendedTransfer() {
-        //TODO:
     }
     
     public func answer() {
-        //TODO:
+        performCallAction { uuid -> CXCallAction in
+            CXAnswerCallAction(call: uuid)
+        }
     }
     
     public func decline() {
-        //TODO:
-    }
-    
-    public func end() {
-        let pil = PIL.shared
-        guard let call = pil?.call, call.state != .ended else { return }
-
-        performCallAction { uuid in
+        performCallAction { uuid -> CXCallAction in
             CXEndCallAction(call: uuid)
         }
     }
     
-    func performCallAction(action: (_: UUID) -> CXCallAction) {
-        let pil = PIL.shared
-        guard let uuid = pil?.call?.uuid else {
-            print("Unable to perform action on call as there is no active call")
-            return
+    public func end() {
+        performCallAction { uuid -> CXCallAction in
+            CXEndCallAction(call: uuid)
         }
-
-        let controller = CXCallController()
-        let action = action(uuid)
-
+    }
+    
+    public func mute() {
+        performCallAction { uuid -> CXCallAction in
+            CXSetMutedCallAction(call: uuid, muted: true)
+        }
+    }
+    
+    public func unmute() {
+        performCallAction { uuid -> CXCallAction in
+            CXSetMutedCallAction(call: uuid, muted: false)
+        }
+    }
+    
+    public func toggleMute() {
+        let isOnMute: Bool = pil.audio.isMicrophoneMuted
+        
+        if isOnMute {
+            unmute()
+        } else {
+            mute()
+        }
+    }
+    
+    public func sendDtmf(dtmf: String) {
+        performCallAction { uuid -> CXCallAction in
+            CXPlayDTMFCallAction(call: uuid, digits: dtmf, type: .singleTone)
+        }
+    }
+    
+    public func beginAttendedTransfer(number: String) {
+        callExists { call in
+            self.callManager.transferSession = phoneLib.actions(call: call).beginAttendedTransfer(to: number)
+        }
+    }
+    
+    public func completeAttendedTransfer() {
+        if let transferSession = callManager.transferSession {
+            phoneLib.actions(call: transferSession.from).finishAttendedTransfer(attendedTransferSession: transferSession)
+        }
+    }
+    
+    func performCallAction(_ callback: (UUID) -> CXCallAction) {
+        guard let uuid = pil.iOSCallKit.uuid else { return }
+        let action = callback(uuid)
+        
         controller.request(CXTransaction(action: action)) { error in
             if error != nil {
                 print("Failed to perform \(action.description) \(String(describing: error?.localizedDescription))")
@@ -80,37 +112,17 @@ public class CallActions {
             }
         }
     }
-    
-    // MARK: PhoneLib actions
-    public func call(number: String) -> PILCall? {
-        var outgoingCall: PILCall? = nil
-        print("Attempting to call.")
-        if let phoneLibCall = phoneLib.call(to: number) {
-            let pil = PIL.shared
-            outgoingCall = pil?.callFactory.make(phoneLibCall: phoneLibCall)
+   
+    private func callExists(callback: (Call) -> Void) {
+        if let transferSession = callManager.transferSession {
+            callback(transferSession.to)
+            return
         }
-        return outgoingCall
-    }
-    
-    public func setMicrophone(muted: Bool) {
-        //phoneLib.setMicrophone(muted: muted)
-    }
-    
-    public func setHold(call: PILCall, onHold: Bool) -> Bool {
-        return true//phoneLib.setHold(session: call.session, onHold: onHold)
-    }
-    
-    public func sendDtmf(dtmf: String) {
-        guard let pil = PIL.shared,
-              let phoneLibCall = pil.call?.phoneLibCall else {return}
-       // phoneLib.sendDtmf(session: session, dtmf: dtmf)
-    }
-    
-    public func toggleSpeaker() {
-       // _ = phoneLib.setSpeaker(phoneLib.isSpeakerOn ? false : true)
-    }
-    
-    public func end(call: PILCall) -> Bool {
-        return true//phoneLib.endCall(for: call.session)
+        
+        if let call = callManager.call {
+            callback(call)
+            pil.events.broadcast(event: .callUpdated)
+            return
+        }
     }
 }

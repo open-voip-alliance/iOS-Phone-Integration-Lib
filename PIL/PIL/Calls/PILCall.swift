@@ -16,9 +16,29 @@ public struct PILCall {
     public let isOnHold: Bool
     public let uuid: UUID
     public let mos: Float
-//TODO:    let contact: Contact?
-    //wip We will see if we keep the below properties
-    public let isIncoming: Bool
-    let phoneLibCall: Call
-    public let phoneLibCallState: PhoneLibCallState
+    public let contact: Contact?
+    
+    public var remotePartyHeading: String {
+        get {
+            if let contact = contact {
+                return contact.name
+            }
+            
+            if !displayName.isEmpty {
+                return displayName
+            }
+            
+            return remoteNumber
+        }
+    }
+    
+    public var remotePartySubheading: String {
+        get {
+            if contact != nil || !displayName.isEmpty {
+                return remoteNumber
+            }
+            
+            return ""
+        }
+    }
 }

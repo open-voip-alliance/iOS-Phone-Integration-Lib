@@ -5,29 +5,79 @@
 import Foundation
 import iOSPhoneLib
 
+public typealias PhoneLibCall = iOSPhoneLib.Call
+
 public class PILCallFactory {
     
-    public func make(phoneLibCall:Call) -> PILCall {
-        let remoteNumber = phoneLibCall.remoteNumber
-        let displayName = phoneLibCall.displayName ?? ""
-        let callState = convertCallState(phoneLibCallState: phoneLibCall.state)
-        let direction: CallDirection = phoneLibCall.direction == .inbound ? .inbound : .outbound
-        let duration = phoneLibCall.durationInSec ?? 0
-        let isOnHold = (phoneLibCall.state == .pausedByRemote || phoneLibCall.state == .paused)
-        let uuid = phoneLibCall.callId
-        let mos = phoneLibCall.getAverageRating()
-        //TODO: contact =
-        let isIncoming = phoneLibCall.isIncoming
-        let phoneLibCallState = phoneLibCall.state
+    private let contacts: Contacts
     
-        let call = PILCall(remoteNumber: remoteNumber, displayName: displayName, state: callState, direction: direction, duration: duration, isOnHold: isOnHold, uuid: uuid, mos: mos, isIncoming: isIncoming, phoneLibCall: phoneLibCall, phoneLibCallState: phoneLibCallState)
-        return call
-        
-        //wip check if UUID and Direction have correct values / get rid of isIncoming since we have direction now
+    init(contacts: Contacts) {
+        self.contacts = contacts
     }
     
-    private func convertCallState(phoneLibCallState: PhoneLibCallState) -> CallState {
-        switch phoneLibCallState {
+    public func make(libraryCall: PhoneLibCall?) -> PILCall? {
+        guard let libraryCall = libraryCall else {
+            return nil
+        }
+        
+        let remotePartyDetails = findRemotePartyDetails(call: libraryCall)
+        
+        return PILCall(
+            remoteNumber: remotePartyDetails.0,
+            displayName: remotePartyDetails.1,
+            state: convertCallState(state: libraryCall.state),
+            direction: libraryCall.direction == .inbound ? .inbound : .outbound,
+            duration: libraryCall.durationInSec ?? 0,
+            isOnHold: (libraryCall.state == .pausedByRemote || libraryCall.state == .paused),
+            uuid: UUID.init(),
+            mos: libraryCall.quality.average,
+            contact: contacts.find(number: libraryCall.remoteNumber)
+        )
+    }
+    
+    private func findRemotePartyDetails(call: PhoneLibCall) -> (String, String) {
+        if !call.pAssertedIdentity.isEmpty {
+            let value = extractHeaderValue(rawHeader: call.pAssertedIdentity)
+            return (value.0, value.1)
+        }
+        
+        if !call.remotePartyId.isEmpty {
+            let value = extractHeaderValue(rawHeader: call.remotePartyId)
+            return (value.0, value.1)
+        }
+        
+        return (call.remoteNumber, call.displayName ?? "")
+    }
+    
+    private func extractHeaderValue(rawHeader: String) -> (String, String) {
+        let numberPattern = "<?sip:(.+)@"
+        let namePattern = "^\"(.+)\" "
+    
+        return (
+            extractCaptureGroup(target: rawHeader, pattern: numberPattern),
+            extractCaptureGroup(target: rawHeader, pattern: namePattern)
+        )
+    }
+    
+    private func extractCaptureGroup(target: String, pattern: String) -> String {
+        let regex = try! NSRegularExpression(pattern: pattern)
+        let result = regex.matches(in: target, range: NSMakeRange(0, target.utf16.count))
+        
+        if result.isEmpty {
+            return ""
+        }
+        
+        let nsRange = result[0].range(at: 1)
+        
+        if let range = Range(nsRange, in: target) {
+            return String(target[range])
+        }
+        
+        return ""
+    }
+    
+    private func convertCallState(state: iOSPhoneLib.CallState) -> CallState {
+        switch state {
         case .idle:
             return .initializing
         case .incomingReceived, .outgoingDidInitialize, .outgoingProgress, .outgoingRinging:
@@ -45,3 +95,4 @@ public class PILCallFactory {
         }
     }
 }
+

@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import iOSPhoneLib
 
 public struct Preferences {
-    let useApplicationRingtone = false
+    public init(useApplicationRingtone: Bool = true, codecs: [Codec] = [Codec.OPUS]) {
+        self.useApplicationRingtone = useApplicationRingtone
+        self.codecs = codecs
+    }
     
-    
+    public let useApplicationRingtone: Bool
+    public let codecs: [Codec]
 }

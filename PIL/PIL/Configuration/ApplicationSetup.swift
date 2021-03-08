@@ -5,10 +5,13 @@
 import Foundation
 
 public struct ApplicationSetup {
-    var middleware: MiddlewareDelegate? = nil
-    let userAgent: String = "iOS PIL"
-    
-    public init(middleware: MiddlewareDelegate?) {
+    public init(middleware: Middleware? = nil, requestCallUi: @escaping () -> Void, userAgent: String = "iOS PIL") {
         self.middleware = middleware
+        self.userAgent = userAgent
+        self.requestCallUi = requestCallUi
     }
+    
+    public let middleware: Middleware?
+    public let requestCallUi: () -> Void
+    public let userAgent: String
 }

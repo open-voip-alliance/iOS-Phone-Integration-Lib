@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import PIL
+import Contacts
 
 class DialerViewController: UIViewController {
     
@@ -19,6 +20,10 @@ class DialerViewController: UIViewController {
         super.viewDidLoad()
 
         numberPreview.text = ""
+        
+        CNContactStore().requestAccess(for: .contacts) { (granted, error) in
+            
+        }
     }
 
     @IBAction func callButtonWasPressed(_ sender: UIButton) {
@@ -31,15 +36,13 @@ class DialerViewController: UIViewController {
             port: Int(self.userDefault(key: "port")) ?? 0,
             secure: self.defaults.bool(forKey: "encryption")
         )
-        pil.start { success in
-            if success {
+        pil.start { 
                 MicPermissionHelper.requestMicrophonePermission { startCalling in
                     if startCalling {
-                        _ = pil.actions.call(number: number)
+                        pil.call(number: number)
                         self.performSegue(withIdentifier: "callSegue", sender: self)
                     }
                 }
-            }
         }
     }
     

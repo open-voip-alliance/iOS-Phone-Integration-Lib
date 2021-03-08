@@ -9,60 +9,147 @@ import Foundation
 import PIL
 import UIKit
 
-class CallViewController: UIViewController {
+class CallViewController: UIViewController, PILEventDelegate {
     
     @IBOutlet weak var callTitle: UILabel!
     @IBOutlet weak var callSubtitle: UILabel!
     @IBOutlet weak var callDuration: UILabel!
     @IBOutlet weak var callStatus: UILabel!
-
+    @IBOutlet weak var inactiveCallStatus: UILabel!
+    
     @IBOutlet weak var speakerButton: UIButton!
     @IBOutlet weak var muteButton: UIButton!
     @IBOutlet weak var holdButton: UIButton!
     @IBOutlet weak var earpieceButton: UIButton!
     @IBOutlet weak var bluetoothButton: UIButton!
+    @IBOutlet weak var transferButton: UIButton!
     
-    let pil = PIL.shared
-    let actions = PIL.shared?.actions
+    let pil = PIL.shared!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        pil.events.listen(delegate: self)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        pil.events.stopListening(delegate: self)
+    }
+    
+    func onEvent(event: Event, call: PILCall?) {
+        print("Received call event \(event.hashValue)")
+        if let call = call {
+            render(call: call)
+        }
+       
+        if event == .callEnded {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    private func render(call: PILCall? = nil) {
+    
+        let call = call ?? pil.calls.active!
+        
+        callTitle.text = "\(call.remotePartyHeading) - \(call.remotePartySubheading)"
+        callSubtitle.text = String(describing: call.direction)
+        callDuration.text = String(describing: call.duration)
+        callStatus.text = String(describing: call.state)
+        
+        if pil.audio.isMicrophoneMuted {
+            muteButton.isSelected = true
+            muteButton.setTitle("UNMUTE", for: .normal)
+        } else {
+            muteButton.isSelected = false
+            muteButton.setTitle("MUTE", for: .normal)
+        }
+        
+        if call.isOnHold {
+            holdButton.isSelected = true
+            holdButton.setTitle("UNHOLD", for: .normal)
+        } else {
+            holdButton.isSelected = false
+            holdButton.setTitle("HOLD", for: .normal)
+        }
+        
+        let state = pil.audio.state
+        
+        bluetoothButton.isEnabled = state.availableRoutes.contains(.bluetooth)
+        earpieceButton.isEnabled = state.availableRoutes.contains(.phone)
+        speakerButton.isEnabled = state.availableRoutes.contains(.speaker)
+        
+        speakerButton.isSelected = state.currentRoute == .speaker
+        bluetoothButton.isSelected = state.currentRoute == .bluetooth
+        earpieceButton.isSelected = state.currentRoute == .phone
+        
+        bluetoothButton.setTitle(state.bluetoothDeviceName ?? "BLUETOOTH", for: .normal)
+        
+        if pil.calls.isInTranfer {
+            inactiveCallStatus.isHidden = false
+            if let inactiveCall = pil.calls.inactive {
+                inactiveCallStatus.text = "\(inactiveCall.remotePartyHeading) - \(inactiveCall.remotePartySubheading)"
+            }
+            transferButton.setTitle("MERGE", for: .normal)
+        } else {
+            inactiveCallStatus.isHidden = true
+            inactiveCallStatus.text = ""
+            transferButton.setTitle("TRANSFER", for: .normal)
+        }
+    }
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {}
     
     @IBAction func hangUpButtonWasPressed(_ sender: Any) {
-        actions?.end()
-        self.dismiss(animated: true, completion: nil)
+        pil.actions.end()
     }
     
     @IBAction func bluetoothButtonWasPressed(_ sender: Any) {
-        //wip
-        bluetoothButton.isSelected = !bluetoothButton.isSelected
+        pil.audio.routeAudio(route: .bluetooth)
     }
 
     @IBAction func earpieceButtonWasPressed(_ sender: Any) {
-        //wip
-        earpieceButton.isSelected = !earpieceButton.isSelected
+        pil.audio.routeAudio(route: .phone)
     }
 
     @IBAction func speakerButtonWasPressed(_ sender: Any) {
-        actions?.toggleSpeaker()
-        speakerButton.isSelected = !speakerButton.isSelected
+        pil.audio.routeAudio(route: .speaker)
     }
 
     @IBAction func transferButtonWasPressed(_ sender: Any) {
-        guard let call = pil?.call else { return }
-        if !call.isOnHold {
-            actions?.performHold()
-            holdButton.isSelected = !holdButton.isSelected
+        if (!pil.calls.isInTranfer) {
+            promptForTransferNumber { number in
+                self.pil.actions.beginAttendedTransfer(number: number)
+            }
+        } else {
+            pil.actions.completeAttendedTransfer()
         }
-        //wip present UI to select number and call actions?.beginAttendedTransfer(number:)
     }
 
     @IBAction func holdButtonWasPressed(_ sender: Any) {
-        actions?.performToggleHold()
-        holdButton.isSelected = !holdButton.isSelected
+        pil.actions.toggleHold()
+        render()
     }
 
     @IBAction func muteButtonWasPressed(_ sender: Any) {
-        actions?.performMute()
-        muteButton.isSelected = !muteButton.isSelected 
+        pil.actions.toggleMute()
+        render()
     }
+    
+    private func promptForTransferNumber(callback: @escaping (String) -> Void) {
+        let alertController = UIAlertController(title: "Call Transfer", message: "Enter the number to transfer to", preferredStyle: .alert)
+
+        alertController.addTextField { (textField) in
+            textField.placeholder = "080012341234"
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let saveAction = UIAlertAction(title: "Transfer", style: .default) { _ in
+            callback(alertController.textFields![0].text!)
+        }
+
+        alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
 }
