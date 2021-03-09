@@ -27,6 +27,7 @@ class CallViewController: UIViewController, PILEventDelegate {
     let pil = PIL.shared!
     
     override func viewWillAppear(_ animated: Bool) {
+        render()
         pil.events.listen(delegate: self)
     }
     
@@ -47,7 +48,10 @@ class CallViewController: UIViewController, PILEventDelegate {
     
     private func render(call: PILCall? = nil) {
     
-        let call = call ?? pil.calls.active!
+        guard let call = (call ?? pil.calls.active) else {
+            self.dismiss(animated: true)
+            return
+        }
         
         callTitle.text = "\(call.remotePartyHeading) - \(call.remotePartySubheading)"
         callSubtitle.text = String(describing: call.direction)

@@ -40,7 +40,6 @@ class DialerViewController: UIViewController {
                 MicPermissionHelper.requestMicrophonePermission { startCalling in
                     if startCalling {
                         pil.call(number: number)
-                        self.performSegue(withIdentifier: "callSegue", sender: self)
                     }
                 }
         }
