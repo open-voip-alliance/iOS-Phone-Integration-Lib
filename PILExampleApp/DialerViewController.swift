@@ -29,13 +29,7 @@ class DialerViewController: UIViewController {
     @IBAction func callButtonWasPressed(_ sender: UIButton) {
         guard let number = numberPreview.text,
               let pil = PIL.shared else { return }
-        pil.auth = Auth(
-            username: self.userDefault(key: "username"),
-            password: self.userDefault(key: "password"),
-            domain: self.userDefault(key: "domain"),
-            port: Int(self.userDefault(key: "port")) ?? 0,
-            secure: self.defaults.bool(forKey: "encryption")
-        )
+        
         pil.start { 
                 MicPermissionHelper.requestMicrophonePermission { startCalling in
                     if startCalling {
