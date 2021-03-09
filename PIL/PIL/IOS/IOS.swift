@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import iOSPhoneLib
+import CallKit
 
 public class IOS {
     
@@ -15,7 +17,23 @@ public class IOS {
         self.pil = pil
     }
     
-    public func applicationWillEnterForeground() {
+    public func startListeningForSystemNotifications() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(willEnterForeground),
+            name: UIApplication.willEnterForegroundNotification,
+            object: nil)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didEnterBackground),
+            name: UIApplication.didEnterBackgroundNotification,
+            object: nil)
+    }
+    
+    @objc func willEnterForeground() {
+        pil.writeLog("Application has entered the foreground")
+        
         if pil.calls.active != nil {
             pil.app.requestCallUi()
         }
@@ -23,7 +41,7 @@ public class IOS {
         pil.start()
     }
     
-    public func applicationDidEnterBackground() {
-        
+    @objc func didEnterBackground() {
+        pil.writeLog("Application has entered the background")
     }
 }

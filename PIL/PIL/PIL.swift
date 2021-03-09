@@ -47,6 +47,7 @@ public class PIL {
     init(applicationSetup: ApplicationSetup) {
         self.app = applicationSetup
         PIL.shared = self
+        self.iOS.startListeningForSystemNotifications()
     }
     
     /**
@@ -102,5 +103,4 @@ public class PIL {
             auth != nil && phoneLib.isInitialized
         }
     }
-
 }

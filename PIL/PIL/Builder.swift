@@ -11,21 +11,39 @@ let di: Container = {
 
 public class Builder {
 
-    public var preferences: Preferences = Preferences()
+    public var preferences: Preferences?
     public var auth: Auth?
     var applicationSetup: ApplicationSetup?
     
-    internal init() {
-        
-    }
+    internal init() {}
 
     internal func start() -> PIL {
-        return PIL(applicationSetup: applicationSetup!)
+        let pil = PIL(applicationSetup: applicationSetup!)
+        
+        if let auth = self.auth {
+            pil.auth = auth
+        }
+        
+        if let preferences = self.preferences {
+            pil.preferences = preferences
+        } else {
+            pil.preferences = Preferences()
+        }
+        
+        return pil
     }
 }
 
-public func startIOSPIL(applicationSetup: ApplicationSetup) -> PIL {
+public func startIOSPIL(applicationSetup: ApplicationSetup, auth: Auth? = nil, preferences: Preferences? = nil, autoStart: Bool = true) -> PIL {
     let builder = Builder()
     builder.applicationSetup = applicationSetup
-    return builder.start()
+    builder.auth = auth
+    builder.preferences = preferences
+    let pil = builder.start()
+    
+    if autoStart {
+        pil.start()
+    }
+    
+    return pil
 }
