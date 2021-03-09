@@ -25,7 +25,7 @@ class CallManager: CallDelegate {
         self.pil = pil
     }
         
-    public func didReceive(incomingCall: Call) {
+    public func incomingCallReceived(_ incomingCall: Call) {
         if !isInCall {
             self.call = incomingCall
             pil.events.broadcast(event: .incomingCallReceived)
@@ -33,11 +33,12 @@ class CallManager: CallDelegate {
         }
     }
 
-    public func outgoingDidInitialize(call: Call) {
+    public func outgoingCallCreated(_ call: Call) {
         if !isInCall {
             self.call = call
             pil.iOSCallKit.provider.reportOutgoingCall(with: pil.iOSCallKit.uuid!, startedConnectingAt: Date())
             pil.events.broadcast(event: .outgoingCallStarted)
+            pil.app.requestCallUi()
         }
     }
 
@@ -48,8 +49,8 @@ class CallManager: CallDelegate {
 
     public func callConnected(_ call: Call) {
         callKitUpdateCurrentCall(call)
-        pil.app.requestCallUi()
         pil.events.broadcast(event: .callConnected)
+        pil.app.requestCallUi()
     }
 
     public func callEnded(_ session: Call) {
@@ -61,12 +62,8 @@ class CallManager: CallDelegate {
         pil.events.broadcast(event: .callEnded)
         transferSession = nil
     }
-
-    public func callReleased(_ call: Call) {
-        callEnded(call)
-    }
-
-    public func error(call: Call, message: String) {
+    
+    public func error(_ call: Call, message: String) {
         callEnded(call)
         pil.writeLog("ERROR: \(message)")
     }
