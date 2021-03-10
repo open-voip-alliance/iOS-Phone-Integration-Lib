@@ -15,7 +15,7 @@ pod 'iOSPhoneLib', :git => 'https://gitlab.wearespindle.com/vialer/mobile/voip/i
   end
   
   target 'PILExampleApp' do
-    pod 'PIL', :path => '../PIL'
+    pod 'PIL', :path => '.'
     pod 'AFNetworkActivityLogger'
     pod 'AFNetworking'
     pod 'SAMKeychain'

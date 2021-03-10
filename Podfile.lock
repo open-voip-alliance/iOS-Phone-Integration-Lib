@@ -46,7 +46,7 @@ DEPENDENCIES:
   - AFNetworking
   - Alamofire (~> 5.2)
   - iOSPhoneLib (from `https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git`)
-  - PIL (from `../PIL`)
+  - PIL (from `.`)
   - QuickTableViewController
   - SAMKeychain
   - Swinject
@@ -66,7 +66,7 @@ EXTERNAL SOURCES:
   iOSPhoneLib:
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
   PIL:
-    :path: "../PIL"
+    :path: "."
 
 CHECKOUT OPTIONS:
   iOSPhoneLib:
@@ -84,6 +84,6 @@ SPEC CHECKSUMS:
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 3faa0d583430eb93076e742601f200d2cb491b96
+PODFILE CHECKSUM: 8df03b2bc8188534655abd8089bdfb8c2c924eab
 
 COCOAPODS: 1.10.0
