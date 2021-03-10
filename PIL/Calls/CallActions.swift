@@ -4,7 +4,7 @@
 
 import Foundation
 import CallKit
-import iOSPhoneLib
+import iOSVoIPLib
 
 public class CallActions {
     

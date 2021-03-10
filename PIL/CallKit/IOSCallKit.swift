@@ -9,7 +9,7 @@ import Foundation
 import CallKit
 import UserNotifications
 import AVKit
-import iOSPhoneLib
+import iOSVoIPLib
 
 class IOSCallKit: NSObject {
 

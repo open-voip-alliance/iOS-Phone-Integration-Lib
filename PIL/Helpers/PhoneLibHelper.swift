@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import iOSPhoneLib
+import iOSVoIPLib
 
 class PhoneLibHelper {
 
@@ -65,9 +65,9 @@ class PhoneLibHelper {
         }
     }
     
-    private func createConfig(auth: Auth) -> iOSPhoneLib.Config {
-        iOSPhoneLib.Config(
-            auth: iOSPhoneLib.Auth(name: auth.username, password: auth.password, domain: auth.domain, port: auth.port),
+    private func createConfig(auth: Auth) -> iOSVoIPLib.Config {
+        iOSVoIPLib.Config(
+            auth: iOSVoIPLib.Auth(name: auth.username, password: auth.password, domain: auth.domain, port: auth.port),
             callDelegate: callManager
         )
     }
