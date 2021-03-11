@@ -8,20 +8,20 @@ import AVFoundation
 
 public class AudioManager {
     
-    private let phoneLib: PhoneLib
+    private let voipLib: VoIPLib
     private let audioSession: AVAudioSession
     private let pil: PIL
     
-    init(pil: PIL, phoneLib: PhoneLib, audioSession: AVAudioSession) {
+    init(pil: PIL, voipLib: VoIPLib, audioSession: AVAudioSession) {
         self.pil = pil
-        self.phoneLib = phoneLib
+        self.voipLib = voipLib
         self.audioSession = audioSession
         NotificationCenter.default.addObserver(self, selector: #selector(handleRouteChange), name: AVAudioSession.routeChangeNotification, object: nil)
     }
     
     public var isMicrophoneMuted: Bool {
         get {
-            phoneLib.isMicrophoneMuted
+            voipLib.isMicrophoneMuted
         }
     }
     

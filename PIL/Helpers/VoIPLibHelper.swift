@@ -1,5 +1,5 @@
 //
-//  PhoneLibHelper.swift
+//  VoIPLibHelper.swift
 //  PIL
 //
 //  Created by Jeremy Norman on 01/03/2021.
@@ -8,20 +8,20 @@
 import Foundation
 import iOSVoIPLib
 
-class PhoneLibHelper {
+class VoIPLibHelper {
 
-    private let phoneLib: PhoneLib
+    private let voipLib: VoIPLib
     private let pil: PIL
     private let callManager: CallManager
     
-    init(phoneLib: PhoneLib, pil: PIL, callManager: CallManager) {
-        self.phoneLib = phoneLib
+    init(voipLib: VoIPLib, pil: PIL, callManager: CallManager) {
+        self.voipLib = voipLib
         self.pil = pil
         self.callManager = callManager
     }
     
     internal func initialize(force: Bool) {
-        if phoneLib.isInitialized && !force {
+        if voipLib.isInitialized && !force {
             pil.writeLog("The VoIP library is already initialized, skipping init.")
         }
         
@@ -30,7 +30,7 @@ class PhoneLibHelper {
             return
         }
         
-        phoneLib.initialize(
+        voipLib.initialize(
             config: createConfig(auth: auth)
         )
     }
@@ -41,9 +41,9 @@ class PhoneLibHelper {
             return
         }
         
-        phoneLib.swapConfig(config: createConfig(auth: auth))
+        voipLib.swapConfig(config: createConfig(auth: auth))
         
-        if phoneLib.isRegistered && !force {
+        if voipLib.isRegistered && !force {
             pil.writeLog("We are already registered!")
             callback(true)
             return
@@ -51,7 +51,7 @@ class PhoneLibHelper {
         
         pil.writeLog("Attempting registration...")
         
-        phoneLib.register { state in
+        voipLib.register { state in
             self.pil.writeLog("Registration response: \(state)")
             
             if state == .registered {

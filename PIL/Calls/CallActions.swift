@@ -10,13 +10,13 @@ public class CallActions {
     
     private let controller: CXCallController
     private let pil: PIL
-    private let phoneLib: PhoneLib
+    private let voipLib: VoIPLib
     private let callManager: CallManager
     
-    init(controller: CXCallController, pil: PIL, phoneLib: PhoneLib, callManager: CallManager) {
+    init(controller: CXCallController, pil: PIL, voipLib: VoIPLib, callManager: CallManager) {
         self.controller = controller
         self.pil = pil
-        self.phoneLib = phoneLib
+        self.voipLib = voipLib
         self.callManager = callManager
     }
 
@@ -90,13 +90,13 @@ public class CallActions {
     
     public func beginAttendedTransfer(number: String) {
         callExists { call in
-            self.callManager.transferSession = phoneLib.actions(call: call).beginAttendedTransfer(to: number)
+            self.callManager.transferSession = voipLib.actions(call: call).beginAttendedTransfer(to: number)
         }
     }
     
     public func completeAttendedTransfer() {
         if let transferSession = callManager.transferSession {
-            phoneLib.actions(call: transferSession.from).finishAttendedTransfer(attendedTransferSession: transferSession)
+            voipLib.actions(call: transferSession.from).finishAttendedTransfer(attendedTransferSession: transferSession)
         }
     }
     
