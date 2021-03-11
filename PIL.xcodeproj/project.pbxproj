@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02E73DEC50BE2BE0BAEDE837 /* Pods_PIL_PILExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DC01A3B438F010368D4E06 /* Pods_PIL_PILExampleApp.framework */; };
+		10AB264FE164F825E8827333 /* Pods_PILExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DA1144AB4ECB29126ED6F3 /* Pods_PILExampleApp.framework */; };
 		4DAC77D3E027A8A2EDEC813D /* Pods_PIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE051288AC0AD01D07F6DE8E /* Pods_PIL.framework */; };
 		5C92D7CA25DA93F8003019D1 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D7C925DA93F8003019D1 /* EventsManager.swift */; };
 		5C92D7CB25DA93F8003019D1 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D7C925DA93F8003019D1 /* EventsManager.swift */; };
@@ -55,7 +55,7 @@
 		83F69EAF25922CE60076B8F0 /* IOSCallKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EAD25922CE50076B8F0 /* IOSCallKit.swift */; };
 		83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADAC5258BD81100CA64C8 /* Auth.swift */; };
 		83FADAC7258BD81100CA64C8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADAC5258BD81100CA64C8 /* Auth.swift */; };
-		B0F39AA7558143F5D0E8DFEB /* Pods_PIL_PILTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921A0DE928C35CE8E10064AE /* Pods_PIL_PILTests.framework */; };
+		9839BA867D11EDBA33A24948 /* Pods_PILTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B68102CB53FFE0FDCAF465 /* Pods_PILTests.framework */; };
 		F81F06860533E6AB96B28CBA /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F00A7ECF3E120DDA5BB05 /* Builder.swift */; };
 		F81F0A14AE85262D7380D5C1 /* ApplicationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F0BA8A9D7361D3FD907A2 /* ApplicationSetup.swift */; };
 /* End PBXBuildFile section */
@@ -72,8 +72,11 @@
 
 /* Begin PBXFileReference section */
 		2234830DFE34A018CA974415 /* Pods-PIL-PILTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILTests.debug.xcconfig"; path = "Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests.debug.xcconfig"; sourceTree = "<group>"; };
-		23DC01A3B438F010368D4E06 /* Pods_PIL_PILExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PIL_PILExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		294FCE57A1494E7C0515403F /* Pods-PILExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PILExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-PILExampleApp/Pods-PILExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3F576E5D2DB8DFA2CD7EC619 /* Pods-PIL-PILExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILExampleApp.release.xcconfig"; path = "Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		47DA1144AB4ECB29126ED6F3 /* Pods_PILExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PILExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		547F786BF437C8AF1105C5D9 /* Pods-PILExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PILExampleApp.release.xcconfig"; path = "Target Support Files/Pods-PILExampleApp/Pods-PILExampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		58B68102CB53FFE0FDCAF465 /* Pods_PILTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PILTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C92D7C925DA93F8003019D1 /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		5C92D7EE25DAA9B1003019D1 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		5C92D81225DAC9AE003019D1 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -122,9 +125,10 @@
 		83C98BA325A8AD1A00CECE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83F69EAD25922CE50076B8F0 /* IOSCallKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSCallKit.swift; sourceTree = "<group>"; };
 		83FADAC5258BD81100CA64C8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
-		921A0DE928C35CE8E10064AE /* Pods_PIL_PILTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PIL_PILTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9209116B25D1B03A8096EB8C /* Pods-PILTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PILTests.debug.xcconfig"; path = "Target Support Files/Pods-PILTests/Pods-PILTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A11562F028AED5C11AE54AEB /* Pods-PIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL.release.xcconfig"; path = "Target Support Files/Pods-PIL/Pods-PIL.release.xcconfig"; sourceTree = "<group>"; };
 		CD379AFE14075D0FD87BC715 /* Pods-PIL-PILTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILTests.release.xcconfig"; path = "Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC7FAF924C93373963D3551A /* Pods-PILTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PILTests.release.xcconfig"; path = "Target Support Files/Pods-PILTests/Pods-PILTests.release.xcconfig"; sourceTree = "<group>"; };
 		DE051288AC0AD01D07F6DE8E /* Pods_PIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81F00A7ECF3E120DDA5BB05 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		F81F0BA8A9D7361D3FD907A2 /* ApplicationSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationSetup.swift; sourceTree = "<group>"; };
@@ -144,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8319D8B22576AD8D0095E54E /* PIL.framework in Frameworks */,
-				B0F39AA7558143F5D0E8DFEB /* Pods_PIL_PILTests.framework in Frameworks */,
+				9839BA867D11EDBA33A24948 /* Pods_PILTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E73DEC50BE2BE0BAEDE837 /* Pods_PIL_PILExampleApp.framework in Frameworks */,
+				10AB264FE164F825E8827333 /* Pods_PILExampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +172,10 @@
 				CD379AFE14075D0FD87BC715 /* Pods-PIL-PILTests.release.xcconfig */,
 				6FE02223E5C763F95DDF0368 /* Pods-PIL-PILExampleApp.debug.xcconfig */,
 				3F576E5D2DB8DFA2CD7EC619 /* Pods-PIL-PILExampleApp.release.xcconfig */,
+				294FCE57A1494E7C0515403F /* Pods-PILExampleApp.debug.xcconfig */,
+				547F786BF437C8AF1105C5D9 /* Pods-PILExampleApp.release.xcconfig */,
+				9209116B25D1B03A8096EB8C /* Pods-PILTests.debug.xcconfig */,
+				DC7FAF924C93373963D3551A /* Pods-PILTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -176,8 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				DE051288AC0AD01D07F6DE8E /* Pods_PIL.framework */,
-				23DC01A3B438F010368D4E06 /* Pods_PIL_PILExampleApp.framework */,
-				921A0DE928C35CE8E10064AE /* Pods_PIL_PILTests.framework */,
+				47DA1144AB4ECB29126ED6F3 /* Pods_PILExampleApp.framework */,
+				58B68102CB53FFE0FDCAF465 /* Pods_PILTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -540,7 +548,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PIL-PILTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PILTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -553,15 +561,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PILExampleApp/Pods-PILExampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PILExampleApp/Pods-PILExampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PILExampleApp/Pods-PILExampleApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8436842C5FA6AE61E4327232 /* [CP] Check Pods Manifest.lock */ = {
@@ -592,15 +600,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PILTests/Pods-PILTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PILTests/Pods-PILTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PIL-PILTests/Pods-PIL-PILTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PILTests/Pods-PILTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		96A457D739C61ECB64045B7B /* [CP] Check Pods Manifest.lock */ = {
@@ -618,7 +626,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PIL-PILExampleApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PILExampleApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -898,7 +906,7 @@
 		};
 		8319D8C02576AD8D0095E54E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2234830DFE34A018CA974415 /* Pods-PIL-PILTests.debug.xcconfig */;
+			baseConfigurationReference = 9209116B25D1B03A8096EB8C /* Pods-PILTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -918,7 +926,7 @@
 		};
 		8319D8C12576AD8D0095E54E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD379AFE14075D0FD87BC715 /* Pods-PIL-PILTests.release.xcconfig */;
+			baseConfigurationReference = DC7FAF924C93373963D3551A /* Pods-PILTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -938,7 +946,7 @@
 		};
 		83C98BA425A8AD1A00CECE31 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FE02223E5C763F95DDF0368 /* Pods-PIL-PILExampleApp.debug.xcconfig */;
+			baseConfigurationReference = 294FCE57A1494E7C0515403F /* Pods-PILExampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -946,6 +954,7 @@
 				CODE_SIGN_ENTITLEMENTS = PILExampleApp/PILExampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
 				INFOPLIST_FILE = PILExampleApp/Info.plist;
@@ -959,13 +968,13 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		83C98BA525A8AD1A00CECE31 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F576E5D2DB8DFA2CD7EC619 /* Pods-PIL-PILExampleApp.release.xcconfig */;
+			baseConfigurationReference = 547F786BF437C8AF1105C5D9 /* Pods-PILExampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -973,6 +982,7 @@
 				CODE_SIGN_ENTITLEMENTS = PILExampleApp/PILExampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
 				INFOPLIST_FILE = PILExampleApp/Info.plist;
@@ -985,7 +995,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
