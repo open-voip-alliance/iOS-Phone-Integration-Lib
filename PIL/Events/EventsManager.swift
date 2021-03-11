@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import iOSPhoneLib
+import iOSVoIPLib
 
 public class EventsManager {
     

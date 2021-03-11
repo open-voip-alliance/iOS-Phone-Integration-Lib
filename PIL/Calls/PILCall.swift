@@ -3,9 +3,9 @@
 //
 
 import Foundation
-import iOSPhoneLib
+import iOSVoIPLib
 
-public typealias PhoneLibCallState = iOSPhoneLib.CallState
+public typealias PhoneLibCallState = iOSVoIPLib.CallState
 
 public struct PILCall {
     public let remoteNumber: String

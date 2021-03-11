@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import iOSPhoneLib
+import iOSVoIPLib
 
 public struct Preferences {
     public init(useApplicationRingtone: Bool = true, codecs: [Codec] = [Codec.OPUS]) {

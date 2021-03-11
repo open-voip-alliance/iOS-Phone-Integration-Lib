@@ -7,7 +7,7 @@
 
 import Foundation
 import Swinject
-import iOSPhoneLib
+import iOSVoIPLib
 import CallKit
 import AVFoundation
 

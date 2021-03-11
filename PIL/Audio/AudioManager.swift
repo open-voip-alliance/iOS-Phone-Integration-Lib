@@ -3,7 +3,7 @@
 //
 
 import Foundation
-import iOSPhoneLib
+import iOSVoIPLib
 import AVFoundation
 
 public class AudioManager {

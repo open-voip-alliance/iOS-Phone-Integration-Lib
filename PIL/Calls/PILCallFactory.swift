@@ -3,9 +3,9 @@
 //
 
 import Foundation
-import iOSPhoneLib
+import iOSVoIPLib
 
-public typealias PhoneLibCall = iOSPhoneLib.Call
+public typealias PhoneLibCall = iOSVoIPLib.Call
 
 public class PILCallFactory {
     
@@ -76,7 +76,7 @@ public class PILCallFactory {
         return ""
     }
     
-    private func convertCallState(state: iOSPhoneLib.CallState) -> CallState {
+    private func convertCallState(state: iOSVoIPLib.CallState) -> CallState {
         switch state {
         case .idle:
             return .initializing
