@@ -45,7 +45,7 @@ DEPENDENCIES:
   - AFNetworkActivityLogger
   - AFNetworking
   - Alamofire (~> 5.2)
-  - iOSVoIPLib (from `https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git`)
+  - iOSVoIPLib (from `https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git`, branch `rename-main-class`)
   - PIL (from `.`)
   - QuickTableViewController
   - SAMKeychain
@@ -64,13 +64,14 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   iOSVoIPLib:
+    :branch: rename-main-class
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
   PIL:
     :path: "."
 
 CHECKOUT OPTIONS:
   iOSVoIPLib:
-    :commit: 3dc6c20aa8cbb144ab4295a0a6f77b89777bf517
+    :commit: 66d84cd6952c5b5f56d2a93aa4a465bfabf524ab
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
 
 SPEC CHECKSUMS:
@@ -79,11 +80,11 @@ SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   iOSVoIPLib: 5d0a20228ab3f9bdcbb7e35903be4009bfa267b3
   linphone-sdk: 91183cb3e3224d2d1a211357cd6a39d61636d17d
-  PIL: 92a2cade212930afa530f25a3f5945ab8c0f37e9
+  PIL: 660930395909c8c4b572b049a61ab4b48c8dccb9
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: de2bf6b0fa5a6b1094da4fc8f182511907f27bd5
+PODFILE CHECKSUM: 63d2605e5c22ffb647e9638861d03e7a8d6e0137
 
 COCOAPODS: 1.10.0

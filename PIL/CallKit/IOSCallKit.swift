@@ -18,14 +18,14 @@ class IOSCallKit: NSObject {
     public let controller = CXCallController()
     private let notifications = NotificationCenter.default
     private let pil: PIL
-    private let phoneLib: PhoneLib
+    private let voipLib: VoIPLib
     private let callManager: CallManager
     
     internal var uuid:UUID?
     
-    init(pil: PIL, phoneLib: PhoneLib, callManager: CallManager) {
+    init(pil: PIL, voipLib: VoIPLib, callManager: CallManager) {
         self.pil = pil
-        self.phoneLib = phoneLib
+        self.voipLib = voipLib
         self.callManager = callManager
         self.provider = CXProvider(configuration: IOSCallKit.self.createConfiguration())
         super.init()
@@ -102,48 +102,48 @@ class IOSCallKit: NSObject {
 extension IOSCallKit: CXProviderDelegate {
     
     func providerDidReset(_ provider: CXProvider) {
-        phoneLib.terminateAllCalls()
+        voipLib.terminateAllCalls()
     }
 
     public func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
         callExists(action) { call in
-            phoneLib.actions(call: call).accept()
+            voipLib.actions(call: call).accept()
         }
     }
 
     public func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
         callExists(action) { call in
-            phoneLib.actions(call: call).end()
+            voipLib.actions(call: call).end()
         }
     }
 
     public func provider(_ provider: CXProvider, perform action: CXStartCallAction) {
         if let number = action.handle.value as? String {
-            self.phoneLib.call(to: number)
+            self.voipLib.call(to: number)
             action.fulfill()
         }
     }
 
     public func provider(_ provider: CXProvider, perform action: CXSetMutedCallAction) {
-        phoneLib.isMicrophoneMuted = action.isMuted
+        voipLib.isMicrophoneMuted = action.isMuted
         action.fulfill()
     }
     
     public func provider(_ provider: CXProvider, perform action: CXSetHeldCallAction) {
         callExists(action) { call in
-            phoneLib.actions(call: call).hold(onHold: action.isOnHold)
+            voipLib.actions(call: call).hold(onHold: action.isOnHold)
         }
     }
 
     public func provider(_ provider: CXProvider, perform action: CXPlayDTMFCallAction) {
         callExists(action) { call in
-            phoneLib.actions(call: call).sendDtmf(dtmf: action.digits)
+            voipLib.actions(call: call).sendDtmf(dtmf: action.digits)
         }
     }
 
     public func provider(_ provider: CXProvider, didActivate audioSession: AVAudioSession) {
         callExists { call in
-            phoneLib.actions(call: call).setAudio(enabled: true)
+            voipLib.actions(call: call).setAudio(enabled: true)
         }
         
         pil.audio.onActivateAudioSession()
@@ -159,7 +159,7 @@ extension IOSCallKit: CXProviderDelegate {
 
     public func provider(_ provider: CXProvider, didDeactivate audioSession: AVAudioSession) {
         callExists { call in
-            phoneLib.actions(call: call).setAudio(enabled: false)
+            voipLib.actions(call: call).setAudio(enabled: false)
         }
         
         pil.audio.onDeactivateAudioSession()

@@ -15,9 +15,9 @@ public class PIL {
     
     private let callFactory = di.resolve(PILCallFactory.self)!
     private lazy var pushKit: PushKitDelegate = { PushKitDelegate(middleware: app.middleware!) }()
-    private lazy var phoneLibHelper = { di.resolve(PhoneLibHelper.self)! }()
+    private lazy var voipLibHelper = { di.resolve(VoIPLibHelper.self)! }()
     
-    let phoneLib: PhoneLib = di.resolve(PhoneLib.self)!
+    let voipLib: VoIPLib = di.resolve(VoIPLib.self)!
     lazy var iOSCallKit = { di.resolve(IOSCallKit.self)! }()
     
     public lazy var actions = { di.resolve(CallActions.self)! }()
@@ -61,8 +61,8 @@ public class PIL {
             return
         }
         
-        phoneLibHelper.initialize(force: false)
-        phoneLibHelper.register(auth: auth, callback: callback)
+        voipLibHelper.initialize(force: false)
+        voipLibHelper.register(auth: auth, callback: callback)
     }
     
     public func start(forceInitialize: Bool = false, forceReregister: Bool = false, completion: (() -> Void)? = nil) {
@@ -75,11 +75,11 @@ public class PIL {
         iOSCallKit.initialize()
         
         if (forceInitialize) {
-            phoneLib.destroy()
+            voipLib.destroy()
         }
 
-        phoneLibHelper.initialize(force: forceInitialize)
-        phoneLibHelper.register(auth: auth, force: forceReregister) { _ in
+        voipLibHelper.initialize(force: forceInitialize)
+        voipLibHelper.register(auth: auth, force: forceReregister) { _ in
             completion?()
         }
     }
@@ -100,7 +100,7 @@ public class PIL {
     
     private var isPreparedToStart: Bool {
         get {
-            auth != nil && phoneLib.isInitialized
+            auth != nil && voipLib.isInitialized
         }
     }
 }
