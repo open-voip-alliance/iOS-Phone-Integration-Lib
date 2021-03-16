@@ -30,7 +30,7 @@ class DialerViewController: UIViewController {
         guard let number = numberPreview.text,
               let pil = PIL.shared else { return }
         
-        pil.start { 
+        pil.start { _ in
                 MicPermissionHelper.requestMicrophonePermission { startCalling in
                     if startCalling {
                         pil.call(number: number)

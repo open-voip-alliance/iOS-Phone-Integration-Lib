@@ -35,7 +35,7 @@ class IOSCallKit: NSObject {
     }
     
     public func initialize() {
-        self.provider = CXProvider(configuration: IOSCallKit.self.createConfiguration())
+        refresh()
         self.provider.setDelegate(self, queue: nil)
         self.controller.callObserver.setDelegate(self, queue: .main)
     }
@@ -108,8 +108,11 @@ class IOSCallKit: NSObject {
     
     func end() {
         controller.callObserver.calls.forEach { call in
-            provider.reportCall(with: call.uuid, endedAt: Date(), reason: .remoteEnded)
+            pil.writeLog("Ending call with UUID: \(call.uuid) and other uuid \(self.uuid)")
+            provider.reportCall(with: call.uuid, endedAt: nil, reason: .failed)
         }
+        
+        self.uuid = nil
     }
     
     func startCall(number: String) {
@@ -225,18 +228,22 @@ extension IOSCallKit {
 
     private func callExists(_ action: CXCallAction? = nil, callback: (Call) -> Void) {
         if let transferSession = callManager.transferSession {
+            pil.writeLog("CXCallAction \(action.debugDescription) completed on transfer target")
             callback(transferSession.to)
             action?.fulfill()
             return
         }
         
         if let call = callManager.call {
+            
+            pil.writeLog("CXCallAction \(action.debugDescription) completed on active call")
             callback(call)
             action?.fulfill()
             pil.events.broadcast(event: .callUpdated)
             return
         }
         
+        pil.writeLog("CXCallAction \(action.debugDescription) has failed")
         action?.fail()
     }
 }

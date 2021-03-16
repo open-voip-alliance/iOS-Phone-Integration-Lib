@@ -34,12 +34,18 @@ extension PushKitDelegate: PKPushRegistryDelegate {
         pil.iOSCallKit.reportIncomingCall(detail: self.middleware.extractCallDetail(from: payload))
         
         if pil.calls.isInCall {
-            print("Not taking call as we already have an active one!")
+            pil.writeLog("Not taking call as we already have an active one!")
             return
         }
         
-        pil.start {
-            self.middleware.respond(payload: payload, available: true)
+        pil.start { success in
+            self.pil.writeLog("Pil started with success: \(success)")
+            
+            if success {
+                self.middleware.respond(payload: payload, available: true)
+            } else {
+                self.pil.iOSCallKit.cancelIncomingCall()
+            }
         }
     }
 
