@@ -55,7 +55,7 @@ class CallManager: CallDelegate {
 
     public func callEnded(_ session: Call) {
         if !pil.calls.isInTranfer {
-            pil.iOSCallKit.provider.reportCall(with: pil.iOSCallKit.uuid!, endedAt: Date(), reason: .remoteEnded)
+            pil.iOSCallKit.end()
             self.call = nil
         }
         
@@ -77,6 +77,8 @@ class CallManager: CallDelegate {
         update.supportsHolding = true
         update.supportsDTMF = true
         
-        pil.iOSCallKit.provider.reportCall(with: pil.iOSCallKit.uuid!, updated: update)
+        if let uuid = pil.iOSCallKit.uuid {
+            pil.iOSCallKit.provider.reportCall(with: uuid, updated: update)
+        }
     }
 }
