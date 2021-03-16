@@ -70,7 +70,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   iOSVoIPLib:
-    :commit: d3573acd54ba77c45aad059813d74763b5803ae3
+    :commit: 8a0d4cecea0d68b29fae349b7b331505637ecaad
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
 
 SPEC CHECKSUMS:
@@ -86,4 +86,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: de2bf6b0fa5a6b1094da4fc8f182511907f27bd5
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

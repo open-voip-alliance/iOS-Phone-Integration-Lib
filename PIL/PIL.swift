@@ -62,10 +62,10 @@ public class PIL {
         }
         
         voipLibHelper.initialize(force: false)
-        voipLibHelper.register(auth: auth, callback: callback)
+        voipLibHelper.register(auth: auth, force: true, callback: callback)
     }
     
-    public func start(forceInitialize: Bool = false, forceReregister: Bool = false, completion: (() -> Void)? = nil) {
+    public func start(forceInitialize: Bool = false, forceReregister: Bool = false, completion: ((_ success: Bool) -> Void)? = nil) {
         guard let auth = self.auth else {
             print("There are not authentication details provided")
             return
@@ -79,8 +79,8 @@ public class PIL {
         }
 
         voipLibHelper.initialize(force: forceInitialize)
-        voipLibHelper.register(auth: auth, force: forceReregister) { _ in
-            completion?()
+        voipLibHelper.register(auth: auth, force: forceReregister) { success in
+            completion?(success)
         }
     }
     
@@ -89,7 +89,7 @@ public class PIL {
             return
         }
         
-        start {
+        start { _ in
             self.iOSCallKit.startCall(number: number)
         }
     }
