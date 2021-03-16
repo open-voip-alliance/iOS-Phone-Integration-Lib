@@ -95,7 +95,7 @@ public class PIL {
     }
     
     internal func writeLog(_ message: String) {
-        print(message)
+        print("PhoneIntegrationLib:" + message)
     }
     
     private var isPreparedToStart: Bool {

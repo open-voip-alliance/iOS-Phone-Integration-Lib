@@ -14,13 +14,16 @@ import iOSVoIPLib
 class IOSCallKit: NSObject {
 
     private var timer: Timer?
-    public let provider: CXProvider
+    public var provider: CXProvider
     public let controller = CXCallController()
     private let notifications = NotificationCenter.default
     private let pil: PIL
     private let voipLib: VoIPLib
     private let callManager: CallManager
     
+    /**
+        This is the UUID of the current, active, valid call. This should never be set to anything aside from a call we know is valid.
+     */
     internal var uuid:UUID?
     
     init(pil: PIL, voipLib: VoIPLib, callManager: CallManager) {
@@ -29,11 +32,12 @@ class IOSCallKit: NSObject {
         self.callManager = callManager
         self.provider = CXProvider(configuration: IOSCallKit.self.createConfiguration())
         super.init()
-        self.provider.setDelegate(self, queue: nil)
     }
     
     public func initialize() {
-        
+        self.provider = CXProvider(configuration: IOSCallKit.self.createConfiguration())
+        self.provider.setDelegate(self, queue: nil)
+        self.controller.callObserver.setDelegate(self, queue: .main)
     }
 
     func refresh() {
@@ -66,7 +70,12 @@ class IOSCallKit: NSObject {
     }
 
     func reportIncomingCall(detail: IncomingPayloadCallDetail) {
-        self.uuid = UUID.init()
+        let uuid = UUID.init()
+        
+        if !hasActiveCalls() {
+            self.uuid = uuid
+        }
+        
         let update = CXCallUpdate()
 
         update.remoteHandle = CXHandle(
@@ -76,14 +85,39 @@ class IOSCallKit: NSObject {
         
         update.localizedCallerName = detail.callerId
         
-        provider.reportNewIncomingCall(with: self.uuid!, update: update) { error in
+        provider.reportNewIncomingCall(with: uuid, update: update) { error in
             if error != nil {
                 self.pil.writeLog("ERROR: \(error?.localizedDescription)")
             }
         }
     }
     
+    func cancelIncomingCall(reason: CXCallEndedReason = CXCallEndedReason.failed, date: Date = Date()) {
+        if !hasActiveCalls() {
+            pil.writeLog("cancelIncomingCall was requested but there are no active CallKit calls.")
+            return
+        }
+        
+        controller.callObserver.calls.filter({ $0.uuid != self.uuid }).forEach { call in
+            if !call.isOutgoing && !call.hasConnected {
+                pil.writeLog("Cancelling incoming call with uuid \(call.uuid), the user will have been alerted for the incoming call already")
+                provider.reportCall(with: call.uuid, endedAt: date, reason: reason)
+            }
+        }
+    }
+    
+    func end() {
+        controller.callObserver.calls.forEach { call in
+            provider.reportCall(with: call.uuid, endedAt: Date(), reason: .remoteEnded)
+        }
+    }
+    
     func startCall(number: String) {
+        if hasActiveCalls() {
+            pil.writeLog("Unable to start new call while CallKit has at least 1 active call")
+            return
+        }
+        
         self.uuid = UUID.init()
         let handle = CXHandle(type: .phoneNumber, value: number)
         let action = CXStartCallAction(call: self.uuid!, handle: handle)
@@ -97,6 +131,9 @@ class IOSCallKit: NSObject {
         }
     }
 
+    private func hasActiveCalls() -> Bool {
+        controller.callObserver.calls.count > 0
+    }
 }
 
 extension IOSCallKit: CXProviderDelegate {
@@ -164,6 +201,23 @@ extension IOSCallKit: CXProviderDelegate {
         
         pil.audio.onDeactivateAudioSession()
         timer?.invalidate()
+    }
+}
+
+extension IOSCallKit: CXCallObserverDelegate {
+    func callObserver(_ callObserver: CXCallObserver, callChanged call: CXCall) {
+        let callCount = callObserver.calls.count
+        
+        if callCount >= 2 {
+            pil.writeLog("We have detected multiple calls, we must cancel them.")
+            cancelIncomingCall()
+        }
+        
+        pil.writeLog("CXCallObserverDelegate has detected call change, currently has \(callCount) calls")
+                
+        if callCount == 0 {
+            self.uuid = nil
+        }
     }
 }
 

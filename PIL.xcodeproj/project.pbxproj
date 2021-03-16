@@ -249,13 +249,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		5CBE0AC925F14C5D00E797EE /* Exception */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Exception;
-			sourceTree = "<group>";
-		};
 		5CBE0C8F25F4071900E797EE /* IOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,7 +284,6 @@
 			children = (
 				5CAED4F425F5293A00F9F4B1 /* Contacts */,
 				5CBE0C8F25F4071900E797EE /* IOS */,
-				5CBE0AC925F14C5D00E797EE /* Exception */,
 				5CBE0A4E25F130BC00E797EE /* Helpers */,
 				5C92D81125DAC997003019D1 /* DI */,
 				5C92D7C825DA93E8003019D1 /* Events */,
