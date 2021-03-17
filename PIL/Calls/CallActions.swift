@@ -101,7 +101,7 @@ public class CallActions {
     }
     
     func performCallAction(_ callback: (UUID) -> CXCallAction) {
-        guard let uuid = pil.iOSCallKit.uuid else { return }
+        guard let uuid = pil.iOSCallKit.findCallUuid() else { return }
         let action = callback(uuid)
         
         controller.request(CXTransaction(action: action)) { error in
