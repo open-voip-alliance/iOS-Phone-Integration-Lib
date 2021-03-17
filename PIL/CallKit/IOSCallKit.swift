@@ -20,12 +20,7 @@ class IOSCallKit: NSObject {
     private let pil: PIL
     private let voipLib: VoIPLib
     private let callManager: CallManager
-    
-    /**
-        This is the UUID of the current, active, valid call. This should never be set to anything aside from a call we know is valid.
-     */
-    internal var uuid:UUID?
-    
+        
     init(pil: PIL, voipLib: VoIPLib, callManager: CallManager) {
         self.pil = pil
         self.voipLib = voipLib
@@ -49,7 +44,7 @@ class IOSCallKit: NSObject {
                 localizedName: Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
         )
 
-        if let icon = UIImage(named: "CallKitIcon") {
+        if let icon = UIImage(named: "PhoneIntegrationLibCallKitIcon") {
             providerConfiguration.iconTemplateImageData = icon.pngData()
         }
         
@@ -60,8 +55,8 @@ class IOSCallKit: NSObject {
 
         if let pil = PIL.shared {
             if pil.preferences.useApplicationRingtone {
-                if Bundle.main.path(forResource: "ringtone", ofType: "wav") != nil {
-                    providerConfiguration.ringtoneSound = "ringtone.wav"
+                if Bundle.main.path(forResource: "phone_integration_lib_call_kit_ringtone", ofType: "wav") != nil {
+                    providerConfiguration.ringtoneSound = "phone_integration_lib_call_kit_ringtone.wav"
                 }
             }
         }
@@ -70,11 +65,7 @@ class IOSCallKit: NSObject {
     }
 
     func reportIncomingCall(detail: IncomingPayloadCallDetail) {
-        let uuid = UUID.init()
-        
-        if !hasActiveCalls() {
-            self.uuid = uuid
-        }
+        self.pil.writeLog("Reporting incoming call!")
         
         let update = CXCallUpdate()
 
@@ -85,45 +76,61 @@ class IOSCallKit: NSObject {
         
         update.localizedCallerName = detail.callerId
         
-        provider.reportNewIncomingCall(with: uuid, update: update) { error in
+        provider.reportNewIncomingCall(with: UUID.init(), update: update) { error in
             if error != nil {
                 self.pil.writeLog("ERROR: \(error?.localizedDescription)")
+            }
+        }
+    
+        performSanityCheck()
+    }
+    
+    private func performSanityCheck() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            if self.hasActiveCalls {
+                self.pil.writeLog("Performing sanity check that we have an active library while there are calls ringing")
+                
+                if !self.pil.voipLib.isReady {
+                    self.pil.writeLog("VoIP library is not booted, ending all calls")
+                    self.endAllCalls(reason: .failed)
+                    return
+                }
+                   
+                if !self.pil.calls.isInCall {
+                    self.pil.writeLog("VoIP library appears to have been booted however there does not appear to be an active call, ending all CallKit calls.")
+                    self.endAllCalls(reason: .failed)
+                }
             }
         }
     }
     
     func cancelIncomingCall(reason: CXCallEndedReason = CXCallEndedReason.failed, date: Date = Date()) {
-        if !hasActiveCalls() {
+        if !hasActiveCalls {
             pil.writeLog("cancelIncomingCall was requested but there are no active CallKit calls.")
             return
         }
         
-        controller.callObserver.calls.filter({ $0.uuid != self.uuid }).forEach { call in
-            if !call.isOutgoing && !call.hasConnected {
-                pil.writeLog("Cancelling incoming call with uuid \(call.uuid), the user will have been alerted for the incoming call already")
-                provider.reportCall(with: call.uuid, endedAt: date, reason: reason)
-            }
+        controller.callObserver.calls.filter({ $0.uuid != self.findCallUuid()! && !$0.isOutgoing }).forEach { call in
+            pil.writeLog("Cancelling incoming call with uuid \(call.uuid), the user will have been alerted for the incoming call already")
+            provider.reportCall(with: call.uuid, endedAt: nil, reason: reason)
         }
     }
     
-    func end() {
+    func endAllCalls(reason: CXCallEndedReason = CXCallEndedReason.remoteEnded, date: Date? = nil) {
         controller.callObserver.calls.forEach { call in
-            pil.writeLog("Ending call with UUID: \(call.uuid) and other uuid \(self.uuid)")
-            provider.reportCall(with: call.uuid, endedAt: nil, reason: .failed)
+            pil.writeLog("Ending call with UUID: \(call.uuid), reason: \(reason.rawValue)")
+            provider.reportCall(with: call.uuid, endedAt: date, reason: reason)
         }
-        
-        self.uuid = nil
     }
     
     func startCall(number: String) {
-        if hasActiveCalls() {
+        if hasActiveCalls {
             pil.writeLog("Unable to start new call while CallKit has at least 1 active call")
             return
         }
         
-        self.uuid = UUID.init()
         let handle = CXHandle(type: .phoneNumber, value: number)
-        let action = CXStartCallAction(call: self.uuid!, handle: handle)
+        let action = CXStartCallAction(call: UUID.init(), handle: handle)
         action.isVideo = false
         
         controller.requestTransaction(with: action) { error in
@@ -133,9 +140,31 @@ class IOSCallKit: NSObject {
             }
         }
     }
-
-    private func hasActiveCalls() -> Bool {
-        controller.callObserver.calls.count > 0
+    
+    func reportOutgoingCallConnecting() {
+        if let uuid = findCallUuid() {
+            provider.reportOutgoingCall(with:uuid, startedConnectingAt: Date())
+        }
+    }
+    
+    func updateCall(update: CXCallUpdate) {
+        if let uuid = findCallUuid() {
+            pil.iOSCallKit.provider.reportCall(with: uuid, updated: update)
+        }
+    }
+    
+    public func findCallUuid() -> UUID? {
+        if self.controller.callObserver.calls.count >= 1 {
+            return self.controller.callObserver.calls[0].uuid
+        } else {
+            return nil
+        }
+    }
+    
+    private var hasActiveCalls: Bool {
+        get {
+            controller.callObserver.calls.count > 0
+        }
     }
 }
 
@@ -217,10 +246,6 @@ extension IOSCallKit: CXCallObserverDelegate {
         }
         
         pil.writeLog("CXCallObserverDelegate has detected call change, currently has \(callCount) calls")
-                
-        if callCount == 0 {
-            self.uuid = nil
-        }
     }
 }
 
@@ -235,7 +260,6 @@ extension IOSCallKit {
         }
         
         if let call = callManager.call {
-            
             pil.writeLog("CXCallAction \(action.debugDescription) completed on active call")
             callback(call)
             action?.fulfill()

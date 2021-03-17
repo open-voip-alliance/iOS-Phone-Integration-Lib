@@ -39,13 +39,8 @@ extension PushKitDelegate: PKPushRegistryDelegate {
         }
         
         pil.start { success in
-            self.pil.writeLog("Pil started with success: \(success)")
-            
-            if success {
-                self.middleware.respond(payload: payload, available: true)
-            } else {
-                self.pil.iOSCallKit.cancelIncomingCall()
-            }
+            self.pil.writeLog("PIL started with success=\(success), responding to middleware: \(success)")
+            self.middleware.respond(payload: payload, available: success)
         }
     }
 
