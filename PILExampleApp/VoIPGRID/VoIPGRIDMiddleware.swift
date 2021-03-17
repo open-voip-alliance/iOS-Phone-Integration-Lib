@@ -27,7 +27,7 @@ class VoIPGRIDMiddleware: Middleware {
                 "sip_user_id" : sipUserId,
                 "app" : "com.voipgrid.PILExampleApp",
                 "push_profile" : "once",
-                "sandbox"   : "true"
+                "sandbox" : "true"
             ],
             headers: createAuthHeader()
         ).response { response in

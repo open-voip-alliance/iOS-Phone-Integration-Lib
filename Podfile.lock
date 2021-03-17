@@ -1,21 +1,4 @@
 PODS:
-  - AFNetworkActivityLogger (3.0.0):
-    - AFNetworking/NSURLSession (~> 3.0)
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
-    - AFNetworking/NSURLSession
   - Alamofire (5.4.1)
   - iOSVoIPLib (0.1.0):
     - linphone-sdk (= 4.4.1)
@@ -42,8 +25,6 @@ PODS:
   - Swinject (2.7.1)
 
 DEPENDENCIES:
-  - AFNetworkActivityLogger
-  - AFNetworking
   - Alamofire (~> 5.2)
   - iOSVoIPLib (from `https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git`)
   - PIL (from `.`)
@@ -53,8 +34,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - AFNetworkActivityLogger
-    - AFNetworking
     - Alamofire
     - QuickTableViewController
     - SAMKeychain
@@ -74,8 +53,6 @@ CHECKOUT OPTIONS:
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
 
 SPEC CHECKSUMS:
-  AFNetworkActivityLogger: e77f68d014becb33c4306a23f56a64906ff72670
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   iOSVoIPLib: 5d0a20228ab3f9bdcbb7e35903be4009bfa267b3
   linphone-sdk: 91183cb3e3224d2d1a211357cd6a39d61636d17d
@@ -84,6 +61,10 @@ SPEC CHECKSUMS:
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
+<<<<<<< HEAD
 PODFILE CHECKSUM: de2bf6b0fa5a6b1094da4fc8f182511907f27bd5
+=======
+PODFILE CHECKSUM: 51027ddea33ea7bbc787bb49ec8bbb69e427236d
+>>>>>>> 88052d5... pods again
 
 COCOAPODS: 1.10.1
