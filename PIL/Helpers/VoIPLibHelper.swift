@@ -20,6 +20,7 @@ class VoIPLibHelper {
         self.callManager = callManager
     }
     
+    /// Boots the VoIP library.
     internal func initialize(force: Bool) {
         if voipLib.isInitialized && !force {
             pil.writeLog("The VoIP library is already initialized, skipping init.")
@@ -35,6 +36,7 @@ class VoIPLibHelper {
         )
     }
 
+    /// Attempt to register if there are valid credentials.
     internal func register(auth: Auth, force: Bool = false, callback: @escaping (Bool) -> Void) {
         guard let auth = pil.auth else {
             pil.writeLog("There are no authentication credentials, not registering.")
@@ -65,6 +67,9 @@ class VoIPLibHelper {
         }
     }
     
+    /// Create configuration object using authentication details
+    /// - Parameter auth: authentication details object
+    /// - Returns: configuration object
     private func createConfig(auth: Auth) -> iOSVoIPLib.Config {
         iOSVoIPLib.Config(
             auth: iOSVoIPLib.Auth(name: auth.username, password: auth.password, domain: auth.domain, port: auth.port),

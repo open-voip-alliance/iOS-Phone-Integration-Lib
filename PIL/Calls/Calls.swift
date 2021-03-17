@@ -10,12 +10,15 @@ public class Calls {
     private let callManager: CallManager
     private let factory: PILCallFactory
     
+    /// The currently active call that is setup to send/receive audio.
     public var active: PILCall? {
         get {
             factory.make(libraryCall: findActiveCall())
         }
     }
 
+    /// The background call. This will only exist when a transfer is happening.
+    /// This will be the initial call while connecting to the new call.
     public var inactive: PILCall? {
         get {
             factory.make(libraryCall: findInactiveCall())

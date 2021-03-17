@@ -28,6 +28,8 @@ public class PIL {
     
     static public var shared: PIL?
     
+    /// The user preferences for the PIL, when this value is updated it will trigger
+    /// a full PIL restart and re-register.
     public var preferences = Preferences() {
         didSet {
             if isPreparedToStart {
@@ -36,6 +38,8 @@ public class PIL {
         }
     }
     
+    /// The authentication details for the PIL, when this value is updated it will
+    /// trigger a full re-register.
     public var auth: Auth? {
         didSet {
             if isPreparedToStart {
@@ -50,11 +54,9 @@ public class PIL {
         self.iOS.startListeningForSystemNotifications()
     }
     
-    /**
-      Quickly check if the PIL is currently configured to successfully register.
-     
-     - Parameter callback: Called when the registration check has been completed.
-     */
+    /// Check if the PIL is currently configured to successfully register.
+    /// Attempt to boot and register to see if user credentials are correct.
+    /// - Parameter callback: Called when the registration check has been completed.
     public func performRegistrationCheck(callback: @escaping (Bool) -> Void) {
         guard let auth = self.auth else {
             callback(false)
@@ -65,6 +67,11 @@ public class PIL {
         voipLibHelper.register(auth: auth, force: true, callback: callback)
     }
     
+    /// Start the PIL, unless the force options are provided, the method will not restart or re-register.
+    /// - Parameters:
+    ///   - forceInitialize: a Bool to determine if the voipLib will restart.
+    ///   - forceReregister: a Bool to determine the voipLib will re-register.
+    ///   - completion:  Called with param success when the PIL has been started.
     public func start(forceInitialize: Bool = false, forceReregister: Bool = false, completion: ((_ success: Bool) -> Void)? = nil) {
         guard let auth = self.auth else {
             print("There are not authentication details provided")
@@ -84,6 +91,9 @@ public class PIL {
         }
     }
     
+    /// Place a call to the given number.
+    /// This will boot the lib if it is not already booted.
+    /// - Parameter number: the String number to call.
     public func call(number: String) {
         if calls.isInCall {
             return
@@ -98,6 +108,7 @@ public class PIL {
         app.logDelegate?.onLogReceived(message: "PhoneIntegrationLib: \(message)", level: level)
     }
     
+    /// Check whether the PIL has been initialized and the authentication details are set.
     private var isPreparedToStart: Bool {
         get {
             auth != nil && voipLib.isInitialized
