@@ -41,7 +41,7 @@ class CallViewController: UIViewController, PILEventDelegate {
             render(call: call)
         }
        
-        if event == .callEnded {
+        if event == .callEnded && !pil.calls.isInCall {
             self.dismiss(animated: true, completion: nil)
         }
     }
