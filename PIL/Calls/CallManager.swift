@@ -27,18 +27,24 @@ class CallManager: CallDelegate {
         
     public func incomingCallReceived(_ incomingCall: Call) {
         if !isInCall {
+            pil.writeLog("Setting up the incoming call")
             self.call = incomingCall
             pil.events.broadcast(event: .incomingCallReceived)
             callKitUpdateCurrentCall(incomingCall)
+        } else {
+            pil.writeLog("Detecting incoming call received while already in call so not doing anything")
         }
     }
 
     public func outgoingCallCreated(_ call: Call) {
         if !isInCall {
+            pil.writeLog("Setting up the outgoing call")
             self.call = call
             pil.iOSCallKit.reportOutgoingCallConnecting()
             pil.events.broadcast(event: .outgoingCallStarted)
             pil.app.requestCallUi()
+        } else {
+            pil.writeLog("Detected outgoing call creation while already in call so not doing anything")
         }
     }
 
@@ -48,13 +54,17 @@ class CallManager: CallDelegate {
     }
 
     public func callConnected(_ call: Call) {
+        pil.writeLog("Call has connected")
         callKitUpdateCurrentCall(call)
         pil.events.broadcast(event: .callConnected)
         pil.app.requestCallUi()
     }
 
     public func callEnded(_ session: Call) {
+        pil.writeLog("Received call ended event")
+        
         if !pil.calls.isInTranfer {
+            pil.writeLog("We are not currently in transfer so we will end all calls")
             pil.iOSCallKit.endAllCalls()
             self.call = nil
         }
