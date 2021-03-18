@@ -9,7 +9,8 @@ import UIKit
 import PIL
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, LogDelegate {
+    
 
     var window: UIWindow?
     
@@ -25,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if let nav = self.window?.rootViewController as? UITabBarController {
                     nav.performSegue(withIdentifier: "LaunchCallSegue", sender: nav)
                 }
-            }
+            },
+            logDelegate: self
         )
         
         _ = startIOSPIL(
@@ -46,6 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func userDefault(key: String) -> String {
         defaults.object(forKey: key) as? String ?? ""
     } //TODO: move this outside ViewControllers
-
+    
+    func onLogReceived(message: String, level: LogLevel) {
+        print("\(String(describing: level)) \(message)")
+    }
 }
 

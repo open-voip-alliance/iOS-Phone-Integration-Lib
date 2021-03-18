@@ -94,8 +94,8 @@ public class PIL {
         }
     }
     
-    internal func writeLog(_ message: String) {
-        print("PhoneIntegrationLib:" + message)
+    internal func writeLog(_ message: String, level: LogLevel = .info) {
+        app.logDelegate?.onLogReceived(message: "PhoneIntegrationLib: \(message)", level: level)
     }
     
     private var isPreparedToStart: Bool {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		10AB264FE164F825E8827333 /* Pods_PILExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DA1144AB4ECB29126ED6F3 /* Pods_PILExampleApp.framework */; };
 		4DAC77D3E027A8A2EDEC813D /* Pods_PIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE051288AC0AD01D07F6DE8E /* Pods_PIL.framework */; };
+		5C66DF572603505B0051199B /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66DF562603505B0051199B /* LogLevel.swift */; };
+		5C66DF5C260350860051199B /* LogDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66DF5B260350860051199B /* LogDelegate.swift */; };
 		5C92D7CA25DA93F8003019D1 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D7C925DA93F8003019D1 /* EventsManager.swift */; };
 		5C92D7CB25DA93F8003019D1 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D7C925DA93F8003019D1 /* EventsManager.swift */; };
 		5C92D7EF25DAA9B1003019D1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D7EE25DAA9B1003019D1 /* Preferences.swift */; };
@@ -77,6 +79,8 @@
 		47DA1144AB4ECB29126ED6F3 /* Pods_PILExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PILExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		547F786BF437C8AF1105C5D9 /* Pods-PILExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PILExampleApp.release.xcconfig"; path = "Target Support Files/Pods-PILExampleApp/Pods-PILExampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		58B68102CB53FFE0FDCAF465 /* Pods_PILTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PILTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C66DF562603505B0051199B /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		5C66DF5B260350860051199B /* LogDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDelegate.swift; sourceTree = "<group>"; };
 		5C92D7C925DA93F8003019D1 /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		5C92D7EE25DAA9B1003019D1 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		5C92D81225DAC9AE003019D1 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -190,6 +194,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5C66DF552603504D0051199B /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				5C66DF562603505B0051199B /* LogLevel.swift */,
+				5C66DF5B260350860051199B /* LogDelegate.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		5C92D7C825DA93E8003019D1 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +303,7 @@
 		8319D8AA2576AD8D0095E54E /* PIL */ = {
 			isa = PBXGroup;
 			children = (
+				5C66DF552603504D0051199B /* Logging */,
 				5CAED4F425F5293A00F9F4B1 /* Contacts */,
 				5CBE0C8F25F4071900E797EE /* IOS */,
 				5CBE0A4E25F130BC00E797EE /* Helpers */,
@@ -659,6 +673,8 @@
 				5CAB174625DA8FCE00BC12E5 /* CallDirection.swift in Sources */,
 				F81F06860533E6AB96B28CBA /* Builder.swift in Sources */,
 				5CAB174825DA8FCE00BC12E5 /* PILCallFactory.swift in Sources */,
+				5C66DF572603505B0051199B /* LogLevel.swift in Sources */,
+				5C66DF5C260350860051199B /* LogDelegate.swift in Sources */,
 				5CBE0C9125F4072300E797EE /* IOS.swift in Sources */,
 				5CAB174B25DA8FCE00BC12E5 /* CallActions.swift in Sources */,
 				5CBE0A5B25F1450D00E797EE /* Middleware.swift in Sources */,
