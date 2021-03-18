@@ -29,7 +29,12 @@ class PushKitDelegate: NSObject {
 extension PushKitDelegate: PKPushRegistryDelegate {
 
     public func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> ()) {
-        print("Received a push message with the following payload \(payload.dictionaryPayload)")
+        if type != .voIP {
+            pil.writeLog("Received a non-voip push message, ignoring it")
+            return
+        }
+        
+        pil.writeLog("Received a VoIP push message, starting incoming ringing.")
         
         pil.iOSCallKit.reportIncomingCall(detail: self.middleware.extractCallDetail(from: payload))
         
