@@ -15,6 +15,8 @@ public protocol Middleware {
     func tokenReceived(token: String)
     
     func extractCallDetail(from payload: PKPushPayload) -> IncomingPayloadCallDetail
+    
+    func handleNonVoIPPush(payload: PKPushPayload, type: PKPushType)
 }
 
 public struct IncomingPayloadCallDetail {
