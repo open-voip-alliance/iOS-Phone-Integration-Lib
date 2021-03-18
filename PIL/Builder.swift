@@ -34,6 +34,7 @@ public class Builder {
     }
 }
 
+/// Initialise the iOS PIL, this should be called in your AppDelegate's didFinishLaunchingWithOptions method.
 public func startIOSPIL(applicationSetup: ApplicationSetup, auth: Auth? = nil, preferences: Preferences? = nil, autoStart: Bool = true) -> PIL {
     let builder = Builder()
     builder.applicationSetup = applicationSetup
