@@ -14,6 +14,10 @@ class VoIPGRIDMiddleware: Middleware {
     
     private let defaults = UserDefaults.standard
     
+    public var isVoipgridTokenValid: Bool {
+        defaults.string(forKey: "voipgrid_api_token")?.isEmpty == false
+    }
+    
     public func register(completion: @escaping (Bool) -> Void) {
         let username = defaults.object(forKey: "voipgrid_username") as? String ?? ""
         let sipUserId = defaults.object(forKey: "username") as? String ?? ""
@@ -92,6 +96,28 @@ class VoIPGRIDMiddleware: Middleware {
     func handleNonVoIPPush(payload: PKPushPayload, type: PKPushType) {
         UserDefaults.standard.set(false, forKey: "middleware_is_registered")
     }
+
+    public func setVoIPAccountEncryption(encryption: Bool, completion: @escaping (Bool) -> Void) {
+        print("Setting Voipgrid app account with encryption: \(encryption)")
+        
+        AF.request(
+            "https://partner.voipgrid.nl/api/mobile/profile/",
+            method: .put,
+            parameters: ["appaccount_use_encryption" : encryption],
+            encoding: JSONEncoding.default,
+            headers: createAuthHeader()
+        ).response { response in
+            switch response.result {
+                case .success(_):
+                    print("VoIP Account Encryption set to \(encryption) successfully.")
+                    self.defaults.set(encryption, forKey: "VoIP Account Encryption")
+                    completion(true)
+                case .failure(_):
+                    print("Error, could not set the VoIP account encryption to \(encryption).")
+                    completion(false)
+                }
+        }
+    }
     
     public func extractCallDetail(from payload: PKPushPayload) -> IncomingPayloadCallDetail {
         return IncomingPayloadCallDetail(
@@ -100,7 +126,7 @@ class VoIPGRIDMiddleware: Middleware {
         )
     }
     
-    private func createAuthHeader() -> HTTPHeaders {
+    internal func createAuthHeader() -> HTTPHeaders {
         let username = defaults.object(forKey: "voipgrid_username") as? String ?? ""
         let apiToken = defaults.object(forKey: "voipgrid_api_token") as? String ?? ""
         

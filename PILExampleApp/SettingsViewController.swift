@@ -45,6 +45,19 @@ final class SettingsViewController: QuickTableViewController {
             Section(title: "VoIPGRID", rows: [
                 NavigationRow(text: "Username", detailText: .subtitle(userDefault(key: "voipgrid_username")), action: { [weak self] in self?.promptUserWithTextField(row: $0, title: "Username", key: "voipgrid_username") }),
                 NavigationRow(text: "Password", detailText: .subtitle(userDefault(key: "voipgrid_password")), icon: .named("gear"), action: { [weak self] in self?.promptUserWithTextField(row: $0, title: "Password", key: "voipgrid_password") }),
+                SwitchRow(text: "VoIP Account Encryption", switchValue: self.defaults.bool(forKey: "VoIP Account Encryption"), customization: { cell,row in
+                        let middleware = VoIPGRIDMiddleware()
+                        cell.isUserInteractionEnabled = middleware.isVoipgridTokenValid
+                        if middleware.isVoipgridTokenValid == false {
+                            if let switchRow = row as? SwitchRowCompatible {
+                                switchRow.switchValue = false
+                            }
+                        }
+                    }, action: { row in
+                        if let switchRow = row as? SwitchRowCompatible {
+                            self.attemptVoIPAccountEncryptionChangeTo(encryption: switchRow.switchValue)
+                        }
+                    }),
                 NavigationRow(text: "VoIPGRID Token", detailText: .subtitle(userDefault(key: "voipgrid_api_token")), action: nil),
                 NavigationRow(text: "Push Kit Token", detailText: .subtitle(userDefault(key: "push_kit_token")), action: nil),
                 NavigationRow(text: "Middleware", detailText: .subtitle(defaults.bool(forKey: "middleware_is_registered") ? "Registered" : "Not Registered"), action: nil),
@@ -53,12 +66,12 @@ final class SettingsViewController: QuickTableViewController {
             ]),
             
             Section(title: "Preferences", rows: [
-                SwitchRow(title: "Encryption", switchValue: self.defaults.bool(forKey: "encryption"), action: { row in
+                SwitchRow(text: "Encryption", switchValue: self.defaults.bool(forKey: "encryption"), action: { row in
                     if let switchRow = row as? SwitchRowCompatible {
                         self.defaults.set(switchRow.switchValue, forKey: "encryption")
                     }
                 }),
-                SwitchRow(title: "Use Application Ringtone", switchValue: self.defaults.bool(forKey: "use_application_ringtone"), action: { row in
+                SwitchRow(text: "Use Application Ringtone", switchValue: self.defaults.bool(forKey: "use_application_ringtone"), action: { row in
                     if let switchRow = row as? SwitchRowCompatible {
                         self.defaults.set(switchRow.switchValue, forKey: "use_application_ringtone")
                     }
@@ -67,7 +80,6 @@ final class SettingsViewController: QuickTableViewController {
         ]
     }
     
-
     private func promptUserWithTextField(row: Row, title: String, key: String) {
         let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertController.Style.alert)
         let action = UIAlertAction(title: "Save", style: .default) { (alertAction) in
@@ -100,6 +112,13 @@ final class SettingsViewController: QuickTableViewController {
             self.defaults.set(apiToken, forKey: "voipgrid_api_token")
             self.viewDidLoad()
         }
+    }
+    
+    private func attemptVoIPAccountEncryptionChangeTo(encryption: Bool) {
+        let middleware = VoIPGRIDMiddleware()
+        middleware.setVoIPAccountEncryption(encryption: encryption, completion: { _ in
+            self.viewDidLoad()
+        })
     }
     
     private func registerMiddleware() {

@@ -956,7 +956,7 @@
 				CODE_SIGN_ENTITLEMENTS = PILExampleApp/PILExampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
 				INFOPLIST_FILE = PILExampleApp/Info.plist;
@@ -984,7 +984,7 @@
 				CODE_SIGN_ENTITLEMENTS = PILExampleApp/PILExampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
 				INFOPLIST_FILE = PILExampleApp/Info.plist;
