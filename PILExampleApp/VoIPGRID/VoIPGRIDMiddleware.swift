@@ -11,6 +11,7 @@ import PIL
 import PushKit
 
 class VoIPGRIDMiddleware: Middleware {
+    
     private let defaults = UserDefaults.standard
     
     public func register(completion: @escaping (Bool) -> Void) {
@@ -86,6 +87,10 @@ class VoIPGRIDMiddleware: Middleware {
                     print("Failure")
                 }
         }
+    }
+    
+    func handleNonVoIPPush(payload: PKPushPayload, type: PKPushType) {
+        UserDefaults.standard.set(false, forKey: "middleware_is_registered")
     }
     
     public func extractCallDetail(from payload: PKPushPayload) -> IncomingPayloadCallDetail {

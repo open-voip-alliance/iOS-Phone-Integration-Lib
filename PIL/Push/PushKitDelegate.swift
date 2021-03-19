@@ -31,6 +31,7 @@ extension PushKitDelegate: PKPushRegistryDelegate {
     public func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> ()) {
         if type != .voIP {
             pil.writeLog("Received a non-voip push message, ignoring it")
+            self.middleware.handleNonVoIPPush(payload: payload, type: type)
             return
         }
         
