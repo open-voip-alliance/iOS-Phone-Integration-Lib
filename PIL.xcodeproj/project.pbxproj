@@ -43,7 +43,6 @@
 		8319D8B22576AD8D0095E54E /* PIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8319D8A82576AD8D0095E54E /* PIL.framework */; };
 		8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319D8B62576AD8D0095E54E /* PILTests.swift */; };
 		8322DB4225DF12A500C7B67E /* MicPermissionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322DB4125DF12A500C7B67E /* MicPermissionHelper.swift */; };
-		833E437125C1A3DA0006518B /* NSString+SubString.m in Sources */ = {isa = PBXBuildFile; fileRef = 833E436F25C1A3DA0006518B /* NSString+SubString.m */; };
 		833E437725C1B4D20006518B /* UrlsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E437625C1B4D20006518B /* UrlsConfiguration.swift */; };
 		833E445D25C98FFC0006518B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833E445C25C98FFC0006518B /* Config.plist */; };
 		833E446225C9914B0006518B /* StagingConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833E446125C9914B0006518B /* StagingConfig.plist */; };
@@ -114,8 +113,6 @@
 		8319D8B62576AD8D0095E54E /* PILTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PILTests.swift; sourceTree = "<group>"; };
 		8319D8B82576AD8D0095E54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8322DB4125DF12A500C7B67E /* MicPermissionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicPermissionHelper.swift; sourceTree = "<group>"; };
-		833E436F25C1A3DA0006518B /* NSString+SubString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SubString.m"; sourceTree = "<group>"; };
-		833E437025C1A3DA0006518B /* NSString+SubString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SubString.h"; sourceTree = "<group>"; };
 		833E437625C1B4D20006518B /* UrlsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlsConfiguration.swift; sourceTree = "<group>"; };
 		833E440225C848BC0006518B /* PILExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PILExampleApp.entitlements; sourceTree = "<group>"; };
 		833E445C25C98FFC0006518B /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -330,15 +327,6 @@
 			path = PILTests;
 			sourceTree = "<group>";
 		};
-		833E436E25C1A3CD0006518B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				833E437025C1A3DA0006518B /* NSString+SubString.h */,
-				833E436F25C1A3DA0006518B /* NSString+SubString.m */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		833E437525C1B4C20006518B /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,7 +352,6 @@
 				5C92D8BA25DC24FA003019D1 /* VoIPGRID */,
 				833E440225C848BC0006518B /* PILExampleApp.entitlements */,
 				833E437525C1B4C20006518B /* Configuration */,
-				833E436E25C1A3CD0006518B /* Extensions */,
 				83C98B9525A8AD1900CECE31 /* AppDelegate.swift */,
 				836A97F325ACDB4A00497759 /* Main.storyboard */,
 				83C98B9E25A8AD1A00CECE31 /* Assets.xcassets */,
@@ -710,7 +697,6 @@
 				8322DB4225DF12A500C7B67E /* MicPermissionHelper.swift in Sources */,
 				5CAB169125D6E05600BC12E5 /* DialerViewController.swift in Sources */,
 				5C92D8D025DC2E14003019D1 /* VoIPGRIDMiddleware.swift in Sources */,
-				833E437125C1A3DA0006518B /* NSString+SubString.m in Sources */,
 				5CAB167E25D6AD3E00BC12E5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
