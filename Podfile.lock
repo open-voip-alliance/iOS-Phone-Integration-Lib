@@ -49,7 +49,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   iOSVoIPLib:
-    :commit: 67b7227f0c5ab5c8259be9c7d98206dbaa257ed1
+    :commit: 8429416358d400459cfd6a462dc71f148dee916f
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
 
 SPEC CHECKSUMS:
