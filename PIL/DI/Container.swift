@@ -28,19 +28,24 @@ var register: (Container) -> Container = {
     
     $0.register(EventsManager.self) { c in
         EventsManager(
+            pil: c.resolve(PIL.self)!,
             calls: c.resolve(Calls.self)!
         )
     }.inObjectScope(.container)
     
     $0.register(Calls.self) { c in
         Calls(callManager: c.resolve(CallManager.self)!, factory: c.resolve(PILCallFactory.self)!)
-        
     }.inObjectScope(.container)
     
     $0.register(AudioManager.self) { c in AudioManager(
         pil: c.resolve(PIL.self)!,
         voipLib: c.resolve(VoIPLib.self)!,
-        audioSession: AVAudioSession.sharedInstance()
+        audioSession: AVAudioSession.sharedInstance(),
+        dtmfPlayer: c.resolve(DtmfPlayer.self)!
+    ) }.inObjectScope(.container)
+    
+    $0.register(DtmfPlayer.self) { c in DtmfPlayer(
+        pil: c.resolve(PIL.self)!
     ) }.inObjectScope(.container)
     
     $0.register(Contacts.self) { _ in Contacts() }.inObjectScope(.container)

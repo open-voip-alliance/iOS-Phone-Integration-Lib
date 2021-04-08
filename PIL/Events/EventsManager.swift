@@ -10,10 +10,12 @@ import iOSVoIPLib
 
 public class EventsManager {
     
+    private let pil: PIL
     private let calls: Calls
     private var listeners = [ObjectIdentifier : EventListener]()
     
-    init(calls: Calls) {
+    init(pil: PIL, calls: Calls) {
+        self.pil = pil
         self.calls = calls
     }
     
@@ -34,11 +36,8 @@ public class EventsManager {
                 continue
             }
             
-            if (calls.isInCall) {
-                delegate.onEvent(event: event, call: calls.active)
-            } else {
-                delegate.onEvent(event: event, call: nil)
-            }
+            let callSessionState = CallSessionState(activeCall: calls.active, inactiveCall: calls.inactive, audioState: pil.audio.state)
+            delegate.onEvent(event: event, callSessionState: callSessionState)
         }
     }
 

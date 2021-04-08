@@ -82,7 +82,10 @@ public class CallActions {
         }
     }
     
-    public func sendDtmf(dtmf: String) {
+    public func sendDtmf(dtmf: String, playToneLocally: Bool = true) {
+        if playToneLocally {
+            pil.audio.dtmf.playTone(character: dtmf)
+        }
         performCallAction { uuid -> CXCallAction in
             CXPlayDTMFCallAction(call: uuid, digits: dtmf, type: .singleTone)
         }
@@ -96,6 +99,7 @@ public class CallActions {
     
     public func completeAttendedTransfer() {
         if let transferSession = callManager.transferSession {
+            callManager.mergeInitiated = true
             voipLib.actions(call: transferSession.from).finishAttendedTransfer(attendedTransferSession: transferSession)
         }
     }
@@ -113,15 +117,14 @@ public class CallActions {
         }
     }
    
-    private func callExists(callback: (Call) -> Void) {
+    private func callExists(callback: (VoipLibCall) -> Void) {
         if let transferSession = callManager.transferSession {
             callback(transferSession.to)
             return
         }
         
-        if let call = callManager.call {
+        if let call = callManager.voipLibCall {
             callback(call)
-            pil.events.broadcast(event: .callUpdated)
             return
         }
     }

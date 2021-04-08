@@ -52,7 +52,7 @@ class Contacts {
                 if !contact.phoneNumbers.filter({ $0.value.stringValue.filter("+0123456789".contains) == number }).isEmpty {
                     self.cachedContacts[number] = Contact(
                         name: "\(contact.givenName) \(contact.familyName)",
-                        image: contact.imageData
+                        image: nil //contact.imageData //wip this causes exception
                     )
                     return
                 }

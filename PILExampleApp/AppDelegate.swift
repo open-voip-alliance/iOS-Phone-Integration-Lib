@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LogDelegate {
         let applicationSetup = ApplicationSetup(
             middleware: VoIPGRIDMiddleware(),
             requestCallUi: {
-              
                 if let nav = self.window?.rootViewController as? UITabBarController {
                     nav.performSegue(withIdentifier: "LaunchCallSegue", sender: nav)
                 }
