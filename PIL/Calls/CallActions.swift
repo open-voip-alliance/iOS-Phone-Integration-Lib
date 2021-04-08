@@ -82,7 +82,10 @@ public class CallActions {
         }
     }
     
-    public func sendDtmf(dtmf: String) {
+    public func sendDtmf(dtmf: String, playToneLocally: Bool = true) {
+        if playToneLocally {
+            pil.audio.dtmf.playTone(character: dtmf)
+        }
         performCallAction { uuid -> CXCallAction in
             CXPlayDTMFCallAction(call: uuid, digits: dtmf, type: .singleTone)
         }

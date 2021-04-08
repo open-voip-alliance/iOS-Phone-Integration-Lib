@@ -12,10 +12,14 @@ public class AudioManager {
     private let audioSession: AVAudioSession
     private let pil: PIL
     
-    init(pil: PIL, voipLib: VoIPLib, audioSession: AVAudioSession) {
+    public let dtmf: DtmfPlayer
+    
+    init(pil: PIL, voipLib: VoIPLib, audioSession: AVAudioSession, dtmfPlayer: DtmfPlayer) {
         self.pil = pil
         self.voipLib = voipLib
         self.audioSession = audioSession
+        self.dtmf = dtmfPlayer
+        
         NotificationCenter.default.addObserver(self, selector: #selector(handleRouteChange), name: AVAudioSession.routeChangeNotification, object: nil)
     }
     
@@ -94,7 +98,7 @@ public class AudioManager {
             try audioSession.setCategory(.playAndRecord, mode: .voiceChat, options: [.allowBluetooth, .duckOthers])
             try audioSession.setActive(true, options: [.notifyOthersOnDeactivation])
         } catch {
-            print("Unable to activateasdasd audio \(error.localizedDescription)")
+            print("Unable to activate audio \(error.localizedDescription)")
         }
         
         routeToDefault()

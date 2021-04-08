@@ -40,18 +40,32 @@
 		5CBE0B0B25F236E800E797EE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0B0A25F236E800E797EE /* Event.swift */; };
 		5CBE0B1025F2382000E797EE /* PILEventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0B0F25F2382000E797EE /* PILEventDelegate.swift */; };
 		5CBE0C9125F4072300E797EE /* IOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0C9025F4072300E797EE /* IOS.swift */; };
+		8300A8DC2620C5B200D4D366 /* dtmf-7.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D02620C5B200D4D366 /* dtmf-7.aif */; };
+		8300A8DD2620C5B200D4D366 /* dtmf-6.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D12620C5B200D4D366 /* dtmf-6.aif */; };
+		8300A8DE2620C5B200D4D366 /* dtmf-4.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D22620C5B200D4D366 /* dtmf-4.aif */; };
+		8300A8DF2620C5B200D4D366 /* dtmf-#.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D32620C5B200D4D366 /* dtmf-#.aif */; };
+		8300A8E02620C5B200D4D366 /* dtmf-5.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D42620C5B200D4D366 /* dtmf-5.aif */; };
+		8300A8E12620C5B200D4D366 /* dtmf-1.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D52620C5B200D4D366 /* dtmf-1.aif */; };
+		8300A8E22620C5B200D4D366 /* dtmf-0.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D62620C5B200D4D366 /* dtmf-0.aif */; };
+		8300A8E32620C5B200D4D366 /* dtmf-2.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D72620C5B200D4D366 /* dtmf-2.aif */; };
+		8300A8E42620C5B200D4D366 /* dtmf-3.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D82620C5B200D4D366 /* dtmf-3.aif */; };
+		8300A8E52620C5B200D4D366 /* dtmf-*.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D92620C5B200D4D366 /* dtmf-*.aif */; };
+		8300A8E62620C5B200D4D366 /* dtmf-8.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8DA2620C5B200D4D366 /* dtmf-8.aif */; };
+		8300A8E72620C5B200D4D366 /* dtmf-9.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8DB2620C5B200D4D366 /* dtmf-9.aif */; };
 		8319D8B22576AD8D0095E54E /* PIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8319D8A82576AD8D0095E54E /* PIL.framework */; };
 		8319D8B72576AD8D0095E54E /* PILTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319D8B62576AD8D0095E54E /* PILTests.swift */; };
 		8322DB4225DF12A500C7B67E /* MicPermissionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322DB4125DF12A500C7B67E /* MicPermissionHelper.swift */; };
 		833E437725C1B4D20006518B /* UrlsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E437625C1B4D20006518B /* UrlsConfiguration.swift */; };
 		833E445D25C98FFC0006518B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833E445C25C98FFC0006518B /* Config.plist */; };
 		833E446225C9914B0006518B /* StagingConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833E446125C9914B0006518B /* StagingConfig.plist */; };
+		83664449261F456300F7B504 /* InCallDialpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83664448261F456300F7B504 /* InCallDialpadViewController.swift */; };
 		836A97F425ACDB4A00497759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836A97F325ACDB4A00497759 /* Main.storyboard */; };
 		83B84F82257D7B1900BABAC7 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B84F81257D7B1900BABAC7 /* PIL.swift */; };
 		83B84F83257D7B1900BABAC7 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B84F81257D7B1900BABAC7 /* PIL.swift */; };
 		83C98B9625A8AD1900CECE31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C98B9525A8AD1900CECE31 /* AppDelegate.swift */; };
 		83C98B9F25A8AD1A00CECE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C98B9E25A8AD1A00CECE31 /* Assets.xcassets */; };
 		83C98BA225A8AD1A00CECE31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C98BA025A8AD1A00CECE31 /* LaunchScreen.storyboard */; };
+		83E508CB2637888700267CF9 /* DtmfPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E508CA2637888700267CF9 /* DtmfPlayer.swift */; };
 		83F69EAE25922CE60076B8F0 /* IOSCallKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EAD25922CE50076B8F0 /* IOSCallKit.swift */; };
 		83F69EAF25922CE60076B8F0 /* IOSCallKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F69EAD25922CE50076B8F0 /* IOSCallKit.swift */; };
 		83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADAC5258BD81100CA64C8 /* Auth.swift */; };
@@ -107,6 +121,18 @@
 		5CBE0C9025F4072300E797EE /* IOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS.swift; sourceTree = "<group>"; };
 		5F9709B49935F95F1CC8CA67 /* Pods-PIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL.debug.xcconfig"; path = "Target Support Files/Pods-PIL/Pods-PIL.debug.xcconfig"; sourceTree = "<group>"; };
 		6FE02223E5C763F95DDF0368 /* Pods-PIL-PILExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIL-PILExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-PIL-PILExampleApp/Pods-PIL-PILExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8300A8D02620C5B200D4D366 /* dtmf-7.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-7.aif"; sourceTree = "<group>"; };
+		8300A8D12620C5B200D4D366 /* dtmf-6.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-6.aif"; sourceTree = "<group>"; };
+		8300A8D22620C5B200D4D366 /* dtmf-4.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-4.aif"; sourceTree = "<group>"; };
+		8300A8D32620C5B200D4D366 /* dtmf-#.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-#.aif"; sourceTree = "<group>"; };
+		8300A8D42620C5B200D4D366 /* dtmf-5.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-5.aif"; sourceTree = "<group>"; };
+		8300A8D52620C5B200D4D366 /* dtmf-1.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-1.aif"; sourceTree = "<group>"; };
+		8300A8D62620C5B200D4D366 /* dtmf-0.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-0.aif"; sourceTree = "<group>"; };
+		8300A8D72620C5B200D4D366 /* dtmf-2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-2.aif"; sourceTree = "<group>"; };
+		8300A8D82620C5B200D4D366 /* dtmf-3.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-3.aif"; sourceTree = "<group>"; };
+		8300A8D92620C5B200D4D366 /* dtmf-*.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-*.aif"; sourceTree = "<group>"; };
+		8300A8DA2620C5B200D4D366 /* dtmf-8.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-8.aif"; sourceTree = "<group>"; };
+		8300A8DB2620C5B200D4D366 /* dtmf-9.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-9.aif"; sourceTree = "<group>"; };
 		8319D8A82576AD8D0095E54E /* PIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8319D8AC2576AD8D0095E54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8319D8B12576AD8D0095E54E /* PILTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PILTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +143,7 @@
 		833E440225C848BC0006518B /* PILExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PILExampleApp.entitlements; sourceTree = "<group>"; };
 		833E445C25C98FFC0006518B /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		833E446125C9914B0006518B /* StagingConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StagingConfig.plist; sourceTree = "<group>"; };
+		83664448261F456300F7B504 /* InCallDialpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCallDialpadViewController.swift; sourceTree = "<group>"; };
 		836A97F325ACDB4A00497759 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		83B84F81257D7B1900BABAC7 /* PIL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIL.swift; sourceTree = "<group>"; };
 		83C98B9325A8AD1900CECE31 /* PILExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PILExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +151,7 @@
 		83C98B9E25A8AD1A00CECE31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83C98BA125A8AD1A00CECE31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83C98BA325A8AD1A00CECE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83E508CA2637888700267CF9 /* DtmfPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtmfPlayer.swift; sourceTree = "<group>"; };
 		83F69EAD25922CE50076B8F0 /* IOSCallKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSCallKit.swift; sourceTree = "<group>"; };
 		83FADAC5258BD81100CA64C8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		9209116B25D1B03A8096EB8C /* Pods-PILTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PILTests.debug.xcconfig"; path = "Target Support Files/Pods-PILTests/Pods-PILTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +275,8 @@
 				5CAB17CF25DA92D100BC12E5 /* AudioManager.swift */,
 				5CAED46225F4C72C00F9F4B1 /* AudioRoute.swift */,
 				5CAED46725F4C74B00F9F4B1 /* AudioState.swift */,
+				83E508CA2637888700267CF9 /* DtmfPlayer.swift */,
+				8300A8CF2620C5B200D4D366 /* Sounds */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -273,6 +303,25 @@
 				5CBE0C9025F4072300E797EE /* IOS.swift */,
 			);
 			path = IOS;
+			sourceTree = "<group>";
+		};
+		8300A8CF2620C5B200D4D366 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8300A8D02620C5B200D4D366 /* dtmf-7.aif */,
+				8300A8D12620C5B200D4D366 /* dtmf-6.aif */,
+				8300A8D22620C5B200D4D366 /* dtmf-4.aif */,
+				8300A8D32620C5B200D4D366 /* dtmf-#.aif */,
+				8300A8D42620C5B200D4D366 /* dtmf-5.aif */,
+				8300A8D52620C5B200D4D366 /* dtmf-1.aif */,
+				8300A8D62620C5B200D4D366 /* dtmf-0.aif */,
+				8300A8D72620C5B200D4D366 /* dtmf-2.aif */,
+				8300A8D82620C5B200D4D366 /* dtmf-3.aif */,
+				8300A8D92620C5B200D4D366 /* dtmf-*.aif */,
+				8300A8DA2620C5B200D4D366 /* dtmf-8.aif */,
+				8300A8DB2620C5B200D4D366 /* dtmf-9.aif */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		8319D89E2576AD8D0095E54E = {
@@ -345,21 +394,38 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		83C98B9425A8AD1900CECE31 /* PILExampleApp */ = {
+		83A03B38261F249E001E3D23 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				833F9BF725DEC930002F6DC6 /* Helpers */,
-				5C92D8BA25DC24FA003019D1 /* VoIPGRID */,
-				833E440225C848BC0006518B /* PILExampleApp.entitlements */,
-				833E437525C1B4C20006518B /* Configuration */,
-				83C98B9525A8AD1900CECE31 /* AppDelegate.swift */,
-				836A97F325ACDB4A00497759 /* Main.storyboard */,
 				83C98B9E25A8AD1A00CECE31 /* Assets.xcassets */,
+				836A97F325ACDB4A00497759 /* Main.storyboard */,
 				83C98BA025A8AD1A00CECE31 /* LaunchScreen.storyboard */,
-				83C98BA325A8AD1A00CECE31 /* Info.plist */,
 				5CAB167D25D6AD3E00BC12E5 /* SettingsViewController.swift */,
 				5CAB169025D6E05600BC12E5 /* DialerViewController.swift */,
 				5CAB169525DA6A1300BC12E5 /* CallViewController.swift */,
+				83664448261F456300F7B504 /* InCallDialpadViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		83A03B39261F24A5001E3D23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83C98BA325A8AD1A00CECE31 /* Info.plist */,
+				833E440225C848BC0006518B /* PILExampleApp.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83C98B9425A8AD1900CECE31 /* PILExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				83A03B39261F24A5001E3D23 /* Supporting Files */,
+				83A03B38261F249E001E3D23 /* UI */,
+				833F9BF725DEC930002F6DC6 /* Helpers */,
+				5C92D8BA25DC24FA003019D1 /* VoIPGRID */,
+				833E437525C1B4C20006518B /* Configuration */,
+				83C98B9525A8AD1900CECE31 /* AppDelegate.swift */,
 			);
 			path = PILExampleApp;
 			sourceTree = "<group>";
@@ -509,6 +575,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8300A8E62620C5B200D4D366 /* dtmf-8.aif in Resources */,
+				8300A8DD2620C5B200D4D366 /* dtmf-6.aif in Resources */,
+				8300A8E12620C5B200D4D366 /* dtmf-1.aif in Resources */,
+				8300A8E52620C5B200D4D366 /* dtmf-*.aif in Resources */,
+				8300A8E32620C5B200D4D366 /* dtmf-2.aif in Resources */,
+				8300A8E72620C5B200D4D366 /* dtmf-9.aif in Resources */,
+				8300A8DE2620C5B200D4D366 /* dtmf-4.aif in Resources */,
+				8300A8E22620C5B200D4D366 /* dtmf-0.aif in Resources */,
+				8300A8E42620C5B200D4D366 /* dtmf-3.aif in Resources */,
+				8300A8E02620C5B200D4D366 /* dtmf-5.aif in Resources */,
+				8300A8DC2620C5B200D4D366 /* dtmf-7.aif in Resources */,
+				8300A8DF2620C5B200D4D366 /* dtmf-#.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +730,7 @@
 				5CAED4F625F5294400F9F4B1 /* Contacts.swift in Sources */,
 				5C92D7EF25DAA9B1003019D1 /* Preferences.swift in Sources */,
 				5CBE0B1025F2382000E797EE /* PILEventDelegate.swift in Sources */,
+				83E508CB2637888700267CF9 /* DtmfPlayer.swift in Sources */,
 				5CBE0A5C25F1450D00E797EE /* PushKitDelegate.swift in Sources */,
 				5CAB17D025DA92D200BC12E5 /* AudioManager.swift in Sources */,
 				5CBE0A5525F143FC00E797EE /* CallManager.swift in Sources */,
@@ -695,6 +774,7 @@
 				83C98B9625A8AD1900CECE31 /* AppDelegate.swift in Sources */,
 				5C92D8BC25DC2510003019D1 /* VoIPGRIDLogin.swift in Sources */,
 				8322DB4225DF12A500C7B67E /* MicPermissionHelper.swift in Sources */,
+				83664449261F456300F7B504 /* InCallDialpadViewController.swift in Sources */,
 				5CAB169125D6E05600BC12E5 /* DialerViewController.swift in Sources */,
 				5C92D8D025DC2E14003019D1 /* VoIPGRIDMiddleware.swift in Sources */,
 				5CAB167E25D6AD3E00BC12E5 /* SettingsViewController.swift in Sources */,
@@ -953,13 +1033,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = NO;
-				CODE_SIGN_ENTITLEMENTS = PILExampleApp/PILExampleApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "PILExampleApp/Supporting Files/PILExampleApp.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
-				INFOPLIST_FILE = PILExampleApp/Info.plist;
+				INFOPLIST_FILE = "PILExampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -981,13 +1061,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = NO;
-				CODE_SIGN_ENTITLEMENTS = PILExampleApp/PILExampleApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "PILExampleApp/Supporting Files/PILExampleApp.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
-				INFOPLIST_FILE = PILExampleApp/Info.plist;
+				INFOPLIST_FILE = "PILExampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

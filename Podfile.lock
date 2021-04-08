@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.1)
+  - Alamofire (5.4.2)
   - iOSVoIPLib (0.1.0):
     - linphone-sdk (= 4.4.1)
   - linphone-sdk (4.4.1):
@@ -49,11 +49,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   iOSVoIPLib:
-    :commit: 8429416358d400459cfd6a462dc71f148dee916f
+    :commit: 397e24730383978b731dd388b1c088393b3db568
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
 
 SPEC CHECKSUMS:
-  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   iOSVoIPLib: 5d0a20228ab3f9bdcbb7e35903be4009bfa267b3
   linphone-sdk: 91183cb3e3224d2d1a211357cd6a39d61636d17d
   PIL: 660930395909c8c4b572b049a61ab4b48c8dccb9
@@ -63,4 +63,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 51027ddea33ea7bbc787bb49ec8bbb69e427236d
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.0
