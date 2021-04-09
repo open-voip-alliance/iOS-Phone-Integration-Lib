@@ -15,7 +15,7 @@ workflows:
             xcode: latest
             cocoapods: default
         scripts:
-            - xcode-project build-ipa --project "XCODE_WORKSPACE.xcodeproj" --scheme "$XCODE_SCHEME"
+            - xcode-project build-ipa --project "$XCODE_WORKSPACE.xcodeproj" --scheme "$XCODE_SCHEME"
         artifacts:
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.ipa
         publishing:
