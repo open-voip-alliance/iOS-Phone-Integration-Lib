@@ -15,7 +15,14 @@ workflows:
             xcode: latest
             cocoapods: default
         scripts:
-            - xcode-project build-ipa --project "$XCODE_WORKSPACE.xcodeproj" --scheme "$XCODE_SCHEME"
+          - name: Setup keychain and fetch provisioning profiles
+            script: |
+              keychain initialize
+              app-store-connect fetch-signing-files "com.voipgrid.PILExampleApp" --type IOS_APP_STORE --create
+              keychain add-certificates
+              xcode-project use-profiles
+          - name: Build Example App ipa
+            script: xcode-project build-ipa --project "$XCODE_WORKSPACE.xcodeproj" --scheme "$XCODE_SCHEME"
         artifacts:
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.ipa
         publishing:
