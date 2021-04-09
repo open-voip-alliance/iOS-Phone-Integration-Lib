@@ -15,6 +15,8 @@ workflows:
             xcode: latest
             cocoapods: default
         scripts:
+          - name: Run pod install
+            script: pod install
           - name: Setup keychain and fetch provisioning profiles
             script: |
               keychain initialize
@@ -26,9 +28,9 @@ workflows:
         artifacts:
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.ipa
         publishing:
-          slack:
-            channel: '#vialer_mobile_ci'
-            notify_on_build_start: true
+          # slack:
+          #   channel: '#vialer_mobile_ci'
+          #   notify_on_build_start: true
           app_store_connect:
             apple_id: iosdev.ci@wearespindle.com
             password: Encrypted(Z0FBQUFBQmdjQ0JXZjd3S0hrSF92dmRkVXFwQ1RnaEo4b25DUnFINWNrRkNwV1IyMlZBWUxFZTJmOXliT1R5cXJLUU5rZHVsM0wwRFRxOGtGSnRWbGVMMFdUa1QzcWk0SkthQU1NbDVkdHJoV3RhYV9xcmtPUFk9)
