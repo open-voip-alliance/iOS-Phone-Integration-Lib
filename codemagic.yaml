@@ -17,12 +17,7 @@ workflows:
         scripts:
           - name: Set gitconfig for ios-phone-lib access
             script: |
-              echo "[url "git@gitlab.wearespindle.com:"]
-                insteadOf = https://gitlab.wearespindle.com/
-              [url "git@gitlab.wearespindle.com:"]
-                pushInsteadOf = "git://gitlab.wearespindle.com/"
-              [url "git@gitlab.wearespindle.com:"]
-                pushInsteadOf = "https://gitlab.wearespindle.com/"" >> ~/.gitconfig
+              echo "[url "git@gitlab.wearespindle.com:"]\n  insteadOf = https://gitlab.wearespindle.com/\n[url "git@gitlab.wearespindle.com:"]\n  pushInsteadOf = "git://gitlab.wearespindle.com/"\n[url "git@gitlab.wearespindle.com:"]\n  pushInsteadOf = "https://gitlab.wearespindle.com/"" >> ~/.gitconfig
           - name: Run pod install
             script: pod install
           - name: Setup keychain and fetch provisioning profiles
