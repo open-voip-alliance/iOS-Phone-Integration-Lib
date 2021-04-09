@@ -24,4 +24,4 @@ workflows:
             notify_on_build_start: true
           app_store_connect:
             apple_id: iosdev.ci@wearespindle.com
-            password: Encrypted(Z0FBQUFBQmdXd19oNEpuaTlzZGlPWENxQksyQ09LQ0hhT3Y5LWJjN1BybC1kVU8yU1BXYXI2YlB4MGFWemktRDk4WVItMkpZM3dIaXY1enhwNDRqYTF1b19YakdOQ3REcWVxdVZ3VmhfUVAtQVVfWlMwY2JHYzA9)
+            password: Encrypted(Z0FBQUFBQmdjQ0JXZjd3S0hrSF92dmRkVXFwQ1RnaEo4b25DUnFINWNrRkNwV1IyMlZBWUxFZTJmOXliT1R5cXJLUU5rZHVsM0wwRFRxOGtGSnRWbGVMMFdUa1QzcWk0SkthQU1NbDVkdHJoV3RhYV9xcmtPUFk9)
