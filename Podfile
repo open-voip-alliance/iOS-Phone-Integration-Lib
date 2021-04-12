@@ -6,7 +6,7 @@ target 'PIL' do
   source 'https://gitlab.linphone.org/BC/public/podspec.git'
   source 'https://github.com/CocoaPods/Specs.git'
 
-  pod 'iOSVoIPLib', :git => 'https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git'
+  pod 'iOSVoIPLib', :git => 'https://gitlab.wearespindle.com/vialer/mobile/voip/ios-voip-lib.git'
   pod 'Swinject'
 end
 
