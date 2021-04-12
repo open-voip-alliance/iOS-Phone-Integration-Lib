@@ -29,7 +29,7 @@ workflows:
               keychain add-certificates
               xcode-project use-profiles
           - name: Build Example App ipa
-            script: xcode-project build-ipa --project "$XCODE_WORKSPACE.xcodeproj" --scheme "$XCODE_SCHEME"
+            script: xcode-project build-ipa --workspace "$XCODE_WORKSPACE.xcworkspace" --scheme "$XCODE_SCHEME"
         artifacts:
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.ipa
         publishing:
