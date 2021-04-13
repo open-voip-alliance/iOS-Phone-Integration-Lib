@@ -2,7 +2,7 @@
 # Please review and update values in curly braces
 
 workflows:
-    ios-phone-integration-lib:
+    ios-phone-integration-lib: &default-workflow
         name: iOS Phone Integration Lib
         environment:
             vars:
@@ -15,7 +15,7 @@ workflows:
             xcode: latest
             cocoapods: default
         scripts:
-          - name: Set gitconfig for ios-phone-lib access
+          - name: Set gitconfig for ios-voip-lib ssh access
             script: |
               git config --global url."git@gitlab.wearespindle.com:".insteadOf "https://gitlab.wearespindle.com/"
               git config --global url."git@gitlab.wearespindle.com:".pushInsteadOf "git://gitlab.wearespindle.com/"
@@ -31,7 +31,7 @@ workflows:
           - name: Build Example App ipa
             script: xcode-project build-ipa --workspace "$XCODE_WORKSPACE.xcworkspace" --scheme "$XCODE_SCHEME"
         artifacts:
-            - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.ipa
+            - build/ios/ipa/*.ipa
         publishing:
           # slack:
           #   channel: '#vialer_mobile_ci'
