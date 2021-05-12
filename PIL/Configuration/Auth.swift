@@ -8,11 +8,11 @@
 import Foundation
 
 public struct Auth {
-    let username: String
-    let password: String
-    let domain: String
-    let port: Int
-    let secure: Bool
+    public let username: String
+    public let password: String
+    public let domain: String
+    public let port: Int
+    public let secure: Bool
     
     var isValid: Bool {
         get {
