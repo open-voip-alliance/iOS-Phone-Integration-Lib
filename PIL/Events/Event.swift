@@ -11,9 +11,13 @@ public enum Event {
     case outgoingCallStarted
     case incomingCallReceived
     case callEnded
-    case callUpdated
     case callConnected
+    case callDurationUpdated
     
     case outgoingCallSetupFailed
     case incomingCallSetupFailed
+    
+    case attendedTransferStarted
+    case attendedTransferAborted
+    case attendedTransferEnded
 }

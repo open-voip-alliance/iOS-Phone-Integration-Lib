@@ -104,7 +104,7 @@ public class CallActions {
     }
     
     func performCallAction(_ callback: (UUID) -> CXCallAction) {
-        guard let uuid = pil.iOSCallKit.findCallUuid() else { return }
+        guard let uuid = pil.iOSCallKit.findCallUuid() else { return } //wip This returns and cannot unhold
         let action = callback(uuid)
         
         controller.request(CXTransaction(action: action)) { error in
@@ -116,15 +116,14 @@ public class CallActions {
         }
     }
    
-    private func callExists(callback: (Call) -> Void) {
+    private func callExists(callback: (VoIPLibCall) -> Void) {
         if let transferSession = callManager.transferSession {
             callback(transferSession.to)
             return
         }
         
-        if let call = callManager.call {
+        if let call = callManager.voipLibCall {
             callback(call)
-            pil.events.broadcast(event: .callUpdated)
             return
         }
     }

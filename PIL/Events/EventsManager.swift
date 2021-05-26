@@ -36,12 +36,8 @@ public class EventsManager {
                 continue
             }
             
-//            if (calls.isInCall) {
-//                let callSessionState = CallSessionState(activeCall: calls.active, inactiveCall: calls.inactive, audioState: calls.active?)
-//                delegate.onEvent(event: event, callSessionState: callSessionState) //wip
-//            } else {
-//                delegate.onEvent(event: event, callSessionState: nil)
-//            }
+            let callSessionState = CallSessionState(activeCall: calls.active, inactiveCall: calls.inactive, audioState: pil.audio.state)
+            delegate.onEvent(event: event, callSessionState: callSessionState)
         }
     }
 

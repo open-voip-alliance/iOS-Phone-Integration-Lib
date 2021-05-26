@@ -87,9 +87,7 @@ public class AudioManager {
             try audioSession.setActive(true)
         } catch {
             print("Audio routing failed: \(error.localizedDescription)")
-        }
-        
-        pil.events.broadcast(event: .callUpdated)
+        }        
     }
     
     func onActivateAudioSession() {
