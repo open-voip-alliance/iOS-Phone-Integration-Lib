@@ -19,5 +19,6 @@ public enum Event {
     
     case attendedTransferStarted
     case attendedTransferAborted
+    case attendedTransferConnected
     case attendedTransferEnded
 }

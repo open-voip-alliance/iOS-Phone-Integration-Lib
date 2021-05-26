@@ -99,12 +99,13 @@ public class CallActions {
     
     public func completeAttendedTransfer() {
         if let transferSession = callManager.transferSession {
+            callManager.mergeInitiated = true
             voipLib.actions(call: transferSession.from).finishAttendedTransfer(attendedTransferSession: transferSession)
         }
     }
     
     func performCallAction(_ callback: (UUID) -> CXCallAction) {
-        guard let uuid = pil.iOSCallKit.findCallUuid() else { return } //wip This returns and cannot unhold
+        guard let uuid = pil.iOSCallKit.findCallUuid() else { return }
         let action = callback(uuid)
         
         controller.request(CXTransaction(action: action)) { error in

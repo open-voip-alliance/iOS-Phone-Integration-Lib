@@ -26,6 +26,8 @@ class CallViewController: UIViewController, PILEventDelegate {
     
     let pil = PIL.shared!
     
+    private var eventAlert: UIAlertController?
+    
     override func viewWillAppear(_ animated: Bool) {
         render()
         pil.events.listen(delegate: self)
@@ -36,14 +38,42 @@ class CallViewController: UIViewController, PILEventDelegate {
     }
     
     func onEvent(event: Event, callSessionState: CallSessionState) {
-        print("Received call event \(event.hashValue)")
+        print("Received \(event)")
         
         if let call = callSessionState.activeCall {
             render(call: call)
         }
-
-        if event == .callEnded && !pil.calls.isInCall {
-            self.dismiss(animated: true, completion: nil)
+        
+        let callNumber = pil.calls.active?.displayName ?? ""
+        
+        switch event {
+        case .incomingCallReceived:
+            showEventStatus(title: "Incoming Call Received", message: "In call with \(callNumber)")
+        case .outgoingCallStarted:
+            showEventStatus(title: "Outgoing Call Started", message: "In call with  \(callNumber)")
+        case .callConnected:
+            showEventStatus(title: "Call Connected", message: "In call with \(callNumber)")
+        case .callDurationUpdated:
+            //Not showing status for this event
+            return
+        case .callEnded:
+            if !pil.calls.isInCall {
+                self.dismiss(animated: true, completion: nil)
+            }
+        case .attendedTransferStarted:
+            showEventStatus(title: "Call Transfer Started", message: "Calling \(callNumber)")
+        case .attendedTransferAborted:
+            showEventStatus(title: "Call Transfer Aborted", message: "In call with \(callNumber)")
+        case .attendedTransferConnected:
+            showEventStatus(title: "Call Transfer Connected", message: "In call with  \(callNumber)")
+        case .attendedTransferEnded:
+            if let inactiveCall = pil.calls.inactive {
+                showEventStatus(title: "Call Transfer Ended", message: "Merged calls with \(callNumber) and \(inactiveCall.displayName)")
+            }
+        case .incomingCallSetupFailed:
+            showEventStatus(title: "Incoming Call Setup Failed", message: "Calling \(callNumber)")
+        case .outgoingCallSetupFailed:
+            showEventStatus(title: "Outgoing Call Setup Failed", message: "Calling \(callNumber)")
         }
     }
     
@@ -88,14 +118,14 @@ class CallViewController: UIViewController, PILEventDelegate {
         bluetoothButton.setTitle(state.bluetoothDeviceName ?? "BLUETOOTH", for: .normal)
         
         if pil.calls.isInTranfer {
-            inactiveCallStatus.isHidden = false
-            if let inactiveCall = pil.calls.inactive {
-                inactiveCallStatus.text = "\(inactiveCall.remotePartyHeading) - \(inactiveCall.remotePartySubheading)"
-            }
+//            inactiveCallStatus.isHidden = false
+//            if let inactiveCall = pil.calls.inactive {
+//                inactiveCallStatus.text = "\(inactiveCall.remotePartyHeading) - \(inactiveCall.remotePartySubheading)"
+//            }
             transferButton.setTitle("MERGE", for: .normal)
         } else {
-            inactiveCallStatus.isHidden = true
-            inactiveCallStatus.text = ""
+//            inactiveCallStatus.isHidden = true
+//            inactiveCallStatus.text = ""
             transferButton.setTitle("TRANSFER", for: .normal)
         }
     }
@@ -160,4 +190,9 @@ class CallViewController: UIViewController, PILEventDelegate {
         present(alertController, animated: true, completion: nil)
     }
     
+    private func showEventStatus(title: String, message: String) {
+        let screenWidth = UIScreen.main.bounds.width
+        inactiveCallStatus.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
+        inactiveCallStatus.text = title + ": " + message
+    }
 }
