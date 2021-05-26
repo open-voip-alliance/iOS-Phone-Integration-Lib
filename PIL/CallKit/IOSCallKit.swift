@@ -252,7 +252,7 @@ extension IOSCallKit: CXCallObserverDelegate {
 
 extension IOSCallKit {
 
-    private func callExists(_ action: CXCallAction? = nil, callback: (VoIPLibCall) -> Void) {
+    private func callExists(_ action: CXCallAction? = nil, callback: (VoipLibCall) -> Void) {
         if let transferSession = callManager.transferSession {
             pil.writeLog("CXCallAction \(action.debugDescription) completed on transfer target")
             callback(transferSession.to)

@@ -13,7 +13,7 @@ class CallManager: CallDelegate {
 
     private let pil: PIL
     
-    internal var voipLibCall: VoIPLibCall? = nil
+    internal var voipLibCall: VoipLibCall? = nil
     internal var transferSession: AttendedTransferSession? = nil
     
     var mergeInitiated = false
@@ -28,7 +28,7 @@ class CallManager: CallDelegate {
         self.pil = pil
     }
         
-    public func incomingCallReceived(_ incomingCall: VoIPLibCall) {
+    public func incomingCallReceived(_ incomingCall: VoipLibCall) {
         if !isInCall {
             pil.writeLog("Setting up the incoming call")
             mergeInitiated = false
@@ -40,7 +40,7 @@ class CallManager: CallDelegate {
         }
     }
 
-    public func outgoingCallCreated(_ call: VoIPLibCall) {
+    public func outgoingCallCreated(_ call: VoipLibCall) {
         pil.writeLog("On outgoingCallCreated")
         if !isInCall {
             pil.writeLog("Setting up the outgoing call")
@@ -59,12 +59,12 @@ class CallManager: CallDelegate {
         }
     }
 
-    public func callUpdated(_ call: VoIPLibCall, message: String) {
+    public func callUpdated(_ call: VoipLibCall, message: String) {
         pil.writeLog("On callUpdated")
         callKitUpdateCurrentCall(call)
     }
 
-    public func callConnected(_ call: VoIPLibCall) {
+    public func callConnected(_ call: VoipLibCall) {
         pil.writeLog("Call has connected")
         callKitUpdateCurrentCall(call)
         
@@ -76,7 +76,7 @@ class CallManager: CallDelegate {
         }
     }
 
-    public func callEnded(_ call: VoIPLibCall) {
+    public func callEnded(_ call: VoipLibCall) {
         pil.writeLog("Received call ended event")
         
         if pil.calls.isInTranfer {
@@ -98,12 +98,12 @@ class CallManager: CallDelegate {
         transferSession = nil
     }
     
-    public func error(_ call: VoIPLibCall, message: String) {
+    public func error(_ call: VoipLibCall, message: String) {
         callEnded(call)
         pil.writeLog("ERROR: \(message)")
     }
     
-    private func callKitUpdateCurrentCall(_ call: VoIPLibCall) {
+    private func callKitUpdateCurrentCall(_ call: VoipLibCall) {
         let update = CXCallUpdate()
         update.hasVideo = false
         update.localizedCallerName = call.remoteNumber

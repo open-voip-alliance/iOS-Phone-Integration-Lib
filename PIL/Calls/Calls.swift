@@ -42,7 +42,7 @@ public class Calls {
         self.factory = factory
     }
     
-    private func findActiveCall() -> VoIPLibCall? {
+    private func findActiveCall() -> VoipLibCall? {
         if let transferSession = callManager.transferSession {
             return transferSession.to
         }
@@ -50,7 +50,7 @@ public class Calls {
         return callManager.voipLibCall
     }
 
-    private func findInactiveCall() -> VoIPLibCall? {
+    private func findInactiveCall() -> VoipLibCall? {
         if let transferSession = callManager.transferSession {
             return transferSession.from
         }

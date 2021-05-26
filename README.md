@@ -134,7 +134,7 @@ override func viewDidDisappear(_ animated: Bool) {
 2. You must then implement an onEvent method to handle these events.
 
 ```swift
-func onEvent(event: Event, call: CallSessionState?) {
+func onEvent(event: Event, call: CallSessionState) {
         
 }
 ```

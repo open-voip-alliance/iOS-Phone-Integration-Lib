@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n10-OO-7RU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n10-OO-7RU">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -415,6 +415,12 @@
                                     <action selector="keypadButtonWasPressed:" destination="Dqm-1b-3En" eventType="primaryActionTriggered" id="nXe-b5-RU3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inactive Call" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ga-5r-JHP">
+                                <rect key="frame" x="134.5" y="499" width="106" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -458,8 +464,6 @@
                             <constraint firstItem="5ci-Z0-o1a" firstAttribute="width" secondItem="mFc-n6-d3s" secondAttribute="width" id="cFK-YW-qLu"/>
                             <constraint firstItem="WFe-mX-np0" firstAttribute="leading" secondItem="d1s-mr-qgF" secondAttribute="leading" id="co7-EG-1Fm"/>
                             <constraint firstItem="mFc-n6-d3s" firstAttribute="trailing" secondItem="d1s-mr-qgF" secondAttribute="trailing" id="d86-jd-n9v"/>
-                            <constraint firstItem="Vjd-aB-vGf" firstAttribute="top" secondItem="WFe-mX-np0" secondAttribute="top" id="eEc-qB-FiB"/>
-                            <constraint firstItem="mKU-J9-eKZ" firstAttribute="height" secondItem="mFc-n6-d3s" secondAttribute="height" id="fqB-Bl-t10"/>
                             <constraint firstItem="d1s-mr-qgF" firstAttribute="top" secondItem="mFc-n6-d3s" secondAttribute="bottom" constant="8" id="gHy-bW-C1O"/>
                             <constraint firstItem="QDa-7q-DYC" firstAttribute="width" secondItem="mFc-n6-d3s" secondAttribute="width" id="gbr-hV-1z6"/>
                             <constraint firstItem="3JX-X5-3Id" firstAttribute="trailing" secondItem="wKL-fZ-zbv" secondAttribute="trailing" id="j64-Ba-DNa"/>

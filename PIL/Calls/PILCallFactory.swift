@@ -5,7 +5,7 @@
 import Foundation
 import iOSVoIPLib
 
-public typealias VoIPLibCall = iOSVoIPLib.Call
+public typealias VoipLibCall = iOSVoIPLib.Call
 
 public class PILCallFactory {
     
@@ -15,7 +15,7 @@ public class PILCallFactory {
         self.contacts = contacts
     }
     
-    public func make(voipLibCall: VoIPLibCall?) -> Call? {
+    public func make(voipLibCall: VoipLibCall?) -> Call? {
         guard let libraryCall = voipLibCall else {
             return nil
         }
@@ -35,7 +35,7 @@ public class PILCallFactory {
         )
     }
     
-    private func findRemotePartyDetails(call: VoIPLibCall) -> (String, String) {
+    private func findRemotePartyDetails(call: VoipLibCall) -> (String, String) {
         if !call.pAssertedIdentity.isEmpty {
             let value = extractHeaderValue(rawHeader: call.pAssertedIdentity)
             return (value.0, value.1)

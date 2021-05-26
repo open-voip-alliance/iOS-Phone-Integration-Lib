@@ -5,7 +5,7 @@
 import Foundation
 import iOSVoIPLib
 
-public typealias VoIPLibCallState = iOSVoIPLib.CallState
+public typealias VoipLibCallState = iOSVoIPLib.CallState
 
 public struct Call {
     public let remoteNumber: String

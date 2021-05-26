@@ -117,7 +117,7 @@ public class CallActions {
         }
     }
    
-    private func callExists(callback: (VoIPLibCall) -> Void) {
+    private func callExists(callback: (VoipLibCall) -> Void) {
         if let transferSession = callManager.transferSession {
             callback(transferSession.to)
             return
