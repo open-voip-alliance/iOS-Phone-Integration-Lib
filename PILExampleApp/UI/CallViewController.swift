@@ -137,6 +137,10 @@ class CallViewController: UIViewController, PILEventDelegate {
         render()
     }
     
+    @IBAction func dialpadButtonWasPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "ShowInCallDialpadViewController", sender: self)
+    }
+    
     private func promptForTransferNumber(callback: @escaping (String) -> Void) {
         let alertController = UIAlertController(title: "Call Transfer", message: "Enter the number to transfer to", preferredStyle: .alert)
 
@@ -154,6 +158,5 @@ class CallViewController: UIViewController, PILEventDelegate {
 
         present(alertController, animated: true, completion: nil)
     }
-    
     
 }

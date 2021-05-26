@@ -76,6 +76,11 @@ final class SettingsViewController: QuickTableViewController {
                         self.defaults.set(switchRow.switchValue, forKey: "use_application_ringtone")
                     }
                 }),
+                SwitchRow(text: "Play DTMF tones locally", switchValue: self.defaults.bool(forKey: "play_dtmf_tones"), action: { row in
+                    if let switchRow = row as? SwitchRowCompatible {
+                        self.defaults.set(switchRow.switchValue, forKey: "play_dtmf_tones")
+                    }
+                }),
             ])
         ]
     }

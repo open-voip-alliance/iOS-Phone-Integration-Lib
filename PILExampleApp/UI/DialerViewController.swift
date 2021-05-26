@@ -53,6 +53,10 @@ class DialerViewController: UIViewController {
         
         numberPreview.text = currentNumberPreview + buttonNumber
     
+        guard let pil = PIL.shared else { return }
+        if self.defaults.bool(forKey: "play_dtmf_tones") {
+            pil.audio.dtmf.playTone(character: buttonNumber)
+        }
     }
     
     private func userDefault(key: String) -> String {

@@ -207,6 +207,7 @@ extension IOSCallKit: CXProviderDelegate {
     public func provider(_ provider: CXProvider, perform action: CXPlayDTMFCallAction) {
         callExists(action) { call in
             voipLib.actions(call: call).sendDtmf(dtmf: action.digits)
+            action.fulfill()
         }
     }
 
