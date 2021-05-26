@@ -32,7 +32,7 @@ public class AudioManager {
     public var state: AudioState {
         get {
             guard let availableInputs = audioSession.availableInputs else {
-                return AudioState(currentRoute: .phone, availableRoutes: [.phone, .speaker], bluetoothDeviceName: nil)
+                return AudioState(currentRoute: .phone, availableRoutes: [.phone, .speaker], bluetoothDeviceName: nil, isMicrophoneMuted: isMicrophoneMuted)
             }
             
             var routes: [AudioRoute] = [.speaker]
@@ -55,7 +55,7 @@ public class AudioManager {
                 currentRoute = .bluetooth
             }
             
-            return AudioState(currentRoute: currentRoute, availableRoutes: routes, bluetoothDeviceName: findBluetoothName())
+            return AudioState(currentRoute: currentRoute, availableRoutes: routes, bluetoothDeviceName: findBluetoothName(), isMicrophoneMuted: isMicrophoneMuted)
         }
     }
     

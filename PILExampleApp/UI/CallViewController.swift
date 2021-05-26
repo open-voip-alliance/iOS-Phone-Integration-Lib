@@ -35,12 +35,13 @@ class CallViewController: UIViewController, PILEventDelegate {
         pil.events.stopListening(delegate: self)
     }
     
-    func onEvent(event: Event, call: PILCall?) {
-        print("Received call event \(event.hashValue)")
-        if let call = call {
+    func onEvent(event: Event, callSessionState: CallSessionState?) {
+        print("Received call event \(event.hashValue)") //wip
+        
+        if let call = callSessionState?.activeCall {
             render(call: call)
         }
-       
+
         if event == .callEnded && !pil.calls.isInCall {
             self.dismiss(animated: true, completion: nil)
         }
