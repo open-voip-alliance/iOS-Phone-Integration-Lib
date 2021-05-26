@@ -223,7 +223,7 @@ extension IOSCallKit: CXProviderDelegate {
                 timer.invalidate()
             }
             
-            self.pil.events.broadcast(event: .callUpdated)
+            self.pil.events.broadcast(event: .callDurationUpdated)
         })
     }
 
@@ -252,7 +252,7 @@ extension IOSCallKit: CXCallObserverDelegate {
 
 extension IOSCallKit {
 
-    private func callExists(_ action: CXCallAction? = nil, callback: (Call) -> Void) {
+    private func callExists(_ action: CXCallAction? = nil, callback: (VoipLibCall) -> Void) {
         if let transferSession = callManager.transferSession {
             pil.writeLog("CXCallAction \(action.debugDescription) completed on transfer target")
             callback(transferSession.to)
@@ -260,11 +260,10 @@ extension IOSCallKit {
             return
         }
         
-        if let call = callManager.call {
+        if let call = callManager.voipLibCall {
             pil.writeLog("CXCallAction \(action.debugDescription) completed on active call")
             callback(call)
             action?.fulfill()
-            pil.events.broadcast(event: .callUpdated)
             return
         }
         

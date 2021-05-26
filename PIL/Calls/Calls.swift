@@ -11,23 +11,23 @@ public class Calls {
     private let factory: PILCallFactory
     
     /// The currently active call that is setup to send/receive audio.
-    public var active: PILCall? {
+    public var active: Call? {
         get {
-            factory.make(libraryCall: findActiveCall())
+            factory.make(voipLibCall: findActiveCall())
         }
     }
 
     /// The background call. This will only exist when a transfer is happening.
     /// This will be the initial call while connecting to the new call.
-    public var inactive: PILCall? {
+    public var inactive: Call? {
         get {
-            factory.make(libraryCall: findInactiveCall())
+            factory.make(voipLibCall: findInactiveCall())
         }
     }
 
     public var isInCall: Bool {
         get {
-            callManager.call != nil
+            callManager.voipLibCall != nil
         }
     }
     
@@ -42,15 +42,15 @@ public class Calls {
         self.factory = factory
     }
     
-    private func findActiveCall() -> Call? {
+    private func findActiveCall() -> VoipLibCall? {
         if let transferSession = callManager.transferSession {
             return transferSession.to
         }
         
-        return callManager.call
+        return callManager.voipLibCall
     }
 
-    private func findInactiveCall() -> Call? {
+    private func findInactiveCall() -> VoipLibCall? {
         if let transferSession = callManager.transferSession {
             return transferSession.from
         }

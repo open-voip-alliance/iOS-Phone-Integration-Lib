@@ -134,16 +134,16 @@ override func viewDidDisappear(_ animated: Bool) {
 2. You must then implement an onEvent method to handle these events.
 
 ```swift
-func onEvent(event: Event, call: PILCall?) {
+func onEvent(event: Event, call: CallSessionState) {
         
 }
 ```
 
-As you can see, there is an optional call parameter given. There are some events that will be triggered without an active call, in which case this will be nil.
+As you can see, there is an optional CallSessionState parameter given. There are some events that will be triggered without an active call, in which case this will be nil.
 
 The two relevant events for updating the call ui are .callUpdated and .callEnded.
 
-.callUpdate is triggered very frequently and is informing you that something about the call has changed, as this includes the duration, you should expect this to be triggered at least once per second. When you receive this event you should update your ui to display the information from the most recent PILCall object.
+.callUpdate is triggered very frequently and is informing you that something about the call has changed, as this includes the duration, you should expect this to be triggered at least once per second. When you receive this event you should update your ui to display the information from the most recent Call object.
 
 .callEnded means you should dismiss your UI.
 

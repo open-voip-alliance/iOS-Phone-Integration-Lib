@@ -99,6 +99,7 @@ public class CallActions {
     
     public func completeAttendedTransfer() {
         if let transferSession = callManager.transferSession {
+            callManager.mergeInitiated = true
             voipLib.actions(call: transferSession.from).finishAttendedTransfer(attendedTransferSession: transferSession)
         }
     }
@@ -116,15 +117,14 @@ public class CallActions {
         }
     }
    
-    private func callExists(callback: (Call) -> Void) {
+    private func callExists(callback: (VoipLibCall) -> Void) {
         if let transferSession = callManager.transferSession {
             callback(transferSession.to)
             return
         }
         
-        if let call = callManager.call {
+        if let call = callManager.voipLibCall {
             callback(call)
-            pil.events.broadcast(event: .callUpdated)
             return
         }
     }
