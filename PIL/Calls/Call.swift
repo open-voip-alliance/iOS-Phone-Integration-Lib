@@ -41,4 +41,18 @@ public struct Call {
             return ""
         }
     }
+    
+    public var prettyDuration: String {
+        let formatter = DateComponentsFormatter()
+        if duration < 3600 {
+            formatter.allowedUnits = [.minute, .second]
+        } else{
+            formatter.allowedUnits = [.hour, .minute, .second]
+        }
+        
+        formatter.unitsStyle = .positional
+        formatter.zeroFormattingBehavior = .pad
+
+        return formatter.string(from: TimeInterval(duration)) ?? ""
+    }
 }

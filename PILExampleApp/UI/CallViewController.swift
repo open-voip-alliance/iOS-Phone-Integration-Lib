@@ -60,7 +60,7 @@ class CallViewController: UIViewController, PILEventDelegate {
     private func renderCallInfo(call: Call) {
         callTitle.text = "\(call.remotePartyHeading) - \(call.remotePartySubheading)"
         callSubtitle.text = String(describing: call.direction)
-        callDuration.text = String(describing: call.duration)
+        callDuration.text = call.prettyDuration
         callStatus.text = String(describing: call.state)
     }
     
