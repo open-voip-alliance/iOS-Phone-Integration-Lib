@@ -20,11 +20,11 @@ public protocol Middleware {
 }
 
 public struct IncomingPayloadCallDetail {
+    public let phoneNumber: String
+    public let callerId: String
+    
     public init(phoneNumber: String, callerId: String) {
         self.phoneNumber = phoneNumber
         self.callerId = callerId
     }
-    
-    public let phoneNumber: String
-    public let callerId: String
 }

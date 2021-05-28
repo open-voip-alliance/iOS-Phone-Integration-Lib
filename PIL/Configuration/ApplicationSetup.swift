@@ -5,6 +5,11 @@
 import Foundation
 
 public struct ApplicationSetup {
+    public let middleware: Middleware?
+    public let requestCallUi: () -> Void
+    public let userAgent: String
+    public let logDelegate: LogDelegate?
+    
     public init(
         middleware: Middleware? = nil,
         requestCallUi: @escaping () -> Void,
@@ -16,9 +21,4 @@ public struct ApplicationSetup {
         self.requestCallUi = requestCallUi
         self.logDelegate = logDelegate
     }
-    
-    public let middleware: Middleware?
-    public let requestCallUi: () -> Void
-    public let userAgent: String
-    public let logDelegate: LogDelegate?
 }
