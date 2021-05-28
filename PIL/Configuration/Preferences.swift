@@ -9,11 +9,11 @@ import Foundation
 import iOSVoIPLib
 
 public struct Preferences {
+    public let useApplicationRingtone: Bool
+    public let codecs: [Codec]
+    
     public init(useApplicationRingtone: Bool = true, codecs: [Codec] = [Codec.OPUS]) {
         self.useApplicationRingtone = useApplicationRingtone
         self.codecs = codecs
     }
-    
-    public let useApplicationRingtone: Bool
-    public let codecs: [Codec]
 }

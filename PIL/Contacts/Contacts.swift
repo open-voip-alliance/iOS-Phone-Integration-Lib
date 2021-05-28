@@ -70,6 +70,6 @@ class Contacts {
 }
 
 public struct Contact {
-    let name: String
-    let image: Data?
+    public let name: String
+    public let image: Data?
 }

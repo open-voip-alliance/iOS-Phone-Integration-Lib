@@ -14,7 +14,7 @@ public struct Auth {
     public let port: Int
     public let secure: Bool
     
-    var isValid: Bool {
+    public var isValid: Bool {
         get {
             !username.isEmpty && !password.isEmpty && !domain.isEmpty && port != 0
         }
