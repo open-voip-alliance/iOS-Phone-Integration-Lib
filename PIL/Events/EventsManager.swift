@@ -36,8 +36,7 @@ public class EventsManager {
                 continue
             }
             
-            let callSessionState = CallSessionState(activeCall: calls.active, inactiveCall: calls.inactive, audioState: pil.audio.state)
-            delegate.onEvent(event: event, callSessionState: callSessionState)
+            delegate.onEvent(event: event, callSessionState: pil.sessionState)
         }
     }
 

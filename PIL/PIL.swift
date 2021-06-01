@@ -26,6 +26,11 @@ public class PIL {
     public lazy var calls = { di.resolve(Calls.self)! }()
     public lazy var iOS = { di.resolve(IOS.self)! }()
     
+    var sessionState: CallSessionState {
+        get {
+            CallSessionState(activeCall: calls.active, inactiveCall: calls.inactive, audioState: audio.state)
+        }
+    }
     static public var shared: PIL?
     
     /// The user preferences for the PIL, when this value is updated it will trigger
