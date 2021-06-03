@@ -90,10 +90,9 @@ class CallManager: CallDelegate {
         } else {
             pil.writeLog("We are not currently in transfer so we will end all calls")
             pil.iOSCallKit.endAllCalls()
+            pil.events.broadcast(event: .callEnded)
             self.voipLibCall = nil
             mergeInitiated = false
-            
-            pil.events.broadcast(event: .callEnded)
         }
         transferSession = nil
     }
