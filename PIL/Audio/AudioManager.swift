@@ -5,6 +5,7 @@
 import Foundation
 import iOSVoIPLib
 import AVFoundation
+import AVKit
 
 public class AudioManager {
     
@@ -14,6 +15,12 @@ public class AudioManager {
     private let callActions: CallActions
     
     let dtmf: DtmfPlayer
+    
+    private lazy var routePickerView: AVRoutePickerView = {
+        let routePickerView = AVRoutePickerView()
+        routePickerView.isHidden = true
+        return routePickerView
+    }()
     
     init(pil: PIL, voipLib: VoIPLib, audioSession: AVAudioSession, dtmfPlayer: DtmfPlayer, callActions: CallActions) {
         self.pil = pil
@@ -88,8 +95,21 @@ public class AudioManager {
             
             try audioSession.setActive(true)
         } catch {
-            print("Audio routing failed: \(error.localizedDescription)")
+            pil.writeLog("Audio routing failed: \(error.localizedDescription)")
         }        
+    }
+    
+    /// Launch a native UI dialog box that allows the user to choose from a list of inputs.
+    public func launchAudioRoutePicker() {
+        do {
+            try audioSession.overrideOutputAudioPort(.none)
+            
+            if let routePickerButton = routePickerView.subviews.first(where: { $0 is UIButton }) as? UIButton {
+                routePickerButton.sendActions(for: .touchUpInside)
+            }
+        } catch {
+            pil.writeLog("Unable to launch audio route picker")
+        }
     }
     
     func onActivateAudioSession() {
@@ -98,7 +118,7 @@ public class AudioManager {
             try audioSession.setCategory(.playAndRecord, mode: .voiceChat, options: [.allowBluetooth, .duckOthers])
             try audioSession.setActive(true, options: [.notifyOthersOnDeactivation])
         } catch {
-            print("Unable to activate audio \(error.localizedDescription)")
+            pil.writeLog("Unable to activate audio \(error.localizedDescription)")
         }
         
         routeToDefault()
@@ -108,7 +128,7 @@ public class AudioManager {
         do {
             try audioSession.setActive(false, options: [.notifyOthersOnDeactivation])
         } catch {
-            print("Unable to deactivate audio \(error.localizedDescription)")
+            pil.writeLog("Unable to deactivate audio \(error.localizedDescription)")
         }
     }
     
@@ -162,9 +182,9 @@ public class AudioManager {
     
     @objc func handleRouteChange(notification: Notification) {
         guard let userInfo = notification.userInfo,
-            let reasonValue = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt,
-            let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) else {
-                return
+              let reasonValue = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt,
+              let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) else {
+            return
         }
         
         if reason == .oldDeviceUnavailable || reason == .newDeviceAvailable {
