@@ -50,7 +50,6 @@ class CallManager: CallDelegate {
 
             pil.iOSCallKit.reportOutgoingCallConnecting()
             pil.events.broadcast(event: .outgoingCallStarted(state: pil.sessionState))
-
             pil.app.requestCallUi()
         } else {
             guard self.pil.calls.isInTranfer else {
