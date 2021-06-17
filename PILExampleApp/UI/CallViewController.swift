@@ -163,7 +163,7 @@ class CallViewController: UIViewController, PILEventDelegate {
     }
     
     @IBAction func bluetoothButtonWasPressed(_ sender: Any) {
-        pil.audio.routeAudio(.bluetooth)
+        pil.audio.launchAudioRoutePicker()
     }
 
     @IBAction func earpieceButtonWasPressed(_ sender: Any) {
