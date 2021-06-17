@@ -42,10 +42,12 @@ class CallManager: CallDelegate {
 
     public func outgoingCallCreated(_ call: VoipLibCall) {
         pil.writeLog("On outgoingCallCreated")
+        self.voipLibCall = call
+        
         if !isInCall {
             pil.writeLog("Setting up the outgoing call")
             mergeInitiated = false
-            self.voipLibCall = call
+
             pil.iOSCallKit.reportOutgoingCallConnecting()
             pil.events.broadcast(event: .outgoingCallStarted(state: pil.sessionState))
             pil.app.requestCallUi()
