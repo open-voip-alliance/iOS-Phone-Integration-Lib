@@ -37,8 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LogDelegate {
                 domain: self.userDefault(key: "domain"),
                 port: Int(self.userDefault(key: "port")) ?? 0,
                 secure: self.defaults.bool(forKey: "encryption")
-            ),
-            autoStart: true
+            )
         )
         
         return true

@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol PILEventDelegate: class {
-    func onEvent(event: Event, callSessionState: CallSessionState)
+    func onEvent(event: Event)
 }

@@ -11,14 +11,16 @@ public class AudioManager {
     private let voipLib: VoIPLib
     private let audioSession: AVAudioSession
     private let pil: PIL
+    private let callActions: CallActions
     
-    public let dtmf: DtmfPlayer
+    let dtmf: DtmfPlayer
     
-    init(pil: PIL, voipLib: VoIPLib, audioSession: AVAudioSession, dtmfPlayer: DtmfPlayer) {
+    init(pil: PIL, voipLib: VoIPLib, audioSession: AVAudioSession, dtmfPlayer: DtmfPlayer, callActions: CallActions) {
         self.pil = pil
         self.voipLib = voipLib
         self.audioSession = audioSession
         self.dtmf = dtmfPlayer
+        self.callActions = callActions
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleRouteChange), name: AVAudioSession.routeChangeNotification, object: nil)
     }
@@ -59,7 +61,7 @@ public class AudioManager {
         }
     }
     
-    public func routeAudio(route: AudioRoute) {
+    public func routeAudio(_ route: AudioRoute) {
         guard let availableInputs = audioSession.availableInputs else {
             return
         }
@@ -112,9 +114,9 @@ public class AudioManager {
     
     private func routeToDefault() {
         if hasBluetooth() {
-            routeAudio(route: .bluetooth)
+            routeAudio(.bluetooth)
         } else {
-            routeAudio(route: .phone)
+            routeAudio(.phone)
         }
     }
     
@@ -152,6 +154,12 @@ public class AudioManager {
         return !availableInputs.filter({$0.portType == port}).isEmpty
     }
     
+    public func mute() { callActions.mute() }
+    
+    public func unmute() { callActions.unmute() }
+    
+    public func toggleMute() { callActions.toggleMute() }
+    
     @objc func handleRouteChange(notification: Notification) {
         guard let userInfo = notification.userInfo,
             let reasonValue = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt,
@@ -162,5 +170,7 @@ public class AudioManager {
         if reason == .oldDeviceUnavailable || reason == .newDeviceAvailable {
             routeToDefault()
         }
+        
+        pil.events.broadcast(event: .audioStateUpdated(state: pil.sessionState))
     }
 }

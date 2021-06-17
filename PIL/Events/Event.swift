@@ -8,17 +8,18 @@
 import Foundation
 
 public enum Event {
-    case outgoingCallStarted
-    case incomingCallReceived
-    case callEnded
-    case callConnected
-    case callDurationUpdated
+    case outgoingCallStarted(state: CallSessionState)
+    case incomingCallReceived(state: CallSessionState)
+    case callEnded(state: CallSessionState)
+    case callConnected(state: CallSessionState)
+    case callDurationUpdated(state: CallSessionState)
+    case audioStateUpdated(state: CallSessionState)
     
     case outgoingCallSetupFailed
     case incomingCallSetupFailed
     
-    case attendedTransferStarted
-    case attendedTransferAborted
-    case attendedTransferConnected
-    case attendedTransferEnded
+    case attendedTransferStarted(state: CallSessionState)
+    case attendedTransferAborted(state: CallSessionState)
+    case attendedTransferConnected(state: CallSessionState)
+    case attendedTransferEnded(state: CallSessionState)
 }

@@ -33,7 +33,7 @@ class CallManager: CallDelegate {
             pil.writeLog("Setting up the incoming call")
             mergeInitiated = false
             self.voipLibCall = incomingCall
-            pil.events.broadcast(event: .incomingCallReceived)
+            pil.events.broadcast(event: .incomingCallReceived(state: pil.sessionState))
             callKitUpdateCurrentCall(incomingCall)
         } else {
             pil.writeLog("Detecting incoming call received while already in call so not doing anything")
@@ -47,7 +47,7 @@ class CallManager: CallDelegate {
             mergeInitiated = false
             self.voipLibCall = call
             pil.iOSCallKit.reportOutgoingCallConnecting()
-            pil.events.broadcast(event: .outgoingCallStarted)
+            pil.events.broadcast(event: .outgoingCallStarted(state: pil.sessionState))
             pil.app.requestCallUi()
         } else {
             guard self.pil.calls.isInTranfer else {
@@ -55,7 +55,7 @@ class CallManager: CallDelegate {
                 return
             }
             pil.writeLog("Setting up the second outgoing call for transfer")
-            pil.events.broadcast(event: .attendedTransferStarted)
+            pil.events.broadcast(event: .attendedTransferStarted(state: pil.sessionState))
         }
     }
 
@@ -69,9 +69,9 @@ class CallManager: CallDelegate {
         callKitUpdateCurrentCall(call)
         
         if pil.calls.isInTranfer {
-            pil.events.broadcast(event: .attendedTransferConnected)
+            pil.events.broadcast(event: .attendedTransferConnected(state: pil.sessionState))
         } else {
-            pil.events.broadcast(event: .callConnected)
+            pil.events.broadcast(event: .callConnected(state: pil.sessionState))
             pil.app.requestCallUi()
         }
     }
@@ -82,15 +82,15 @@ class CallManager: CallDelegate {
         if pil.calls.isInTranfer {
             pil.writeLog("Call ended in transfer")
             if mergeInitiated {
-                pil.events.broadcast(event: .attendedTransferEnded)
+                pil.events.broadcast(event: .attendedTransferEnded(state: pil.sessionState))
                 mergeInitiated = false
             } else {
-                pil.events.broadcast(event: .attendedTransferAborted)
+                pil.events.broadcast(event: .attendedTransferAborted(state: pil.sessionState))
             }
         } else {
             pil.writeLog("We are not currently in transfer so we will end all calls")
             pil.iOSCallKit.endAllCalls()
-            pil.events.broadcast(event: .callEnded)
+            pil.events.broadcast(event: .callEnded(state: pil.sessionState))
             self.voipLibCall = nil
             mergeInitiated = false
         }

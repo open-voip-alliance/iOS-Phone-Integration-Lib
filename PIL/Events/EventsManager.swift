@@ -36,7 +36,7 @@ public class EventsManager {
                 continue
             }
             
-            delegate.onEvent(event: event, callSessionState: pil.sessionState)
+            delegate.onEvent(event: event)
         }
     }
 

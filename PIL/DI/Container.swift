@@ -41,7 +41,8 @@ var register: (Container) -> Container = {
         pil: c.resolve(PIL.self)!,
         voipLib: c.resolve(VoIPLib.self)!,
         audioSession: AVAudioSession.sharedInstance(),
-        dtmfPlayer: c.resolve(DtmfPlayer.self)!
+        dtmfPlayer: c.resolve(DtmfPlayer.self)!,
+        callActions: c.resolve(CallActions.self)!
     ) }.inObjectScope(.container)
     
     $0.register(DtmfPlayer.self) { c in DtmfPlayer(

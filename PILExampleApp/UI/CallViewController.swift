@@ -38,12 +38,28 @@ class CallViewController: UIViewController, PILEventDelegate {
         pil.events.stopListening(delegate: self)
     }
     
-    func onEvent(event: Event, callSessionState: CallSessionState) {
+    func onEvent(event: Event) {
         print("Received \(event)")
         
         self.event = event
-        self.callSessionState = callSessionState
-        render()
+        
+        switch event {
+            case .callEnded(let state):
+                self.dismiss(animated: true)
+                fallthrough
+            case .incomingCallReceived(let state),
+                 .outgoingCallStarted(let state),
+                 .callDurationUpdated(let state),
+                 .callConnected(let state),
+                 .attendedTransferAborted(let state),
+                 .attendedTransferEnded(let state),
+                 .attendedTransferConnected(let state),
+                 .attendedTransferStarted(let state),
+                 .audioStateUpdated(let state):
+                self.callSessionState = state
+                fallthrough
+            default: render()
+        }
     }
     
     private func render() {
@@ -134,7 +150,7 @@ class CallViewController: UIViewController, PILEventDelegate {
             showEventStatus(message: "Incoming Call Setup Failed.")
         case .outgoingCallSetupFailed:
             showEventStatus(message: "Outgoing Call Setup Failed.")
-        case .none, .callDurationUpdated:
+            case .none, .callDurationUpdated, .audioStateUpdated:
             return
         }
     }
@@ -147,15 +163,15 @@ class CallViewController: UIViewController, PILEventDelegate {
     }
     
     @IBAction func bluetoothButtonWasPressed(_ sender: Any) {
-        pil.audio.routeAudio(route: .bluetooth)
+        pil.audio.routeAudio(.bluetooth)
     }
 
     @IBAction func earpieceButtonWasPressed(_ sender: Any) {
-        pil.audio.routeAudio(route: .phone)
+        pil.audio.routeAudio(.phone)
     }
 
     @IBAction func speakerButtonWasPressed(_ sender: Any) {
-        pil.audio.routeAudio(route: .speaker)
+        pil.audio.routeAudio(.speaker)
     }
 
     @IBAction func transferButtonWasPressed(_ sender: Any) {
@@ -174,7 +190,7 @@ class CallViewController: UIViewController, PILEventDelegate {
     }
 
     @IBAction func muteButtonWasPressed(_ sender: Any) {
-        pil.actions.toggleMute()
+        pil.audio.toggleMute()
         render()
     }
     
