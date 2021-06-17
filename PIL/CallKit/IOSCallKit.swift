@@ -223,7 +223,7 @@ extension IOSCallKit: CXProviderDelegate {
                 timer.invalidate()
             }
             
-            self.pil.events.broadcast(event: .callDurationUpdated)
+            self.pil.events.broadcast(event: .callDurationUpdated(state: self.pil.sessionState))
         })
     }
 

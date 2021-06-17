@@ -60,19 +60,19 @@ public class CallActions {
         }
     }
     
-    public func mute() {
+    func mute() {
         performCallAction { uuid -> CXCallAction in
             CXSetMutedCallAction(call: uuid, muted: true)
         }
     }
     
-    public func unmute() {
+    func unmute() {
         performCallAction { uuid -> CXCallAction in
             CXSetMutedCallAction(call: uuid, muted: false)
         }
     }
     
-    public func toggleMute() {
+    func toggleMute() {
         let isOnMute: Bool = pil.audio.isMicrophoneMuted
         
         if isOnMute {
@@ -82,9 +82,9 @@ public class CallActions {
         }
     }
     
-    public func sendDtmf(dtmf: String, playToneLocally: Bool = true) {
+    public func sendDtmf(_ dtmf: String, playToneLocally: Bool = true) {
         if playToneLocally {
-            pil.audio.dtmf.playTone(character: dtmf)
+            pil.audio.dtmf.playTone(dtmf)
         }
         performCallAction { uuid -> CXCallAction in
             CXPlayDTMFCallAction(call: uuid, digits: dtmf, type: .singleTone)

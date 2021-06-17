@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 
-public class DtmfPlayer {
+class DtmfPlayer {
     
     let pil: PIL
     
@@ -42,7 +42,7 @@ public class DtmfPlayer {
         }
     }
     
-    public func playTone(character: String) {
+    func playTone(_ character: String) {
         guard let tone = dtmfTones[character] else {return}
         tone.currentTime = 0
         tone.play()

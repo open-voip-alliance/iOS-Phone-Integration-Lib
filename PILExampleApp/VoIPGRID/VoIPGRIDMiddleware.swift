@@ -11,7 +11,6 @@ import PIL
 import PushKit
 
 class VoIPGRIDMiddleware: Middleware {
-    
     private let defaults = UserDefaults.standard
     
     public var isVoipgridTokenValid: Bool {
@@ -93,8 +92,13 @@ class VoIPGRIDMiddleware: Middleware {
         }
     }
     
-    func handleNonVoIPPush(payload: PKPushPayload, type: PKPushType) {
-        UserDefaults.standard.set(false, forKey: "middleware_is_registered")
+    func inspect(payload: PKPushPayload, type: PKPushType) -> Bool {
+        if (type != .voIP) {
+            UserDefaults.standard.set(false, forKey: "middleware_is_registered")
+            return false
+        }
+        
+        return true
     }
 
     public func setVoIPAccountEncryption(encryption: Bool, completion: @escaping (Bool) -> Void) {
