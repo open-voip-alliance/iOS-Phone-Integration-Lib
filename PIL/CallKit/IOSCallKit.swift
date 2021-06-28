@@ -52,7 +52,8 @@ class IOSCallKit: NSObject {
         providerConfiguration.maximumCallsPerCallGroup = 1
         providerConfiguration.supportsVideo = false
         providerConfiguration.supportedHandleTypes = [CXHandle.HandleType.phoneNumber]
-
+        providerConfiguration.includesCallsInRecents = false
+        
         if let pil = PIL.shared {
             if pil.preferences.useApplicationRingtone {
                 if Bundle.main.path(forResource: "phone_integration_lib_call_kit_ringtone", ofType: "wav") != nil {
