@@ -96,6 +96,14 @@ public class PIL {
         }
     }
     
+    /// Stop the PIL, this will remove all authentication credentials from memory and destroy the underlying voip lib. This will not destroy the PIL.
+    ///
+    /// This should be called when a user logs-out (or similar action).
+    public func stop() {
+        auth = nil
+        voipLib.destroy()
+    }
+    
     /// Place a call to the given number.
     /// This will boot the lib if it is not already booted.
     /// - Parameter number: the String number to call.
