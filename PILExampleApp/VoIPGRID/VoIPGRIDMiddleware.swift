@@ -92,13 +92,10 @@ class VoIPGRIDMiddleware: Middleware {
         }
     }
     
-    func inspect(payload: PKPushPayload, type: PKPushType) -> Bool {
+    func inspect(payload: PKPushPayload, type: PKPushType) {
         if (type != .voIP) {
             UserDefaults.standard.set(false, forKey: "middleware_is_registered")
-            return false
-        }
-        
-        return true
+        }        
     }
 
     public func setVoIPAccountEncryption(encryption: Bool, completion: @escaping (Bool) -> Void) {
