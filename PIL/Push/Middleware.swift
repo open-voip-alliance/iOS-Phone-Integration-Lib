@@ -16,13 +16,8 @@ public protocol Middleware {
     
     func extractCallDetail(from payload: PKPushPayload) -> IncomingPayloadCallDetail
     
-    /// Inspect the contents of the push notification to determine whether this notification should be processed
-    /// as a call notification.
-    ///
-    /// - Returns: If TRUE is returned, processing of the push message will continue as if it is a call. If FALSE is
-    ///     returned, nothing further will be done with this notification. This will be ignored if the [PKPushType] is
-    ///     .voip as it is required that this be handled as a call.
-    func inspect(payload: PKPushPayload, type: PKPushType) -> Bool
+    /// View the content of the push message before it is processed.
+    func inspect(payload: PKPushPayload, type: PKPushType)
 }
 
 public struct IncomingPayloadCallDetail {
