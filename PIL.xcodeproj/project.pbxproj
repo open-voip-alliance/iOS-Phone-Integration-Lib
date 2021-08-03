@@ -34,7 +34,7 @@
 		5CAED46825F4C74B00F9F4B1 /* AudioState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAED46725F4C74B00F9F4B1 /* AudioState.swift */; };
 		5CAED4F625F5294400F9F4B1 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAED4F525F5294400F9F4B1 /* Contacts.swift */; };
 		5CBE0A5025F130BC00E797EE /* VoIPLibHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A4F25F130BC00E797EE /* VoIPLibHelper.swift */; };
-		5CBE0A5525F143FC00E797EE /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A5425F143FC00E797EE /* CallManager.swift */; };
+		5CBE0A5525F143FC00E797EE /* VoipLibEventTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A5425F143FC00E797EE /* VoipLibEventTranslator.swift */; };
 		5CBE0A5B25F1450D00E797EE /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A5925F1450D00E797EE /* Middleware.swift */; };
 		5CBE0A5C25F1450D00E797EE /* PushKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0A5A25F1450D00E797EE /* PushKitDelegate.swift */; };
 		5CBE0B0B25F236E800E797EE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0B0A25F236E800E797EE /* Event.swift */; };
@@ -60,7 +60,9 @@
 		833E446225C9914B0006518B /* StagingConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833E446125C9914B0006518B /* StagingConfig.plist */; };
 		83664449261F456300F7B504 /* InCallDialpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83664448261F456300F7B504 /* InCallDialpadViewController.swift */; };
 		836A97F425ACDB4A00497759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836A97F325ACDB4A00497759 /* Main.storyboard */; };
-		83B3C1D926404CF600238976 /* CallSessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B3C1D826404CF600238976 /* CallSessionState.swift */; };
+		836F4C3026CAC418003AC5A7 /* CallSessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836F4C2F26CAC418003AC5A7 /* CallSessionState.swift */; };
+		8392482226B998B1001C9BBB /* PlatformIntegrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392482126B998B1001C9BBB /* PlatformIntegrator.swift */; };
+		8392482426BAD4A9001C9BBB /* CallList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392482326BAD4A9001C9BBB /* CallList.swift */; };
 		83B84F82257D7B1900BABAC7 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B84F81257D7B1900BABAC7 /* PIL.swift */; };
 		83B84F83257D7B1900BABAC7 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B84F81257D7B1900BABAC7 /* PIL.swift */; };
 		83C98B9625A8AD1900CECE31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C98B9525A8AD1900CECE31 /* AppDelegate.swift */; };
@@ -114,7 +116,7 @@
 		5CAED46725F4C74B00F9F4B1 /* AudioState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioState.swift; sourceTree = "<group>"; };
 		5CAED4F525F5294400F9F4B1 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		5CBE0A4F25F130BC00E797EE /* VoIPLibHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoIPLibHelper.swift; sourceTree = "<group>"; };
-		5CBE0A5425F143FC00E797EE /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
+		5CBE0A5425F143FC00E797EE /* VoipLibEventTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoipLibEventTranslator.swift; sourceTree = "<group>"; };
 		5CBE0A5925F1450D00E797EE /* Middleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		5CBE0A5A25F1450D00E797EE /* PushKitDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushKitDelegate.swift; sourceTree = "<group>"; };
 		5CBE0B0A25F236E800E797EE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -146,7 +148,9 @@
 		833E446125C9914B0006518B /* StagingConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StagingConfig.plist; sourceTree = "<group>"; };
 		83664448261F456300F7B504 /* InCallDialpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCallDialpadViewController.swift; sourceTree = "<group>"; };
 		836A97F325ACDB4A00497759 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		83B3C1D826404CF600238976 /* CallSessionState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallSessionState.swift; sourceTree = "<group>"; };
+		836F4C2F26CAC418003AC5A7 /* CallSessionState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallSessionState.swift; sourceTree = "<group>"; };
+		8392482126B998B1001C9BBB /* PlatformIntegrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformIntegrator.swift; sourceTree = "<group>"; };
+		8392482326BAD4A9001C9BBB /* CallList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallList.swift; sourceTree = "<group>"; };
 		83B84F81257D7B1900BABAC7 /* PIL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIL.swift; sourceTree = "<group>"; };
 		83C98B9325A8AD1900CECE31 /* PILExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PILExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C98B9525A8AD1900CECE31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 				5C92D7C925DA93F8003019D1 /* EventsManager.swift */,
 				5CBE0B0A25F236E800E797EE /* Event.swift */,
 				5CBE0B0F25F2382000E797EE /* PILEventDelegate.swift */,
+				8392482126B998B1001C9BBB /* PlatformIntegrator.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -260,14 +265,15 @@
 		5CAB173F25DA8FCE00BC12E5 /* Calls */ = {
 			isa = PBXGroup;
 			children = (
-				5CAB174025DA8FCE00BC12E5 /* CallDirection.swift */,
-				5CAB174125DA8FCE00BC12E5 /* CallState.swift */,
-				5CAB174325DA8FCE00BC12E5 /* Calls.swift */,
-				5CAB174525DA8FCE00BC12E5 /* CallActions.swift */,
-				5CAB174225DA8FCE00BC12E5 /* PILCallFactory.swift */,
 				5CAB174425DA8FCE00BC12E5 /* Call.swift */,
-				5CBE0A5425F143FC00E797EE /* CallManager.swift */,
-				83B3C1D826404CF600238976 /* CallSessionState.swift */,
+				5CAB174525DA8FCE00BC12E5 /* CallActions.swift */,
+				5CAB174025DA8FCE00BC12E5 /* CallDirection.swift */,
+				836F4C2F26CAC418003AC5A7 /* CallSessionState.swift */,
+				5CAB174225DA8FCE00BC12E5 /* PILCallFactory.swift */,
+				5CAB174325DA8FCE00BC12E5 /* Calls.swift */,
+				8392482326BAD4A9001C9BBB /* CallList.swift */,
+				5CAB174125DA8FCE00BC12E5 /* CallState.swift */,
+				5CBE0A5425F143FC00E797EE /* VoipLibEventTranslator.swift */,
 			);
 			path = Calls;
 			sourceTree = "<group>";
@@ -723,6 +729,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CAB174925DA8FCE00BC12E5 /* Calls.swift in Sources */,
+				8392482226B998B1001C9BBB /* PlatformIntegrator.swift in Sources */,
 				83B84F82257D7B1900BABAC7 /* PIL.swift in Sources */,
 				83FADAC6258BD81100CA64C8 /* Auth.swift in Sources */,
 				5CAB174A25DA8FCE00BC12E5 /* Call.swift in Sources */,
@@ -735,19 +742,20 @@
 				5CBE0B1025F2382000E797EE /* PILEventDelegate.swift in Sources */,
 				83E508CB2637888700267CF9 /* DtmfPlayer.swift in Sources */,
 				5CBE0A5C25F1450D00E797EE /* PushKitDelegate.swift in Sources */,
+				836F4C3026CAC418003AC5A7 /* CallSessionState.swift in Sources */,
 				5CAB17D025DA92D200BC12E5 /* AudioManager.swift in Sources */,
-				5CBE0A5525F143FC00E797EE /* CallManager.swift in Sources */,
+				5CBE0A5525F143FC00E797EE /* VoipLibEventTranslator.swift in Sources */,
 				5CBE0B0B25F236E800E797EE /* Event.swift in Sources */,
 				5CBE0A5025F130BC00E797EE /* VoIPLibHelper.swift in Sources */,
 				5CAB174625DA8FCE00BC12E5 /* CallDirection.swift in Sources */,
 				F81F06860533E6AB96B28CBA /* Builder.swift in Sources */,
-				83B3C1D926404CF600238976 /* CallSessionState.swift in Sources */,
 				5CAB174825DA8FCE00BC12E5 /* PILCallFactory.swift in Sources */,
 				5C66DF572603505B0051199B /* LogLevel.swift in Sources */,
 				5C66DF5C260350860051199B /* LogDelegate.swift in Sources */,
 				5CBE0C9125F4072300E797EE /* IOS.swift in Sources */,
 				5CAB174B25DA8FCE00BC12E5 /* CallActions.swift in Sources */,
 				5CBE0A5B25F1450D00E797EE /* Middleware.swift in Sources */,
+				8392482426BAD4A9001C9BBB /* CallList.swift in Sources */,
 				5CAED46325F4C72C00F9F4B1 /* AudioRoute.swift in Sources */,
 				F81F0A14AE85262D7380D5C1 /* ApplicationSetup.swift in Sources */,
 				5CAB174725DA8FCE00BC12E5 /* CallState.swift in Sources */,

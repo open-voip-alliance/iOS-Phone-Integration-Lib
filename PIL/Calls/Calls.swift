@@ -7,54 +7,64 @@ import iOSVoIPLib
 
 public class Calls {
 
-    private let callManager: CallManager
+    // MARK: Properties
+    private let callList: CallList
     private let factory: PILCallFactory
+    private let MAX_CALLS = 2
+    
+    var transferSession: AttendedTransferSession? = nil
+    
+    var isInCall: Bool {
+        get {
+            !callList.callArray.isEmpty
+        }
+    }
+    
+    var activeVoipLibCall: VoipLibCall? {
+        get {
+            callList.callArray.last
+        }
+    }
+
+    
+    var inactiveVoipLibCall: VoipLibCall? {
+        get {
+            isInTransfer ? callList.callArray.first : nil
+        }
+    }
     
     /// The currently active call that is setup to send/receive audio.
-    public var active: Call? {
+    public var activeCall: Call? {
         get {
-            factory.make(voipLibCall: findActiveCall())
+            factory.make(voipLibCall: activeVoipLibCall)
         }
     }
-
+    
     /// The background call. This will only exist when a transfer is happening.
     /// This will be the initial call while connecting to the new call.
-    public var inactive: Call? {
+    public var inactiveCall: Call? {
         get {
-            factory.make(voipLibCall: findInactiveCall())
-        }
-    }
-
-    public var isInCall: Bool {
-        get {
-            callManager.voipLibCall != nil
+            factory.make(voipLibCall: inactiveVoipLibCall)
         }
     }
     
-    public var isInTranfer: Bool {
+    public var isInTransfer: Bool {
         get {
-            callManager.transferSession != nil
+            callList.callArray.count >= 2
         }
     }
     
-    init(callManager: CallManager, factory: PILCallFactory) {
-        self.callManager = callManager
+    // MARK: Initialization
+    init(factory: PILCallFactory) {
         self.factory = factory
+        self.callList = CallList(maxCalls: MAX_CALLS)
     }
     
-    private func findActiveCall() -> VoipLibCall? {
-        if let transferSession = callManager.transferSession {
-            return transferSession.to
-        }
-        
-        return callManager.voipLibCall
+    public func add(voipLibCall: VoipLibCall) {
+        callList.add(call: voipLibCall)
     }
-
-    private func findInactiveCall() -> VoipLibCall? {
-        if let transferSession = callManager.transferSession {
-            return transferSession.from
-        }
-        
-        return nil
+    
+    public func remove(voipLibCall: VoipLibCall) {
+        callList.remove(call: voipLibCall)
     }
 }

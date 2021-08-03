@@ -19,12 +19,10 @@ class IOSCallKit: NSObject {
     private let notifications = NotificationCenter.default
     private let pil: PIL
     private let voipLib: VoIPLib
-    private let callManager: CallManager
         
-    init(pil: PIL, voipLib: VoIPLib, callManager: CallManager) {
+    init(pil: PIL, voipLib: VoIPLib) {
         self.pil = pil
         self.voipLib = voipLib
-        self.callManager = callManager
         self.provider = CXProvider(configuration: IOSCallKit.self.createConfiguration())
         super.init()
     }
@@ -220,7 +218,7 @@ extension IOSCallKit: CXProviderDelegate {
         pil.audio.onActivateAudioSession()
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { timer in
-            if self.pil.calls.active == nil {
+            if self.pil.calls.activeCall == nil {
                 timer.invalidate()
             }
             
@@ -254,14 +252,14 @@ extension IOSCallKit: CXCallObserverDelegate {
 extension IOSCallKit {
 
     private func callExists(_ action: CXCallAction? = nil, callback: (VoipLibCall) -> Void) {
-        if let transferSession = callManager.transferSession {
+        if let transferSession = pil.calls.transferSession {
             pil.writeLog("CXCallAction \(action.debugDescription) completed on transfer target")
             callback(transferSession.to)
             action?.fulfill()
             return
         }
         
-        if let call = callManager.voipLibCall {
+        if let call = pil.calls.activeVoipLibCall {
             pil.writeLog("CXCallAction \(action.debugDescription) completed on active call")
             callback(call)
             action?.fulfill()

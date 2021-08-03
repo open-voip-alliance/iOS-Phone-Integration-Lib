@@ -34,7 +34,7 @@ public class IOS {
     @objc func willEnterForeground() {
         pil.writeLog("Application has entered the foreground")
         
-        if pil.calls.active != nil {
+        if pil.calls.activeCall != nil {
             pil.app.requestCallUi()
         }
         
