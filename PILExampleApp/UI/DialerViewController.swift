@@ -24,6 +24,10 @@ class DialerViewController: UIViewController {
         CNContactStore().requestAccess(for: .contacts) { (granted, error) in
             
         }
+        
+        if let environmentDestination = ProcessInfo.processInfo.environment["pil.default.destination"] {
+            numberPreview.text = environmentDestination
+        }
     }
 
     @IBAction func callButtonWasPressed(_ sender: UIButton) {
