@@ -61,8 +61,8 @@ final class SettingsViewController: QuickTableViewController {
                 NavigationRow(text: "VoIPGRID Token", detailText: .subtitle(userDefault(key: "voipgrid_api_token")), action: nil),
                 NavigationRow(text: "Push Kit Token", detailText: .subtitle(userDefault(key: "push_kit_token")), action: nil),
                 NavigationRow(text: "Middleware", detailText: .subtitle(defaults.bool(forKey: "middleware_is_registered") ? "Registered" : "Not Registered"), action: nil),
-                TapActionRow(text: "Register with Middleware", action: { _ in self.registerMiddleware() }),
-                TapActionRow(text: "Unregister with Middleware", action: { _ in self.unregisterMiddleware() }),
+                TapActionRow(text: "Register with Middleware", action: { _ in SettingsViewController.registerMiddleware { success in self.viewDidLoad() } }),
+                TapActionRow(text: "Unregister with Middleware", action: { _ in SettingsViewController.unregisterMiddleware { success in self.viewDidLoad() } }),
             ]),
             
             Section(title: "Preferences", rows: [
@@ -92,7 +92,9 @@ final class SettingsViewController: QuickTableViewController {
             self.defaults.set(textField.text, forKey: key)
             
             if key.contains("voipgrid") {
-                self.attemptVoipgridLogin()
+                SettingsViewController.attemptVoipgridLogin { apiToken in
+                    self.viewDidLoad()
+                }
             } else {
                 self.viewDidLoad()
             }
@@ -104,18 +106,18 @@ final class SettingsViewController: QuickTableViewController {
         self.present(alert, animated:true, completion: nil)
     }
     
-    private func attemptVoipgridLogin() {
+    static func attemptVoipgridLogin(completion: @escaping (String?) -> Void) {
         let voipgridLogin = VoIPGRIDLogin()
         voipgridLogin.login { apiToken in
             guard let apiToken = apiToken else {
-                self.defaults.removeObject(forKey: "voipgrid_api_token")
-                self.unregisterMiddleware()
-                self.viewDidLoad()
+                UserDefaults.standard.removeObject(forKey: "voipgrid_api_token")
+                SettingsViewController.unregisterMiddleware(completion: nil)
+                completion(apiToken)
                 return
             }
             
-            self.defaults.set(apiToken, forKey: "voipgrid_api_token")
-            self.viewDidLoad()
+            UserDefaults.standard.set(apiToken, forKey: "voipgrid_api_token")
+            completion(apiToken)
         }
     }
     
@@ -126,23 +128,23 @@ final class SettingsViewController: QuickTableViewController {
         })
     }
     
-    private func registerMiddleware() {
+    static func registerMiddleware(completion: ((Bool) -> Void)?) {
         let middleware = VoIPGRIDMiddleware()
         middleware.register { success in
             if success {
-                self.defaults.set(true, forKey: "middleware_is_registered")
+                UserDefaults.standard.set(true, forKey: "middleware_is_registered")
             }
-            self.viewDidLoad()
+            completion?(success)
         }
     }
     
-    private func unregisterMiddleware() {
+    static func unregisterMiddleware(completion: ((Bool) -> Void)?) {
         let middleware = VoIPGRIDMiddleware()
         middleware.unregister { success in
             if success {
-                self.defaults.set(false, forKey: "middleware_is_registered")
+                UserDefaults.standard.set(false, forKey: "middleware_is_registered")
             }
-            self.viewDidLoad()
+            completion?(success)
         }
     }
 
