@@ -26,8 +26,8 @@ class CallViewController: UIViewController, PILEventDelegate {
     
     let pil = PIL.shared!
     
-    private var callSessionState: CallSessionState?
     private var event: Event?
+    private var callSessionState: CallSessionState?
     
     override func viewWillAppear(_ animated: Bool) {
         render()
@@ -39,45 +39,49 @@ class CallViewController: UIViewController, PILEventDelegate {
     }
     
     func onEvent(event: Event) {
-        print("Received \(event)")
+        print("CallViewController received \(event) event")
         
         self.event = event
         
         switch event {
-            case .callEnded(let state):
-                self.dismiss(animated: true)
-                fallthrough
-            case .incomingCallReceived(let state),
-                 .outgoingCallStarted(let state),
-                 .callDurationUpdated(let state),
-                 .callConnected(let state),
-                 .attendedTransferAborted(let state),
-                 .attendedTransferEnded(let state),
-                 .attendedTransferConnected(let state),
-                 .attendedTransferStarted(let state),
-                 .audioStateUpdated(let state):
-                self.callSessionState = state
-                fallthrough
-            default: render()
+        case .callEnded(_):
+            self.dismiss(animated: true)
+        case .incomingCallReceived(let state),
+             .outgoingCallStarted(let state),
+             .callDurationUpdated(let state),
+             .callConnected(let state),
+             .callStateUpdated(let state),
+             .attendedTransferAborted(let state),
+             .attendedTransferEnded(let state),
+             .attendedTransferConnected(let state),
+             .attendedTransferStarted(let state),
+             .audioStateUpdated(let state):
+            self.callSessionState = state
+            fallthrough
+        default:
+            self.render()
         }
     }
     
     private func render() {
-        guard let call = callSessionState?.activeCall ?? pil.calls.active else {
+        guard let call = callSessionState?.activeCall ?? pil.calls.activeCall else {
             self.dismiss(animated: true)
             return
         }
         
-        renderCallInfo(call: call)
-        renderCallButtons(call: call)
+        DispatchQueue.main.async {
+            self.renderCallInfo(call: call)
+            self.renderCallButtons(call: call)
+        }
+        
         renderForEventStatus(call: call)
     }
     
     private func renderCallInfo(call: Call) {
-        callTitle.text = "\(call.remotePartyHeading) - \(call.remotePartySubheading)"
-        callSubtitle.text = String(describing: call.direction)
-        callDuration.text = call.prettyDuration
-        callStatus.text = String(describing: call.state)
+        self.callTitle.text = "\(call.remotePartyHeading) - \(call.remotePartySubheading)"
+        self.callSubtitle.text = String(describing: call.direction)
+        self.callDuration.text = call.prettyDuration
+        self.callStatus.text = String(describing: call.state)
     }
     
     private func renderCallButtons(call: Call) {
@@ -133,9 +137,7 @@ class CallViewController: UIViewController, PILEventDelegate {
         case .callConnected:
             showEventStatus(message: "Call Connected: In call with \(call.displayName)")
         case .callEnded:
-            if callSessionState?.activeCall == nil && callSessionState?.inactiveCall == nil {
-                self.dismiss(animated: true, completion: nil)
-            }
+            self.dismiss(animated: true, completion: nil)
         case .attendedTransferStarted:
             showEventStatus(message: "Call Transfer Started: Calling \(call.displayName)")
         case .attendedTransferAborted:
@@ -147,10 +149,10 @@ class CallViewController: UIViewController, PILEventDelegate {
                 showEventStatus(message: "Call Transfer Ended: Merged calls with \(call.displayName) and \(inactiveCall.displayName)")
             }
         case .incomingCallSetupFailed:
-            showEventStatus(message: "Incoming Call Setup Failed.")
+            showEventStatus(message: "Incoming Call Setup Failed")
         case .outgoingCallSetupFailed:
-            showEventStatus(message: "Outgoing Call Setup Failed.")
-            case .none, .callDurationUpdated, .audioStateUpdated:
+            showEventStatus(message: "Outgoing Call Setup Failed")
+        case .none, .callStateUpdated, .audioStateUpdated, .callDurationUpdated:
             return
         }
     }
@@ -175,7 +177,7 @@ class CallViewController: UIViewController, PILEventDelegate {
     }
 
     @IBAction func transferButtonWasPressed(_ sender: Any) {
-        if callSessionState?.inactiveCall == nil {
+        if pil.calls.inactiveCall == nil {
             promptForTransferNumber { number in
                 self.pil.actions.beginAttendedTransfer(number: number)
             }
@@ -217,8 +219,10 @@ class CallViewController: UIViewController, PILEventDelegate {
     }
     
     private func showEventStatus(message: String) {
-        inactiveCallStatus.text = message
-        let screenWidth = UIScreen.main.bounds.width
-        inactiveCallStatus.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
+        DispatchQueue.main.async {
+            self.inactiveCallStatus.text = message
+            let screenWidth = UIScreen.main.bounds.width
+            self.inactiveCallStatus.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
+        }
     }
 }

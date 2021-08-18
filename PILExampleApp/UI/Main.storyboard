@@ -383,8 +383,8 @@
                                     <action selector="keypadButtonWasPressed:" destination="Dqm-1b-3En" eventType="primaryActionTriggered" id="aNj-HD-v9c"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inactive Call" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ga-5r-JHP">
-                                <rect key="frame" x="135" y="499" width="105.5" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ga-5r-JHP">
+                                <rect key="frame" x="187.5" y="499" width="0.0" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -752,7 +752,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="btu-K0-LAc"/>
+        <segue reference="0zK-Aw-DFA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="delete.left.fill" catalog="system" width="128" height="104"/>

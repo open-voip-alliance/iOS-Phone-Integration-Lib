@@ -21,8 +21,7 @@ var register: (Container) -> Container = {
         CallActions(
             controller: CXCallController(),
             pil: c.resolve(PIL.self)!,
-            voipLib: c.resolve(VoIPLib.self)!,
-            callManager: c.resolve(CallManager.self)!
+            voipLib: c.resolve(VoIPLib.self)!
         )
     }.inObjectScope(.container)
     
@@ -34,7 +33,7 @@ var register: (Container) -> Container = {
     }.inObjectScope(.container)
     
     $0.register(Calls.self) { c in
-        Calls(callManager: c.resolve(CallManager.self)!, factory: c.resolve(PILCallFactory.self)!)
+        Calls(factory: c.resolve(PILCallFactory.self)!)
     }.inObjectScope(.container)
     
     $0.register(AudioManager.self) { c in AudioManager(
@@ -57,8 +56,12 @@ var register: (Container) -> Container = {
     
     $0.register(VoIPLib.self) { _ in VoIPLib.shared }.inObjectScope(.container)
     
-    $0.register(CallManager.self) { c in
-        CallManager(pil: c.resolve(PIL.self)!)
+    $0.register(VoipLibEventTranslator.self) { c in
+        VoipLibEventTranslator(pil: c.resolve(PIL.self)!)
+    }.inObjectScope(.container)
+    
+    $0.register(PlatformIntegrator.self) { c in
+        PlatformIntegrator(pil: c.resolve(PIL.self)!)
     }.inObjectScope(.container)
     
     $0.register(IOS.self) { c in
@@ -69,15 +72,14 @@ var register: (Container) -> Container = {
         VoIPLibHelper(
             voipLib: c.resolve(VoIPLib.self)!,
             pil: c.resolve(PIL.self)!,
-            callManager: c.resolve(CallManager.self)!
+            voipLibEventTranslator: c.resolve(VoipLibEventTranslator.self)!
         )
     }.inObjectScope(.container)
     
     $0.register(IOSCallKit.self) { c in
         IOSCallKit(
             pil: c.resolve(PIL.self)!,
-            voipLib: c.resolve(VoIPLib.self)!,
-            callManager: c.resolve(CallManager.self)!
+            voipLib: c.resolve(VoIPLib.self)!
         )
     }.inObjectScope(.container)
     

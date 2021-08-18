@@ -16,6 +16,7 @@ public class PIL {
     private let callFactory = di.resolve(PILCallFactory.self)!
     private lazy var pushKit: PushKitDelegate = { PushKitDelegate(middleware: app.middleware!) }()
     private lazy var voipLibHelper = { di.resolve(VoIPLibHelper.self)! }()
+    private lazy var platformIntegrator = { di.resolve(PlatformIntegrator.self)! }()
     
     let voipLib: VoIPLib = di.resolve(VoIPLib.self)!
     lazy var iOSCallKit = { di.resolve(IOSCallKit.self)! }()
@@ -28,7 +29,7 @@ public class PIL {
     
     var sessionState: CallSessionState {
         get {
-            CallSessionState(activeCall: calls.active, inactiveCall: calls.inactive, audioState: audio.state)
+            CallSessionState(activeCall: calls.activeCall, inactiveCall: calls.inactiveCall, audioState: audio.state)
         }
     }
     static public var shared: PIL?
@@ -56,6 +57,7 @@ public class PIL {
     init(applicationSetup: ApplicationSetup) {
         self.app = applicationSetup
         PIL.shared = self
+        events.listen(delegate: platformIntegrator)
         self.iOS.startListeningForSystemNotifications()
     }
     

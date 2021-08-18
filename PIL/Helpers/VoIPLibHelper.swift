@@ -12,12 +12,12 @@ class VoIPLibHelper {
 
     private let voipLib: VoIPLib
     private let pil: PIL
-    private let callManager: CallManager
+    private let voipLibEventTranslator: VoipLibEventTranslator
     
-    init(voipLib: VoIPLib, pil: PIL, callManager: CallManager) {
+    init(voipLib: VoIPLib, pil: PIL, voipLibEventTranslator: VoipLibEventTranslator) {
         self.voipLib = voipLib
         self.pil = pil
-        self.callManager = callManager
+        self.voipLibEventTranslator = voipLibEventTranslator
     }
     
     /// Boots the VoIP library.
@@ -73,7 +73,7 @@ class VoIPLibHelper {
     private func createConfig(auth: Auth) -> iOSVoIPLib.Config {
         iOSVoIPLib.Config(
             auth: iOSVoIPLib.Auth(name: auth.username, password: auth.password, domain: auth.domain, port: auth.port),
-            callDelegate: callManager
+            callDelegate: voipLibEventTranslator
         )
     }
 }

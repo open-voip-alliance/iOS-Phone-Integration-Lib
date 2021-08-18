@@ -11,13 +11,11 @@ public class CallActions {
     private let controller: CXCallController
     private let pil: PIL
     private let voipLib: VoIPLib
-    private let callManager: CallManager
     
-    init(controller: CXCallController, pil: PIL, voipLib: VoIPLib, callManager: CallManager) {
+    init(controller: CXCallController, pil: PIL, voipLib: VoIPLib) {
         self.controller = controller
         self.pil = pil
         self.voipLib = voipLib
-        self.callManager = callManager
     }
 
     public func hold() {
@@ -33,7 +31,7 @@ public class CallActions {
     }
     
     public func toggleHold() {
-        let isOnHold: Bool = pil.calls.active!.isOnHold
+        let isOnHold: Bool = pil.calls.activeCall!.isOnHold
         
         if isOnHold {
             unhold()
@@ -93,13 +91,12 @@ public class CallActions {
     
     public func beginAttendedTransfer(number: String) {
         callExists { call in
-            self.callManager.transferSession = voipLib.actions(call: call).beginAttendedTransfer(to: number)
+            pil.calls.transferSession = voipLib.actions(call: call).beginAttendedTransfer(to: number)
         }
     }
     
     public func completeAttendedTransfer() {
-        if let transferSession = callManager.transferSession {
-            callManager.mergeInitiated = true
+        if let transferSession = pil.calls.transferSession {
             voipLib.actions(call: transferSession.from).finishAttendedTransfer(attendedTransferSession: transferSession)
         }
     }
@@ -118,12 +115,12 @@ public class CallActions {
     }
    
     private func callExists(callback: (VoipLibCall) -> Void) {
-        if let transferSession = callManager.transferSession {
+        if let transferSession = pil.calls.transferSession {
             callback(transferSession.to)
             return
         }
         
-        if let call = callManager.voipLibCall {
+        if let call = pil.calls.activeVoipLibCall {
             callback(call)
             return
         }

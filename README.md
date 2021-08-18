@@ -130,7 +130,6 @@ override func viewDidDisappear(_ animated: Bool) {
     pil.events.stopListening(delegate: self)
 }
 ```
-
 2. You must then implement an onEvent method to handle these events.
 
 ```swift
