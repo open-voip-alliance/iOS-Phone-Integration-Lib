@@ -53,6 +53,13 @@ public class CallActions {
     }
     
     public func end() {
+        if pil.calls.isInTransfer {
+            if let call = pil.calls.activeVoipLibCall {
+                pil.voipLib.actions(call: call).end()
+            }
+            return
+        }
+
         performCallAction { uuid -> CXCallAction in
             CXEndCallAction(call: uuid)
         }

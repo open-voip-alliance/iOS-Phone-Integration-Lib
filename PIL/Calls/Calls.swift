@@ -8,7 +8,7 @@ import iOSVoIPLib
 public class Calls {
 
     // MARK: Properties
-    private let callList: CallList
+    let list: CallList
     private let factory: PILCallFactory
     private let MAX_CALLS = 2
     
@@ -16,20 +16,20 @@ public class Calls {
     
     var isInCall: Bool {
         get {
-            !callList.callArray.isEmpty
+            !list.callArray.isEmpty
         }
     }
     
     var activeVoipLibCall: VoipLibCall? {
         get {
-            callList.callArray.last
+            list.callArray.last
         }
     }
 
     
     var inactiveVoipLibCall: VoipLibCall? {
         get {
-            isInTransfer ? callList.callArray.first : nil
+            isInTransfer ? list.callArray.first : nil
         }
     }
     
@@ -50,21 +50,21 @@ public class Calls {
     
     public var isInTransfer: Bool {
         get {
-            callList.callArray.count >= 2
+            list.callArray.count >= 2
         }
     }
     
     // MARK: Initialization
     init(factory: PILCallFactory) {
         self.factory = factory
-        self.callList = CallList(maxCalls: MAX_CALLS)
+        self.list = CallList(maxCalls: MAX_CALLS)
     }
     
     public func add(voipLibCall: VoipLibCall) {
-        callList.add(call: voipLibCall)
+        list.add(call: voipLibCall)
     }
     
     public func remove(voipLibCall: VoipLibCall) {
-        callList.remove(call: voipLibCall)
+        list.remove(call: voipLibCall)
     }
 }
