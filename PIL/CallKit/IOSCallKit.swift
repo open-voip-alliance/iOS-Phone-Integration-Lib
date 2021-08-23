@@ -180,7 +180,7 @@ extension IOSCallKit: CXProviderDelegate {
     }
 
     public func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
-        callExists(action) { call in
+        pil.calls.list.callArray.forEach { call in
             voipLib.actions(call: call).end()
         }
     }
@@ -252,10 +252,12 @@ extension IOSCallKit: CXCallObserverDelegate {
 extension IOSCallKit {
 
     private func callExists(_ action: CXCallAction? = nil, callback: (VoipLibCall) -> Void) {
-        if let transferSession = pil.calls.transferSession {
-            pil.writeLog("CXCallAction \(action.debugDescription) completed on transfer target")
-            callback(transferSession.to)
-            action?.fulfill()
+        if pil.calls.isInTransfer {
+            if let call = pil.calls.activeVoipLibCall {
+                pil.writeLog("CXCallAction \(action.debugDescription) completed on transfer target")
+                callback(call)
+                action?.fulfill()
+            }
             return
         }
         
