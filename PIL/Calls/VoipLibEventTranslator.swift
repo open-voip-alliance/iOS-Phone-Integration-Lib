@@ -64,14 +64,16 @@ class VoipLibEventTranslator: CallDelegate {
     public func callEnded(_ call: VoipLibCall) {
         pil.writeLog("VoipLib event callEnded")
         
+        let currentSessionState = pil.sessionState
         let isInTransfer = pil.calls.isInTransfer
+        
         pil.calls.remove(voipLibCall: call)
         
         if isInTransfer {
             pil.writeLog("Call ended in transfer")
-            pil.events.broadcast(event: .attendedTransferAborted(state: pil.sessionState))
-        }else {
-            pil.events.broadcast(event: .callEnded(state: pil.sessionState))
+            pil.events.broadcast(event: .attendedTransferAborted(state: currentSessionState))
+        } else {
+            pil.events.broadcast(event: .callEnded(state: currentSessionState))
         }
     }
     
