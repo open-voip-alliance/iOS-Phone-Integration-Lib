@@ -24,6 +24,7 @@ class VoIPLibHelper {
     internal func initialize(force: Bool) {
         if voipLib.isInitialized && !force {
             pil.writeLog("The VoIP library is already initialized, skipping init.")
+            return
         }
         
         guard let auth = pil.auth else {

@@ -44,8 +44,8 @@ extension PushKitDelegate: PKPushRegistryDelegate {
             pil.writeLog("Not taking call as we already have an active one!")
             return
         }
-        
-        pil.start { success in
+                
+        pil.start(forceInitialize: false, forceReregister: true) { success in
             self.pil.writeLog("PIL started with success=\(success), responding to middleware: \(success)")
             self.middleware.respond(payload: payload, available: success)
         }
