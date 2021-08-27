@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		10AB264FE164F825E8827333 /* Pods_PILExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DA1144AB4ECB29126ED6F3 /* Pods_PILExampleApp.framework */; };
 		4DAC77D3E027A8A2EDEC813D /* Pods_PIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE051288AC0AD01D07F6DE8E /* Pods_PIL.framework */; };
+		5C6324C226D830B700171831 /* MissedCallNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6324C126D830B700171831 /* MissedCallNotification.swift */; };
+		5C6324CA26D8F00B00171831 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 5C6324CD26D8F00B00171831 /* Localizable.stringsdict */; };
+		5C6324CB26D8F00B00171831 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 5C6324CD26D8F00B00171831 /* Localizable.stringsdict */; };
 		5C66DF572603505B0051199B /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66DF562603505B0051199B /* LogLevel.swift */; };
 		5C66DF5C260350860051199B /* LogDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66DF5B260350860051199B /* LogDelegate.swift */; };
 		5C92D7CA25DA93F8003019D1 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92D7C925DA93F8003019D1 /* EventsManager.swift */; };
@@ -95,6 +98,8 @@
 		47DA1144AB4ECB29126ED6F3 /* Pods_PILExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PILExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		547F786BF437C8AF1105C5D9 /* Pods-PILExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PILExampleApp.release.xcconfig"; path = "Target Support Files/Pods-PILExampleApp/Pods-PILExampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		58B68102CB53FFE0FDCAF465 /* Pods_PILTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PILTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C6324C126D830B700171831 /* MissedCallNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissedCallNotification.swift; sourceTree = "<group>"; };
+		5C6324CC26D8F00B00171831 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		5C66DF562603505B0051199B /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		5C66DF5B260350860051199B /* LogDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDelegate.swift; sourceTree = "<group>"; };
 		5C92D7C925DA93F8003019D1 /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
@@ -223,6 +228,14 @@
 				58B68102CB53FFE0FDCAF465 /* Pods_PILTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C6324C026D830A600171831 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				5C6324C126D830B700171831 /* MissedCallNotification.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		5C66DF552603504D0051199B /* Logging */ = {
@@ -358,6 +371,7 @@
 		8319D8AA2576AD8D0095E54E /* PIL */ = {
 			isa = PBXGroup;
 			children = (
+				5C6324C026D830A600171831 /* Notifications */,
 				5C66DF552603504D0051199B /* Logging */,
 				5CAED4F425F5293A00F9F4B1 /* Contacts */,
 				5CBE0C8F25F4071900E797EE /* IOS */,
@@ -372,6 +386,7 @@
 				8319D8AC2576AD8D0095E54E /* Info.plist */,
 				83B84F81257D7B1900BABAC7 /* PIL.swift */,
 				F81F00A7ECF3E120DDA5BB05 /* Builder.swift */,
+				5C6324CD26D8F00B00171831 /* Localizable.stringsdict */,
 			);
 			path = PIL;
 			sourceTree = "<group>";
@@ -596,6 +611,7 @@
 				8300A8E02620C5B200D4D366 /* dtmf-5.aif in Resources */,
 				8300A8DC2620C5B200D4D366 /* dtmf-7.aif in Resources */,
 				8300A8DF2620C5B200D4D366 /* dtmf-#.aif in Resources */,
+				5C6324CA26D8F00B00171831 /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +631,7 @@
 				83C98BA225A8AD1A00CECE31 /* LaunchScreen.storyboard in Resources */,
 				833E446225C9914B0006518B /* StagingConfig.plist in Resources */,
 				83C98B9F25A8AD1A00CECE31 /* Assets.xcassets in Resources */,
+				5C6324CB26D8F00B00171831 /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +776,7 @@
 				5CAED46325F4C72C00F9F4B1 /* AudioRoute.swift in Sources */,
 				F81F0A14AE85262D7380D5C1 /* ApplicationSetup.swift in Sources */,
 				5CAB174725DA8FCE00BC12E5 /* CallState.swift in Sources */,
+				5C6324C226D830B700171831 /* MissedCallNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +822,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5C6324CD26D8F00B00171831 /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C6324CC26D8F00B00171831 /* en */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
 		83C98BA025A8AD1A00CECE31 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

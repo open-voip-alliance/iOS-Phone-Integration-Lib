@@ -61,7 +61,10 @@ var register: (Container) -> Container = {
     }.inObjectScope(.container)
     
     $0.register(PlatformIntegrator.self) { c in
-        PlatformIntegrator(pil: c.resolve(PIL.self)!)
+        PlatformIntegrator(
+            pil: c.resolve(PIL.self)!,
+            missedCallNotification: c.resolve(MissedCallNotification.self)!
+        )
     }.inObjectScope(.container)
     
     $0.register(IOS.self) { c in
@@ -80,6 +83,12 @@ var register: (Container) -> Container = {
         IOSCallKit(
             pil: c.resolve(PIL.self)!,
             voipLib: c.resolve(VoIPLib.self)!
+        )
+    }.inObjectScope(.container)
+    
+    $0.register(MissedCallNotification.self) { c in
+        MissedCallNotification(
+            center: UNUserNotificationCenter.current()
         )
     }.inObjectScope(.container)
     
