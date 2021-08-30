@@ -32,6 +32,13 @@ public class PIL {
             CallSessionState(activeCall: calls.activeCall, inactiveCall: calls.inactiveCall, audioState: audio.state)
         }
     }
+    
+    static public var isInitialized: Bool {
+        get {
+            shared != nil
+        }
+    }
+    
     static public var shared: PIL?
     
     /// The user preferences for the PIL, when this value is updated it will trigger
@@ -129,4 +136,8 @@ public class PIL {
             auth != nil && voipLib.isInitialized
         }
     }
+}
+
+public enum PILError: Error {
+    case alreadyInitialized
 }

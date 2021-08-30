@@ -31,16 +31,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LogDelegate {
             logDelegate: self
         )
         
-        _ = startIOSPIL(
-            applicationSetup: applicationSetup,
-            auth: Auth(
-                username: self.userDefault(key: "username"),
-                password: self.userDefault(key: "password"),
-                domain: self.userDefault(key: "domain"),
-                port: Int(self.userDefault(key: "port")) ?? 0,
-                secure: self.defaults.bool(forKey: "encryption")
+        do {
+            _ = try startIOSPIL(
+                applicationSetup: applicationSetup,
+                auth: Auth(
+                    username: self.userDefault(key: "username"),
+                    password: self.userDefault(key: "password"),
+                    domain: self.userDefault(key: "domain"),
+                    port: Int(self.userDefault(key: "port")) ?? 0,
+                    secure: self.defaults.bool(forKey: "encryption")
+                )
             )
-        )
+        } catch {
+            print("ERROR: Failed to start PIL - \(error)")
+        }
         
         return true
     }
