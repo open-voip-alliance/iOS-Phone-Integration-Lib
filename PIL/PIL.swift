@@ -138,6 +138,12 @@ public class PIL {
     }
 }
 
+internal func log(_ message: String, level: LogLevel = .info) {
+    if let pil = PIL.shared {
+        pil.writeLog(message, level: level)
+    }
+}
+
 public enum PILError: Error {
     case alreadyInitialized
 }

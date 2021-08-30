@@ -146,7 +146,15 @@ class IOSCallKit: NSObject {
         }
     }
     
-    func updateCall(update: CXCallUpdate) {
+    func updateCall(call: Call) {
+        let update = CXCallUpdate()
+        update.hasVideo = false
+        update.localizedCallerName = call.remoteNumber
+        update.supportsGrouping = false
+        update.supportsUngrouping = false
+        update.supportsHolding = true
+        update.supportsDTMF = true
+        
         if let uuid = findCallUuid() {
             pil.iOSCallKit.provider.reportCall(with: uuid, updated: update)
         }
