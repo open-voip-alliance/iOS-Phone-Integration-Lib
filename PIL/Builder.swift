@@ -17,7 +17,11 @@ public class Builder {
     
     internal init() {}
 
-    internal func start() -> PIL {
+    internal func start() throws -> PIL {
+        if PIL.isInitialized {
+            throw PILError.alreadyInitialized
+        }
+        
         let pil = PIL(applicationSetup: applicationSetup!)
         
         if let auth = self.auth {
@@ -35,12 +39,12 @@ public class Builder {
 }
 
 /// Initialise the iOS PIL, this should be called in your AppDelegate's didFinishLaunchingWithOptions method.
-public func startIOSPIL(applicationSetup: ApplicationSetup, auth: Auth? = nil, preferences: Preferences? = nil) -> PIL {
+public func startIOSPIL(applicationSetup: ApplicationSetup, auth: Auth? = nil, preferences: Preferences? = nil) throws -> PIL {
     let builder = Builder()
     builder.applicationSetup = applicationSetup
     builder.auth = auth
     builder.preferences = preferences
-    let pil = builder.start()
+    let pil = try builder.start()
     pil.start()
     return pil
 }
