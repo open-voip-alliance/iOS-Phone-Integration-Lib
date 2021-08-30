@@ -39,6 +39,9 @@
 		5CBE0B0B25F236E800E797EE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0B0A25F236E800E797EE /* Event.swift */; };
 		5CBE0B1025F2382000E797EE /* PILEventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0B0F25F2382000E797EE /* PILEventDelegate.swift */; };
 		5CBE0C9125F4072300E797EE /* IOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE0C9025F4072300E797EE /* IOS.swift */; };
+		5CCD4CE826DD122A00BFB3C3 /* MissedCallNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCD4CE726DD122A00BFB3C3 /* MissedCallNotification.swift */; };
+		5CCD4CF126DD18FE00BFB3C3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 5CCD4CF026DD18FE00BFB3C3 /* Localizable.stringsdict */; };
+		5CCD4CF226DD1D1A00BFB3C3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 5CCD4CF026DD18FE00BFB3C3 /* Localizable.stringsdict */; };
 		8300A8DC2620C5B200D4D366 /* dtmf-7.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D02620C5B200D4D366 /* dtmf-7.aif */; };
 		8300A8DD2620C5B200D4D366 /* dtmf-6.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D12620C5B200D4D366 /* dtmf-6.aif */; };
 		8300A8DE2620C5B200D4D366 /* dtmf-4.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8300A8D22620C5B200D4D366 /* dtmf-4.aif */; };
@@ -119,6 +122,8 @@
 		5CBE0B0A25F236E800E797EE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5CBE0B0F25F2382000E797EE /* PILEventDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PILEventDelegate.swift; sourceTree = "<group>"; };
 		5CBE0C9025F4072300E797EE /* IOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS.swift; sourceTree = "<group>"; };
+		5CCD4CE726DD122A00BFB3C3 /* MissedCallNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedCallNotification.swift; sourceTree = "<group>"; };
+		5CCD4CF026DD18FE00BFB3C3 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		8300A8D02620C5B200D4D366 /* dtmf-7.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-7.aif"; sourceTree = "<group>"; };
 		8300A8D12620C5B200D4D366 /* dtmf-6.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-6.aif"; sourceTree = "<group>"; };
 		8300A8D22620C5B200D4D366 /* dtmf-4.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-4.aif"; sourceTree = "<group>"; };
@@ -296,6 +301,14 @@
 			path = IOS;
 			sourceTree = "<group>";
 		};
+		5CCD4CE626DD122A00BFB3C3 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				5CCD4CE726DD122A00BFB3C3 /* MissedCallNotification.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		79634A5F8C7ACF842ADE953E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +363,7 @@
 		8319D8AA2576AD8D0095E54E /* PIL */ = {
 			isa = PBXGroup;
 			children = (
+				5CCD4CE626DD122A00BFB3C3 /* Notifications */,
 				5C66DF552603504D0051199B /* Logging */,
 				5CAED4F425F5293A00F9F4B1 /* Contacts */,
 				5CBE0C8F25F4071900E797EE /* IOS */,
@@ -364,6 +378,7 @@
 				8319D8AC2576AD8D0095E54E /* Info.plist */,
 				83B84F81257D7B1900BABAC7 /* PIL.swift */,
 				F81F00A7ECF3E120DDA5BB05 /* Builder.swift */,
+				5CCD4CF026DD18FE00BFB3C3 /* Localizable.stringsdict */,
 			);
 			path = PIL;
 			sourceTree = "<group>";
@@ -584,6 +599,7 @@
 				8300A8E72620C5B200D4D366 /* dtmf-9.aif in Resources */,
 				8300A8DE2620C5B200D4D366 /* dtmf-4.aif in Resources */,
 				8300A8E22620C5B200D4D366 /* dtmf-0.aif in Resources */,
+				5CCD4CF126DD18FE00BFB3C3 /* Localizable.stringsdict in Resources */,
 				8300A8E42620C5B200D4D366 /* dtmf-3.aif in Resources */,
 				8300A8E02620C5B200D4D366 /* dtmf-5.aif in Resources */,
 				8300A8DC2620C5B200D4D366 /* dtmf-7.aif in Resources */,
@@ -607,6 +623,7 @@
 				83C98BA225A8AD1A00CECE31 /* LaunchScreen.storyboard in Resources */,
 				833E446225C9914B0006518B /* StagingConfig.plist in Resources */,
 				83C98B9F25A8AD1A00CECE31 /* Assets.xcassets in Resources */,
+				5CCD4CF226DD1D1A00BFB3C3 /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +768,7 @@
 				5CAED46325F4C72C00F9F4B1 /* AudioRoute.swift in Sources */,
 				F81F0A14AE85262D7380D5C1 /* ApplicationSetup.swift in Sources */,
 				5CAB174725DA8FCE00BC12E5 /* CallState.swift in Sources */,
+				5CCD4CE826DD122A00BFB3C3 /* MissedCallNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
