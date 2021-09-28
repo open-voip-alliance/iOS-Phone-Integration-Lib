@@ -178,6 +178,7 @@ class CallViewController: UIViewController, PILEventDelegate {
 
     @IBAction func transferButtonWasPressed(_ sender: Any) {
         if pil.calls.inactiveCall == nil {
+            self.pil.actions.hold()
             promptForTransferNumber { number in
                 self.pil.actions.beginAttendedTransfer(number: number)
             }
