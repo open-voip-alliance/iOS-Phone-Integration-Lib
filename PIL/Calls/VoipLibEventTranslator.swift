@@ -54,6 +54,8 @@ class VoipLibEventTranslator: CallDelegate {
     public func callConnected(_ call: VoipLibCall) {
         pil.writeLog("VoipLib event callConnected")
         
+        pil.iOSCallKit.activateAudio()
+        
         if pil.calls.isInTransfer {
             pil.events.broadcast(event: .attendedTransferConnected(state: pil.sessionState))
         } else {
