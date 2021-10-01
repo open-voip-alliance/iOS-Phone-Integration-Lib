@@ -30,6 +30,10 @@ public class EventsManager {
     }
     
     internal func broadcast(event: Event) {
+        if !pil.isStarted {
+            return
+        }
+        
         for (id, listener) in listeners {
             guard let delegate = listener.listener else {
                 listeners.removeValue(forKey: id)
