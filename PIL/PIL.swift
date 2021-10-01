@@ -132,9 +132,12 @@ public class PIL {
     
     /// Check whether the PIL has been initialized and the authentication details are set.
     private var isPreparedToStart: Bool {
-        get {
-            auth != nil && voipLib.isInitialized
-        }
+        auth != nil && voipLib.isInitialized
+    }
+    
+    /// Currently this just defers to ``isPreparedToStart`` as they have the same conditions but this may change in the future.
+    internal var isStarted: Bool {
+        isPreparedToStart
     }
 }
 
