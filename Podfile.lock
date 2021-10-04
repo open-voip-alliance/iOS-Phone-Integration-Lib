@@ -1,20 +1,20 @@
 PODS:
-  - Alamofire (5.4.3)
+  - Alamofire (5.4.4)
   - iOSVoIPLib (0.1.0):
-    - linphone-sdk (= 4.4.1)
-  - linphone-sdk (4.4.1):
-    - linphone-sdk/all-frameworks (= 4.4.1)
-    - linphone-sdk/app-extension (= 4.4.1)
-    - linphone-sdk/app-extension-swift (= 4.4.1)
-    - linphone-sdk/basic-frameworks (= 4.4.1)
-    - linphone-sdk/swift (= 4.4.1)
-  - linphone-sdk/all-frameworks (4.4.1)
-  - linphone-sdk/app-extension (4.4.1)
-  - linphone-sdk/app-extension-swift (4.4.1):
+    - linphone-sdk (= 5.0.9)
+  - linphone-sdk (5.0.9):
+    - linphone-sdk/all-frameworks (= 5.0.9)
+    - linphone-sdk/app-extension (= 5.0.9)
+    - linphone-sdk/app-extension-swift (= 5.0.9)
+    - linphone-sdk/basic-frameworks (= 5.0.9)
+    - linphone-sdk/swift (= 5.0.9)
+  - linphone-sdk/all-frameworks (5.0.9)
+  - linphone-sdk/app-extension (5.0.9)
+  - linphone-sdk/app-extension-swift (5.0.9):
     - linphone-sdk/app-extension
-  - linphone-sdk/basic-frameworks (4.4.1):
+  - linphone-sdk/basic-frameworks (5.0.9):
     - linphone-sdk/app-extension
-  - linphone-sdk/swift (4.4.1):
+  - linphone-sdk/swift (5.0.9):
     - linphone-sdk/app-extension-swift
     - linphone-sdk/basic-frameworks
   - PIL (0.1.0):
@@ -49,13 +49,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   iOSVoIPLib:
-    :commit: 02fa2d7431b19c927b6b11d9f1adfc10663a435c
+    :commit: 3220edcfea9d79226661509573793a0a4a049170
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
 
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  iOSVoIPLib: 5d0a20228ab3f9bdcbb7e35903be4009bfa267b3
-  linphone-sdk: 91183cb3e3224d2d1a211357cd6a39d61636d17d
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  iOSVoIPLib: 3d42db807a9eb5a49103c57de69a11fadc68e603
+  linphone-sdk: 42ff9193d1138a2d5ba0a3938b835fa5dbed3c2a
   PIL: 660930395909c8c4b572b049a61ab4b48c8dccb9
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
@@ -63,4 +63,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 51027ddea33ea7bbc787bb49ec8bbb69e427236d
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2
