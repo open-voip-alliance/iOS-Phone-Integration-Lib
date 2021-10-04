@@ -80,7 +80,7 @@ public class PILCallFactory {
         switch state {
         case .idle:
             return .initializing
-        case .incomingReceived, .outgoingDidInitialize, .outgoingProgress, .outgoingRinging:
+        case .incomingReceived, .outgoingDidInitialize, .outgoingProgress, .outgoingRinging, .incomingReceivedFromPush:
             return .ringing
         case .connected, .streamsRunning, .outgoingEarlyMedia, .earlyUpdatedByRemote, .earlyUpdating, .incomingEarlyMedia, .pausing, .resuming, .referred, .updatedByRemote, .updating:
             return .connected
