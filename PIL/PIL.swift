@@ -16,7 +16,7 @@ public class PIL {
     private let callFactory = di.resolve(PILCallFactory.self)!
     private lazy var pushKit: PushKitDelegate = { PushKitDelegate(middleware: app.middleware!) }()
     private lazy var voipLibHelper = { di.resolve(VoIPLibHelper.self)! }()
-    private lazy var platformIntegrator = { di.resolve(PlatformIntegrator.self)! }()
+    internal lazy var platformIntegrator = { di.resolve(PlatformIntegrator.self)! }()
     
     let voipLib: VoIPLib = di.resolve(VoIPLib.self)!
     lazy var iOSCallKit = { di.resolve(IOSCallKit.self)! }()

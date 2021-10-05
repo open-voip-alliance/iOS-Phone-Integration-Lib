@@ -63,7 +63,8 @@ var register: (Container) -> Container = {
     $0.register(PlatformIntegrator.self) { c in
         PlatformIntegrator(
             pil: c.resolve(PIL.self)!,
-            missedCallNotification: c.resolve(MissedCallNotification.self)!
+            missedCallNotification: c.resolve(MissedCallNotification.self)!,
+            callFactory: c.resolve(PILCallFactory.self)!
         )
     }.inObjectScope(.container)
     

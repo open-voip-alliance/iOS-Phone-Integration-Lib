@@ -14,10 +14,12 @@ class PlatformIntegrator: PILEventDelegate {
     
     private let pil: PIL
     private let missedCallNotification: MissedCallNotification
+    private let callFactory: PILCallFactory
     
-    init(pil: PIL, missedCallNotification: MissedCallNotification) {
+    init(pil: PIL, missedCallNotification: MissedCallNotification, callFactory: PILCallFactory) {
         self.pil = pil
         self.missedCallNotification = missedCallNotification
+        self.callFactory = callFactory
     }
     
     func onEvent(event: Event) {
@@ -34,9 +36,6 @@ class PlatformIntegrator: PILEventDelegate {
                 pil.app.requestCallUi()
             case .callEnded(let state):
                 pil.iOSCallKit.endAllCalls()
-                if let call = state.activeCall {
-                    notifyIfMissedCall(call: call)
-                }
                 fallthrough
             case .attendedTransferAborted,
                  .attendedTransferEnded:
@@ -53,17 +52,15 @@ class PlatformIntegrator: PILEventDelegate {
         }
     }
     
-    func notifyIfMissedCall(call: Call) {
-        let center = UNUserNotificationCenter.current()
-        
-        if call.duration > 0 { return }
-        
-        if call.direction != .inbound { return }
+    internal func notifyIfMissedCall(call: VoipLibCall) {
+        if !call.wasMissed { return }
         
         if !pil.app.notifyOnMissedCall { return }
         
         if #available(iOS 12.0, *) {
-            missedCallNotification.notify(call: call)
+            if let call = callFactory.make(voipLibCall: call) {
+                missedCallNotification.notify(call: call)
+            }
         }
     }
     

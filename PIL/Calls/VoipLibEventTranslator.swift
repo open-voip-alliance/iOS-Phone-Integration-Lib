@@ -87,8 +87,7 @@ class VoipLibEventTranslator: CallDelegate {
         pil.events.broadcast(event: .attendedTransferEnded(state: pil.sessionState))
     }
     
-    public func error(_ call: VoipLibCall, message: String) {
-        pil.writeLog("VoipLib event error: \(message)")
-        callEnded(call)
+    public func callReleased(_ call: VoipLibCall) {
+        pil.platformIntegrator.notifyIfMissedCall(call: call)
     }
 }
