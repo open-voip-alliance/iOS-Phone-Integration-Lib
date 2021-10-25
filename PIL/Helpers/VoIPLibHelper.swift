@@ -32,9 +32,15 @@ class VoIPLibHelper {
             return
         }
         
-        voipLib.initialize(
-            config: createConfig(auth: auth)
-        )
+        if (force && voipLib.isInitialized) {
+            voipLib.destroy()
+        }
+        
+        if (!voipLib.isInitialized) {
+            voipLib.initialize(
+                config: createConfig(auth: auth)
+            )
+        }
     }
 
     /// Attempt to register if there are valid credentials.
@@ -74,7 +80,10 @@ class VoIPLibHelper {
     private func createConfig(auth: Auth) -> iOSVoIPLib.Config {
         iOSVoIPLib.Config(
             auth: iOSVoIPLib.Auth(name: auth.username, password: auth.password, domain: auth.domain, port: auth.port),
-            callDelegate: voipLibEventTranslator
+            callDelegate: voipLibEventTranslator,
+            logListener: { message in
+                self.pil.app.logDelegate?.onLogReceived(message: message, level: LogLevel.info)
+            }
         )
     }
 }

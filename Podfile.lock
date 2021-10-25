@@ -1,20 +1,20 @@
 PODS:
   - Alamofire (5.4.4)
   - iOSVoIPLib (0.1.0):
-    - linphone-sdk (= 5.0.9)
-  - linphone-sdk (5.0.9):
-    - linphone-sdk/all-frameworks (= 5.0.9)
-    - linphone-sdk/app-extension (= 5.0.9)
-    - linphone-sdk/app-extension-swift (= 5.0.9)
-    - linphone-sdk/basic-frameworks (= 5.0.9)
-    - linphone-sdk/swift (= 5.0.9)
-  - linphone-sdk/all-frameworks (5.0.9)
-  - linphone-sdk/app-extension (5.0.9)
-  - linphone-sdk/app-extension-swift (5.0.9):
+    - linphone-sdk (= 5.0.40)
+  - linphone-sdk (5.0.40):
+    - linphone-sdk/all-frameworks (= 5.0.40)
+    - linphone-sdk/app-extension (= 5.0.40)
+    - linphone-sdk/app-extension-swift (= 5.0.40)
+    - linphone-sdk/basic-frameworks (= 5.0.40)
+    - linphone-sdk/swift (= 5.0.40)
+  - linphone-sdk/all-frameworks (5.0.40)
+  - linphone-sdk/app-extension (5.0.40)
+  - linphone-sdk/app-extension-swift (5.0.40):
     - linphone-sdk/app-extension
-  - linphone-sdk/basic-frameworks (5.0.9):
+  - linphone-sdk/basic-frameworks (5.0.40):
     - linphone-sdk/app-extension
-  - linphone-sdk/swift (5.0.9):
+  - linphone-sdk/swift (5.0.40):
     - linphone-sdk/app-extension-swift
     - linphone-sdk/basic-frameworks
   - PIL (0.1.0):
@@ -49,13 +49,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   iOSVoIPLib:
-    :commit: 359b5e9d3c055d42f76de24783f9b006099540a7
+    :commit: 0591ba793ca4b431a85fdbcf40185d340481d0fd
     :git: https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
-  iOSVoIPLib: 3d42db807a9eb5a49103c57de69a11fadc68e603
-  linphone-sdk: 42ff9193d1138a2d5ba0a3938b835fa5dbed3c2a
+  iOSVoIPLib: a77ef52a3443bdee2486a0ab86c3fdb7da9db70a
+  linphone-sdk: 506c61b1eff916866e9c7a5265f8eadb2789e41f
   PIL: 660930395909c8c4b572b049a61ab4b48c8dccb9
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
