@@ -45,8 +45,8 @@ public class PIL {
     /// a full PIL restart and re-register.
     public var preferences = Preferences() {
         didSet {
-            if isPreparedToStart {
-                self.start(forceInitialize: true, forceReregister: true)
+            if isPreparedToStart && oldValue != preferences {
+               start(forceInitialize: true, forceReregister: true)
             }
         }
     }
@@ -55,8 +55,8 @@ public class PIL {
     /// trigger a full re-register.
     public var auth: Auth? {
         didSet {
-            if isPreparedToStart {
-                self.start(forceInitialize: false, forceReregister: true)
+            if isPreparedToStart && oldValue != auth {
+                start(forceInitialize: false, forceReregister: true)
             }
         }
     }
@@ -72,7 +72,7 @@ public class PIL {
     /// Attempt to boot and register to see if user credentials are correct.
     /// - Parameter callback: Called when the registration check has been completed.
     public func performRegistrationCheck(callback: @escaping (Bool) -> Void) {
-        guard let auth = self.auth else {
+        guard let auth = auth else {
             callback(false)
             return
         }
@@ -87,17 +87,13 @@ public class PIL {
     ///   - forceReregister: a Bool to determine the voipLib will re-register.
     ///   - completion:  Called with param success when the PIL has been started.
     public func start(forceInitialize: Bool = false, forceReregister: Bool = false, completion: ((_ success: Bool) -> Void)? = nil) {
-        guard let auth = self.auth else {
+        guard let auth = auth else {
             print("There are not authentication details provided")
             return
         }
 
         pushKit.registerForVoipPushes()
         iOSCallKit.initialize()
-        
-        if (forceInitialize) {
-            voipLib.destroy()
-        }
 
         voipLibHelper.initialize(force: forceInitialize)
         voipLibHelper.register(auth: auth, force: forceReregister) { success in

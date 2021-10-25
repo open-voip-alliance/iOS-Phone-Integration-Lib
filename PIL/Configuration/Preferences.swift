@@ -8,12 +8,16 @@
 import Foundation
 import iOSVoIPLib
 
-public struct Preferences {
+public struct Preferences: Equatable {
     public let useApplicationRingtone: Bool
     public let codecs: [Codec]
-    
+
     public init(useApplicationRingtone: Bool = true, codecs: [Codec] = [Codec.OPUS]) {
         self.useApplicationRingtone = useApplicationRingtone
         self.codecs = codecs
+    }
+
+    public static func ==(lhs: Self, rhs: Self) -> Bool {
+        lhs.useApplicationRingtone == rhs.useApplicationRingtone && lhs.codecs.elementsEqual(rhs.codecs)
     }
 }

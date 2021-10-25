@@ -21,14 +21,14 @@ public class Builder {
         if PIL.isInitialized {
             throw PILError.alreadyInitialized
         }
-        
+
         let pil = PIL(applicationSetup: applicationSetup!)
         
-        if let auth = self.auth {
+        if let auth = auth {
             pil.auth = auth
         }
         
-        if let preferences = self.preferences {
+        if let preferences = preferences {
             pil.preferences = preferences
         } else {
             pil.preferences = Preferences()
