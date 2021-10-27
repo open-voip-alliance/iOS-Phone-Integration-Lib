@@ -169,14 +169,7 @@ class IOSCallKit: NSObject {
             return nil
         }
     }
-    
-    public func activateAudio() {
-        callExists { call in
-            voipLib.actions(call: call).setAudio(enabled: true)
-        }
-        
-        pil.audio.onActivateAudioSession()
-    }
+
     
     private var hasActiveCalls: Bool {
         get {
@@ -229,7 +222,11 @@ extension IOSCallKit: CXProviderDelegate {
     }
 
     public func provider(_ provider: CXProvider, didActivate audioSession: AVAudioSession) {
-        activateAudio()
+        callExists { call in
+            voipLib.actions(call: call).setAudio(enabled: true)
+        }
+
+        pil.audio.onActivateAudioSession()
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { timer in
             if self.pil.calls.activeCall == nil {
