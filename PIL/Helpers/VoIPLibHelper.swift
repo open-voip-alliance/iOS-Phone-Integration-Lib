@@ -81,6 +81,7 @@ class VoIPLibHelper {
         iOSVoIPLib.Config(
             auth: iOSVoIPLib.Auth(name: auth.username, password: auth.password, domain: auth.domain, port: auth.port),
             callDelegate: voipLibEventTranslator,
+            userAgent: self.pil.app.userAgent,
             logListener: { message in
                 self.pil.app.logDelegate?.onLogReceived(message: message, level: LogLevel.info)
             }
