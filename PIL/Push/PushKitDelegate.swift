@@ -45,7 +45,7 @@ extension PushKitDelegate: PKPushRegistryDelegate {
             return
         }
                 
-        pil.start(forceInitialize: false, forceReregister: true) { success in
+        pil.start() { success in
             self.pil.writeLog("PIL started with success=\(success), responding to middleware: \(success)")
             self.middleware.respond(payload: payload, available: success)
         }
